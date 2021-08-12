@@ -17,7 +17,7 @@ const Welcome = () => {
             <h3 className="ml-2 font-bold">Hunger Strike</h3>
           </div>
 
-          <div className="flex flex-row item-center py-2 px-4 rounded-md bg-whiteColor text-smokyBlack">
+          <div id="addCartBtn" className="flex flex-row item-center py-2 px-4 rounded-md bg-whiteColor text-smokyBlack">
             <span className="flex justify-center items-center">
               <CgShoppingBag className="inline-block  mr-4 text-center" />
             </span>

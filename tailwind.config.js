@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#FFC914",
-        secondary: "#FF8100",
-        dark: "#302F3C",
-        smokyBlack: "#3D3D3D",
-        whiteColor: "#F8F8FA",
+          primary: "#FFC914",
+          secondary: "#FF8100",
+          dark: "#302F3C",
+          smokyBlack: "#3D3D3D",
+          whiteColor: "#F8F8FA",
       },
 
       backgroundImage: (theme) => ({
@@ -22,5 +22,5 @@ module.exports = {
       background: ["active"],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };
