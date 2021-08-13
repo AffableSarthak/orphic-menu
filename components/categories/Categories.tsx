@@ -4,11 +4,10 @@ import taco from "../../public/categoriesImages/taco.png";
 import Image from "next/image";
 import CategoriesCard from "./CategoriesCard";
 
-
 const Categories = () => {
   return (
     <section>
-      <div id="categoriesHeader" className="flex justify-between items-center px-4 mt-10">
+      <div id="categoriesHeader" className="flex justify-between items-center px-4 mt-8">
         <div id="locationInput" className="flex flex-row items-center">
           <span className="flex flex-row justify-center items-center">
             <HiOutlineLocationMarker className="text-secondary" />
@@ -28,7 +27,6 @@ const Categories = () => {
             </option>
           </select>
         </div>
-
         <div
           id="addCartBtn"
           className="flex flex-row item-center py-2 px-4 rounded-md bg-whiteColor text-smokyBlack shadow-lg "
@@ -36,8 +34,7 @@ const Categories = () => {
           <span className="flex justify-center items-center">
             <CgShoppingBag className="inline-block mr-4 text-center" />
           </span>
-
-          <span>0</span>
+          <span>0</span> {/* no of items in cart*/}
         </div>
       </div>
 
