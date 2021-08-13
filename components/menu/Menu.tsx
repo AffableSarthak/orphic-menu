@@ -8,7 +8,7 @@ const Welcome = () => {
       <section className="relative min-w-full min-h-screen">
         <div
           id="menuHeaderConatiner"
-          className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-gray-800 bg-cover bg-no-repeat object-center text-white"
+          className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-menu bg-cover bg-no-repeat object-center text-white"
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
             <a className="inline-block bg-whiteColor p-2  rounded-md">

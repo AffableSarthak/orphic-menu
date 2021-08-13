@@ -46,6 +46,13 @@ const Categories = () => {
       </div>
 
       {/* {search input} */}
+      <div className="px-4 mt-5">
+        <input
+          type="text"
+          className="min-w-full bg-whiteColor border-none focus:border-none rounded-2xl focus:ring-0 "
+          placeholder="Search for resturants"
+        />
+      </div>
 
       <div id="menuScroll" className="mt-6 px-4">
         <h1 className="font-medium px-2 py-4">Categories</h1>
@@ -62,7 +69,7 @@ const Categories = () => {
 
       <div>
         <h1 className="px-6 py-4">Populer</h1>
-        <div className="flex flex-col gap-[100px]">
+        <div className="flex flex-col gap-3 mb-4">
           <CategoriesCard />
           <CategoriesCard />
           <CategoriesCard />

@@ -3,14 +3,14 @@ import { FaStar } from "react-icons/fa";
 const CategoriesCard = () => {
   return (
     <>
-      <div id="categoriesCardContainer" className="w-[365px] mx-auto h-[219PX] px-4 rounded-t-lg">
+      <div id="categoriesCardContainer" className="px-6 rounded-t-lg">
         <div id="cardHeader">
           <div id="imgContainer">
             <img
               src="https://images.freekaamaal.com/post_images/1606817930.jpg"
               alt=""
-              className="block w-full object-cover rounded-t-3xl"
-            />{" "}
+              className="block w-full object-contain rounded-t-3xl"
+            />
             {/* product image*/}
           </div>
         </div>
