@@ -15,14 +15,15 @@ const CartItem = () => {
 
         <div id="cartInfo" className="flex-seven flex flex-col justify-between">
           <div className="flex flex-row justify-between mb-2">
-            <p className="text-sm capitalize text-smokyBlack">Spicy monsturous lamb</p> {/*cart product name*/}
-            <p className="text-sm text-smokyBlack">$225</p>
+            <p className="text-sm capitalize text-smokyBlack font-medium">Spicy monsturous lamb</p>{" "}
+            {/*cart product name*/}
+            <p className="text-sm text-smokyBlack font-medium">$225</p>
             {/*cart product price*/}
           </div>
 
           <div className="flex flex-row justify-between items-cente">
-            <p className="text-xs text-gray-400">
-              Added by <span className="font-bold text-secondary capitalize">yatin</span> {/* user name*/}
+            <p className="text-xs text-gray-400 font-medium">
+              Added by <span className="text-secondary capitalize">yatin</span> {/* user name*/}
             </p>
 
             <div className="text-sm flex bg-whiteColor rounded-sm shadow-sm ">

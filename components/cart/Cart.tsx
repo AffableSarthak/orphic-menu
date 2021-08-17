@@ -14,14 +14,14 @@ const Cart = () => {
             </span>
           </div>
 
-          <h1 className="font-bold text-xl flex-six text-smokyBlack">Cart</h1>
+          <h1 className="font-semibold text-xl flex-six text-smokyBlack">Cart</h1>
         </div>
 
         {/* cart delivery address */}
 
         <div id="deliveryAdress" className="bg-whiteColor mt-8 px-4 py-2 rounded-2xl shadow-lg">
           <p className="text-gray-500 text-sm mb-2">Diliver to</p>
-          <h2 className="text-smokyBlack">Table 7</h2>
+          <h2 className="text-smokyBlack font-medium">Table 7</h2>
         </div>
 
         {/* carts section */}

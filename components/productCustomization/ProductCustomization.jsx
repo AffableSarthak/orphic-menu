@@ -19,15 +19,15 @@ const ProductCustomization = () => {
           </div>
         </div>
 
-        <h1 className="text-sm font-bold text-smokyBlack mt-6">Classic Pepporoni</h1>
+        <h1 className="text-sm font-semibold text-smokyBlack mt-6">Classic Pepporoni</h1>
 
         {/* size slection start */}
 
         <div id="sizeSelection" className="mt-6">
           {/* sizeSelection Header start */}
           <div id="sizeSelectionHeader" className="flex justify-between items-center">
-            <h2 className="text-sm text-smokyBlack font-bold">Choose Size</h2>
-            <p className="text-xs text-smokyBlack font-medium bg-primary uppercase p-1 rounded-md">required</p>
+            <h2 className="text-sm text-smokyBlack font-semibold">Choose Size</h2>
+            <p className="text-xs text-smokyBlack font-semibold bg-primary uppercase p-1 rounded-md">required</p>
           </div>
           {/* sizeSelection Header  ends */}
 
@@ -42,7 +42,7 @@ const ProductCustomization = () => {
                   className="h-3 w-3 m-2 p-0 text-primary ring-2 ring-offset-1  ring-white checked:ring-2 checked:ring-offset-1 checked:ring-primary"
                 />
                 <label htmlFor="name" className="text-sm text-gray-600">
-                  Small-6"
+                  Small - 6"
                 </label>
               </div>
 
@@ -60,7 +60,7 @@ const ProductCustomization = () => {
                   className="h-3 w-3 m-2 p-0 text-primary ring-2 ring-offset-1  ring-white checked:ring-2 checked:ring-offset-1 checked:ring-primary"
                 />
                 <label htmlFor="name" className="text-sm text-gray-600">
-                  Medium-8"
+                  Medium - 8"
                 </label>
               </div>
 
@@ -78,7 +78,7 @@ const ProductCustomization = () => {
                   className="h-3 w-3 m-2 p-0 text-primary ring-2 ring-offset-1  ring-white checked:ring-2 checked:ring-offset-1 checked:ring-primary"
                 />
                 <label htmlFor="name" className="text-sm text-gray-600">
-                  Large-14"
+                  Large - 14"
                 </label>
               </div>
 
@@ -93,8 +93,8 @@ const ProductCustomization = () => {
         <div id="crustSelection" className="mt-6">
           {/* curstSelection Header start */}
           <div id="crustSelectionHeader" className="flex justify-between items-center">
-            <h2 className="text-sm text-smokyBlack font-bold">Select Curst</h2>
-            <p className="text-xs text-smokyBlack font-medium bg-primary uppercase p-1 rounded-md">required</p>
+            <h2 className="text-sm text-smokyBlack font-semibold">Select Curst</h2>
+            <p className="text-xs text-smokyBlack font-semibold bg-primary uppercase p-1 rounded-md">required</p>
           </div>
           {/* curstSelection Header Ends */}
 
@@ -149,7 +149,7 @@ const ProductCustomization = () => {
                 </label>
               </div>
 
-              <p className="text-sm text-gray-600">+$1.50</p>
+              <p className="text-sm text-gray-600 font-normal">+$1.50</p>
             </div>
             {/* SingelSelect crust end*/}
           </div>
@@ -159,8 +159,8 @@ const ProductCustomization = () => {
         <div id="addOnsSection" className="mt-6">
           {/* addonsSelection Header start */}
           <div id="addonsSelectionHeader" className="flex justify-between items-center">
-            <h2 className="text-sm text-smokyBlack font-bold">Add ons</h2>
-            <p className="text-xs text-smokyBlack font-medium bg-whiteColor uppercase p-1 rounded-md">Optional</p>
+            <h2 className="text-sm text-smokyBlack font-semibold">Add ons</h2>
+            <p className="text-xs text-smokyBlack font-semibold bg-whiteColor uppercase p-1 rounded-md">Optional</p>
           </div>
           {/* addonsSelection Header Ends */}
 
@@ -206,7 +206,7 @@ const ProductCustomization = () => {
 
         {/* total Bill */}
         <div id="totalBill" className="mt-3 flex flex-row justify-between gap-10">
-          <a href="" className=" flex-five py-4 bg-primary text-center text-sm rounded-3xl">
+          <a href="" className="flex-five py-4  bg-primary text-center text-base font-medium rounded-3xl">
             Add to cart
           </a>
           <div className="">

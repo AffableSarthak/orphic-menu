@@ -7,10 +7,14 @@ import ketchupMayo from "../../public/authenticateImages/ketchupMayo.png";
 import orphicLogo from "../../public/authenticateImages/orphicLogo.png";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
-
+// import { useContext } from "react";
+// import eatriesContext from "../../context/eateries/eatriesContext";
 const Authenticate = () => {
+  // const { isLoading, allData } = useContext(eatriesContext);
+
   return (
     <>
+      {/* {allData && JSON.stringify(allData)} */}
       <div id="imagesConatiner">
         <div id="pizzaContainer" className="text-center mt-8 ">
           <Image src={pizzaMatte} width={60} height={60} />
@@ -38,8 +42,8 @@ const Authenticate = () => {
           <form action="" className="flex flex-col items-end">
             <input
               type="text"
-              placeholder="Enter Your Email"
-              className="px-8 py-4 bg- border border-solid border-black rounded-2xl focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary"
+              placeholder="Enter Your Name"
+              className="px-8 py-4 bg- border border-solid border-gray-500 bg-whiteColor rounded-2xl focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary"
             />
             <Link href="/app/menuPage/menu">
               <a

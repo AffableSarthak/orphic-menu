@@ -10,6 +10,7 @@ module.exports = {
         dark: "#302F3C",
         smokyBlack: "#3D3D3D",
         whiteColor: "#F8F8FA",
+        categoriesCardsColor: "#F5D4C1",
       },
 
       flex: {
