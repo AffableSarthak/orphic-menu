@@ -1,0 +1,22 @@
+import firebase from "firebase/app";
+import "firebase/database";
+
+const config = {
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  databaseURL: process.env.databaseURL,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId,
+};
+
+function initFirebase() {
+  if (!firebase.apps.length) {
+    firebase.initializeApp(config);
+  }
+}
+
+initFirebase();
+
+export default firebase;

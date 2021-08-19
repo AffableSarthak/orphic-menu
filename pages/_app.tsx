@@ -1,13 +1,11 @@
-import "../styles/globals.css";
-import EatriesState from "../context/eateries/eatriesState";
+import '../styles/globals.css'
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <EatriesState>
-        <Component {...pageProps} />
-      </EatriesState>
+      <Component {...pageProps} />
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

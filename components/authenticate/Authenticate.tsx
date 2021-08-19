@@ -1,17 +1,16 @@
-import Image from "next/image";
-import pizzaMatte from "../../public/authenticateImages/pizzaMatte.png";
-import burgerSmall from "../../public/authenticateImages/burgerSmall.png";
-import friesIsometric from "../../public/authenticateImages/friesIsometric.png";
-import hotDog from "../../public/authenticateImages/hotDog.png";
-import ketchupMayo from "../../public/authenticateImages/ketchupMayo.png";
-import orphicLogo from "../../public/authenticateImages/orphicLogo.png";
-import { BsArrowRight } from "react-icons/bs";
-import Link from "next/link";
+import Image from 'next/image'
+import pizzaMatte from '../../public/authenticateImages/pizzaMatte.png'
+import burgerSmall from '../../public/authenticateImages/burgerSmall.png'
+import friesIsometric from '../../public/authenticateImages/friesIsometric.png'
+import hotDog from '../../public/authenticateImages/hotDog.png'
+import ketchupMayo from '../../public/authenticateImages/ketchupMayo.png'
+import orphicLogo from '../../public/authenticateImages/orphicLogo.png'
+import { BsArrowRight } from 'react-icons/bs'
+import Link from 'next/link'
 // import { useContext } from "react";
 // import eatriesContext from "../../context/eateries/eatriesContext";
 const Authenticate = () => {
   // const { isLoading, allData } = useContext(eatriesContext);
-
   return (
     <>
       {/* {allData && JSON.stringify(allData)} */}
@@ -25,7 +24,10 @@ const Authenticate = () => {
           <Image src={friesIsometric} width={60} height={60} />
         </div>
 
-        <div id="foodLayer3" className="flex flex-row justify-between text-center">
+        <div
+          id="foodLayer3"
+          className="flex flex-row justify-between text-center"
+        >
           <Image src={burgerSmall} width={60} height={60} />
           <Image src={orphicLogo} width={100} height={100} />
           <Image src={ketchupMayo} width={60} height={60} />
@@ -34,7 +36,9 @@ const Authenticate = () => {
 
       <div className=" flex flex-col justify-center items-center">
         <div className="mt-8 ">
-          <h1 className="text-6xl mb-4 text-center text-smokyBlack font-semibold">orphic.</h1>
+          <h1 className="text-6xl mb-4 text-center text-smokyBlack font-semibold">
+            orphic.
+          </h1>
           <p className="text-xl text-gray-600">your favorite meal in 3D</p>
         </div>
 
@@ -58,7 +62,7 @@ const Authenticate = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Authenticate;
+export default Authenticate
