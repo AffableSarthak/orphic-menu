@@ -1,9 +1,9 @@
-import Authenticate from '../../components/authenticate/Authenticate'
 import { GetServerSideProps } from 'next'
-import sessionContext from '../../context/session/context'
-import { useContext } from 'react'
-import firebase from '../../firebase/init'
-import SessionState from '../../context/session/state'
+// import sessionContext from '../../context/session/context'
+// import { useContext } from 'react'
+import firebase from '../../../firebase/init'
+import SessionState from '../../../context/session/state'
+import UserDetail from '../../../components/user-detail/UserDetail'
 
 const db = firebase.database()
 
@@ -13,7 +13,7 @@ function Home(props: { tableId: string; eateryId: string; gc: Igc[] }) {
   return (
     <>
       <SessionState db={db} sessionProps={props}>
-        <Authenticate />
+        <UserDetail />
       </SessionState>
     </>
   )
