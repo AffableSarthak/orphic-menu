@@ -59,10 +59,10 @@ const Categories = () => {
           </div>
           <div
             id="addCartBtn"
-            className="flex flex-row item-center py-2 px-4 rounded-md bg-whiteColor text-smokyBlack shadow-lg "
+            className="flex flex-row item-center text-xl py-3 px-4 rounded-xl bg-whiteColor text-smokyBlack shadow-lg "
           >
-            <span className="flex justify-center items-center">
-              <CgShoppingBag className="inline-block mr-4 text-center" />
+            <span className="flex justify-center items-center ">
+              <CgShoppingBag className="mr-4 text-center" />
             </span>
             <span>0</span> {/* no of items in cart*/}
           </div>
@@ -89,8 +89,8 @@ const Categories = () => {
             Populer
           </h2>
           <div id="categoriesCardsContainer" className="flex justify-center items-center flex-wrap gap-4">
-            {cardsInfo.map((c) => (
-              <CategoriesCard categoryName={c.categoryName} imgUrl={c.imgUrl} />
+            {cardsInfo.map((c, i) => (
+              <CategoriesCard key={i} categoryName={c.categoryName} imgUrl={c.imgUrl} />
             ))}
           </div>
         </div>

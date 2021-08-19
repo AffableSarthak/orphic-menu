@@ -4,7 +4,7 @@ import { AiOutlineMinus } from "react-icons/ai";
 const CartItem = () => {
   return (
     <>
-      <div id="cartContainer" className="flex justify-center gap-2">
+      <div id="cartContainer" className="flex justify-center items-center gap-2 py-1">
         <div id="cartImage" className="flex-two">
           <img
             src="https://images.freekaamaal.com/post_images/1606817930.jpg"
@@ -21,7 +21,7 @@ const CartItem = () => {
             {/*cart product price*/}
           </div>
 
-          <div className="flex flex-row justify-between items-cente">
+          <div className="flex flex-row justify-between items-end">
             <p className="text-xs text-gray-400 font-medium">
               Added by <span className="text-secondary capitalize">yatin</span> {/* user name*/}
             </p>

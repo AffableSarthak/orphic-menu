@@ -7,19 +7,22 @@ const ProductCustomization = () => {
     <>
       <section id="prodCustSection" className="min-w-full px-4">
         <div id="prodCustHeader" className="flex flex-row justify-between items-center mt-8">
-          <a className="inline-block bg-whiteColor p-2  rounded-md">
-            <IoIosArrowBack className="text-smokyBlack" />
+          <a className="inline-block bg-whiteColor p-2  rounded-xl">
+            <IoIosArrowBack className="text-smokyBlack text-2xl" />
           </a>
 
-          <div id="addCartBtn" className="flex flex-row item-center py-2 px-4 rounded-md bg-primary text-smokyBlack">
+          <div
+            id="addCartBtn"
+            className="flex flex-row item-center  text-xl py-3 px-4 rounded-xl bg-primary text-smokyBlack"
+          >
             <span className="flex justify-center items-center">
-              <CgShoppingBag className="inline-block  mr-4 text-center" />
+              <CgShoppingBag className="mr-4 text-center" />
             </span>
-            <span className="bg-whiteColor flex justify-center items-center h-5 w-5 rounded-full">0</span>
+            <span className="bg-whiteColor flex justify-center items-center px-2 rounded-full">0</span>
           </div>
         </div>
 
-        <h1 className="text-sm font-semibold text-smokyBlack mt-6">Classic Pepporoni</h1>
+        <h1 className="text-sm font-semibold text-smokyBlack mt-8">Classic Pepporoni</h1>
 
         {/* size slection start */}
 
@@ -205,7 +208,7 @@ const ProductCustomization = () => {
         {/* {Addons Section end} */}
 
         {/* total Bill */}
-        <div id="totalBill" className="mt-3 flex flex-row justify-between gap-10">
+        <div id="totalBill" className="flex flex-row justify-between gap-10 mt-8">
           <a href="" className="flex-five py-4  bg-primary text-center text-base font-medium rounded-3xl">
             Add to cart
           </a>

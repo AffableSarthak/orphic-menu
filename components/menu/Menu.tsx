@@ -2,6 +2,8 @@ import { IoIosArrowBack } from "react-icons/io";
 import { CgShoppingBag } from "react-icons/cg";
 import { BsArrowRight } from "react-icons/bs";
 import MenuCard from "./MenuCard";
+import PopularCard from "./PopularCard";
+
 const Welcome = () => {
   return (
     <>
@@ -11,15 +13,18 @@ const Welcome = () => {
           className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-menu bg-cover bg-no-repeat object-center text-white"
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
-            <a className="inline-block bg-whiteColor p-2  rounded-md">
-              <IoIosArrowBack className="text-smokyBlack" />
+            <a className="inline-block bg-whiteColor p-2  rounded-xl">
+              <IoIosArrowBack className="text-smokyBlack text-2xl" />
             </a>
             <h3 className="ml-2 font-bold">Hunger Strike</h3>
           </div>
 
-          <div id="addCartBtn" className="flex flex-row item-center py-2 px-4 rounded-md bg-whiteColor text-smokyBlack">
+          <div
+            id="addCartBtn"
+            className="flex flex-row item-center text-xl py-3 px-4 rounded-xl bg-whiteColor text-smokyBlack"
+          >
             <span className="flex justify-center items-center">
-              <CgShoppingBag className="inline-block  mr-4 text-center" />
+              <CgShoppingBag className="mr-4 text-center" />
             </span>
 
             <span>0</span>
@@ -39,23 +44,19 @@ const Welcome = () => {
           </p>
         </div>
 
-        <div id="menuScroll" className="mt-12 px-4">
-          <h1 className="font-medium px-2 py-4">Menu</h1>
-          <div className="flex flex-row gap-3 overflow-y-auto">
-            <a className="text-sm bg-primary border shadow text-smokyBlack px-2 py-1 rounded-xl">Populer</a>
-            <a className="text-sm bg-whiteColor border-2 shadow  text-smokyBlack px-2 py-1 rounded-xl">Burger</a>
-            <a className="text-sm bg-whiteColor border-2 shadow  text-smokyBlack px-2 py-1 rounded-xl">Fries</a>
-            <a className="text-sm bg-whiteColor border-2 shadow  text-smokyBlack px-2 py-1 rounded-xl">Dummy</a>
-            <a className="text-sm bg-whiteColor border-2 shadow  text-smokyBlack px-2 py-1 rounded-xl">Dummy</a>
-            <a className="text-sm bg-whiteColor border-2 shadow  text-smokyBlack px-2 py-1 rounded-xl">Dummy</a>
-            <a className="text-sm bg-whiteColor border-2 shadow   text-smokyBlack px-2 py-1 rounded-xl">Dummy</a>
+        <div className="mt-16">
+          <h2 className="text-lg font-semibold px-4">Recommend</h2>
+          <div className="flex flex-row items-center gap-4 overflow-x-auto     px-4">
+            <MenuCard />
+            <MenuCard />
+            <MenuCard />
           </div>
         </div>
 
-        <div className="flex flex-row gap-4 overflow-y-auto px-4">
-          <MenuCard />
-          <MenuCard />
-          <MenuCard />
+        <div className="mt-5">
+          <h2 className="text-lg font-semibold px-4">Popular Now</h2>
+
+          <PopularCard />
         </div>
       </section>
     </>

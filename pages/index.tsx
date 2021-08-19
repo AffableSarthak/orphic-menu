@@ -1,9 +1,8 @@
-
-import Authenticate from "../components/authenticate/Authenticate";
+import UserDetail from "../components/user-detail/UserDetail";
 export default function Home() {
   return (
     <>
-      <Authenticate />
+      <UserDetail />
     </>
   );
 }

@@ -28,7 +28,9 @@ const getData = (data) => {
 };
 
 const EatriesState = ({ children }) => {
+
   const [state, dispatch] = useReducer(eatriesReducer, initialState);
+  
   const getModifiedData = () => {
     const modifiedData = getData(Data);
 

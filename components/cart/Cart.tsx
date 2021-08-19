@@ -9,8 +9,8 @@ const Cart = () => {
         {/* {cart header} */}
         <div id="cartHeader" className="mt-8 flex flex-row items-center">
           <div className="flex-four">
-            <span className=" inline-block  bg-whiteColor p-2  rounded-xl shadow-lg">
-              <IoIosArrowBack className="text-smokyBlack text-lg" />
+            <span className=" inline-block  bg-whiteColor p-2 rounded-xl shadow-lg">
+              <IoIosArrowBack className="text-smokyBlack text-2xl" />
             </span>
           </div>
 
@@ -19,7 +19,10 @@ const Cart = () => {
 
         {/* cart delivery address */}
 
-        <div id="deliveryAdress" className="bg-whiteColor mt-8 px-4 py-2 rounded-2xl shadow-lg">
+        <div
+          id="deliveryAdress"
+          className="flex flex-col justify-center pl-4 bg-whiteColor mt-8 h-[96px] rounded-2xl shadow-lg"
+        >
           <p className="text-gray-500 text-sm mb-2">Diliver to</p>
           <h2 className="text-smokyBlack font-medium">Table 7</h2>
         </div>
