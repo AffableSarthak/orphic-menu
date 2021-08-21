@@ -51,6 +51,8 @@ const MenuCard = (props) => {
           // push to cart with and add the item with other details to staged items => item, count, username
           <span
             onClick={() => {
+              console.log('Inside without cust item')
+
               setStagedItem(item, 'SET_WITHOUT_CUST')
             }}
             className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
@@ -76,7 +78,7 @@ const MenuCard = (props) => {
               onClick={() => {
                 setStagedItem(item, 'SET_WITHOUT_CUST')
               }}
-              className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+              className="absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
             >
               <AiOutlinePlus className="text-smokyBlack text-xl" />
             </span>

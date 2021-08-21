@@ -26,8 +26,8 @@ const sessionReducer = (state, action) => {
     case SET_STAGED:
       return {
         ...state,
-        // stagedItem: [...state.stagedItem, { payload }],
-        stagedItem: payload,
+        // stagedItem: [...state.stagedItem, payload],
+        stagedItem: [payload],
       }
   }
 }

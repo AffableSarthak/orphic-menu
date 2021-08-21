@@ -181,6 +181,8 @@ const SessionState = ({ children, db }: Iprops) => {
       itemCust.push(tempCust[0])
     })
 
+    console.log(itemCust)
+
     return itemCust
   }
 
@@ -192,9 +194,25 @@ const SessionState = ({ children, db }: Iprops) => {
           ...item,
           cust: itemCust,
         }
+        console.log(newItem)
+
         dispatch({ type: 'SET_STAGED', payload: newItem })
       }
       case 'SET_WITHOUT_CUST': {
+        console.log('set staged item function ', item)
+
+        /**
+         *
+         *
+         * stagedItem = [
+         *
+         * {
+         * item: {item},
+         * count : 2,
+         * username
+         * }
+         * ]
+         */
         dispatch({ type: 'SET_STAGED', payload: item })
       }
     }
@@ -203,7 +221,7 @@ const SessionState = ({ children, db }: Iprops) => {
   // console.log(categories)
   // console.log(username)
   // console.log(gcState)
-  // console.log(items)
+  console.log(stagedItems)
 
   return (
     <>
