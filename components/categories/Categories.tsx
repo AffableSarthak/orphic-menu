@@ -6,6 +6,7 @@ import Image from 'next/image'
 import CategoriesCard from './CategoriesCard'
 import sessionContext from '../../context/session/context'
 import { useContext } from 'react'
+import { RiSearchLine } from 'react-icons/ri'
 
 const Categories = (props) => {
   const {
@@ -81,12 +82,13 @@ const Categories = (props) => {
         </div>
 
         {/* {search input} */}
-        <div className="px-4 mt-5">
+        <div className="relative p-4">
           <input
             type="text"
-            className="min-w-full bg-whiteColor border-none focus:border-none rounded-2xl focus:ring-0 p-4"
+            className="bg-whiteColor border-2 border-gray-300 rounded-2xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-secondary p-4 pl-10 w-full"
             placeholder="Search for a category"
           />
+          <RiSearchLine className="absolute top-[35px] left-[29px] text-2xl text-gray-400" />
         </div>
 
         <div id="categoriesCards" className="mt-5 px-4">
@@ -94,12 +96,9 @@ const Categories = (props) => {
             id="categoriesCardsHeading"
             className="text-lg font-semibold mb-4"
           >
-            Populer
+            Popular
           </h2>
-          <div
-            id="categoriesCardsContainer"
-            className="flex justify-center items-center flex-wrap gap-4"
-          >
+          <div id="categoriesCardsContainer" className="grid grid-cols-2 gap-4">
             {props.sessionProps.categories.map((c, i) => (
               <CategoriesCard key={i} categoryName={c.name} imgUrl={c.src} />
             ))}

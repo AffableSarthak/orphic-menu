@@ -58,7 +58,11 @@ const UserDetail = (props) => {
         <Formik
           initialValues={{ username: '' }}
           validationSchema={yup.object({
-            username: yup.string().required().min(2).max(15),
+            username: yup
+              .string()
+              .required('Username is Required!')
+              .min(2, 'Atleast enter two characters')
+              .max(15),
           })}
           onSubmit={(values, formikHelpers) => {
             setUsername(values.username)
@@ -73,21 +77,26 @@ const UserDetail = (props) => {
               <Field
                 name="username"
                 placeholder="Enter your Name"
-                className="bg-whiteColor w-full px-8 py-4 rounded-2xl mb-5"
+                className="bg-whiteColor w-full px-8 py-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl focus:bg-[#e1e1e1]"
               />
-              <ErrorMessage name="username" className="" />
-              <div className="flex justify-end">
-                <button
-                  type="submit"
-                  disabled={isSubmitting || isValidating}
-                  className="flex flex-row justify-center items-center px-8 py-4 rounded-2xl bg-primary disabled:bg-gray-400 disabled:text-white"
-                >
-                  <span>Continue</span>
-                  <span className="flex justify-center items-center {${isSubmitting? disabled: animate-spin}}">
-                    <BsArrowRight />
-                  </span>
-                </button>
-              </div>
+              {/* <ErrorMessage
+                name="username"
+                component={'div'}
+                className="text-red-500 px-4"
+              /> */}
+              <p className="text-red-500 text-center h-8">{errors.username}</p>
+              {/* <div className="flex justify-end mt-5"> */}
+              <button
+                type="submit"
+                disabled={isSubmitting || isValidating}
+                className="ml-auto  flex flex-row justify-center items-center px-8 py-4 rounded-2xl bg-primary active:bg-secondary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl"
+              >
+                <span>Continue</span>
+                <span className="flex justify-center items-center {${isSubmitting? disabled: animate-spin}}">
+                  <BsArrowRight />
+                </span>
+              </button>
+              {/* </div> */}
             </Form>
           )}
         </Formik>

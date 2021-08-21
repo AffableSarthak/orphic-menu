@@ -6,9 +6,11 @@ import burgerGif from '../../public/menuImages/burger.gif'
 import Image from 'next/image'
 import sessionContext from '../../context/session/context'
 import { useContext } from 'react'
+
 const MenuCard = (props) => {
   const { setStagedItem } = useContext(sessionContext)
   const { item, stagedItems } = props
+
   const cartItemInfo = (stagedItems, item) => {
     if (item.cust) {
       // Item has customization
@@ -65,9 +67,9 @@ const MenuCard = (props) => {
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
           // If the current Item is present in Cart
           return (
-            <span className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2">
+            <span className=" absolute right-5 top-5 flex flex-row justify-center items-center  rounded-full px-2 py-2 bg-primary text-white">
               {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
-              <p>ADDED</p>
+              Added
             </span>
           )
         } else {
@@ -89,24 +91,25 @@ const MenuCard = (props) => {
   }
   return (
     <>
+      {console.log(item, 'img container')}
       <div
         id="cardConatiner"
-        className=" flex-four bg-dark rounded-[30px] my-1"
+        className=" flex-four bg-dark min-h-[315px] rounded-[30px] my-1"
       >
         <div
           id="cardImgContainer"
           className="flex justify-center relative h-[188px]"
         >
-          <Image
-            src={burgerGif}
-            className="block  object-cover rounded-3xl border-2 border-pink-600"
-          />{' '}
+          <img
+            src={item.bannerUrl}
+            className="block object-cover rounded-t-3xl"
+          />
           {/*menu card product image*/}
           {cartItemInfo(stagedItems, item)}
         </div>
 
-        <div id="cardtext">
-          <h2 className="text-whiteColor font-bold px-4 w-[200px]">
+        <div id="cardtext" className="h-14 flex justify-center items-center">
+          <h2 className="text-whiteColor font-bold px-4 min-w-[224px]">
             {item.itemName}
           </h2>
           {/* product name/desc.*/}
@@ -114,11 +117,11 @@ const MenuCard = (props) => {
 
         <div
           id="cardFooter"
-          className="px-4 flex flex-row justify-between items-center pb-4"
+          className="px-4 flex flex-row justify-between items-center "
         >
-          <h2 className="text-whiteColor font-bold">{item.price}</h2>{' '}
+          <h2 className="text-whiteColor font-bold">{item.price}</h2>
           {/* product price.*/}
-          <span className="flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2">
+          <span className="flex flex-row justify-center items-end bg-whiteColor rounded-full px-2 py-2">
             <FiBox className="text-3xl" />
           </span>
         </div>

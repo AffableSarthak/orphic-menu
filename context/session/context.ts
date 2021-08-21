@@ -30,9 +30,6 @@ export const sessionDefaultValue: sessionDataType = {
   stagedItems: [],
   orderedItems: [],
   setStagedItem: () => null
-
-
-
 };
 
 const sessionContext = createContext<sessionDataType>(sessionDefaultValue);

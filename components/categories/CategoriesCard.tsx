@@ -10,7 +10,7 @@ const CategoriesCard = ({ categoryName, imgUrl }) => {
     <>
       <div
         id="cardContaner"
-        className="flex-four p-4 rounded-2xl bg-categoriesCardsColor"
+        className="flex flex-col justify-between p-4 rounded-2xl bg-categoriesCardsColor"
         onClick={() => {
           setCategoryItems(categoryName)
           router.push({ pathname: '/app/menu' })
@@ -19,14 +19,9 @@ const CategoriesCard = ({ categoryName, imgUrl }) => {
         <h2 id="cardHeading" className="text-base font-bold">
           {categoryName}
         </h2>
-        <div className="text-center">
+        <div className="flex justify-center items-center p-2">
           {/* <Image src={imgUrl} /> */}
-          <img
-            className="text-center"
-            src={imgUrl}
-            height="80px"
-            width="80px"
-          />
+          <img src={imgUrl} className="w-[102px]  h-[85px]" />
         </div>
       </div>
     </>

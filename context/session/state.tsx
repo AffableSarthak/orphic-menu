@@ -1,7 +1,9 @@
+import { SET_CATEGORIES, SET_STAGED, SET_USERNAME } from './actionType'
+
 import SessionContext from './context'
 // import Data from '../../db/claytopia.json'
-import { useReducer, useEffect, useState } from 'react'
-import SessionReducer from './reducer'
+import { useReducer, useState } from 'react'
+import sessionReducer from './reducer'
 
 const SessionState = ({ children, db }: Iprops) => {
   const initialState: IinitialState = {
@@ -14,8 +16,10 @@ const SessionState = ({ children, db }: Iprops) => {
   }
 
   // console.log({ sessionProps })
-  const [state, dispatch] = useReducer(SessionReducer, initialState)
+  const [state, dispatch] = useReducer(sessionReducer, initialState)
+
   const [gcState, setGcState] = useState<Igc[]>([])
+  
   const { isLoading, categories, orderedItems, stagedItems, username, items } =
     state
 
@@ -32,7 +36,7 @@ const SessionState = ({ children, db }: Iprops) => {
 
   const setUsername = (username: string) => {
     dispatch({
-      type: 'SET_USERNAME',
+      type: SET_USERNAME,
       payload: username,
     })
   }
@@ -61,7 +65,7 @@ const SessionState = ({ children, db }: Iprops) => {
     ]
 
     dispatch({
-      type: 'SET_CATEGORIES',
+      type: SET_CATEGORIES,
       payload: data,
     })
   }
@@ -194,7 +198,7 @@ const SessionState = ({ children, db }: Iprops) => {
           ...item,
           cust: itemCust,
         }
-        console.log(newItem)
+        console.log(newItem, 'from setStaged newItems')
 
         dispatch({ type: 'SET_STAGED', payload: newItem })
       }
@@ -213,7 +217,13 @@ const SessionState = ({ children, db }: Iprops) => {
          * }
          * ]
          */
-        dispatch({ type: 'SET_STAGED', payload: item })
+
+        let stageItem = {
+          item,
+          count: 1,
+          username,
+        }
+        dispatch({ type: SET_STAGED, payload: stageItem })
       }
     }
   }
@@ -221,7 +231,7 @@ const SessionState = ({ children, db }: Iprops) => {
   // console.log(categories)
   // console.log(username)
   // console.log(gcState)
-  console.log(stagedItems)
+  console.log(stagedItems, 'from state')
 
   return (
     <>
