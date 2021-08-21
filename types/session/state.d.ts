@@ -5,7 +5,7 @@
 interface Iprops {
     children: any;
   db: any;
-  sessionProps : any;
+  // sessionProps : any;
 }
 
 interface IorderItem {
@@ -14,9 +14,14 @@ interface IorderItem {
   item : Iitem;
 }
 
+interface Icategory {
+  name: string;
+  src:string;
+}
+
 interface IinitialState {
     isLoading: boolean;
-    categories : string[];
+    categories : Icategory[];
     orderedItems: IorderItem[];
     stagedItems: IorderItem[];
     username: string;

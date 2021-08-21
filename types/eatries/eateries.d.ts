@@ -8,7 +8,7 @@
 interface Iitem {
   bannerUrl: string;
   category: string;
-  cust: string[];
+  cust?: string[];
   desc: string;
   itemId: string;
   itemName: string;

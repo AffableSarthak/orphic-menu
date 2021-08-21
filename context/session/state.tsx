@@ -1,22 +1,22 @@
 import SessionContext from './context'
 // import Data from '../../db/claytopia.json'
-import { useReducer, useEffect } from 'react'
-import { SET_INITIAL_DATA } from './actionType'
+import { useReducer, useEffect, useState } from 'react'
 import SessionReducer from './reducer'
 
-const initialState: IinitialState = {
-  isLoading: false,
-  categories: [],
-  orderedItems: [],
-  stagedItems: [],
-  username: '',
-  items: [],
-}
+const SessionState = ({ children, db }: Iprops) => {
+  const initialState: IinitialState = {
+    isLoading: false,
+    categories: [],
+    orderedItems: [],
+    stagedItems: [],
+    username: '',
+    items: [],
+  }
 
-const SessionState = ({ children, db, sessionProps }: Iprops) => {
-  console.log({ sessionProps })
+  // console.log({ sessionProps })
   const [state, dispatch] = useReducer(SessionReducer, initialState)
-  const { isLoading, categories, orderedItems, stagedItems, usernamem, items } =
+  const [gcState, setGcState] = useState<Igc[]>([])
+  const { isLoading, categories, orderedItems, stagedItems, username, items } =
     state
 
   /**
@@ -30,9 +30,199 @@ const SessionState = ({ children, db, sessionProps }: Iprops) => {
    *
    */
 
+  const setUsername = (username: string) => {
+    dispatch({
+      type: 'SET_USERNAME',
+      payload: username,
+    })
+  }
+
+  const populateGc = (gc: Igc[]) => {
+    setGcState(gc)
+  }
+
+  const getCategories = (eataryId: string) => {
+    // Call api
+    // console.log(eataryId)
+
+    let data: Icategory[] = [
+      {
+        name: 'Pizza',
+        src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
+      },
+      {
+        name: 'Burger',
+        src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
+      },
+      {
+        name: 'Pasta',
+        src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
+      },
+    ]
+
+    dispatch({
+      type: 'SET_CATEGORIES',
+      payload: data,
+    })
+  }
+
+  const setCategoryItems = (categoryName: string) => {
+    // Call API
+    const data: Iitem[] = [
+      {
+        bannerUrl: '',
+        category: 'Pasta',
+        cust: ['002'],
+        desc: '',
+        itemId: 'BC-001',
+        itemName: 'Bistro Mix Mushroom',
+        objectUrl: '',
+        price: '320',
+      },
+      {
+        bannerUrl:
+          'https://drive.google.com/uc?export=download&id=1jw7MKjy4PaP7zR5U3J3m3ePlyrGuSh5z',
+        category: 'Burgers & Combos',
+        desc: '',
+        itemId: 'BC-002',
+        itemName: 'Spicy BBQ Chicken Combo',
+        objectUrl:
+          'https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL',
+        price: '350',
+      },
+      {
+        bannerUrl: '',
+        category: 'Main Course',
+        cust: ['001'],
+        desc: '',
+        itemId: 'BC-003',
+        itemName: 'Hosin Glazed Grilled Chicken',
+        objectUrl: '',
+        price: '280',
+      },
+      {
+        bannerUrl:
+          'https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw',
+        category: 'Pasta',
+        cust: ['002'],
+        desc: '',
+        itemId: 'BC-005',
+        itemName: 'Wild Mushroom Pasta ',
+        objectUrl:
+          'https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk',
+        price: '295',
+      },
+      {
+        bannerUrl: '',
+        category: 'Snacks',
+        desc: '',
+        itemId: 'BC-007',
+        itemName: 'French Fries',
+        objectUrl: '',
+        price: '110',
+      },
+      {
+        bannerUrl: '',
+        category: 'Soups & Salads',
+        desc: '',
+        itemId: 'BC-008',
+        itemName: 'Exotic Veggies Soup',
+        objectUrl: '',
+        price: '200',
+      },
+      {
+        bannerUrl:
+          'https://drive.google.com/uc?export=download&id=1uopz02oTWLrITiDHVs9Gn8fOViVuXhQr',
+        category: 'Breakfast',
+        desc: '',
+        itemId: 'BC-010',
+        itemName: 'Bistro Heavenly Rolls',
+        objectUrl:
+          'https://drive.google.com/uc?export=download&id=1DYZej3r0NxZ7A6IYLm_B8g_L2bBY4Mqy',
+        price: '300',
+      },
+      {
+        bannerUrl:
+          'https://drive.google.com/uc?export=download&id=1fMxyyYdRYpXsm3u0OWnfBgCkzElHGO0E',
+        category: 'Soups & Salads',
+        desc: '',
+        itemId: 'BC-011',
+        itemName: 'Classic Ceaser Salad',
+        objectUrl:
+          'https://drive.google.com/uc?export=download&id=15JVQk8Ysh263m89ud4_YNGl0o9ICKJFX',
+        price: '220/250',
+      },
+      {
+        bannerUrl:
+          'https://drive.google.com/uc?export=download&id=1B4wmQm1QXc5c73EhOrRXPXaIlSJGJrtz',
+        category: 'Main Course',
+        desc: '',
+        itemId: 'BC-012',
+        itemName: 'Herb Roasted Chicken',
+        objectUrl:
+          'https://drive.google.com/uc?export=download&id=1B4tGVggAHrQG_VaOsCeEz_zZj7hL1wPK',
+        price: '330',
+      },
+    ]
+
+    dispatch({
+      type: 'SET_CATEGORY_ITEM',
+      payload: data,
+    })
+  }
+
+  // get the data for item cust
+  const getCustForItem = (item: Iitem) => {
+    let itemCust: Igc[] = []
+    item.cust.map((igc) => {
+      const tempCust = gcState.filter((gc) => {
+        gc.id === igc
+      })
+      itemCust.push(tempCust[0])
+    })
+
+    return itemCust
+  }
+
+  const setStagedItem = (item: Iitem, type: string) => {
+    switch (type) {
+      case 'SET_WITH_CUST': {
+        const itemCust = getCustForItem(item)
+        const newItem = {
+          ...item,
+          cust: itemCust,
+        }
+        dispatch({ type: 'SET_STAGED', payload: newItem })
+      }
+      case 'SET_WITHOUT_CUST': {
+        dispatch({ type: 'SET_STAGED', payload: item })
+      }
+    }
+  }
+
+  // console.log(categories)
+  // console.log(username)
+  // console.log(gcState)
+  // console.log(items)
+
   return (
     <>
-      <SessionContext.Provider value={{ isLoading }}>
+      <SessionContext.Provider
+        value={{
+          isLoading,
+          setUsername,
+          getCategories,
+          populateGc,
+          categories,
+          username,
+          items,
+          setCategoryItems,
+          gcState,
+          stagedItems,
+          orderedItems,
+          setStagedItem,
+        }}
+      >
         {children}
       </SessionContext.Provider>
     </>
@@ -40,37 +230,3 @@ const SessionState = ({ children, db, sessionProps }: Iprops) => {
 }
 
 export default SessionState
-
-//   const getModifiedData = () => {
-//     const modifiedData = getData(Data);
-
-//     dispatch({
-//       type: GET_DATA,
-//       payload: modifiedData,
-//     });
-//   };
-//   const getCategories = () => {
-//     const categories = new Set();
-//     // console.log(state.allData, "from get c");
-//     if (state.allData && state.allData.eateries)
-//       state.allData.eateries.bistro_claytopia_all.map((data) => {
-//         categories.add(data.value.category);
-//       });
-//     console.log(categories);
-//   };
-
-//   useEffect(() => {
-//     console.log(state.allData);
-//     getCategories();
-//   }, [state.allData]);
-
-//   useEffect(() => {
-//     getModifiedData();
-//   }, []);
-
-/**
- * UseEffect
- *
- * Get server side props to get ID in the QR code => function to call the Get Initial Data
- *
- */
