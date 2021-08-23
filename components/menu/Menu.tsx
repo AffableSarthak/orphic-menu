@@ -48,7 +48,6 @@ const Welcome = ({ categoryName }) => {
           <p>
             <span className="text-secondary">Bhargav</span> added{' '}
             <span className="font-bold text-smokyBlack"> Cheese Burger </span>{' '}
-            {/*cust.name/desc.*/}
             <span className="inline-block ml-4">
               <BsArrowRight />
             </span>

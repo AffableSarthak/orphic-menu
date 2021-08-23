@@ -233,11 +233,25 @@ const SessionState = ({ children, db }: Iprops) => {
 
         let stageItem = {
           item,
-          count: 1,
+          qty: 1,
           username,
+          delivered: false,
         }
         await dispatch({ type: SET_STAGED, payload: stageItem })
         // api for firebase
+        db.ref('sessions')
+          .child('-MfXwG_o6gXl_fHuY0V8')
+          .get()
+          .then((snapshot) => {
+            if (snapshot.exists()) {
+              console.log(snapshot.val())
+            } else {
+              console.log('No data available')
+            }
+          })
+          .catch((error) => {
+            console.error(error)
+          })
       }
     }
     setIsLoading(false)
