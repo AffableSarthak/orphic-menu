@@ -1,6 +1,8 @@
-import { IoIosArrowBack } from 'react-icons/io'
 import CartItem from './CartItem'
 import { AiOutlinePlus } from 'react-icons/ai'
+import BackButton from '../common/BackButton'
+import router from 'next/router'
+import Button from '../common/Button'
 
 const Cart = () => {
   return (
@@ -9,9 +11,7 @@ const Cart = () => {
         {/* {cart header} */}
         <div id="cartHeader" className="mt-8 flex flex-row items-center">
           <div className="flex-four">
-            <span className=" inline-block  bg-whiteColor p-2 rounded-xl shadow-lg">
-              <IoIosArrowBack className="text-smokyBlack text-2xl" />
-            </span>
+            <BackButton />
           </div>
 
           <h1 className="font-semibold text-xl flex-six text-smokyBlack">
@@ -80,9 +80,7 @@ const Cart = () => {
             id="totalBill"
             className="mt-3 flex flex-row justify-between gap-10"
           >
-            <button className="flex-five py-4 text-center text-base font-medium rounded-3xl bg-primary  active:bg-secondary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl">
-              Checkout
-            </button>
+            <Button name='Checkout'/>
 
             <div>
               <p className="text-smokyBlack text-sm">Item Total</p>

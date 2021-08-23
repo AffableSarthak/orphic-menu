@@ -6,6 +6,8 @@ import PopularCard from './PopularCard'
 import sessionContext from '../../context/session/context'
 import { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import BackButton from '../common/BackButton'
+import CartButton from '../common/CartButton'
 
 const Welcome = () => {
   const { items, username, categories, gcState, stagedItems } =
@@ -32,22 +34,11 @@ const Welcome = () => {
           className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-menu bg-cover bg-no-repeat object-center text-white"
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
-            <a className="inline-block bg-whiteColor p-2  rounded-xl">
-              <IoIosArrowBack className="text-smokyBlack text-2xl" />
-            </a>
+            <BackButton />
             <h3 className="ml-2 font-bold">Hunger Strike</h3>
           </div>
 
-          <div
-            id="addCartBtn"
-            className="flex flex-row item-center text-xl py-3 px-4 rounded-xl bg-whiteColor text-smokyBlack"
-          >
-            <span className="flex justify-center items-center">
-              <CgShoppingBag className="mr-4 text-center" />
-            </span>
-
-            <span>0</span>
-          </div>
+          <CartButton />
         </div>
 
         <div

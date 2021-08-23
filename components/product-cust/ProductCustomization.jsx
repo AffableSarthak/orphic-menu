@@ -1,7 +1,9 @@
 import React from 'react'
 import { IoIosArrowBack } from 'react-icons/io'
 import { CgShoppingBag } from 'react-icons/cg'
-
+import BackButton from '../common/BackButton'
+import Button from '../common/Button'
+import CartButton from '../common/CartButton'
 const ProductCustomization = () => {
   return (
     <>
@@ -10,21 +12,9 @@ const ProductCustomization = () => {
           id="prodCustHeader"
           className="flex flex-row justify-between items-center mt-8"
         >
-          <a className="inline-block bg-whiteColor p-2  rounded-xl">
-            <IoIosArrowBack className="text-smokyBlack text-2xl" />
-          </a>
+          <BackButton />
 
-          <div
-            id="addCartBtn"
-            className="flex flex-row item-center  text-xl py-3 px-4 rounded-xl bg-primary text-smokyBlack"
-          >
-            <span className="flex justify-center items-center">
-              <CgShoppingBag className="mr-4 text-center" />
-            </span>
-            <span className="bg-whiteColor flex justify-center items-center px-2 rounded-full">
-              0
-            </span>
-          </div>
+          <CartButton />
         </div>
 
         <h1 className="text-sm font-semibold text-smokyBlack mt-8">
@@ -262,9 +252,7 @@ const ProductCustomization = () => {
           id="totalBill"
           className="flex flex-row justify-between gap-10 mt-8"
         >
-          <button className="flex-five py-4 text-center text-base font-medium rounded-3xl bg-primary  active:bg-secondary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl">
-            Add to cart
-          </button>
+          <Button name="Add to cart" />
           <div className="">
             <p className="text-smokyBlack text-sm">Item Total</p>
             <p className="text-dark font-bold text-xl">$13.50</p>
