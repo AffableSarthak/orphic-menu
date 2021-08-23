@@ -1,5 +1,5 @@
 import { HiOutlineLocationMarker } from 'react-icons/hi'
-import { CgShoppingBag } from 'react-icons/cg'
+
 import taco from '../../public/categoriesImages/taco.png'
 import wavyPizza from '../../public/categoriesImages/wavyPizza.png'
 import Image from 'next/image'
@@ -8,6 +8,7 @@ import sessionContext from '../../context/session/context'
 import { useContext, useEffect } from 'react'
 import { RiSearchLine } from 'react-icons/ri'
 import OrphicLoader from '../common/OrphicLoader'
+import CartButton from '../common/CartButton'
 
 const Categories = (props) => {
   const {
@@ -73,15 +74,8 @@ const Categories = (props) => {
               </option>
             </select>
           </div>
-          <div
-            id="addCartBtn"
-            className="flex flex-row item-center text-xl py-3 px-4 rounded-xl bg-whiteColor text-smokyBlack shadow-lg "
-          >
-            <span className="flex justify-center items-center ">
-              <CgShoppingBag className="mr-4 text-center" />
-            </span>
-            <span>0</span> {/* no of items in cart*/}
-          </div>
+          {/* cart button */}
+          <CartButton />
         </div>
 
         <div id="resturantHeading" className="mt-6">
