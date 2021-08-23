@@ -1,4 +1,9 @@
-import { SET_CATEGORIES, SET_STAGED, SET_USERNAME } from './actionType'
+import {
+  SET_CATEGORIES,
+  SET_LOADING,
+  SET_STAGED,
+  SET_USERNAME,
+} from './actionType'
 
 import SessionContext from './context'
 // import Data from '../../db/claytopia.json'
@@ -8,7 +13,7 @@ import { useRouter } from 'next/router'
 
 const SessionState = ({ children, db }: Iprops) => {
   const initialState: IinitialState = {
-    // isLoading: false,
+    isLoading: false,
     categories: [],
     orderedItems: [],
     stagedItems: [],
@@ -18,11 +23,12 @@ const SessionState = ({ children, db }: Iprops) => {
 
   // console.log({ sessionProps })
   const [state, dispatch] = useReducer(sessionReducer, initialState)
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+  // const [isLoading, setIsLoading] = useState<boolean>(false)
   const [gcState, setGcState] = useState<Igc[]>([])
   const router = useRouter()
 
-  const { categories, orderedItems, stagedItems, username, items } = state
+  const { isLoading, categories, orderedItems, stagedItems, username, items } =
+    state
 
   /**
    *  Functions to Add
@@ -35,16 +41,24 @@ const SessionState = ({ children, db }: Iprops) => {
    *
    */
 
+  const setLoading = (val: boolean) => {
+    dispatch({
+      type: SET_LOADING,
+      payload: val,
+    })
+  }
+
   const setUsername = async (username: string) => {
-    setIsLoading(true)
+    // setIsLoading(true)
+    setLoading(true)
     await dispatch({
       type: SET_USERNAME,
       payload: username,
     })
     await localStorage.setItem('username', username)
     // const rId = localStorage.getItem('rId')
-
-    setIsLoading(false)
+    // setIsLoading(false)
+    setLoading(false)
   }
 
   const populateGc = (gc: Igc[]) => {
@@ -55,7 +69,8 @@ const SessionState = ({ children, db }: Iprops) => {
     // Call api
     // console.log(eataryId)
     // setTimeout(() => {}, 3000)
-    setIsLoading(true)
+    // setIsLoading(true)
+    setLoading(true);
     const data: Icategory[] = [
       {
         name: 'Pizza',
@@ -75,12 +90,16 @@ const SessionState = ({ children, db }: Iprops) => {
       type: SET_CATEGORIES,
       payload: data,
     })
-    setIsLoading(false)
+
+    setLoading(false)
+    // setIsLoading(false)
+
   }
 
   const setCategoryItems = async (categoryName: string) => {
     // Call API
-    setIsLoading(true)
+    // setIsLoading(true)
+    setLoading(true);
     const data: Iitem[] = [
       {
         bannerUrl: '',
@@ -182,7 +201,8 @@ const SessionState = ({ children, db }: Iprops) => {
       type: 'SET_CATEGORY_ITEM',
       payload: data,
     })
-    setIsLoading(false)
+    setLoading(false);
+    // setIsLoading(false)
   }
 
   // get the data for item cust
@@ -201,7 +221,8 @@ const SessionState = ({ children, db }: Iprops) => {
   }
 
   const setStagedItem = async (item: Iitem, type: string) => {
-    setIsLoading(true)
+    // setIsLoading(true)
+    setLoading(true);
     switch (type) {
       case 'SET_WITH_CUST': {
         const itemCust = getCustForItem(item)
@@ -254,7 +275,8 @@ const SessionState = ({ children, db }: Iprops) => {
           })
       }
     }
-    setIsLoading(false)
+    setLoading(false);
+    // setIsLoading(false)
   }
 
   // console.log(categories)

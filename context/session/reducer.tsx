@@ -3,11 +3,17 @@ import {
   SET_USERNAME,
   SET_CATEGORY_ITEM,
   SET_STAGED,
+  SET_LOADING,
 } from './actionType'
 
 const sessionReducer = (state, action) => {
   const { type, payload } = action
   switch (type) {
+    case SET_LOADING:
+      return {
+        ...state,
+        isLoading: payload,
+      }
     case SET_CATEGORIES:
       return {
         ...state,

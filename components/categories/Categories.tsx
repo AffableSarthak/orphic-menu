@@ -33,7 +33,7 @@ const Categories = (props) => {
 
   return (
     <>
-      <OrphicLoader isLoading={isLoading} />
+      {/* <OrphicLoader isLoading={isLoading} /> */}
       <section id="categoriesSection">
         <div
           id="resturantHeader"
