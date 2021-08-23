@@ -13,7 +13,7 @@ const CategoriesCard = ({ categoryName, imgUrl }) => {
         className="flex flex-col justify-between p-4 rounded-2xl bg-categoriesCardsColor"
         onClick={() => {
           setCategoryItems(categoryName)
-          router.push({ pathname: '/app/menu' })
+          router.push({ pathname: `/app/menu/${categoryName}` })
         }}
       >
         <h2 id="cardHeading" className="text-base font-bold">

@@ -10,23 +10,32 @@ import Link from 'next/link'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as yup from 'yup'
 import sessionContext from '../../context/session/context'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import OrphicLoader from '../common/OrphicLoader'
 // import { useContext } from "react";
 // import eatriesContext from "../../context/eateries/eatriesContext";
 const UserDetail = (props) => {
   const { isLoading, setUsername, getCategories, populateGc } =
     useContext(sessionContext)
   // console.log(props)
+
   const router = useRouter()
   let rId = props.rId
-  if (typeof window !== 'undefined') {
+
+  useEffect(() => {
+    // localStorage.setItem('rId', rId)
+    // if (typeof window !== 'undefined') {
     localStorage.setItem('rId', rId)
-  }
+    // }
+
+    console.log(localStorage.getItem('rId'))
+  })
 
   return (
     <>
       {/* {allData && JSON.stringify(allData)} */}
+      <OrphicLoader isLoading={isLoading} />
       <div id="imagesConatiner">
         <div id="pizzaContainer" className="text-center mt-8 ">
           <Image src={pizzaMatte} width={60} height={60} />
@@ -61,15 +70,19 @@ const UserDetail = (props) => {
             username: yup
               .string()
               .required('Username is Required!')
-              .min(2, 'Atleast enter two characters')
+              .min(3, 'Atleast enter two characters')
               .max(15),
           })}
-          onSubmit={(values, formikHelpers) => {
-            setUsername(values.username)
-            rId = localStorage.getItem('rId')
-            router.push({
-              pathname: `/app/categories/${rId}`,
-            })
+          onSubmit={async (values, formikHelpers) => {
+            await setUsername(values.username)
+            if (
+              localStorage.getItem('username').length > 2 ||
+              localStorage.getItem('rId') !== undefined
+            ) {
+              router.push({
+                pathname: `/app/categories/${rId}`,
+              })
+            }
           }}
         >
           {({ values, errors, isSubmitting, isValidating }) => (

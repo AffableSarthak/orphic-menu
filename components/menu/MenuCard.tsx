@@ -8,7 +8,7 @@ import sessionContext from '../../context/session/context'
 import { useContext } from 'react'
 
 const MenuCard = (props) => {
-  const { setStagedItem } = useContext(sessionContext)
+  const { setStagedItem, isLoading } = useContext(sessionContext)
   const { item, stagedItems } = props
 
   const cartItemInfo = (stagedItems, item) => {
@@ -91,36 +91,46 @@ const MenuCard = (props) => {
   }
   return (
     <>
-      {console.log(item, 'img container')}
+      {/* {console.log(item, 'img container')} */}
       <div
         id="cardConatiner"
         className=" flex-four bg-dark min-h-[315px] rounded-[30px] my-1"
       >
         <div
           id="cardImgContainer"
-          className="flex justify-center relative h-[188px]"
+          className="flex justify-center relative h-[205px]"
         >
-          <img
-            src={item.bannerUrl}
-            className="block object-cover rounded-t-3xl"
-          />
-          {/*menu card product image*/}
+          {isLoading ? (
+            <div className="bg-gray-200 h-12 w-12 animate-pulse p-4"></div>
+          ) : (
+            <img
+              src={item.bannerUrl}
+              className="block object-cover rounded-t-3xl mt-4"
+            />
+          )}
           {cartItemInfo(stagedItems, item)}
         </div>
 
         <div id="cardtext" className="h-14 flex justify-center items-center">
-          <h2 className="text-whiteColor font-bold px-4 min-w-[224px]">
-            {item.itemName}
-          </h2>
-          {/* product name/desc.*/}
+          {isLoading ? (
+            <div className=" bg-gray-200 h-5 mx-1 animate-pulse rounded-md min-w-[224px]"></div>
+          ) : (
+            <h2 className="text-whiteColor font-bold px-4 min-w-[224px] ">
+              {item.itemName}
+            </h2>
+          )}
         </div>
 
         <div
           id="cardFooter"
           className="px-4 flex flex-row justify-between items-center "
         >
-          <h2 className="text-whiteColor font-bold">{item.price}</h2>
-          {/* product price.*/}
+          {isLoading ? (
+            <div className=" bg-gray-200 h-5 mx-1 w-1 px-6 animate-pulse rounded-md"></div>
+          ) : (
+            <h2 className="text-whiteColor font-bold">{item.price}</h2>
+          )}
+
           <span className="flex flex-row justify-center items-end bg-whiteColor rounded-full px-2 py-2">
             <FiBox className="text-3xl" />
           </span>

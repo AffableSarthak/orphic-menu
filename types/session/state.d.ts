@@ -20,7 +20,7 @@ interface Icategory {
 }
 
 interface IinitialState {
-    isLoading: boolean;
+    // isLoading: boolean;
     categories : Icategory[];
     orderedItems: IorderItem[];
     stagedItems: IorderItem[];

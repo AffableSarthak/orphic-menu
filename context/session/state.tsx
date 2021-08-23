@@ -4,10 +4,11 @@ import SessionContext from './context'
 // import Data from '../../db/claytopia.json'
 import { useReducer, useState } from 'react'
 import sessionReducer from './reducer'
+import { useRouter } from 'next/router'
 
 const SessionState = ({ children, db }: Iprops) => {
   const initialState: IinitialState = {
-    isLoading: false,
+    // isLoading: false,
     categories: [],
     orderedItems: [],
     stagedItems: [],
@@ -17,11 +18,11 @@ const SessionState = ({ children, db }: Iprops) => {
 
   // console.log({ sessionProps })
   const [state, dispatch] = useReducer(sessionReducer, initialState)
-
+  const [isLoading, setIsLoading] = useState<boolean>(false)
   const [gcState, setGcState] = useState<Igc[]>([])
-  
-  const { isLoading, categories, orderedItems, stagedItems, username, items } =
-    state
+  const router = useRouter()
+
+  const { categories, orderedItems, stagedItems, username, items } = state
 
   /**
    *  Functions to Add
@@ -34,22 +35,28 @@ const SessionState = ({ children, db }: Iprops) => {
    *
    */
 
-  const setUsername = (username: string) => {
-    dispatch({
+  const setUsername = async (username: string) => {
+    setIsLoading(true)
+    await dispatch({
       type: SET_USERNAME,
       payload: username,
     })
+    await localStorage.setItem('username', username)
+    // const rId = localStorage.getItem('rId')
+
+    setIsLoading(false)
   }
 
   const populateGc = (gc: Igc[]) => {
     setGcState(gc)
   }
 
-  const getCategories = (eataryId: string) => {
+  const getCategories = async (eataryId: string) => {
     // Call api
     // console.log(eataryId)
-
-    let data: Icategory[] = [
+    // setTimeout(() => {}, 3000)
+    setIsLoading(true)
+    const data: Icategory[] = [
       {
         name: 'Pizza',
         src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
@@ -64,14 +71,16 @@ const SessionState = ({ children, db }: Iprops) => {
       },
     ]
 
-    dispatch({
+    await dispatch({
       type: SET_CATEGORIES,
       payload: data,
     })
+    setIsLoading(false)
   }
 
-  const setCategoryItems = (categoryName: string) => {
+  const setCategoryItems = async (categoryName: string) => {
     // Call API
+    setIsLoading(true)
     const data: Iitem[] = [
       {
         bannerUrl: '',
@@ -169,10 +178,11 @@ const SessionState = ({ children, db }: Iprops) => {
       },
     ]
 
-    dispatch({
+    await dispatch({
       type: 'SET_CATEGORY_ITEM',
       payload: data,
     })
+    setIsLoading(false)
   }
 
   // get the data for item cust
@@ -190,7 +200,8 @@ const SessionState = ({ children, db }: Iprops) => {
     return itemCust
   }
 
-  const setStagedItem = (item: Iitem, type: string) => {
+  const setStagedItem = async (item: Iitem, type: string) => {
+    setIsLoading(true)
     switch (type) {
       case 'SET_WITH_CUST': {
         const itemCust = getCustForItem(item)
@@ -200,7 +211,9 @@ const SessionState = ({ children, db }: Iprops) => {
         }
         console.log(newItem, 'from setStaged newItems')
 
-        dispatch({ type: 'SET_STAGED', payload: newItem })
+        await dispatch({ type: 'SET_STAGED', payload: newItem })
+
+        // Firebase API to set Staged with call back
       }
       case 'SET_WITHOUT_CUST': {
         console.log('set staged item function ', item)
@@ -223,15 +236,17 @@ const SessionState = ({ children, db }: Iprops) => {
           count: 1,
           username,
         }
-        dispatch({ type: SET_STAGED, payload: stageItem })
+        await dispatch({ type: SET_STAGED, payload: stageItem })
+        // api for firebase
       }
     }
+    setIsLoading(false)
   }
 
   // console.log(categories)
   // console.log(username)
   // console.log(gcState)
-  console.log(stagedItems, 'from state')
+  // console.log(stagedItems, 'from state')
 
   return (
     <>

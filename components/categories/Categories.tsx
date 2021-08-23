@@ -5,8 +5,9 @@ import wavyPizza from '../../public/categoriesImages/wavyPizza.png'
 import Image from 'next/image'
 import CategoriesCard from './CategoriesCard'
 import sessionContext from '../../context/session/context'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { RiSearchLine } from 'react-icons/ri'
+import OrphicLoader from '../common/OrphicLoader'
 
 const Categories = (props) => {
   const {
@@ -18,11 +19,20 @@ const Categories = (props) => {
     username,
   } = useContext(sessionContext)
 
-  if (typeof window !== 'undefined') {
-    localStorage.setItem('username', username)
-  }
+  // if (typeof window !== 'undefined') {
+  //   localStorage.setItem('username', username)
+  // }
+  useEffect(() => {
+    console.log(localStorage.getItem('rId'))
+    console.log(localStorage.getItem('username'))
+    // return () => {
+    //   cleanup
+    // }
+  })
+
   return (
     <>
+      <OrphicLoader isLoading={isLoading} />
       <section id="categoriesSection">
         <div
           id="resturantHeader"
@@ -98,7 +108,11 @@ const Categories = (props) => {
           >
             Popular
           </h2>
-          <div id="categoriesCardsContainer" className="grid grid-cols-2 gap-4">
+          <div
+            id="categoriesCardsContainer"
+            className={`grid grid-cols-2 gap-4 ${isLoading && 'animate-pulse'}`}
+            // className="animate-pulse grid grid-cols-2 gap-4"
+          >
             {props.sessionProps.categories.map((c, i) => (
               <CategoriesCard key={i} categoryName={c.name} imgUrl={c.src} />
             ))}

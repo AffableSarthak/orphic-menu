@@ -7,7 +7,7 @@ import sessionContext from '../../context/session/context'
 import { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-const Welcome = () => {
+const Welcome = ({ categoryName }) => {
   const { items, username, categories, gcState, stagedItems } =
     useContext(sessionContext)
   // console.log(
@@ -35,7 +35,7 @@ const Welcome = () => {
             <a className="inline-block bg-whiteColor p-2  rounded-xl">
               <IoIosArrowBack className="text-smokyBlack text-2xl" />
             </a>
-            <h3 className="ml-2 font-bold">Hunger Strike</h3>
+            <h3 className="ml-2 font-bold">{categoryName}</h3>
           </div>
 
           <div
@@ -63,17 +63,19 @@ const Welcome = () => {
             </span>
           </p>
         </div>
-
-        <div className="mt-16">
+        <div className="mt-14 p-4">
           <h2 className="text-lg font-semibold px-4">Recommend</h2>
-          <div className="flex flex-row items-center gap-4 overflow-x-auto     px-4">
-            {items.map((item, index) => (
-              <MenuCard key={index} item={item} stagedItems={stagedItems} />
-            ))}
-            {/* <MenuCard />
-            <MenuCard /> */}
-          </div>
         </div>
+
+        {/* <div className=""> */}
+        <div className="flex flex-row items-center gap-4 overflow-x-auto px-4">
+          {items.map((item, index) => (
+            <MenuCard key={index} item={item} stagedItems={stagedItems} />
+          ))}
+          {/* <MenuCard />
+            <MenuCard /> */}
+        </div>
+        {/* </div> */}
 
         {/* <div className="mt-5">
           <h2 className="text-lg font-semibold px-4">Popular Now</h2>
