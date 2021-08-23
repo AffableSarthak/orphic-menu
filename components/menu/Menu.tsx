@@ -66,7 +66,7 @@ const Welcome = () => {
 
         <div className="mt-16">
           <h2 className="text-lg font-semibold px-4">Recommend</h2>
-          <div className="flex flex-row items-center gap-4 overflow-x-auto     px-4">
+          <div className="flex flex-row items-center gap-4 overflow-x-auto mt-3 px-4">
             {items.map((item, index) => (
               <MenuCard key={index} item={item} stagedItems={stagedItems} />
             ))}

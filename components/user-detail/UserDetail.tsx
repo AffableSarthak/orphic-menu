@@ -77,7 +77,7 @@ const UserDetail = (props) => {
               <Field
                 name="username"
                 placeholder="Enter your Name"
-                className="bg-whiteColor w-full px-8 py-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl focus:bg-[#e1e1e1]"
+                className="bg-whiteColor w-full px-8 py-4 rounded-2xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl "
               />
               {/* <ErrorMessage
                 name="username"
