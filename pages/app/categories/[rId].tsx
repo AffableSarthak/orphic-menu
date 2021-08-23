@@ -27,6 +27,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     props: {
       tableId: 'T-070',
       eateryId: 'E-001',
+      sessionId: '123',
       gc: [
         {
           id: '001',

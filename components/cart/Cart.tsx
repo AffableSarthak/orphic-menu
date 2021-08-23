@@ -11,7 +11,7 @@ const Cart = () => {
         {/* {cart header} */}
         <div id="cartHeader" className="mt-8 flex flex-row items-center">
           <div className="flex-four">
-            <BackButton />
+            <BackButton path='/app/menu'/>
           </div>
 
           <h1 className="font-semibold text-xl flex-six text-smokyBlack">

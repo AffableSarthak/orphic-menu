@@ -1,11 +1,15 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import { useContext } from 'react'
 import sessionContext from '../../context/session/context'
 
 const CategoriesCard = ({ categoryName, imgUrl }) => {
   const router = useRouter()
   const { setCategoryItems } = useContext(sessionContext)
+  useEffect(()=>{
+      localStorage.setItem('categoryName', categoryName)
+  },[])
   return (
     <>
       <div

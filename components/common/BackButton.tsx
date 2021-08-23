@@ -1,9 +1,13 @@
 import { IoIosArrowBack } from 'react-icons/io'
-
-const BackButton = () => {
+import { useRouter } from 'next/router'
+const BackButton = ({ path }) => {
+  const router = useRouter()
   return (
     <>
-      <span className=" inline-block  bg-whiteColor p-2 rounded-xl shadow-lg">
+      <span
+        onClick={() => router.push({ pathname: path })}
+        className="inline-block  bg-whiteColor p-2 rounded-xl shadow-lg"
+      >
         <IoIosArrowBack className="text-smokyBlack text-2xl" />
       </span>
     </>

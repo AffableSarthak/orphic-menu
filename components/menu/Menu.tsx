@@ -8,8 +8,9 @@ import { useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import BackButton from '../common/BackButton'
 import CartButton from '../common/CartButton'
+import OrphicLoader from '../common/OrphicLoader'
 
-const Welcome = ({ categoryName }) => {
+const Menu = ({ categoryName }) => {
   const { items, username, categories, gcState, stagedItems } =
     useContext(sessionContext)
   // console.log(
@@ -21,11 +22,16 @@ const Welcome = ({ categoryName }) => {
   // console.log(stagedItems)
   const router = useRouter()
 
+  const isLoading = true
+
   useEffect(() => {
     const rId = localStorage.getItem('rId')
     if (items.length === 0) router.push(`/app/categories/${rId}`)
   }, [])
 
+  {
+    isLoading && <OrphicLoader />
+  }
   return (
     <>
       <section className="relative min-w-full min-h-screen">
@@ -34,7 +40,9 @@ const Welcome = ({ categoryName }) => {
           className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-menu bg-cover bg-no-repeat object-center text-white"
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
-            <BackButton />
+            <BackButton
+              path={`/app/categories/${localStorage.getItem('rId')}`}
+            />
             <h3 className="ml-2 font-bold">{categoryName}</h3>
           </div>
 
@@ -74,4 +82,4 @@ const Welcome = ({ categoryName }) => {
   )
 }
 
-export default Welcome
+export default Menu

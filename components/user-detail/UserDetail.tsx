@@ -35,7 +35,7 @@ const UserDetail = (props) => {
   return (
     <>
       {/* {allData && JSON.stringify(allData)} */}
-      <OrphicLoader isLoading={isLoading} />
+      {/* <OrphicLoader isLoading={isLoading} /> */}
       <div id="imagesConatiner">
         <div id="pizzaContainer" className="text-center mt-8 ">
           <Image src={pizzaMatte} width={60} height={60} />
