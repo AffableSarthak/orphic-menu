@@ -19,16 +19,25 @@ const SessionState = ({ children, db }: Iprops) => {
     stagedItems: [],
     username: '',
     items: [],
+    currentItem: {},
   }
 
   // console.log({ sessionProps })
   const [state, dispatch] = useReducer(sessionReducer, initialState)
   // const [isLoading, setIsLoading] = useState<boolean>(false)
   const [gcState, setGcState] = useState<Igc[]>([])
+  const [miniGC, setminiGC] = useState<Igc[]>([])
   const router = useRouter()
 
-  const { isLoading, categories, orderedItems, stagedItems, username, items } =
-    state
+  const {
+    isLoading,
+    categories,
+    orderedItems,
+    stagedItems,
+    username,
+    items,
+    currentItem,
+  } = state
 
   /**
    *  Functions to Add
@@ -41,16 +50,24 @@ const SessionState = ({ children, db }: Iprops) => {
    *
    */
 
-  const setLoading = (val: boolean) => {
-    dispatch({
+  const setLoading = async (val: boolean) => {
+    await dispatch({
       type: SET_LOADING,
       payload: val,
     })
   }
 
+  const setCurrentItem = async (item: Iitem) => {
+    await setLoading(true)
+    await dispatch({
+      type: 'SET_CURRENT_ITEM',
+      payload: item,
+    })
+    await setLoading(false)
+  }
   const setUsername = async (username: string) => {
     // setIsLoading(true)
-    setLoading(true)
+    await setLoading(true)
     await dispatch({
       type: SET_USERNAME,
       payload: username,
@@ -58,59 +75,51 @@ const SessionState = ({ children, db }: Iprops) => {
     await localStorage.setItem('username', username)
     // const rId = localStorage.getItem('rId')
     // setIsLoading(false)
-    setLoading(false)
+    await setLoading(false)
   }
 
-  const populateGc = (gc: Igc[]) => {
-    setGcState(gc)
+  const populateGc = async (gc: Igc[]) => {
+    // console.log(gc)
+    await setLoading(true)
+    await setGcState([...gc])
+    await setLoading(false)
   }
 
-  const getCategories = async (eataryId: string) => {
-    // Call api
-    // console.log(eataryId)
-    // setTimeout(() => {}, 3000)
-    // setIsLoading(true)
-    setLoading(true);
-    const data: Icategory[] = [
-      {
-        name: 'Pizza',
-        src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
-      },
-      {
-        name: 'Burger',
-        src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
-      },
-      {
-        name: 'Pasta',
-        src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
-      },
-    ]
+  // const getCategories = async (eataryId: string) => {
+  //   // Call api
+  //   // console.log(eataryId)
+  //   // setTimeout(() => {}, 3000)
+  //   // setIsLoading(true)
+  //   await setLoading(true)
+  //   const data: Icategory[] = [
+  //     {
+  //       name: 'Pizza',
+  //       src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
+  //     },
+  //     {
+  //       name: 'Burger',
+  //       src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
+  //     },
+  //     {
+  //       name: 'Pasta',
+  //       src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
+  //     },
+  //   ]
 
-    await dispatch({
-      type: SET_CATEGORIES,
-      payload: data,
-    })
+  //   await dispatch({
+  //     type: SET_CATEGORIES,
+  //     payload: data,
+  //   })
 
-    setLoading(false)
-    // setIsLoading(false)
-
-  }
+  //   await setLoading(false)
+  //   // setIsLoading(false)
+  // }
 
   const setCategoryItems = async (categoryName: string) => {
     // Call API
     // setIsLoading(true)
-    setLoading(true);
+    await setLoading(true)
     const data: Iitem[] = [
-      {
-        bannerUrl: '',
-        category: 'Pasta',
-        cust: ['002'],
-        desc: '',
-        itemId: 'BC-001',
-        itemName: 'Bistro Mix Mushroom',
-        objectUrl: '',
-        price: '320',
-      },
       {
         bannerUrl:
           'https://drive.google.com/uc?export=download&id=1jw7MKjy4PaP7zR5U3J3m3ePlyrGuSh5z',
@@ -122,45 +131,18 @@ const SessionState = ({ children, db }: Iprops) => {
           'https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL',
         price: '350',
       },
-      {
-        bannerUrl: '',
-        category: 'Main Course',
-        cust: ['001'],
-        desc: '',
-        itemId: 'BC-003',
-        itemName: 'Hosin Glazed Grilled Chicken',
-        objectUrl: '',
-        price: '280',
-      },
+
       {
         bannerUrl:
           'https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw',
         category: 'Pasta',
-        cust: ['002'],
+        cust: ['002', '040', '001'],
         desc: '',
         itemId: 'BC-005',
         itemName: 'Wild Mushroom Pasta ',
         objectUrl:
           'https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk',
         price: '295',
-      },
-      {
-        bannerUrl: '',
-        category: 'Snacks',
-        desc: '',
-        itemId: 'BC-007',
-        itemName: 'French Fries',
-        objectUrl: '',
-        price: '110',
-      },
-      {
-        bannerUrl: '',
-        category: 'Soups & Salads',
-        desc: '',
-        itemId: 'BC-008',
-        itemName: 'Exotic Veggies Soup',
-        objectUrl: '',
-        price: '200',
       },
       {
         bannerUrl:
@@ -201,28 +183,28 @@ const SessionState = ({ children, db }: Iprops) => {
       type: 'SET_CATEGORY_ITEM',
       payload: data,
     })
-    setLoading(false);
+    await setLoading(false)
     // setIsLoading(false)
   }
 
   // get the data for item cust
-  const getCustForItem = (item: Iitem) => {
-    let itemCust: Igc[] = []
-    item.cust.map((igc) => {
-      const tempCust = gcState.filter((gc) => {
-        gc.id === igc
+  const getCustForItem = async (item: Iitem) => {
+    console.log({ item, gcState })
+    localStorage.setItem('currentItemName', item.itemName)
+    let tempArray = []
+    item.cust.map((ic) => {
+      let itemCObj = gcState.find((gc) => {
+        console.log(gc.id, typeof gc.id, ic, typeof ic)
+        return gc.id === ic
       })
-      itemCust.push(tempCust[0])
+      tempArray.push(itemCObj)
     })
-
-    console.log(itemCust)
-
-    return itemCust
+    setminiGC([...tempArray])
   }
 
   const setStagedItem = async (item: Iitem, type: string) => {
     // setIsLoading(true)
-    setLoading(true);
+    await setLoading(true)
     switch (type) {
       case 'SET_WITH_CUST': {
         const itemCust = getCustForItem(item)
@@ -275,13 +257,13 @@ const SessionState = ({ children, db }: Iprops) => {
           })
       }
     }
-    setLoading(false);
+    await setLoading(false)
     // setIsLoading(false)
   }
 
   // console.log(categories)
   // console.log(username)
-  // console.log(gcState)
+  // console.log(miniGC)
   // console.log(stagedItems, 'from state')
 
   return (
@@ -290,7 +272,7 @@ const SessionState = ({ children, db }: Iprops) => {
         value={{
           isLoading,
           setUsername,
-          getCategories,
+          // getCategories,
           populateGc,
           categories,
           username,
@@ -300,6 +282,10 @@ const SessionState = ({ children, db }: Iprops) => {
           stagedItems,
           orderedItems,
           setStagedItem,
+          getCustForItem,
+          miniGC,
+          currentItem,
+          setCurrentItem,
         }}
       >
         {children}

@@ -26,4 +26,5 @@ interface IinitialState {
     stagedItems: IorderItem[];
     username: string;
     items : Iitem[];
+    currentItem: object;
 }

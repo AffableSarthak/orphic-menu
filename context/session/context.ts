@@ -4,7 +4,7 @@ import { createContext } from "react";
 export type sessionDataType = {
   isLoading: boolean;
   setUsername: (username: string) => void;
-  getCategories: (eataryId: string) => void;
+  // getCategories: (eataryId: string) => void;
   populateGc: (gc: Igc[]) => void;
   categories: any;
   username: any;
@@ -14,13 +14,18 @@ export type sessionDataType = {
   stagedItems: any;
   orderedItems: any;
   setStagedItem: (item: Iitem, type: string) => void;
+  // getCustForItem: (item: Iitem) => Igc[];
+  getCustForItem: (item: Iitem) => void;
+  miniGC: Igc[];
+  currentItem: any;
+  setCurrentItem: (item: Iitem) => Promise<void>;
 
 };
 
 export const sessionDefaultValue: sessionDataType = {
   isLoading: false,
   setUsername: () => null,
-  getCategories: () => null,
+  // getCategories: () => null,
   populateGc:()=> null,
   categories: [],
   username:'',
@@ -29,7 +34,11 @@ export const sessionDefaultValue: sessionDataType = {
   gcState: [],
   stagedItems: [],
   orderedItems: [],
-  setStagedItem: () => null
+  setStagedItem: () => null,
+  getCustForItem: () => null,
+  miniGC: [],
+  currentItem: {},
+  setCurrentItem: () => Promise.resolve()
 };
 
 const sessionContext = createContext<sessionDataType>(sessionDefaultValue);

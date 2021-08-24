@@ -16,8 +16,7 @@ import OrphicLoader from '../common/OrphicLoader'
 // import { useContext } from "react";
 // import eatriesContext from "../../context/eateries/eatriesContext";
 const UserDetail = (props) => {
-  const { isLoading, setUsername, getCategories, populateGc } =
-    useContext(sessionContext)
+  const { isLoading, setUsername, populateGc } = useContext(sessionContext)
   // console.log(props)
 
   const router = useRouter()

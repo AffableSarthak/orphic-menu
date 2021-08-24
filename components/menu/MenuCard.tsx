@@ -2,16 +2,18 @@
 
 import { FiBox } from 'react-icons/fi'
 import { AiOutlinePlus } from 'react-icons/ai'
+import burgerGif from '../../public/menuImages/burger.gif'
+import Image from 'next/image'
 import sessionContext from '../../context/session/context'
 import { useContext } from 'react'
 import { useRouter } from 'next/router'
-import OrphicLoader from '../common/OrphicLoader'
 
 const MenuCard = (props) => {
-  const router = useRouter()
-  const { setStagedItem } = useContext(sessionContext)
+  const { setStagedItem, isLoading, getCustForItem } =
+    useContext(sessionContext)
   const { item, stagedItems } = props
-  const isLoading = true
+  const router = useRouter()
+
   const cartItemInfo = (stagedItems, item) => {
     if (item.cust) {
       // Item has customization
@@ -20,10 +22,13 @@ const MenuCard = (props) => {
         return (
           // push to cart with and add the item with other details to staged items => item, count, username, cust array
           <span
-            onClick={() => {}}
-            className="flex items-center justify-center bg-whiteColor p-2 rounded-full"
+            onClick={async () => {
+              await getCustForItem(item)
+              router.push({ pathname: `/app/cust` })
+            }}
+            className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
           >
-            <AiOutlinePlus className="text-smokyBlack" />
+            <AiOutlinePlus className="text-smokyBlack text-xl" />
             <p>cust</p>
           </span>
         )
@@ -32,15 +37,21 @@ const MenuCard = (props) => {
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
           // If the current Item is present in Cart
           return (
-            <span className="flex items-center justify-center bg-whiteColor p-2 rounded-full ">
+            <span
+              onClick={async () => {
+                await getCustForItem(item)
+                router.push({ pathname: `/app/cust` })
+              }}
+              className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+            >
               {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
-              <p className="bg-primary text-sm">ADDED</p>
+              <p className="text-primary text-sm">ADDED</p>
             </span>
           )
         } else {
           // current Item is not present in the cart
           return (
-            <span className="flex items-center justify-center bg-whiteColor p-2 rounded-full">
+            <span className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2">
               <AiOutlinePlus className="text-smokyBlack text-xl" />
             </span>
           )
@@ -58,9 +69,9 @@ const MenuCard = (props) => {
 
               setStagedItem(item, 'SET_WITHOUT_CUST')
             }}
-            className="flex items-center justify-center bg-whiteColor p-2 rounded-full"
+            className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
           >
-            <AiOutlinePlus />
+            <AiOutlinePlus className="text-smokyBlack text-xl" />
           </span>
         )
       } else if (stagedItems.length > 0) {
@@ -68,7 +79,7 @@ const MenuCard = (props) => {
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
           // If the current Item is present in Cart
           return (
-            <span className="flex items-center justify-center bg-primary text-whiteColor p-2 rounded-full">
+            <span className=" absolute right-5 top-5 flex flex-row justify-center items-center  rounded-full px-2 py-2 bg-primary text-white">
               {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
               Added
             </span>
@@ -81,9 +92,9 @@ const MenuCard = (props) => {
               onClick={() => {
                 setStagedItem(item, 'SET_WITHOUT_CUST')
               }}
-              className="flex items-center justify-center bg-whiteColor p-2 rounded-full"
+              className="absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
             >
-              <AiOutlinePlus />
+              <AiOutlinePlus className="text-smokyBlack text-xl" />
             </span>
           )
         }
@@ -92,67 +103,49 @@ const MenuCard = (props) => {
   }
   return (
     <>
-      {console.log(item, 'img container')}
-      
+      {/* {console.log(item, 'img container')} */}
       <div
-        id="cardContainer"
-        className="flex-four min-w-[224px] min-h-[324px] bg-dark rounded-[30px] my-1"
+        id="cardConatiner"
+        className=" flex-four bg-dark min-h-[315px] rounded-[30px] my-1"
       >
         <div
-          id="cardHeader"
-          className="flex justify-between items-center px-4 min-h-[60px] rounded-t-[30px]"
+          id="cardImgContainer"
+          className="flex justify-center relative h-[205px]"
         >
           {isLoading ? (
-            <>
-              <p className="bg-gray-500 h-5  w-10 px-6 animate-pulse rounded-md"></p>
-              <span className="bg-gray-500 h-5 mx-1 w-1 px-6 animate-pulse rounded-md"></span>
-            </>
-          ) : (
-            <>
-              <p className="text-white">{item.itemId}</p>
-              {cartItemInfo(stagedItems, item)}
-            </>
-          )}
-        </div>
-        <div id="imgContainer" className="flex-3 mt-2">
-          {isLoading ? (
-            <>
-              <div className="h-[130px] mb-5 w-11/12 mx-auto animate-pulse rounded-md bg-gray-500"></div>
-            </>
+            <div className="bg-gray-200 h-12 w-12 animate-pulse p-4"></div>
           ) : (
             <img
               src={item.bannerUrl}
-              className="block w-full min-h-[150px] object-cover"
+              className="block object-cover rounded-t-3xl mt-4"
             />
           )}
+          {cartItemInfo(stagedItems, item)}
         </div>
 
-        <div className="min-h-[49px]">
+        <div id="cardtext" className="h-14 flex justify-center items-center">
           {isLoading ? (
-            <div className="bg-gray-500 h-5 w-11/12 mx-auto px-6 animate-pulse rounded-md"></div>
+            <div className=" bg-gray-200 h-5 mx-1 animate-pulse rounded-md min-w-[224px]"></div>
           ) : (
-            <h1 className="text-whiteColor px-4 text-base font-medium">
+            <h2 className="text-whiteColor font-bold px-4 min-w-[224px] ">
               {item.itemName}
-            </h1>
+            </h2>
           )}
         </div>
 
-        <div className="flex justify-between items-end px-4 pb-4">
+        <div
+          id="cardFooter"
+          className="px-4 flex flex-row justify-between items-center "
+        >
           {isLoading ? (
-            <>
-              <p className="flex-7 w-8/12 bg-gray-500 h-5  mx-auto px-6 animate-pulse rounded-md"></p>
-              <span className="flex-2 bg-gray-500 h-5 mx-auto px-6 animate-pulse rounded-md"></span>
-            </>
+            <div className=" bg-gray-200 h-5 mx-1 w-1 px-6 animate-pulse rounded-md"></div>
           ) : (
-            <>
-              <p className="text-whiteColor text-lg font-normal">
-                ${item.price}
-              </p>
-              <span className="flex justify-center items-center bg-whiteColor rounded-full p-2 ">
-                <FiBox className="text-3xl" />
-              </span>
-            </>
+            <h2 className="text-whiteColor font-bold">{item.price}</h2>
           )}
+
+          <span className="flex flex-row justify-center items-end bg-whiteColor rounded-full px-2 py-2">
+            <FiBox className="text-3xl" />
+          </span>
         </div>
       </div>
     </>

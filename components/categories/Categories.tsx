@@ -11,25 +11,25 @@ import OrphicLoader from '../common/OrphicLoader'
 import CartButton from '../common/CartButton'
 
 const Categories = (props) => {
-  const {
-    isLoading,
-    setUsername,
-    getCategories,
-    populateGc,
-    categories,
-    username,
-  } = useContext(sessionContext)
+  const { isLoading, setUsername, populateGc, username } =
+    useContext(sessionContext)
+
+  const { tableId, sessionId, eateryId, categories, gc } = props.sessionProps
 
   // if (typeof window !== 'undefined') {
   //   localStorage.setItem('username', username)
   // }
+
   useEffect(() => {
-    console.log(localStorage.getItem('rId'))
-    console.log(localStorage.getItem('username'))
-    // return () => {
-    //   cleanup
-    // }
-  })
+    localStorage.setItem('sessionId', sessionId)
+    localStorage.setItem('tableId', tableId)
+    localStorage.setItem('eateryId', eateryId)
+    {
+      ;(async () => {
+        await populateGc(gc)
+      })()
+    }
+  }, [])
 
   return (
     <>
@@ -107,7 +107,7 @@ const Categories = (props) => {
             className={`grid grid-cols-2 gap-4 ${isLoading && 'animate-pulse'}`}
             // className="animate-pulse grid grid-cols-2 gap-4"
           >
-            {props.sessionProps.categories.map((c, i) => (
+            {categories.map((c, i) => (
               <CategoriesCard key={i} categoryName={c.name} imgUrl={c.src} />
             ))}
           </div>

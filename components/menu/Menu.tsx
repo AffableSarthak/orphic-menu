@@ -9,6 +9,7 @@ import { useRouter } from 'next/router'
 import BackButton from '../common/BackButton'
 import CartButton from '../common/CartButton'
 import OrphicLoader from '../common/OrphicLoader'
+import { useState } from 'react'
 
 const Menu = ({ categoryName }) => {
   const { items, username, categories, gcState, stagedItems } =
@@ -24,25 +25,26 @@ const Menu = ({ categoryName }) => {
 
   const isLoading = true
 
+  const [rId, setRId] = useState('')
+
   useEffect(() => {
     const rId = localStorage.getItem('rId')
+    setRId(rId)
     if (items.length === 0) router.push(`/app/categories/${rId}`)
   }, [])
 
-  {
-    isLoading && <OrphicLoader />
-  }
+  console.log({ rId })
+
   return (
     <>
+      {/* {isLoading ? <OrphicLoader /> : ''} */}
       <section className="relative min-w-full min-h-screen">
         <div
           id="menuHeaderConatiner"
           className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-menu bg-cover bg-no-repeat object-center text-white"
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
-            <BackButton
-              path={`/app/categories/${localStorage.getItem('rId')}`}
-            />
+            <BackButton path={`/app/categories/${rId}`} />
             <h3 className="ml-2 font-bold">{categoryName}</h3>
           </div>
 

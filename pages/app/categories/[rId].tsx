@@ -1,11 +1,7 @@
 import Categories from '../../../components/categories/Categories'
 import { GetServerSideProps } from 'next'
 
-export default function categories(props: {
-  tableId: string
-  eateryId: string
-  gc: Igc[]
-}) {
+export default function categories(props) {
   return (
     <>
       <Categories sessionProps={props} />
@@ -31,12 +27,46 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       gc: [
         {
           id: '001',
-          name: 'Choose',
+          name: 'Choose Size',
+          type: 'one',
+          values: [
+            {
+              name: 'Small',
+              price: 20,
+            },
+            {
+              name: 'Large',
+              price: 40,
+            },
+          ],
+        },
+        {
+          id: '002',
+          name: 'Choose Pasta Type',
           type: 'one',
           values: [
             {
               name: 'Penne',
-              price: 1010,
+              price: 0,
+            },
+            {
+              name: 'Spaghetti',
+              price: 0,
+            },
+          ],
+        },
+        {
+          id: '040',
+          name: 'Add On',
+          type: 'many',
+          values: [
+            {
+              name: 'Pepsi',
+              price: 50,
+            },
+            {
+              name: 'Brownie',
+              price: 60,
             },
           ],
         },
