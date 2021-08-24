@@ -1,18 +1,18 @@
 // import Box from "../../public/menuImages/Box.svg";
 
-import { FiBox } from 'react-icons/fi'
-import { AiOutlinePlus } from 'react-icons/ai'
-import burgerGif from '../../public/menuImages/burger.gif'
-import Image from 'next/image'
-import sessionContext from '../../context/session/context'
-import { useContext } from 'react'
-import { useRouter } from 'next/router'
+import { FiBox } from "react-icons/fi";
+import { AiOutlinePlus } from "react-icons/ai";
+import burgerGif from "../../public/menuImages/burger.gif";
+import Image from "next/image";
+import sessionContext from "../../context/session/context";
+import { useContext } from "react";
+import { useRouter } from "next/router";
 
 const MenuCard = (props) => {
   const { setStagedItem, isLoading, getCustForItem } =
-    useContext(sessionContext)
-  const { item, stagedItems } = props
-  const router = useRouter()
+    useContext(sessionContext);
+  const { item, stagedItems } = props;
+  const router = useRouter();
 
   const cartItemInfo = (stagedItems, item) => {
     if (item.cust) {
@@ -23,15 +23,15 @@ const MenuCard = (props) => {
           // push to cart with and add the item with other details to staged items => item, count, username, cust array
           <span
             onClick={async () => {
-              await getCustForItem(item)
-              router.push({ pathname: `/app/cust` })
+              await getCustForItem(item);
+              router.push({ pathname: `/app/cust` });
             }}
             className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
           >
             <AiOutlinePlus className="text-smokyBlack text-xl" />
             <p>cust</p>
           </span>
-        )
+        );
       } else if (stagedItems.length > 0) {
         // Items present in cart
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
@@ -39,22 +39,22 @@ const MenuCard = (props) => {
           return (
             <span
               onClick={async () => {
-                await getCustForItem(item)
-                router.push({ pathname: `/app/cust` })
+                await getCustForItem(item);
+                router.push({ pathname: `/app/cust` });
               }}
               className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
             >
               {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
               <p className="text-primary text-sm">ADDED</p>
             </span>
-          )
+          );
         } else {
           // current Item is not present in the cart
           return (
             <span className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2">
               <AiOutlinePlus className="text-smokyBlack text-xl" />
             </span>
-          )
+          );
         }
       }
     } else {
@@ -65,15 +65,15 @@ const MenuCard = (props) => {
           // push to cart with and add the item with other details to staged items => item, count, username
           <span
             onClick={() => {
-              console.log('Inside without cust item')
+              console.log("Inside without cust item");
 
-              setStagedItem(item, 'SET_WITHOUT_CUST')
+              setStagedItem(item, "SET_WITHOUT_CUST");
             }}
             className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
           >
             <AiOutlinePlus className="text-smokyBlack text-xl" />
           </span>
-        )
+        );
       } else if (stagedItems.length > 0) {
         // Items present in cart
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
@@ -83,24 +83,24 @@ const MenuCard = (props) => {
               {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
               Added
             </span>
-          )
+          );
         } else {
           // current Item is not present in the cart
           return (
             // push to cart with and add the item with other details to staged items => item, count, username
             <span
               onClick={() => {
-                setStagedItem(item, 'SET_WITHOUT_CUST')
+                setStagedItem(item, "SET_WITHOUT_CUST");
               }}
               className="absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
             >
               <AiOutlinePlus className="text-smokyBlack text-xl" />
             </span>
-          )
+          );
         }
       }
     }
-  }
+  };
   return (
     <>
       {/* {console.log(item, 'img container')} */}
@@ -149,7 +149,7 @@ const MenuCard = (props) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default MenuCard
+export default MenuCard;

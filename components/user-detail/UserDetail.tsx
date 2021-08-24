@@ -1,35 +1,38 @@
-import Image from 'next/image'
-import pizzaMatte from '../../public/usernameImages/pizzaMatte.png'
-import burgerSmall from '../../public/usernameImages/burgerSmall.png'
-import friesIsometric from '../../public/usernameImages/friesIsometric.png'
-import hotDog from '../../public/usernameImages/hotDog.png'
-import ketchupMayo from '../../public/usernameImages/ketchupMayo.png'
-import orphicLogo from '../../public/usernameImages/orphicLogo.png'
-import { BsArrowRight } from 'react-icons/bs'
-import Link from 'next/link'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-import * as yup from 'yup'
-import sessionContext from '../../context/session/context'
-import { useContext, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import OrphicLoader from '../common/OrphicLoader'
+import Image from "next/image";
+import pizzaMatte from "../../public/usernameImages/pizzaMatte.png";
+import burgerSmall from "../../public/usernameImages/burgerSmall.png";
+import friesIsometric from "../../public/usernameImages/friesIsometric.png";
+import hotDog from "../../public/usernameImages/hotDog.png";
+import ketchupMayo from "../../public/usernameImages/ketchupMayo.png";
+import orphicLogo from "../../public/usernameImages/orphicLogo.png";
+import { BsArrowRight } from "react-icons/bs";
+import Link from "next/link";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as yup from "yup";
+import sessionContext from "../../context/session/context";
+import { useContext, useEffect } from "react";
+import { useRouter } from "next/router";
+import OrphicLoader from "../common/OrphicLoader";
 // import { useContext } from "react";
 // import eatriesContext from "../../context/eateries/eatriesContext";
 const UserDetail = (props) => {
-  const { isLoading, setUsername, populateGc } = useContext(sessionContext)
+  const { isLoading, setUsername, populateGc } = useContext(sessionContext);
   // console.log(props)
 
-  const router = useRouter()
-  let rId = props.rId
+  const router = useRouter();
+  let rId = props.rId;
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
 
   useEffect(() => {
     // localStorage.setItem('rId', rId)
     // if (typeof window !== 'undefined') {
-    localStorage.setItem('rId', rId)
+    localStorage.setItem("rId", rId);
     // }
 
-    console.log(localStorage.getItem('rId'))
-  })
+    console.log(localStorage.getItem("rId"));
+  });
 
   return (
     <>
@@ -64,23 +67,23 @@ const UserDetail = (props) => {
 
       <div className="mt-5">
         <Formik
-          initialValues={{ username: '' }}
+          initialValues={{ username: "" }}
           validationSchema={yup.object({
             username: yup
               .string()
-              .required('Username is Required!')
-              .min(3, 'Atleast enter two characters')
+              .required("Username is Required!")
+              .min(3, "Atleast enter two characters")
               .max(15),
           })}
           onSubmit={async (values, formikHelpers) => {
-            await setUsername(values.username)
+            await setUsername(values.username);
             if (
-              localStorage.getItem('username').length > 2 ||
-              localStorage.getItem('rId') !== undefined
+              localStorage.getItem("username").length > 2 ||
+              localStorage.getItem("rId") !== undefined
             ) {
               router.push({
                 pathname: `/app/categories/${rId}`,
-              })
+              });
             }
           }}
         >
@@ -114,7 +117,7 @@ const UserDetail = (props) => {
         </Formik>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default UserDetail
+export default UserDetail;

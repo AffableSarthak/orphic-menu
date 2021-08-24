@@ -1,33 +1,34 @@
 import {
   SET_CATEGORIES,
   SET_LOADING,
+  GET_STAGED_ITEMS,
   SET_STAGED,
   SET_USERNAME,
-} from './actionType'
+} from "./actionType";
 
-import SessionContext from './context'
+import SessionContext from "./context";
 // import Data from '../../db/claytopia.json'
-import { useReducer, useState } from 'react'
-import sessionReducer from './reducer'
-import { useRouter } from 'next/router'
+import { useReducer, useState } from "react";
+import sessionReducer from "./reducer";
+import { useRouter } from "next/router";
 
-const SessionState = ({ children, db }: Iprops) => {
+const sessionInfo = ({ children, db }: Iprops) => {
   const initialState: IinitialState = {
     isLoading: false,
     categories: [],
     orderedItems: [],
     stagedItems: [],
-    username: '',
+    username: "",
     items: [],
     currentItem: {},
-  }
+  };
 
   // console.log({ sessionProps })
-  const [state, dispatch] = useReducer(sessionReducer, initialState)
+  const [state, dispatch] = useReducer(sessionReducer, initialState);
   // const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [gcState, setGcState] = useState<Igc[]>([])
-  const [miniGC, setminiGC] = useState<Igc[]>([])
-  const router = useRouter()
+  const [gcState, setGcState] = useState<Igc[]>([]);
+  const [miniGC, setminiGC] = useState<Igc[]>([]);
+  const router = useRouter();
 
   const {
     isLoading,
@@ -37,7 +38,8 @@ const SessionState = ({ children, db }: Iprops) => {
     username,
     items,
     currentItem,
-  } = state
+    // sessionInfo
+  } = state;
 
   /**
    *  Functions to Add
@@ -54,36 +56,36 @@ const SessionState = ({ children, db }: Iprops) => {
     await dispatch({
       type: SET_LOADING,
       payload: val,
-    })
-  }
+    });
+  };
 
   const setCurrentItem = async (item: Iitem) => {
-    await setLoading(true)
+    await setLoading(true);
     await dispatch({
-      type: 'SET_CURRENT_ITEM',
+      type: "SET_CURRENT_ITEM",
       payload: item,
-    })
-    await setLoading(false)
-  }
+    });
+    await setLoading(false);
+  };
   const setUsername = async (username: string) => {
     // setIsLoading(true)
-    await setLoading(true)
+    setLoading(true);
     await dispatch({
       type: SET_USERNAME,
       payload: username,
-    })
-    await localStorage.setItem('username', username)
+    });
+    await localStorage.setItem("username", username);
     // const rId = localStorage.getItem('rId')
     // setIsLoading(false)
-    await setLoading(false)
-  }
+    await setLoading(false);
+  };
 
   const populateGc = async (gc: Igc[]) => {
     // console.log(gc)
-    await setLoading(true)
-    await setGcState([...gc])
-    await setLoading(false)
-  }
+    await setLoading(true);
+    await setGcState([...gc]);
+    await setLoading(false);
+  };
 
   // const getCategories = async (eataryId: string) => {
   //   // Call api
@@ -118,108 +120,108 @@ const SessionState = ({ children, db }: Iprops) => {
   const setCategoryItems = async (categoryName: string) => {
     // Call API
     // setIsLoading(true)
-    await setLoading(true)
+    await setLoading(true);
     const data: Iitem[] = [
       {
         bannerUrl:
-          'https://drive.google.com/uc?export=download&id=1jw7MKjy4PaP7zR5U3J3m3ePlyrGuSh5z',
-        category: 'Burgers & Combos',
-        desc: '',
-        itemId: 'BC-002',
-        itemName: 'Spicy BBQ Chicken Combo',
+          "https://drive.google.com/uc?export=download&id=1jw7MKjy4PaP7zR5U3J3m3ePlyrGuSh5z",
+        category: "Burgers & Combos",
+        desc: "",
+        itemId: "BC-002",
+        itemName: "Spicy BBQ Chicken Combo",
         objectUrl:
-          'https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL',
-        price: '350',
+          "https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL",
+        price: "350",
       },
 
       {
         bannerUrl:
-          'https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw',
-        category: 'Pasta',
-        cust: ['002', '040', '001'],
-        desc: '',
-        itemId: 'BC-005',
-        itemName: 'Wild Mushroom Pasta ',
+          "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
+        category: "Pasta",
+        cust: ["002", "040", "001"],
+        desc: "",
+        itemId: "BC-005",
+        itemName: "Wild Mushroom Pasta ",
         objectUrl:
-          'https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk',
-        price: '295',
+          "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
+        price: "295",
       },
       {
         bannerUrl:
-          'https://drive.google.com/uc?export=download&id=1uopz02oTWLrITiDHVs9Gn8fOViVuXhQr',
-        category: 'Breakfast',
-        desc: '',
-        itemId: 'BC-010',
-        itemName: 'Bistro Heavenly Rolls',
+          "https://drive.google.com/uc?export=download&id=1uopz02oTWLrITiDHVs9Gn8fOViVuXhQr",
+        category: "Breakfast",
+        desc: "",
+        itemId: "BC-010",
+        itemName: "Bistro Heavenly Rolls",
         objectUrl:
-          'https://drive.google.com/uc?export=download&id=1DYZej3r0NxZ7A6IYLm_B8g_L2bBY4Mqy',
-        price: '300',
+          "https://drive.google.com/uc?export=download&id=1DYZej3r0NxZ7A6IYLm_B8g_L2bBY4Mqy",
+        price: "300",
       },
       {
         bannerUrl:
-          'https://drive.google.com/uc?export=download&id=1fMxyyYdRYpXsm3u0OWnfBgCkzElHGO0E',
-        category: 'Soups & Salads',
-        desc: '',
-        itemId: 'BC-011',
-        itemName: 'Classic Ceaser Salad',
+          "https://drive.google.com/uc?export=download&id=1fMxyyYdRYpXsm3u0OWnfBgCkzElHGO0E",
+        category: "Soups & Salads",
+        desc: "",
+        itemId: "BC-011",
+        itemName: "Classic Ceaser Salad",
         objectUrl:
-          'https://drive.google.com/uc?export=download&id=15JVQk8Ysh263m89ud4_YNGl0o9ICKJFX',
-        price: '220/250',
+          "https://drive.google.com/uc?export=download&id=15JVQk8Ysh263m89ud4_YNGl0o9ICKJFX",
+        price: "220/250",
       },
       {
         bannerUrl:
-          'https://drive.google.com/uc?export=download&id=1B4wmQm1QXc5c73EhOrRXPXaIlSJGJrtz',
-        category: 'Main Course',
-        desc: '',
-        itemId: 'BC-012',
-        itemName: 'Herb Roasted Chicken',
+          "https://drive.google.com/uc?export=download&id=1B4wmQm1QXc5c73EhOrRXPXaIlSJGJrtz",
+        category: "Main Course",
+        desc: "",
+        itemId: "BC-012",
+        itemName: "Herb Roasted Chicken",
         objectUrl:
-          'https://drive.google.com/uc?export=download&id=1B4tGVggAHrQG_VaOsCeEz_zZj7hL1wPK',
-        price: '330',
+          "https://drive.google.com/uc?export=download&id=1B4tGVggAHrQG_VaOsCeEz_zZj7hL1wPK",
+        price: "330",
       },
-    ]
+    ];
 
     await dispatch({
-      type: 'SET_CATEGORY_ITEM',
+      type: "SET_CATEGORY_ITEM",
       payload: data,
-    })
-    await setLoading(false)
+    });
+    setLoading(false);
     // setIsLoading(false)
-  }
+  };
 
   // get the data for item cust
   const getCustForItem = async (item: Iitem) => {
-    console.log({ item, gcState })
-    localStorage.setItem('currentItemName', item.itemName)
-    let tempArray = []
+    console.log({ item, gcState });
+    localStorage.setItem("currentItemName", item.itemName);
+    let tempArray = [];
     item.cust.map((ic) => {
       let itemCObj = gcState.find((gc) => {
-        console.log(gc.id, typeof gc.id, ic, typeof ic)
-        return gc.id === ic
-      })
-      tempArray.push(itemCObj)
-    })
-    setminiGC([...tempArray])
-  }
+        console.log(gc.id, typeof gc.id, ic, typeof ic);
+        return gc.id === ic;
+      });
+      tempArray.push(itemCObj);
+    });
+    setminiGC([...tempArray]);
+  };
 
   const setStagedItem = async (item: Iitem, type: string) => {
     // setIsLoading(true)
-    await setLoading(true)
+    await setLoading(true);
     switch (type) {
-      case 'SET_WITH_CUST': {
-        const itemCust = getCustForItem(item)
+      case "SET_WITH_CUST": {
+        const itemCust = getCustForItem(item);
         const newItem = {
           ...item,
           cust: itemCust,
-        }
-        console.log(newItem, 'from setStaged newItems')
+        };
+        console.log(newItem, "from setStaged newItems");
 
-        await dispatch({ type: 'SET_STAGED', payload: newItem })
+        await dispatch({ type: "SET_STAGED", payload: newItem });
 
         // Firebase API to set Staged with call back
       }
-      case 'SET_WITHOUT_CUST': {
-        console.log('set staged item function ', item)
+      case "SET_WITHOUT_CUST": {
+        console.log("set staged item function ", item);
 
         /**
          *
@@ -234,37 +236,76 @@ const SessionState = ({ children, db }: Iprops) => {
          * ]
          */
 
-        let stageItem = {
-          item,
-          qty: 1,
-          username,
+        let stagedItem = {
           delivered: false,
-        }
-        await dispatch({ type: SET_STAGED, payload: stageItem })
+          item,
+          itemId: item.itemId,
+          note: "",
+          ordered: false,
+          qty: 1,
+        };
+
+        const sessionId = "-MglGB1mqNf5eF4QWPfZ";
+        await updateStagedItems(sessionId, stagedItem);
+        await dispatch({ type: SET_STAGED, payload: stagedItem });
         // api for firebase
-        db.ref('sessions')
-          .child('-MfXwG_o6gXl_fHuY0V8')
+        db.ref("sessions")
+          .child("-MfXwG_o6gXl_fHuY0V8")
           .get()
           .then((snapshot) => {
             if (snapshot.exists()) {
-              console.log(snapshot.val())
+              console.log(snapshot.val());
             } else {
-              console.log('No data available')
+              console.log("No data available");
             }
           })
           .catch((error) => {
-            console.error(error)
-          })
+            console.error(error);
+          });
       }
     }
-    await setLoading(false)
+    await setLoading(false);
     // setIsLoading(false)
-  }
+  };
 
   // console.log(categories)
   // console.log(username)
   // console.log(miniGC)
   // console.log(stagedItems, 'from state')
+
+  const getStagedItems = async (sessionId) => {
+    try {
+      const sessionRef = await db.ref("sessions");
+      let data;
+      sessionRef.child(sessionId).on("value", (snapshot) => {
+        data = snapshot.val().stagedItems;
+        console.log(data, "from firebase");
+        dispatch({
+          type: GET_STAGED_ITEMS,
+          payload: data,
+        });
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateStagedItems = async (sessionId, stageItem) => {
+    try {
+      const sessionRef = db.ref("sessions");
+      await sessionRef.child(sessionId).update(
+        {
+          stagedItems: [...state.stagedItems, stageItem],
+        },
+        (error) => {
+          if (error) console.log(error);
+          else console.log("update success full");
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -281,17 +322,19 @@ const SessionState = ({ children, db }: Iprops) => {
           gcState,
           stagedItems,
           orderedItems,
+          // sessionInfo,
           setStagedItem,
           getCustForItem,
           miniGC,
           currentItem,
           setCurrentItem,
+          getStagedItems,
         }}
       >
         {children}
       </SessionContext.Provider>
     </>
-  )
-}
+  );
+};
 
-export default SessionState
+export default sessionInfo;

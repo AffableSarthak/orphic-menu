@@ -1,34 +1,33 @@
 import { createContext } from "react";
 
-
 export type sessionDataType = {
   isLoading: boolean;
   setUsername: (username: string) => void;
   // getCategories: (eataryId: string) => void;
   populateGc: (gc: Igc[]) => void;
-  categories: any;
+  categories: Icategory[];
   username: any;
-  items: any;
+  items: Iitem[];
   setCategoryItems: (categoryName: string) => void;
   gcState: Igc[];
-  stagedItems: any;
-  orderedItems: any;
+  stagedItems: IstagedItem[];
+  orderedItems: IorderedItem[];
   setStagedItem: (item: Iitem, type: string) => void;
-  // getCustForItem: (item: Iitem) => Igc[];
   getCustForItem: (item: Iitem) => void;
   miniGC: Igc[];
   currentItem: any;
   setCurrentItem: (item: Iitem) => Promise<void>;
 
+  getStagedItems: (sessionId: any) => void;
+  // sessionInfo: IsessionInfoType;
 };
 
 export const sessionDefaultValue: sessionDataType = {
   isLoading: false,
   setUsername: () => null,
-  // getCategories: () => null,
   populateGc:()=> null,
   categories: [],
-  username:'',
+  username: "",
   items: [],
   setCategoryItems: () => null,
   gcState: [],
@@ -38,7 +37,9 @@ export const sessionDefaultValue: sessionDataType = {
   getCustForItem: () => null,
   miniGC: [],
   currentItem: {},
-  setCurrentItem: () => Promise.resolve()
+  setCurrentItem: () => Promise.resolve(),
+  getStagedItems: () => null,
+  // sessionInfo: null,
 };
 
 const sessionContext = createContext<sessionDataType>(sessionDefaultValue);

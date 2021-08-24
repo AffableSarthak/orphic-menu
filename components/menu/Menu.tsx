@@ -1,19 +1,18 @@
-import { IoIosArrowBack } from 'react-icons/io'
-import { CgShoppingBag } from 'react-icons/cg'
-import { BsArrowRight } from 'react-icons/bs'
-import MenuCard from './MenuCard'
-import PopularCard from './PopularCard'
-import sessionContext from '../../context/session/context'
-import { useContext, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import BackButton from '../common/BackButton'
-import CartButton from '../common/CartButton'
-import OrphicLoader from '../common/OrphicLoader'
-import { useState } from 'react'
+import { IoIosArrowBack } from "react-icons/io";
+import { CgShoppingBag } from "react-icons/cg";
+import { BsArrowRight } from "react-icons/bs";
+import MenuCard from "./MenuCard";
+import PopularCard from "./PopularCard";
+import sessionContext from "../../context/session/context";
+import { useContext, useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import BackButton from "../common/BackButton";
+import CartButton from "../common/CartButton";
+import OrphicLoader from "../common/OrphicLoader";
 
 const Menu = ({ categoryName }) => {
-  const { items, username, categories, gcState, stagedItems } =
-    useContext(sessionContext)
+  const { items, username, categories, gcState, stagedItems, isLoading } =
+    useContext(sessionContext);
   // console.log(
   //   items.length,
   //   localStorage.getItem('username'),
@@ -21,19 +20,19 @@ const Menu = ({ categoryName }) => {
   //   gcState
   // )
   // console.log(stagedItems)
-  const router = useRouter()
+  const router = useRouter();
 
-  const isLoading = true
+  // const isLoading = true
 
-  const [rId, setRId] = useState('')
+  const [rId, setRId] = useState("");
 
   useEffect(() => {
-    const rId = localStorage.getItem('rId')
-    setRId(rId)
-    if (items.length === 0) router.push(`/app/categories/${rId}`)
-  }, [])
+    const rId = localStorage.getItem("rId");
+    setRId(rId);
+    if (items.length === 0) router.push(`/app/categories/${rId}`);
+  }, []);
 
-  console.log({ rId })
+  console.log({ rId });
 
   return (
     <>
@@ -44,7 +43,9 @@ const Menu = ({ categoryName }) => {
           className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-menu bg-cover bg-no-repeat object-center text-white"
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
-            <BackButton path={`/app/categories/${rId}`} />
+            <BackButton
+              path={`/app/categories/${localStorage.getItem("rId")}}`}
+            />
             <h3 className="ml-2 font-bold">{categoryName}</h3>
           </div>
 
@@ -56,8 +57,9 @@ const Menu = ({ categoryName }) => {
           className="absolute top-[140px] left-[15px] w-11/12 mx-auto bg-whiteColor p-4 rounded-lg shadow-xl text-center"
         >
           <p>
-            <span className="text-secondary">Bhargav</span> added{' '}
-            <span className="font-bold text-smokyBlack"> Cheese Burger </span>{' '}
+            <span className="text-secondary">Bhargav</span> added{" "}
+            <span className="font-bold text-smokyBlack"> Cheese Burger </span>{" "}
+            {/*cust.name/desc.*/}
             <span className="inline-block ml-4">
               <BsArrowRight />
             </span>
@@ -80,7 +82,7 @@ const Menu = ({ categoryName }) => {
         </div> */}
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

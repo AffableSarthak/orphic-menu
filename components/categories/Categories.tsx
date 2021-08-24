@@ -1,35 +1,35 @@
-import { HiOutlineLocationMarker } from 'react-icons/hi'
+import { HiOutlineLocationMarker } from "react-icons/hi";
 
-import taco from '../../public/categoriesImages/taco.png'
-import wavyPizza from '../../public/categoriesImages/wavyPizza.png'
-import Image from 'next/image'
-import CategoriesCard from './CategoriesCard'
-import sessionContext from '../../context/session/context'
-import { useContext, useEffect } from 'react'
-import { RiSearchLine } from 'react-icons/ri'
-import OrphicLoader from '../common/OrphicLoader'
-import CartButton from '../common/CartButton'
+import taco from "../../public/categoriesImages/taco.png";
+import wavyPizza from "../../public/categoriesImages/wavyPizza.png";
+import Image from "next/image";
+import CategoriesCard from "./CategoriesCard";
+import sessionContext from "../../context/session/context";
+import { useContext, useEffect } from "react";
+import { RiSearchLine } from "react-icons/ri";
+import OrphicLoader from "../common/OrphicLoader";
+import CartButton from "../common/CartButton";
 
 const Categories = (props) => {
   const { isLoading, setUsername, populateGc, username } =
-    useContext(sessionContext)
+    useContext(sessionContext);
 
-  const { tableId, sessionId, eateryId, categories, gc } = props.sessionProps
+  const { tableId, sessionId, eateryId, categories, gc } = props.sessionProps;
 
   // if (typeof window !== 'undefined') {
   //   localStorage.setItem('username', username)
   // }
 
   useEffect(() => {
-    localStorage.setItem('sessionId', sessionId)
-    localStorage.setItem('tableId', tableId)
-    localStorage.setItem('eateryId', eateryId)
+    localStorage.setItem("sessionId", sessionId);
+    localStorage.setItem("tableId", tableId);
+    localStorage.setItem("eateryId", eateryId);
     {
-      ;(async () => {
-        await populateGc(gc)
-      })()
+      (async () => {
+        await populateGc(gc);
+      })();
     }
-  }, [])
+  }, []);
 
   return (
     <>
@@ -104,7 +104,7 @@ const Categories = (props) => {
           </h2>
           <div
             id="categoriesCardsContainer"
-            className={`grid grid-cols-2 gap-4 ${isLoading && 'animate-pulse'}`}
+            className={`grid grid-cols-2 gap-4 ${isLoading && "animate-pulse"}`}
             // className="animate-pulse grid grid-cols-2 gap-4"
           >
             {categories.map((c, i) => (
@@ -114,7 +114,7 @@ const Categories = (props) => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Categories
+export default Categories;

@@ -1,23 +1,22 @@
-import Image from 'next/image'
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
-import { useContext } from 'react'
-import sessionContext from '../../context/session/context'
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useContext } from "react";
+import sessionContext from "../../context/session/context";
 
 const CategoriesCard = ({ categoryName, imgUrl }) => {
-  const router = useRouter()
-  const { setCategoryItems } = useContext(sessionContext)
-  useEffect(()=>{
-      localStorage.setItem('categoryName', categoryName)
-  },[])
+  const router = useRouter();
+  const { setCategoryItems } = useContext(sessionContext);
+
   return (
     <>
       <div
         id="cardContaner"
         className="flex flex-col justify-between p-4 rounded-2xl bg-categoriesCardsColor"
         onClick={() => {
-          setCategoryItems(categoryName)
-          router.push({ pathname: `/app/menu/${categoryName}` })
+          localStorage.setItem("categoryName", categoryName);
+          setCategoryItems(categoryName);
+          router.push({ pathname: `/app/menu/${categoryName}` });
         }}
       >
         <h2 id="cardHeading" className="text-base font-bold">
@@ -29,7 +28,7 @@ const CategoriesCard = ({ categoryName, imgUrl }) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default CategoriesCard
+export default CategoriesCard;
