@@ -9,9 +9,9 @@ import OrphicLoader from '../common/OrphicLoader'
 
 const MenuCard = (props) => {
   const router = useRouter()
-  const { setStagedItem } = useContext(sessionContext)
+  const { setStagedItem, isLoading } = useContext(sessionContext)
   const { item, stagedItems } = props
-  const isLoading = true
+
   const cartItemInfo = (stagedItems, item) => {
     if (item.cust) {
       // Item has customization
@@ -93,7 +93,7 @@ const MenuCard = (props) => {
   return (
     <>
       {console.log(item, 'img container')}
-      
+
       <div
         id="cardContainer"
         className="flex-four min-w-[224px] min-h-[324px] bg-dark rounded-[30px] my-1"

@@ -24,11 +24,12 @@ const Categories = (props) => {
   //   localStorage.setItem('username', username)
   // }
   useEffect(() => {
-    console.log(localStorage.getItem('rId'))
-    console.log(localStorage.getItem('username'))
+    // console.log(localStorage.getItem('rId'))
+    // console.log(localStorage.getItem('username'))
     // return () => {
     //   cleanup
     // }
+    
   })
 
   return (

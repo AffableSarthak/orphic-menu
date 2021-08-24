@@ -3,27 +3,51 @@
  */
 
 interface Iprops {
-    children: any;
+  children: any;
   db: any;
   // sessionProps : any;
 }
 
-interface IorderItem {
-  count : number
-  userName :string;
-  item : Iitem;
-}
-
 interface Icategory {
   name: string;
-  src:string;
+  src: string;
+}
+
+// <---------------------------------------->
+
+interface IorderedItem {
+  delivered: boolean;
+  item: Iitem;
+  itemId: string;
+  note: string;
+  ordered: boolean;
+  qty: number;
+}
+
+interface IstagedItem {
+  delivered: boolean;
+  item: Iitem;
+  itemId: string;
+  note: string;
+  ordered: boolean;
+  qty: number;
+}
+
+interface IsessionInfoType {
+  occupied: boolean;
+  orderedItems: IorderedItem[];
+  paid: boolean;
+  sessionId: string;
+  stagedItems: IstagedItem[];
+  tableId: string;
 }
 
 interface IinitialState {
-    isLoading: boolean;
-    categories : Icategory[];
-    orderedItems: IorderItem[];
-    stagedItems: IorderItem[];
-    username: string;
-    items : Iitem[];
+  isLoading: boolean;
+  categories: Icategory[];
+  orderedItems: IorderItem[];
+  stagedItems: IorderItem[];
+  username: string;
+  items: Iitem[];
+  // sessionInfo: IsessionInfoType;
 }

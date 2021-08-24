@@ -1,35 +1,37 @@
 import { createContext } from "react";
 
-
 export type sessionDataType = {
   isLoading: boolean;
   setUsername: (username: string) => void;
   getCategories: (eataryId: string) => void;
   populateGc: (gc: Igc[]) => void;
-  categories: any;
+  categories: Icategory[];
   username: any;
-  items: any;
+  items: Iitem[];
   setCategoryItems: (categoryName: string) => void;
   gcState: Igc[];
-  stagedItems: any;
-  orderedItems: any;
+  stagedItems: IstagedItem[];
+  orderedItems: IorderedItem[];
   setStagedItem: (item: Iitem, type: string) => void;
-
+  getStagedItems: (sessionId: any) => void;
+  sessionInfo: IsessionInfoType;
 };
 
 export const sessionDefaultValue: sessionDataType = {
   isLoading: false,
   setUsername: () => null,
   getCategories: () => null,
-  populateGc:()=> null,
+  populateGc: () => null,
   categories: [],
-  username:'',
+  username: "",
   items: [],
   setCategoryItems: () => null,
   gcState: [],
   stagedItems: [],
   orderedItems: [],
-  setStagedItem: () => null
+  setStagedItem: () => null,
+  getStagedItems: () => null,
+  sessionInfo: null,
 };
 
 const sessionContext = createContext<sessionDataType>(sessionDefaultValue);
