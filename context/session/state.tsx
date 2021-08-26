@@ -43,6 +43,10 @@ const sessionInfo = ({ children, db }: Iprops) => {
     });
   };
 
+  const populateGc = (gc: Igc[]) => {
+    setGcState(gc);
+  };
+
   const setUsername = async (username: string) => {
     // setIsLoading(true)
     setLoading(true);
@@ -54,10 +58,6 @@ const sessionInfo = ({ children, db }: Iprops) => {
     // const rId = localStorage.getItem('rId')
     // setIsLoading(false)
     setLoading(false);
-  };
-
-  const populateGc = (gc: Igc[]) => {
-    setGcState(gc);
   };
 
   const getCategories = async (eataryId: string) => {
@@ -189,6 +189,49 @@ const sessionInfo = ({ children, db }: Iprops) => {
     // setIsLoading(false)
   };
 
+  const getStagedItems = async (sessionId) => {
+    try {
+      const sessionRef = await db.ref("sessions");
+      let data;
+      sessionRef.child(sessionId).on("value", (snapshot) => {
+        data = snapshot.val().stagedItems;
+        console.log(data, "from firebase");
+        if (data === undefined) {
+          dispatch({
+            type: GET_STAGED_ITEMS,
+            payload: [],
+          });
+        } else {
+          dispatch({
+            type: GET_STAGED_ITEMS,
+            payload: data,
+          });
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateStagedItems = async (sessionId, stageItem) => {
+    try {
+      const sessionRef = db.ref("sessions");
+      console.log(state.stagedItems, "from stagedItms func");
+
+      await sessionRef.child(sessionId).update(
+        {
+          stagedItems: [...state.stagedItems, stageItem],
+        },
+        (error) => {
+          if (error) console.log(error);
+          else console.log("update success full");
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   // get the data for item cust
   const getCustForItem = (item: Iitem) => {
     let itemCust: Igc[] = [];
@@ -223,19 +266,6 @@ const sessionInfo = ({ children, db }: Iprops) => {
       case "SET_WITHOUT_CUST": {
         console.log("set staged item function ", item);
 
-        /**
-         *
-         *
-         * stagedItem = [
-         *
-         * {
-         * item: {item},
-         * count : 2,
-         * username
-         * }
-         * ]
-         */
-
         let stagedItem = {
           delivered: false,
           item,
@@ -247,7 +277,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
 
         const sessionId = "-MglGB1mqNf5eF4QWPfZ";
         await updateStagedItems(sessionId, stagedItem);
-        await dispatch({ type: SET_STAGED, payload: stagedItem });
+        // await dispatch({ type: SET_STAGED, payload: stagedItem });
         // api for firebase
       }
     }
@@ -260,46 +290,13 @@ const sessionInfo = ({ children, db }: Iprops) => {
   // console.log(gcState)
   // console.log(stagedItems, 'from state')
 
-  const getStagedItems = async (sessionId) => {
-    try {
-      const sessionRef = await db.ref("sessions");
-      let data;
-      sessionRef.child(sessionId).on("value", (snapshot) => {
-        data = snapshot.val().stagedItems;
-        // console.log(data, "from firebase");
-        dispatch({
-          type: GET_STAGED_ITEMS,
-          payload: data,
-        });
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const updateStagedItems = async (sessionId, stageItem) => {
-    try {
-      const sessionRef = db.ref("sessions");
-      await sessionRef.child(sessionId).update(
-        {
-          stagedItems: [...state.stagedItems, stageItem],
-        },
-        (error) => {
-          if (error) console.log(error);
-          else console.log("update success full");
-        }
-      );
-    } catch (error) {
-      console.log(error);
-    }
-  };
   const IncQtyForItem = async (itemId: string, sessionId: string, idx: number) => {
-    console.log(itemId, "from INC FUN");
+    // console.log(itemId, "from INC FUN");
     try {
       let itemQty = state.stagedItems.find((stagedItem: IstagedItem) => stagedItem.itemId === itemId);
-      console.log(itemQty, "from updateQty itemQty");
+      // console.log(itemQty, "from updateQty itemQty");
       let oldQty = itemQty.qty;
-      console.log(oldQty, "from updateQty oldQty");
+      // console.log(oldQty, "from updateQty oldQty");
 
       const sessionRef = db.ref("sessions");
       await sessionRef
@@ -318,10 +315,6 @@ const sessionInfo = ({ children, db }: Iprops) => {
             }
           }
         );
-      // await dispatch({
-      //   type: "UPDATE_QTY",
-      //   payload: tempItem,
-      // });
     } catch (error) {
       console.log(error);
     }
@@ -332,30 +325,16 @@ const sessionInfo = ({ children, db }: Iprops) => {
     try {
       // console.log(state.stagedItems, "from DEC FUN");
       let itemQty = state.stagedItems.find((stagedItem: IstagedItem) => stagedItem.itemId === itemId);
-      console.log(itemQty, "from updateQty itemQty");
+      // console.log(itemQty, "from updateQty itemQty");
       let oldQty = itemQty.qty;
-      console.log(oldQty, "from updateQty oldQty");
+      // console.log(oldQty, "from updateQty oldQty");
 
       const sessionRef = db.ref("sessions");
 
       if (oldQty === 1) {
-        // await sessionRef.child(sessionId).child("stagedItems").child(ind).remove();
-        await sessionRef
-          .child(sessionId)
-          .child("stagedItems")
-          .child(idx)
-          .update(
-            {
-              qty: 1,
-            },
-            (error) => {
-              if (error) {
-                console.log(error);
-              } else {
-                console.log("qty updated");
-              }
-            }
-          );
+        await sessionRef.child(sessionId).update({
+          stagedItems: state.stagedItems.filter((stagedItem: IstagedItem) => stagedItem.itemId !== itemId),
+        });
       } else {
         await sessionRef
           .child(sessionId)
@@ -374,11 +353,6 @@ const sessionInfo = ({ children, db }: Iprops) => {
             }
           );
       }
-
-      // await dispatch({
-      //   type: "UPDATE_QTY",
-      //   payload: tempItem,
-      // });
     } catch (error) {
       console.log(error);
     }

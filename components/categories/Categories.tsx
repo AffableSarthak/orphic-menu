@@ -1,24 +1,18 @@
-import { HiOutlineLocationMarker } from 'react-icons/hi'
+import { HiOutlineLocationMarker } from "react-icons/hi";
 
-import taco from '../../public/categoriesImages/taco.png'
-import wavyPizza from '../../public/categoriesImages/wavyPizza.png'
-import Image from 'next/image'
-import CategoriesCard from './CategoriesCard'
-import sessionContext from '../../context/session/context'
-import { useContext, useEffect } from 'react'
-import { RiSearchLine } from 'react-icons/ri'
-import OrphicLoader from '../common/OrphicLoader'
-import CartButton from '../common/CartButton'
+import taco from "../../public/categoriesImages/taco.png";
+import wavyPizza from "../../public/categoriesImages/wavyPizza.png";
+import Image from "next/image";
+import CategoriesCard from "./CategoriesCard";
+import sessionContext from "../../context/session/context";
+import { useContext, useEffect } from "react";
+import { RiSearchLine } from "react-icons/ri";
+import OrphicLoader from "../common/OrphicLoader";
+import CartButton from "../common/CartButton";
 
 const Categories = (props) => {
-  const {
-    isLoading,
-    setUsername,
-    getCategories,
-    populateGc,
-    categories,
-    username,
-  } = useContext(sessionContext)
+  const { isLoading, setUsername, getCategories, populateGc, categories, username, getStagedItems } =
+    useContext(sessionContext);
 
   // if (typeof window !== 'undefined') {
   //   localStorage.setItem('username', username)
@@ -29,17 +23,15 @@ const Categories = (props) => {
     // return () => {
     //   cleanup
     // }
-    
-  })
+
+    getStagedItems("-MglGB1mqNf5eF4QWPfZ");
+  }, []);
 
   return (
     <>
       {/* <OrphicLoader isLoading={isLoading} /> */}
       <section id="categoriesSection">
-        <div
-          id="resturantHeader"
-          className="flex justify-between items-center px-4 mt-8"
-        >
+        <div id="resturantHeader" className="flex justify-between items-center px-4 mt-8">
           <div id="locationInput" className="flex flex-row items-center">
             <span className="flex flex-row justify-center items-center">
               <HiOutlineLocationMarker className="text-secondary" />
@@ -57,11 +49,7 @@ const Categories = (props) => {
               >
                 select location
               </option> */}
-              <option
-                className="font-thin bg-whiteColor"
-                value="bangalore"
-                defaultValue="bangalore"
-              >
+              <option className="font-thin bg-whiteColor" value="bangalore" defaultValue="bangalore">
                 Bangalore
               </option>
               <option className="font-thin bg-whiteColor" value="delhi">
@@ -97,15 +85,12 @@ const Categories = (props) => {
         </div>
 
         <div id="categoriesCards" className="mt-5 px-4">
-          <h2
-            id="categoriesCardsHeading"
-            className="text-lg font-semibold mb-4"
-          >
+          <h2 id="categoriesCardsHeading" className="text-lg font-semibold mb-4">
             Popular
           </h2>
           <div
             id="categoriesCardsContainer"
-            className={`grid grid-cols-2 gap-4 ${isLoading && 'animate-pulse'}`}
+            className={`grid grid-cols-2 gap-4 ${isLoading && "animate-pulse"}`}
             // className="animate-pulse grid grid-cols-2 gap-4"
           >
             {props.sessionProps.categories.map((c, i) => (
@@ -115,7 +100,7 @@ const Categories = (props) => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Categories
+export default Categories;

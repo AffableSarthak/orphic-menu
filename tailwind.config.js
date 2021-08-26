@@ -1,28 +1,27 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  mode: "jit",
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
-        primary: '#FFC914',
-        secondary: '#FF8100',
-        dark: '#302F3C',
-        smokyBlack: '#3D3D3D',
-        whiteColor: '#F8F8FA',
-        categoriesCardsColor: '#F5D4C1',
+        primary: "#FFC914",
+        secondary: "#FF8100",
+        dark: "#302F3C",
+        smokyBlack: "#3D3D3D",
+        whiteColor: "#F8F8FA",
+        categoriesCardsColor: "#F5D4C1",
       },
 
       flex: {
-        two: '1 0 20%',
-        three: '1 0 30%',
-        four: '0 0 40%',
-        five: '1 0 50%',
-        six: '1 0 60%',
-        seven: '1 0 70%',
-        eight: '1 0 80%',
-        nine: '1 0 90%',
-        alag: '0 0 49%',
+        two: "1 0 20%",
+        three: "1 0 30%",
+        four: "0 0 40%",
+        five: "1 0 50%",
+        six: "1 0 60%",
+        seven: "1 0 70%",
+        eight: "1 0 80%",
+        nine: "1 0 90%",
       },
 
       backgroundImage: (theme) => ({
@@ -32,8 +31,8 @@ module.exports = {
   },
   variants: {
     extend: {
-      background: ['active'],
+      background: ["active"],
     },
   },
-  plugins: [require('@tailwindcss/forms')],
-}
+  plugins: [require("@tailwindcss/forms")],
+};

@@ -9,20 +9,10 @@ const CartItem = ({ item, qty, idx }: { item: Iitem; qty: number; idx: number })
   //   key && console.log(key, 'key from cartItem');
   // }
 
-  console.log(idx, "from cartItem ind");
-  const [itemQty, setItemQty] = useState(1);
+  // console.log(idx, "from cartItem ind");
+
   const { IncQtyForItem, DecQtyForItem } = useContext(sessionContext);
 
-  const incQty = () => {
-    setItemQty(itemQty + 1);
-  };
-  const decQty = () => {
-    if (itemQty == 1) {
-      setItemQty(1);
-    } else {
-      setItemQty(itemQty - 1);
-    }
-  };
   return (
     <>
       <div id="cartContainer" className="flex justify-center items-center gap-2 py-1">
