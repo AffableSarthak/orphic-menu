@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
+import sessionContext from "../../context/session/context";
 
-const CartItem = ({ item, qty }: { item: Iitem; qty: number }) => {
+const CartItem = ({ item, qty, ind }: { item: Iitem; qty: number; ind: number }) => {
   // console.log(item,'from stagedItem card')
+  // {
+  //   key && console.log(key, 'key from cartItem');
+  // }
+
+  console.log(ind, "from cartItem ind");
   const [itemQty, setItemQty] = useState(1);
+  const { IncQtyForItem, DecQtyForItem } = useContext(sessionContext);
 
   const incQty = () => {
     setItemQty(itemQty + 1);
@@ -39,11 +46,19 @@ const CartItem = ({ item, qty }: { item: Iitem; qty: number }) => {
             </p>
 
             <div className="text-sm flex bg-whiteColor rounded-sm shadow-sm ">
-              <button type="button" onClick={decQty} className="px-2 flex justify-center items-center">
+              <button
+                type="button"
+                onClick={() => DecQtyForItem(item.itemId, "-MglGB1mqNf5eF4QWPfZ", ind.toString())}
+                className="px-2 flex justify-center items-center"
+              >
                 <AiOutlineMinus className="text-secondary text-lg" />
               </button>
               <p className="px-2 text-smokyBlack">{qty}</p> {/*no of items*/}
-              <button type="button" onClick={incQty} className="px-2 flex justify-center items-center">
+              <button
+                type="button"
+                onClick={() => IncQtyForItem(item.itemId, "-MglGB1mqNf5eF4QWPfZ", ind.toString())}
+                className="px-2 flex justify-center items-center"
+              >
                 <AiOutlinePlus className="text-secondary text-lg" />
               </button>
             </div>

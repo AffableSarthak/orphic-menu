@@ -18,14 +18,14 @@ const Cart = () => {
   }, []);
 
   // console.log(sessionInfo.stagedItems, "from cart");
-  console.log(stagedItems, "from cart");
+  // console.log(stagedItems, "from cart");
   return (
     <>
       <section id="cartSection" className="min-w-full px-4">
         {/* {cart header} */}
         <div id="cartHeader" className="mt-8 flex flex-row items-center">
           <div className="flex-four">
-            <BackButton path={`/app/categories/${localStorage.getItem("rId")}`} />
+            {/* <BackButton path={`/app/categories/${localStorage.getItem("rId")}`} /> */}
           </div>
 
           <h1 className="font-semibold text-xl flex-six text-smokyBlack">Cart</h1>
@@ -45,7 +45,12 @@ const Cart = () => {
 
         <div id="cartsSection" className="mt-8 flex flex-col gap-5">
           {stagedItems &&
-            stagedItems.map((stagedItem: IstagedItem) => <CartItem item={stagedItem.item} qty={stagedItem.qty} />)}
+            stagedItems.map((stagedItem: IstagedItem, index) => (
+              <>
+                {/* {console.log(index)} */}
+                <CartItem key={index} ind={index} item={stagedItem.item} qty={stagedItem.qty} />
+              </>
+            ))}
         </div>
 
         {/* promo code */}

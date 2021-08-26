@@ -15,6 +15,8 @@ export type sessionDataType = {
   setStagedItem: (item: Iitem, type: string) => void;
   getStagedItems: (sessionId: any) => void;
   sessionInfo: IsessionInfoType;
+  IncQtyForItem: (itemId: string, sessionId: string, ind: string) => void;
+  DecQtyForItem: (itemId: string, sessionId: string, ind: string) => void;
 };
 
 export const sessionDefaultValue: sessionDataType = {
@@ -32,6 +34,8 @@ export const sessionDefaultValue: sessionDataType = {
   setStagedItem: () => null,
   getStagedItems: () => null,
   sessionInfo: null,
+  IncQtyForItem: () => null,
+  DecQtyForItem: () => null,
 };
 
 const sessionContext = createContext<sessionDataType>(sessionDefaultValue);

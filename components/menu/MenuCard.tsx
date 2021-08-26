@@ -92,7 +92,7 @@ const MenuCard = (props) => {
   }
   return (
     <>
-      {console.log(item, 'img container')}
+      {/* {console.log(item, 'img container')} */}
 
       <div
         id="cardContainer"

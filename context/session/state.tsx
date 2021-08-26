@@ -266,7 +266,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
       let data;
       sessionRef.child(sessionId).on("value", (snapshot) => {
         data = snapshot.val().stagedItems;
-        console.log(data, "from firebase");
+        // console.log(data, "from firebase");
         dispatch({
           type: GET_STAGED_ITEMS,
           payload: data,
@@ -293,6 +293,92 @@ const sessionInfo = ({ children, db }: Iprops) => {
       console.log(error);
     }
   };
+  const IncQtyForItem = async (itemId: string, sessionId: string, ind: string) => {
+    try {
+      let itemQty = state.stagedItems.find((stagedItem: IstagedItem) => stagedItem.itemId === itemId);
+      console.log(itemQty, "from updateQty itemQty");
+      let oldQty = itemQty.qty;
+      console.log(oldQty, "from updateQty oldQty");
+
+      const sessionRef = db.ref("sessions");
+      await sessionRef
+        .child(sessionId)
+        .child("stagedItems")
+        .child(ind)
+        .update(
+          {
+            qty: oldQty + 1,
+          },
+          (error) => {
+            if (error) {
+              console.log(error);
+            } else {
+              console.log("qty updated");
+            }
+          }
+        );
+      // await dispatch({
+      //   type: "UPDATE_QTY",
+      //   payload: tempItem,
+      // });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const DecQtyForItem = async (itemId: string, sessionId: string, ind: string) => {
+    try {
+      let itemQty = state.stagedItems.find((stagedItem: IstagedItem) => stagedItem.itemId === itemId);
+      console.log(itemQty, "from updateQty itemQty");
+      let oldQty = itemQty.qty;
+      console.log(oldQty, "from updateQty oldQty");
+
+      const sessionRef = db.ref("sessions");
+
+      if (oldQty === 1) {
+        await sessionRef
+          .child(sessionId)
+          .child("stagedItems")
+          .child(ind)
+          .update(
+            {
+              qty: 1,
+            },
+            (error) => {
+              if (error) {
+                console.log(error);
+              } else {
+                console.log("qty updated");
+              }
+            }
+          );
+      } else {
+        await sessionRef
+          .child(sessionId)
+          .child("stagedItems")
+          .child(ind)
+          .update(
+            {
+              qty: oldQty - 1,
+            },
+            (error) => {
+              if (error) {
+                console.log(error);
+              } else {
+                console.log("qty updated");
+              }
+            }
+          );
+      }
+
+      // await dispatch({
+      //   type: "UPDATE_QTY",
+      //   payload: tempItem,
+      // });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -312,6 +398,8 @@ const sessionInfo = ({ children, db }: Iprops) => {
           sessionInfo,
           setStagedItem,
           getStagedItems,
+          IncQtyForItem,
+          DecQtyForItem,
         }}
       >
         {children}
