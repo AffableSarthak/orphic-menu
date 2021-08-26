@@ -48,7 +48,7 @@ const Cart = () => {
             stagedItems.map((stagedItem: IstagedItem, index) => (
               <>
                 {/* {console.log(index)} */}
-                <CartItem key={index} ind={index} item={stagedItem.item} qty={stagedItem.qty} />
+                <CartItem key={index} idx={index} item={stagedItem.item} qty={stagedItem.qty} />
               </>
             ))}
         </div>

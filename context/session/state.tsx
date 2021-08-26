@@ -293,7 +293,8 @@ const sessionInfo = ({ children, db }: Iprops) => {
       console.log(error);
     }
   };
-  const IncQtyForItem = async (itemId: string, sessionId: string, ind: string) => {
+  const IncQtyForItem = async (itemId: string, sessionId: string, idx: number) => {
+    console.log(itemId, "from INC FUN");
     try {
       let itemQty = state.stagedItems.find((stagedItem: IstagedItem) => stagedItem.itemId === itemId);
       console.log(itemQty, "from updateQty itemQty");
@@ -304,7 +305,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
       await sessionRef
         .child(sessionId)
         .child("stagedItems")
-        .child(ind)
+        .child(idx)
         .update(
           {
             qty: oldQty + 1,
@@ -326,8 +327,10 @@ const sessionInfo = ({ children, db }: Iprops) => {
     }
   };
 
-  const DecQtyForItem = async (itemId: string, sessionId: string, ind: string) => {
+  const DecQtyForItem = async (itemId: string, sessionId: string, idx: number) => {
+    // console.log(itemId, "from DEC FUN");
     try {
+      // console.log(state.stagedItems, "from DEC FUN");
       let itemQty = state.stagedItems.find((stagedItem: IstagedItem) => stagedItem.itemId === itemId);
       console.log(itemQty, "from updateQty itemQty");
       let oldQty = itemQty.qty;
@@ -336,10 +339,11 @@ const sessionInfo = ({ children, db }: Iprops) => {
       const sessionRef = db.ref("sessions");
 
       if (oldQty === 1) {
+        // await sessionRef.child(sessionId).child("stagedItems").child(ind).remove();
         await sessionRef
           .child(sessionId)
           .child("stagedItems")
-          .child(ind)
+          .child(idx)
           .update(
             {
               qty: 1,
@@ -356,7 +360,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
         await sessionRef
           .child(sessionId)
           .child("stagedItems")
-          .child(ind)
+          .child(idx)
           .update(
             {
               qty: oldQty - 1,

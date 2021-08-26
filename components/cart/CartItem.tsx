@@ -3,13 +3,13 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
 import sessionContext from "../../context/session/context";
 
-const CartItem = ({ item, qty, ind }: { item: Iitem; qty: number; ind: number }) => {
+const CartItem = ({ item, qty, idx }: { item: Iitem; qty: number; idx: number }) => {
   // console.log(item,'from stagedItem card')
   // {
   //   key && console.log(key, 'key from cartItem');
   // }
 
-  console.log(ind, "from cartItem ind");
+  console.log(idx, "from cartItem ind");
   const [itemQty, setItemQty] = useState(1);
   const { IncQtyForItem, DecQtyForItem } = useContext(sessionContext);
 
@@ -35,7 +35,7 @@ const CartItem = ({ item, qty, ind }: { item: Iitem; qty: number; ind: number })
           <div className="flex flex-row justify-between mb-2">
             <p className="text-sm capitalize text-smokyBlack font-medium">{item.itemName}</p>
             {/*cart product name*/}
-            <p className="text-sm text-smokyBlack font-medium">${item.price}</p>
+            <p className="text-sm text-smokyBlack font-medium">${parseInt(item.price) * qty}</p>
             {/*cart product price*/}
           </div>
 
@@ -48,7 +48,7 @@ const CartItem = ({ item, qty, ind }: { item: Iitem; qty: number; ind: number })
             <div className="text-sm flex bg-whiteColor rounded-sm shadow-sm ">
               <button
                 type="button"
-                onClick={() => DecQtyForItem(item.itemId, "-MglGB1mqNf5eF4QWPfZ", ind.toString())}
+                onClick={() => DecQtyForItem(item.itemId, "-MglGB1mqNf5eF4QWPfZ", idx)}
                 className="px-2 flex justify-center items-center"
               >
                 <AiOutlineMinus className="text-secondary text-lg" />
@@ -56,7 +56,7 @@ const CartItem = ({ item, qty, ind }: { item: Iitem; qty: number; ind: number })
               <p className="px-2 text-smokyBlack">{qty}</p> {/*no of items*/}
               <button
                 type="button"
-                onClick={() => IncQtyForItem(item.itemId, "-MglGB1mqNf5eF4QWPfZ", ind.toString())}
+                onClick={() => IncQtyForItem(item.itemId, "-MglGB1mqNf5eF4QWPfZ", idx)}
                 className="px-2 flex justify-center items-center"
               >
                 <AiOutlinePlus className="text-secondary text-lg" />
