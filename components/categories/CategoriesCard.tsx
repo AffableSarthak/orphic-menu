@@ -6,16 +6,20 @@ import sessionContext from "../../context/session/context";
 
 const CategoriesCard = ({ categoryName, imgUrl }) => {
   const router = useRouter();
-  const { setCategoryItems } = useContext(sessionContext);
+  const { setCategoryItems, getStagedItems } = useContext(sessionContext);
 
   return (
     <>
       <div
         id="cardContaner"
         className="flex flex-col justify-between p-4 rounded-2xl bg-categoriesCardsColor"
-        onClick={() => {
-          localStorage.setItem("categoryName", categoryName);
-          setCategoryItems(categoryName);
+        onClick={async () => {
+          await localStorage.setItem("categoryName", categoryName);
+          console.log(localStorage.getItem("categoryName"));
+          // const sessionId = await localStorage.getItem("sessionId");
+          // console.log(sessionId);
+          await setCategoryItems(categoryName);
+          // await getStagedItems(sessionId);
           router.push({ pathname: `/app/menu/${categoryName}` });
         }}
       >

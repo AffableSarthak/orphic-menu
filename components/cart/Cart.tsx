@@ -11,9 +11,10 @@ const Cart = () => {
 
   // console.log(stagedItems, "from cart");
 
-  const sessionId = "-MglGB1mqNf5eF4QWPfZ";
+  // const sessionId = "-MglGB1mqNf5eF4QWPfZ";
 
   useEffect(() => {
+    const sessionId = localStorage.getItem("sessionId");
     getStagedItems(sessionId);
   }, []);
 
@@ -25,10 +26,12 @@ const Cart = () => {
         {/* {cart header} */}
         <div id="cartHeader" className="mt-8 flex flex-row items-center">
           <div className="flex-four">
-            <BackButton path={`/app/categories/${localStorage.getItem("rId")}`} />
+            <BackButton />
           </div>
 
-          <h1 className="font-semibold text-xl flex-six text-smokyBlack">Cart</h1>
+          <h1 className="font-semibold text-xl flex-six text-smokyBlack">
+            Cart
+          </h1>
         </div>
 
         {/* cart delivery address */}
@@ -45,7 +48,9 @@ const Cart = () => {
 
         <div id="cartsSection" className="mt-8 flex flex-col gap-5">
           {stagedItems &&
-            stagedItems.map((stagedItem: IstagedItem) => <CartItem item={stagedItem.item} qty={stagedItem.qty} />)}
+            stagedItems.map((stagedItem: IstagedItem, index) => (
+              <CartItem key={index} stagedItem={stagedItem} />
+            ))}
         </div>
 
         {/* promo code */}
@@ -66,12 +71,20 @@ const Cart = () => {
         {/* Bill section */}
 
         <div id="billSection" className="mt-4 flex flex-col gap-3">
-          <div id="itemTotal" className="flex flex-row justify-between items-center">
+          <div
+            id="itemTotal"
+            className="flex flex-row justify-between items-center"
+          >
             <p className="text-smokyBlack text-sm">Item total</p>
-            <p className="text-smokyBlack text-sm">${totalPrice(stagedItems)}</p>
+            <p className="text-smokyBlack text-sm">
+              ${totalPrice(stagedItems)}
+            </p>
           </div>
 
-          <div id="discount" className="flex flex-row justify-between items-center">
+          <div
+            id="discount"
+            className="flex flex-row justify-between items-center"
+          >
             <p className="text-smokyBlack text-sm">Discount</p>
             <p className="text-smokyBlack text-sm">-$10</p>
           </div>
@@ -81,12 +94,17 @@ const Cart = () => {
             <p className="text-smokyBlack text-sm">$2</p>
           </div>
 
-          <div id="totalBill" className="mt-3 flex flex-row justify-between gap-10">
+          <div
+            id="totalBill"
+            className="mt-3 flex flex-row justify-between gap-10"
+          >
             <Button name="Checkout" />
 
             <div>
               <p className="text-smokyBlack text-sm">Item Total</p>
-              <p className="text-dark font-bold text-xl">${totalPrice(stagedItems)}</p>
+              <p className="text-dark font-bold text-xl">
+                ${totalPrice(stagedItems)}
+              </p>
             </div>
           </div>
         </div>

@@ -31,6 +31,7 @@ interface IstagedItem {
   note: string;
   ordered: boolean;
   qty: number;
+  username: string;
 }
 
 interface IsessionInfoType {
@@ -46,9 +47,10 @@ interface IinitialState {
     isLoading: boolean;
     categories : Icategory[];
     orderedItems: IorderItem[];
-    stagedItems: IorderItem[];
+    stagedItems: IstagedItem[];
     username: string;
     items : Iitem[];
     currentItem: object;
-    
+    cartCount: number;
+    totalPrice: number;
 }

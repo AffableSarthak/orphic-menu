@@ -1,16 +1,16 @@
-import Categories from '../../../components/categories/Categories'
-import { GetServerSideProps } from 'next'
+import Categories from "../../../components/categories/Categories";
+import { GetServerSideProps } from "next";
 
 export default function categories(props) {
   return (
     <>
       <Categories sessionProps={props} />
     </>
-  )
+  );
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { params } = context
+  const { params } = context;
   // const res = await fetch(`https://...`)
   // const data = await res.json()
 
@@ -21,51 +21,51 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   // }
   return {
     props: {
-      tableId: 'T-070',
-      eateryId: 'E-001',
-      sessionId: '123',
+      tableId: "T-070",
+      eateryId: "E-001",
+      sessionId: "-Mhn1ub6UEGjrGxxtEF1",
       gc: [
         {
-          id: '001',
-          name: 'Choose Size',
-          type: 'one',
+          id: "001",
+          name: "Choose Size",
+          type: "one",
           values: [
             {
-              name: 'Small',
+              name: "Small",
               price: 20,
             },
             {
-              name: 'Large',
+              name: "Large",
               price: 40,
             },
           ],
         },
         {
-          id: '002',
-          name: 'Choose Pasta Type',
-          type: 'one',
+          id: "002",
+          name: "Choose Pasta Type",
+          type: "one",
           values: [
             {
-              name: 'Penne',
+              name: "Penne",
               price: 0,
             },
             {
-              name: 'Spaghetti',
+              name: "Spaghetti",
               price: 0,
             },
           ],
         },
         {
-          id: '040',
-          name: 'Add On',
-          type: 'many',
+          id: "040",
+          name: "Add On",
+          type: "many",
           values: [
             {
-              name: 'Pepsi',
+              name: "Pepsi",
               price: 50,
             },
             {
-              name: 'Brownie',
+              name: "Brownie",
               price: 60,
             },
           ],
@@ -73,18 +73,18 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       ],
       categories: [
         {
-          name: 'Pizza',
-          src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
+          name: "Pizza",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
         },
         {
-          name: 'Burger',
-          src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
+          name: "Burger",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
         },
         {
-          name: 'Pasta',
-          src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
+          name: "Pasta",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
         },
       ],
     }, // will be passed to the page component as props
-  }
-}
+  };
+};

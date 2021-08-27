@@ -4,6 +4,7 @@ import {
   GET_STAGED_ITEMS,
   SET_STAGED,
   SET_USERNAME,
+  UPDATE_QTY,
 } from "./actionType";
 
 import SessionContext from "./context";
@@ -21,6 +22,8 @@ const sessionInfo = ({ children, db }: Iprops) => {
     username: "",
     items: [],
     currentItem: {},
+    cartCount: 0,
+    totalPrice: 0,
   };
 
   // console.log({ sessionProps })
@@ -38,7 +41,8 @@ const sessionInfo = ({ children, db }: Iprops) => {
     username,
     items,
     currentItem,
-    // sessionInfo
+    cartCount,
+    totalPrice,
   } = state;
 
   /**
@@ -53,6 +57,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
    */
 
   const setLoading = async (val: boolean) => {
+    // console.log(val, "inside setLoading");
     await dispatch({
       type: SET_LOADING,
       payload: val,
@@ -60,67 +65,33 @@ const sessionInfo = ({ children, db }: Iprops) => {
   };
 
   const setCurrentItem = async (item: Iitem) => {
-    await setLoading(true);
+    setLoading(true);
     await dispatch({
       type: "SET_CURRENT_ITEM",
       payload: item,
     });
-    await setLoading(false);
+    setLoading(false);
   };
   const setUsername = async (username: string) => {
-    // setIsLoading(true)
     setLoading(true);
     await dispatch({
       type: SET_USERNAME,
       payload: username,
     });
     await localStorage.setItem("username", username);
-    // const rId = localStorage.getItem('rId')
-    // setIsLoading(false)
-    await setLoading(false);
+    setLoading(false);
   };
 
   const populateGc = async (gc: Igc[]) => {
-    // console.log(gc)
-    await setLoading(true);
+    setLoading(true);
+    // console.log("inisde populate");
     await setGcState([...gc]);
-    await setLoading(false);
+    setLoading(false);
   };
 
-  // const getCategories = async (eataryId: string) => {
-  //   // Call api
-  //   // console.log(eataryId)
-  //   // setTimeout(() => {}, 3000)
-  //   // setIsLoading(true)
-  //   await setLoading(true)
-  //   const data: Icategory[] = [
-  //     {
-  //       name: 'Pizza',
-  //       src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
-  //     },
-  //     {
-  //       name: 'Burger',
-  //       src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
-  //     },
-  //     {
-  //       name: 'Pasta',
-  //       src: 'https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png',
-  //     },
-  //   ]
-
-  //   await dispatch({
-  //     type: SET_CATEGORIES,
-  //     payload: data,
-  //   })
-
-  //   await setLoading(false)
-  //   // setIsLoading(false)
-  // }
-
   const setCategoryItems = async (categoryName: string) => {
-    // Call API
-    // setIsLoading(true)
-    await setLoading(true);
+    //call API
+    setLoading(true);
     const data: Iitem[] = [
       {
         bannerUrl:
@@ -185,12 +156,16 @@ const sessionInfo = ({ children, db }: Iprops) => {
       type: "SET_CATEGORY_ITEM",
       payload: data,
     });
+    const sessionId = await localStorage.getItem("sessionId");
+    console.log(sessionId);
+    await getStagedItems(sessionId);
+
     setLoading(false);
-    // setIsLoading(false)
   };
 
   // get the data for item cust
   const getCustForItem = async (item: Iitem) => {
+    setLoading(true);
     console.log({ item, gcState });
     localStorage.setItem("currentItemName", item.itemName);
     let tempArray = [];
@@ -202,11 +177,12 @@ const sessionInfo = ({ children, db }: Iprops) => {
       tempArray.push(itemCObj);
     });
     setminiGC([...tempArray]);
+    setLoading(false);
   };
 
   const setStagedItem = async (item: Iitem, type: string) => {
     // setIsLoading(true)
-    await setLoading(true);
+    setLoading(true);
     switch (type) {
       case "SET_WITH_CUST": {
         const itemCust = getCustForItem(item);
@@ -240,17 +216,19 @@ const sessionInfo = ({ children, db }: Iprops) => {
           delivered: false,
           item,
           itemId: item.itemId,
-          note: "",
+          // note: "",
           ordered: false,
           qty: 1,
+          username: localStorage.getItem("username"),
         };
 
-        const sessionId = "-MglGB1mqNf5eF4QWPfZ";
+        const sessionId = localStorage.getItem("sessionId");
+
         await updateStagedItems(sessionId, stagedItem);
         await dispatch({ type: SET_STAGED, payload: stagedItem });
         // api for firebase
         db.ref("sessions")
-          .child("-MfXwG_o6gXl_fHuY0V8")
+          .child(sessionId)
           .get()
           .then((snapshot) => {
             if (snapshot.exists()) {
@@ -264,7 +242,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
           });
       }
     }
-    await setLoading(false);
+    setLoading(false);
     // setIsLoading(false)
   };
 
@@ -279,11 +257,19 @@ const sessionInfo = ({ children, db }: Iprops) => {
       let data;
       sessionRef.child(sessionId).on("value", (snapshot) => {
         data = snapshot.val().stagedItems;
-        console.log(data, "from firebase");
-        dispatch({
-          type: GET_STAGED_ITEMS,
-          payload: data,
-        });
+        if (data) {
+          console.log(data, "from firebase");
+          dispatch({
+            type: GET_STAGED_ITEMS,
+            payload: data,
+          });
+        } else {
+          console.log(data, "from firebase");
+          dispatch({
+            type: GET_STAGED_ITEMS,
+            payload: [],
+          });
+        }
       });
     } catch (error) {
       console.log(error);
@@ -307,13 +293,62 @@ const sessionInfo = ({ children, db }: Iprops) => {
     }
   };
 
+  const updateStagedQtyItems = async () => {
+    console.log(stagedItems);
+    try {
+      const sessionRef = db.ref("sessions");
+      const sessionId = localStorage.getItem("sessionId");
+      await sessionRef.child(sessionId).update(
+        {
+          stagedItems: [...stagedItems],
+        },
+        (error) => {
+          if (error) console.log(error);
+          else console.log("Qty updated");
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateQytForItem = async (itemId: string, newItemQty: number) => {
+    let tempItem = await stagedItems.find((staged) => staged.itemId === itemId);
+    setLoading(true);
+    let tempIndex = await stagedItems.findIndex(
+      (staged) => staged.itemId === itemId
+    );
+    tempItem["qty"] = newItemQty;
+    console.log(itemId, newItemQty);
+    console.log(tempIndex, tempItem);
+    let tempStaged = stagedItems.map((stagedItem) => stagedItem);
+    if (newItemQty === 0) {
+      console.log({ tempStaged });
+      await tempStaged.splice(tempIndex, 1);
+      // delete tempStaged[tempIndex];
+      console.log({ tempStaged });
+    } else {
+      tempStaged.splice(tempIndex, 0, { ...tempItem });
+    }
+    console.log({ ...tempStaged });
+    await dispatch({
+      type: "UPDATE_QTY",
+      payload: [...tempStaged],
+    });
+    // console.log(stagedItems);
+
+    await updateStagedQtyItems();
+    setLoading(false);
+  };
+
+  console.log(isLoading);
+
   return (
     <>
       <SessionContext.Provider
         value={{
           isLoading,
           setUsername,
-          // getCategories,
           populateGc,
           categories,
           username,
@@ -322,13 +357,13 @@ const sessionInfo = ({ children, db }: Iprops) => {
           gcState,
           stagedItems,
           orderedItems,
-          // sessionInfo,
           setStagedItem,
           getCustForItem,
           miniGC,
           currentItem,
           setCurrentItem,
           getStagedItems,
+          updateQytForItem,
         }}
       >
         {children}

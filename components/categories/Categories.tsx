@@ -16,10 +16,6 @@ const Categories = (props) => {
 
   const { tableId, sessionId, eateryId, categories, gc } = props.sessionProps;
 
-  // if (typeof window !== 'undefined') {
-  //   localStorage.setItem('username', username)
-  // }
-
   useEffect(() => {
     localStorage.setItem("sessionId", sessionId);
     localStorage.setItem("tableId", tableId);
@@ -48,14 +44,6 @@ const Categories = (props) => {
               defaultValue="bangalore"
               className="font-medium border-none focus:outline-none focus:ring-0 "
             >
-              {/* <option
-                value=""
-                className="font-thin bg-whiteColor"
-                selected
-                disabled
-              >
-                select location
-              </option> */}
               <option
                 className="font-thin bg-whiteColor"
                 value="bangalore"
@@ -105,7 +93,6 @@ const Categories = (props) => {
           <div
             id="categoriesCardsContainer"
             className={`grid grid-cols-2 gap-4 ${isLoading && "animate-pulse"}`}
-            // className="animate-pulse grid grid-cols-2 gap-4"
           >
             {categories.map((c, i) => (
               <CategoriesCard key={i} categoryName={c.name} imgUrl={c.src} />

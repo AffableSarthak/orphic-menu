@@ -7,6 +7,7 @@ import CartButton from "../common/CartButton";
 import sessionContext from "../../context/session/context";
 import router, { useRouter } from "next/router";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as yup from "yup";
 
 const ProductCustomization = () => {
   const router = useRouter();
@@ -36,8 +37,21 @@ const ProductCustomization = () => {
       makeFormiKInitialValues();
     }
   }, []);
-  console.log(miniGC);
-  console.log(initialValues);
+  // console.log(miniGC);
+  // console.log(initialValues);
+
+  // const getValidationSchema = async () => {
+  //   let schemaObj = {};
+  //   await miniGC.map((mgc) => {
+  //     if (mgc.type === "one") {
+  //       schemaObj[`${mgc.name}`.split(" ").join("_")] = yup
+  //         .string()
+  //         .required(`A ${mgc.name} option is required`);
+  //     }
+  //   });
+  //   console.log(schemaObj);
+  //   return schemaObj;
+  // };
 
   return (
     <>
@@ -57,22 +71,18 @@ const ProductCustomization = () => {
 
         <Formik
           initialValues={initialValues}
-          // validationSchema={yup.object({
-          //   username: yup
-          //     .string()
-          //     .required('Username is Required!')
-          //     .min(3, 'Atleast enter two characters')
-          //     .max(15),
-          // })}
-          onSubmit={async (values, formikHelpers) => {}}
+          // validationSchema={yup.object(getValidationSchema())}
+          onSubmit={async (values, formikHelpers) => {
+            console.log(values, formikHelpers);
+          }}
         >
           {({ values, errors, isSubmitting, isValidating }) => (
             <Form className="block px-4">
-              {miniGC.map((mgc) => {
+              {miniGC.map((mgc, index) => {
                 if (mgc.type === "one") {
                   return (
                     <>
-                      <div className="m-2 p-2">
+                      <div key={index} className="m-2 p-2">
                         <div
                           id="my-radio-group"
                           className="flex justify-between items-center"
@@ -90,7 +100,10 @@ const ProductCustomization = () => {
                           className="mt-3"
                         >
                           {mgc.values.map((value, index) => (
-                            <label className="text-sm text-gray-600">
+                            <label
+                              key={index}
+                              className="text-sm text-gray-600"
+                            >
                               <Field
                                 type="radio"
                                 name={mgc.name.split(" ").join("_")}
@@ -101,13 +114,18 @@ const ProductCustomization = () => {
                             </label>
                           ))}
                         </div>
+                        <ErrorMessage
+                          name={mgc.name.split(" ").join("_")}
+                          component={"div"}
+                          className="text-red-500 px-4"
+                        />
                       </div>
                     </>
                   );
                 } else {
                   return (
                     <>
-                      <div className="m-2 p-2">
+                      <div key={index} className="m-2 p-2">
                         <div
                           id="checkbox-group"
                           className="flex justify-between items-center"
@@ -125,7 +143,10 @@ const ProductCustomization = () => {
                           className="mt-3"
                         >
                           {mgc.values.map((value, index) => (
-                            <label className="text-sm text-gray-600">
+                            <label
+                              key={index}
+                              className="text-sm text-gray-600"
+                            >
                               <Field
                                 type="checkbox"
                                 name={mgc.name.split(" ").join("_")}
@@ -147,16 +168,26 @@ const ProductCustomization = () => {
                 id="totalBill"
                 className="flex flex-row justify-between gap-10 mt-8"
               >
-                <Button
-                  name="Add to cart"
+                <button
                   type="submit"
+                  className="flex-five py-4 text-center text-base font-medium rounded-3xl bg-primary  active:bg-secondary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl"
                   disabled={isSubmitting || isValidating}
-                />
-                <div>
+                >
+                  Add to Cart
+                </button>
+                {/* <div>
                   <p className="text-smokyBlack text-sm">Item Total</p>
                   <p className="text-dark font-bold text-xl">$13.50</p>
-                </div>
+                </div> */}
               </div>
+              {/* <button
+                type="submit"
+                disabled={isSubmitting || isValidating}
+                className="ml-auto  flex flex-row justify-center items-center px-8 py-4 rounded-2xl bg-primary active:bg-secondary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl"
+              >
+                <span>Continue</span>
+                <span className="flex justify-center items-center {${isSubmitting? disabled: animate-spin}}"></span>
+              </button> */}
               {/* <pre>{JSON.stringify(values, null, 4)}</pre> */}
             </Form>
           )}

@@ -5,7 +5,7 @@ import {
   SET_STAGED,
   SET_LOADING,
   GET_STAGED_ITEMS,
- 
+  UPDATE_QTY,
 } from "./actionType";
 
 const sessionReducer = (state, action) => {
@@ -48,6 +48,12 @@ const sessionReducer = (state, action) => {
     //     ...state,
     //     sessionInfo: payload,
     //   };
+    case UPDATE_QTY:
+      console.log(payload.length);
+      return {
+        ...state,
+        stagedItems: payload,
+      };
   }
 };
 

@@ -27,11 +27,11 @@ const UserDetail = (props) => {
 
   useEffect(() => {
     // localStorage.setItem('rId', rId)
-    // if (typeof window !== 'undefined') {
-    localStorage.setItem("rId", rId);
-    // }
+    if (typeof window !== "undefined") {
+      localStorage.setItem("rId", rId);
+    }
 
-    console.log(localStorage.getItem("rId"));
+    // console.log(localStorage.getItem("rId"));
   });
 
   return (
@@ -75,12 +75,9 @@ const UserDetail = (props) => {
               .min(3, "Atleast enter two characters")
               .max(15),
           })}
-          onSubmit={async (values, formikHelpers) => {
+          onSubmit={async (values) => {
             await setUsername(values.username);
-            if (
-              localStorage.getItem("username").length > 2 ||
-              localStorage.getItem("rId") !== undefined
-            ) {
+            if (localStorage.getItem("rId") !== undefined) {
               router.push({
                 pathname: `/app/categories/${rId}`,
               });

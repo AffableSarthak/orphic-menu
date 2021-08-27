@@ -1,13 +1,13 @@
-import { IoIosArrowBack } from 'react-icons/io'
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
-const BackButton = ({ path }) => {
-  const router = useRouter()
-  const [pathValue, setPathValue] = useState('')
+import { IoIosArrowBack } from "react-icons/io";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+const BackButton = () => {
+  const router = useRouter();
+  const [pathValue, setPathValue] = useState("");
   useEffect(() => {
-    const rId = localStorage.getItem('rId')
-    setPathValue(`/app/categories/${rId}`)
-  }, [])
+    const rId = localStorage.getItem("rId");
+    setPathValue(`/app/categories/${rId}`);
+  }, []);
   return (
     <>
       <span
@@ -17,7 +17,7 @@ const BackButton = ({ path }) => {
         <IoIosArrowBack className="text-smokyBlack text-2xl" />
       </span>
     </>
-  )
-}
+  );
+};
 
-export default BackButton
+export default BackButton;

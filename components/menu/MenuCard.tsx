@@ -9,15 +9,16 @@ import { useContext } from "react";
 import { useRouter } from "next/router";
 
 const MenuCard = (props) => {
-  const { setStagedItem, isLoading, getCustForItem } =
+  const { setStagedItem, getCustForItem, isLoading } =
     useContext(sessionContext);
+  // const isLoading = true;
   const { item, stagedItems } = props;
   const router = useRouter();
 
   const cartItemInfo = (stagedItems, item) => {
     if (item.cust) {
       // Item has customization
-      if (stagedItems.length === 0) {
+      if (stagedItems.length === 0 || stagedItems === undefined) {
         // No Item in Cart
         return (
           // push to cart with and add the item with other details to staged items => item, count, username, cust array
@@ -37,13 +38,7 @@ const MenuCard = (props) => {
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
           // If the current Item is present in Cart
           return (
-            <span
-              onClick={async () => {
-                await getCustForItem(item);
-                router.push({ pathname: `/app/cust` });
-              }}
-              className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
-            >
+            <span className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2">
               {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
               <p className="text-primary text-sm">ADDED</p>
             </span>
@@ -51,15 +46,22 @@ const MenuCard = (props) => {
         } else {
           // current Item is not present in the cart
           return (
-            <span className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2">
+            <span
+              onClick={async () => {
+                await getCustForItem(item);
+                router.push({ pathname: `/app/cust` });
+              }}
+              className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+            >
               <AiOutlinePlus className="text-smokyBlack text-xl" />
+              <p>cust</p>
             </span>
           );
         }
       }
     } else {
       // No customization for the item
-      if (stagedItems.length === 0) {
+      if (stagedItems.length === 0 || stagedItems === undefined) {
         // No Item in Cart
         return (
           // push to cart with and add the item with other details to staged items => item, count, username
@@ -113,7 +115,7 @@ const MenuCard = (props) => {
           className="flex justify-center relative h-[205px]"
         >
           {isLoading ? (
-            <div className="bg-gray-200 h-12 w-12 animate-pulse p-4"></div>
+            <div className="bg-gray-200 h-12 w-12 animate-pulse px-20 py-14 mt-20 rounded-xl"></div>
           ) : (
             <img
               src={item.bannerUrl}
