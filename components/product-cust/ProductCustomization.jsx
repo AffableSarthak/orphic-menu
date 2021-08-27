@@ -30,7 +30,7 @@ const ProductCustomization = () => {
           {/* sizeSelection Header  ends */}
 
           <div id="selectSize" className="mt-4 flex flex-col gap-2 divide-y-2">
-            {/* SingelSelect size start*/}
+            {/* SingelSelect size start  himanshu*/}
             <div id="sizeInfo" className="flex flex-row justify-between items-center">
               <div id="sizeInputContainer">
                 <input
