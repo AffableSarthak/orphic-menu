@@ -37,11 +37,7 @@ const Menu = ({ categoryName }) => {
           className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-menu bg-cover bg-no-repeat object-center text-white"
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
-            {typeof window !== "undefined" && (
-              <BackButton
-                path={`/app/categories/${localStorage.getItem("rId")}}`}
-              />
-            )}
+            {typeof window !== "undefined" && <BackButton />}
 
             <h3 className="ml-2 font-bold">{categoryName}</h3>
           </div>
