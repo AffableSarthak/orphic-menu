@@ -1,21 +1,26 @@
-import { useContext, useState } from "react";
+import { useState, useContext } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
 import sessionContext from "../../context/session/context";
 
-const CartItem = ({ stagedItem }: { stagedItem: IstagedItem }) => {
+const CartItem = ({
+  item,
+  qty,
+  idx,
+}: {
+  item: Iitem;
+  qty: number;
+  idx: number;
+}) => {
   // console.log(item,'from stagedItem card')
-  const { updateQytForItem } = useContext(sessionContext);
-  const { item, qty, itemId, username } = stagedItem;
+  // {
+  //   key && console.log(key, 'key from cartItem');
+  // }
 
-  const handleQty = async (itemId, qty) => {
-    // if (qty <= 0) {
-    //   await removeItem(itemId);
-    // } else {
-    // }
-    await updateQytForItem(itemId, qty);
-  };
-  // console.log(item, qty, itemId, username);
+  // console.log(idx, "from cartItem ind");
+
+  const { IncQtyForItem, DecQtyForItem, username } = useContext(sessionContext);
+
   return (
     <>
       <div
@@ -36,7 +41,9 @@ const CartItem = ({ stagedItem }: { stagedItem: IstagedItem }) => {
               {item.itemName}
             </p>
             {/*cart product name*/}
-            <p className="text-sm text-smokyBlack font-medium">${item.price}</p>
+            <p className="text-sm text-smokyBlack font-medium">
+              ${parseInt(item.price) * qty}
+            </p>
             {/*cart product price*/}
           </div>
 
@@ -50,10 +57,9 @@ const CartItem = ({ stagedItem }: { stagedItem: IstagedItem }) => {
             <div className="text-sm flex bg-whiteColor rounded-sm shadow-sm ">
               <button
                 type="button"
-                onClick={() => {
-                  const newQty = qty - 1;
-                  handleQty(itemId, newQty);
-                }}
+                onClick={() =>
+                  DecQtyForItem(item.itemId, "-MglGB1mqNf5eF4QWPfZ", idx)
+                }
                 className="px-2 flex justify-center items-center"
               >
                 <AiOutlineMinus className="text-secondary text-lg" />
@@ -61,10 +67,9 @@ const CartItem = ({ stagedItem }: { stagedItem: IstagedItem }) => {
               <p className="px-2 text-smokyBlack">{qty}</p> {/*no of items*/}
               <button
                 type="button"
-                onClick={() => {
-                  const newQty = qty + 1;
-                  handleQty(itemId, newQty);
-                }}
+                onClick={() =>
+                  IncQtyForItem(item.itemId, "-MglGB1mqNf5eF4QWPfZ", idx)
+                }
                 className="px-2 flex justify-center items-center"
               >
                 <AiOutlinePlus className="text-secondary text-lg" />

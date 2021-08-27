@@ -11,10 +11,15 @@ import OrphicLoader from "../common/OrphicLoader";
 import CartButton from "../common/CartButton";
 
 const Categories = (props) => {
-  const { isLoading, setUsername, populateGc, username } =
-    useContext(sessionContext);
-
   const { tableId, sessionId, eateryId, categories, gc } = props.sessionProps;
+  const {
+    isLoading,
+    setUsername,
+    populateGc,
+    // categories,
+    username,
+    getStagedItems,
+  } = useContext(sessionContext);
 
   useEffect(() => {
     localStorage.setItem("sessionId", sessionId);
@@ -25,6 +30,13 @@ const Categories = (props) => {
         await populateGc(gc);
       })();
     }
+    // console.log(localStorage.getItem('rId'))
+    // console.log(localStorage.getItem('username'))
+    // return () => {
+    //   cleanup
+    // }
+
+    getStagedItems(localStorage.getItem("sessionId"));
   }, []);
 
   return (

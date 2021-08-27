@@ -72,6 +72,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
     });
     setLoading(false);
   };
+
   const setUsername = async (username: string) => {
     setLoading(true);
     await dispatch({
@@ -159,8 +160,50 @@ const sessionInfo = ({ children, db }: Iprops) => {
     const sessionId = await localStorage.getItem("sessionId");
     console.log(sessionId);
     await getStagedItems(sessionId);
-
     setLoading(false);
+  };
+
+  const getStagedItems = async (sessionId) => {
+    try {
+      const sessionRef = await db.ref("sessions");
+      let data;
+      sessionRef.child(sessionId).on("value", (snapshot) => {
+        data = snapshot.val().stagedItems;
+        console.log(data, "from firebase");
+        if (data === undefined) {
+          dispatch({
+            type: GET_STAGED_ITEMS,
+            payload: [],
+          });
+        } else {
+          dispatch({
+            type: GET_STAGED_ITEMS,
+            payload: data,
+          });
+        }
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const updateStagedItems = async (sessionId, stageItem) => {
+    try {
+      const sessionRef = db.ref("sessions");
+      console.log(state.stagedItems, "from stagedItms func");
+
+      await sessionRef.child(sessionId).update(
+        {
+          stagedItems: [...state.stagedItems, stageItem],
+        },
+        (error) => {
+          if (error) console.log(error);
+          else console.log("update success full");
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   // get the data for item cust
@@ -199,19 +242,6 @@ const sessionInfo = ({ children, db }: Iprops) => {
       case "SET_WITHOUT_CUST": {
         console.log("set staged item function ", item);
 
-        /**
-         *
-         *
-         * stagedItem = [
-         *
-         * {
-         * item: {item},
-         * count : 2,
-         * username
-         * }
-         * ]
-         */
-
         let stagedItem = {
           delivered: false,
           item,
@@ -225,7 +255,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
         const sessionId = localStorage.getItem("sessionId");
 
         await updateStagedItems(sessionId, stagedItem);
-        await dispatch({ type: SET_STAGED, payload: stagedItem });
+        // await dispatch({ type: SET_STAGED, payload: stagedItem });
         // api for firebase
         db.ref("sessions")
           .child(sessionId)
@@ -251,94 +281,86 @@ const sessionInfo = ({ children, db }: Iprops) => {
   // console.log(miniGC)
   // console.log(stagedItems, 'from state')
 
-  const getStagedItems = async (sessionId) => {
+  const IncQtyForItem = async (
+    itemId: string,
+    sessionId: string,
+    idx: number
+  ) => {
+    // console.log(itemId, "from INC FUN");
     try {
-      const sessionRef = await db.ref("sessions");
-      let data;
-      sessionRef.child(sessionId).on("value", (snapshot) => {
-        data = snapshot.val().stagedItems;
-        if (data) {
-          console.log(data, "from firebase");
-          dispatch({
-            type: GET_STAGED_ITEMS,
-            payload: data,
-          });
-        } else {
-          console.log(data, "from firebase");
-          dispatch({
-            type: GET_STAGED_ITEMS,
-            payload: [],
-          });
-        }
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const updateStagedItems = async (sessionId, stageItem) => {
-    try {
-      const sessionRef = db.ref("sessions");
-      await sessionRef.child(sessionId).update(
-        {
-          stagedItems: [...state.stagedItems, stageItem],
-        },
-        (error) => {
-          if (error) console.log(error);
-          else console.log("update success full");
-        }
+      let itemQty = state.stagedItems.find(
+        (stagedItem: IstagedItem) => stagedItem.itemId === itemId
       );
-    } catch (error) {
-      console.log(error);
-    }
-  };
+      // console.log(itemQty, "from updateQty itemQty");
+      let oldQty = itemQty.qty;
+      // console.log(oldQty, "from updateQty oldQty");
 
-  const updateStagedQtyItems = async () => {
-    console.log(stagedItems);
-    try {
       const sessionRef = db.ref("sessions");
-      const sessionId = localStorage.getItem("sessionId");
-      await sessionRef.child(sessionId).update(
-        {
-          stagedItems: [...stagedItems],
-        },
-        (error) => {
-          if (error) console.log(error);
-          else console.log("Qty updated");
-        }
-      );
+      await sessionRef
+        .child(sessionId)
+        .child("stagedItems")
+        .child(idx)
+        .update(
+          {
+            qty: oldQty + 1,
+          },
+          (error) => {
+            if (error) {
+              console.log(error);
+            } else {
+              console.log("qty updated");
+            }
+          }
+        );
     } catch (error) {
       console.log(error);
     }
   };
 
-  const updateQytForItem = async (itemId: string, newItemQty: number) => {
-    let tempItem = await stagedItems.find((staged) => staged.itemId === itemId);
-    setLoading(true);
-    let tempIndex = await stagedItems.findIndex(
-      (staged) => staged.itemId === itemId
-    );
-    tempItem["qty"] = newItemQty;
-    console.log(itemId, newItemQty);
-    console.log(tempIndex, tempItem);
-    let tempStaged = stagedItems.map((stagedItem) => stagedItem);
-    if (newItemQty === 0) {
-      console.log({ tempStaged });
-      await tempStaged.splice(tempIndex, 1);
-      // delete tempStaged[tempIndex];
-      console.log({ tempStaged });
-    } else {
-      tempStaged.splice(tempIndex, 0, { ...tempItem });
-    }
-    console.log({ ...tempStaged });
-    await dispatch({
-      type: "UPDATE_QTY",
-      payload: [...tempStaged],
-    });
-    // console.log(stagedItems);
+  const DecQtyForItem = async (
+    itemId: string,
+    sessionId: string,
+    idx: number
+  ) => {
+    // console.log(itemId, "from DEC FUN");
+    try {
+      // console.log(state.stagedItems, "from DEC FUN");
+      let itemQty = state.stagedItems.find(
+        (stagedItem: IstagedItem) => stagedItem.itemId === itemId
+      );
+      // console.log(itemQty, "from updateQty itemQty");
+      let oldQty = itemQty.qty;
+      // console.log(oldQty, "from updateQty oldQty");
 
-    await updateStagedQtyItems();
-    setLoading(false);
+      const sessionRef = db.ref("sessions");
+
+      if (oldQty === 1) {
+        await sessionRef.child(sessionId).update({
+          stagedItems: state.stagedItems.filter(
+            (stagedItem: IstagedItem) => stagedItem.itemId !== itemId
+          ),
+        });
+      } else {
+        await sessionRef
+          .child(sessionId)
+          .child("stagedItems")
+          .child(idx)
+          .update(
+            {
+              qty: oldQty - 1,
+            },
+            (error) => {
+              if (error) {
+                console.log(error);
+              } else {
+                console.log("qty updated");
+              }
+            }
+          );
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   console.log(isLoading);
@@ -363,7 +385,8 @@ const sessionInfo = ({ children, db }: Iprops) => {
           currentItem,
           setCurrentItem,
           getStagedItems,
-          updateQytForItem,
+          IncQtyForItem,
+          DecQtyForItem,
         }}
       >
         {children}

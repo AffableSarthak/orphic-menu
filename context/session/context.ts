@@ -17,9 +17,10 @@ export type sessionDataType = {
   miniGC: Igc[];
   currentItem: any;
   setCurrentItem: (item: Iitem) => Promise<void>;
-  updateQytForItem: (itemId: string, newItemQty: number) => Promise<void>;
   getStagedItems: (sessionId: any) => void;
   // sessionInfo: IsessionInfoType;
+  IncQtyForItem: (itemId: string, sessionId: string, idx: number) => void;
+  DecQtyForItem: (itemId: string, sessionId: string, idx: number) => void;
 };
 
 export const sessionDefaultValue: sessionDataType = {
@@ -39,8 +40,9 @@ export const sessionDefaultValue: sessionDataType = {
   currentItem: {},
   setCurrentItem: () => Promise.resolve(),
   getStagedItems: () => null,
-  updateQytForItem: (itemId: string, newItemQty: number) => Promise.resolve()
   // sessionInfo: null,
+  IncQtyForItem: () => null,
+  DecQtyForItem: () => null,
 };
 
 const sessionContext = createContext<sessionDataType>(sessionDefaultValue);

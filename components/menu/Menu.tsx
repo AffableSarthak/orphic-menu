@@ -20,8 +20,7 @@ const Menu = ({ categoryName }) => {
   const [rId, setRId] = useState("");
 
   useEffect(() => {
-    const rId = localStorage.getItem("rId");
-    setRId(rId);
+    const rId = typeof window !== "undefined" && localStorage.getItem("rId");
     if (items.length === 0) router.push(`/app/categories/${rId}`);
   }, []);
 
@@ -38,7 +37,12 @@ const Menu = ({ categoryName }) => {
           className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-menu bg-cover bg-no-repeat object-center text-white"
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
-            <BackButton />
+            {typeof window !== "undefined" && (
+              <BackButton
+                path={`/app/categories/${localStorage.getItem("rId")}}`}
+              />
+            )}
+
             <h3 className="ml-2 font-bold">{categoryName}</h3>
           </div>
 
