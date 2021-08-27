@@ -2,7 +2,7 @@ import CartItem from "./CartItem";
 import { AiOutlinePlus } from "react-icons/ai";
 import BackButton from "../common/BackButton";
 import Button from "../common/Button";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import sessionContext from "../../context/session/context";
 import totalPrice from "../utils/total-price";
 import TotalPrice from "../common/TotalPrice";
@@ -10,6 +10,7 @@ import { toArray } from "lodash";
 
 const Cart = () => {
   const { getStagedItems, stagedItems } = useContext(sessionContext);
+  const [tableId, setTableId] = useState("");
 
   // console.log(stagedItems, "from cart");
 
@@ -17,6 +18,8 @@ const Cart = () => {
 
   useEffect(() => {
     const sessionId = localStorage.getItem("sessionId");
+    const tableId = localStorage.getItem("tableId");
+    setTableId(tableId);
     getStagedItems(sessionId);
   }, []);
 
@@ -32,7 +35,7 @@ const Cart = () => {
           <div className="flex-four">
             {typeof window !== "undefined" && localStorage && (
               <BackButton
-                path={`/app/categories/${localStorage.getItem("rId")}`}
+              // path={`/app/categories/${localStorage.getItem("rId")}`}
               />
             )}
           </div>
@@ -49,7 +52,7 @@ const Cart = () => {
           className="flex flex-col justify-center pl-4 bg-whiteColor mt-8 h-[96px] rounded-2xl shadow-lg"
         >
           <p className="text-gray-500 text-sm mb-2">Diliver to</p>
-          <h2 className="text-smokyBlack font-medium">table 7</h2>
+          <h2 className="text-smokyBlack font-medium">{tableId}</h2>
         </div>
 
         {/* carts section */}
@@ -67,6 +70,7 @@ const Cart = () => {
                   idx={index}
                   item={stagedItem.item}
                   qty={stagedItem.qty}
+                  username={stagedItem.username}
                 />
               </>
             ))
@@ -90,30 +94,29 @@ const Cart = () => {
 
         {/* Bill section */}
 
-        <div id="billSection" className="mt-4 flex flex-col gap-3">
-          <div
+        <div id="billSection" className="mt-8 flex flex-col gap-3">
+          {/* <div
             id="itemTotal"
             className="flex flex-row justify-between items-center"
           >
             <p className="text-smokyBlack text-sm">Item total</p>
-            {/* <p className="text-smokyBlack text-sm">${totalPrice(stagedItems)}</p> */}
             <p className="text-smokyBlack text-sm">
               <TotalPrice />
             </p>
-          </div>
+          </div> */}
 
-          <div
+          {/* <div
             id="discount"
             className="flex flex-row justify-between items-center"
           >
             <p className="text-smokyBlack text-sm">Discount</p>
             <p className="text-smokyBlack text-sm">-$10</p>
-          </div>
-
+          </div> */}
+          {/* 
           <div id="tax" className="flex flex-row justify-between items-center">
             <p className="text-smokyBlack text-sm">Tax</p>
             <p className="text-smokyBlack text-sm">$2</p>
-          </div>
+          </div> */}
 
           <div
             id="totalBill"

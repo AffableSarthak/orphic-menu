@@ -30,12 +30,6 @@ const Categories = (props) => {
         await populateGc(gc);
       })();
     }
-    // console.log(localStorage.getItem('rId'))
-    // console.log(localStorage.getItem('username'))
-    // return () => {
-    //   cleanup
-    // }
-
     getStagedItems(localStorage.getItem("sessionId"));
   }, []);
 

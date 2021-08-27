@@ -27,7 +27,7 @@ const MenuCard = (props) => {
               await getCustForItem(item);
               router.push({ pathname: `/app/cust` });
             }}
-            className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+            className=" flex  justify-center items-center bg-whiteColor rounded-full px-2 py-2"
           >
             <AiOutlinePlus className="text-smokyBlack text-xl" />
             <p>cust</p>
@@ -38,7 +38,7 @@ const MenuCard = (props) => {
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
           // If the current Item is present in Cart
           return (
-            <span className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2">
+            <span className=" flex justify-center items-center bg-whiteColor rounded-full px-2 py-2">
               {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
               <p className="text-primary text-sm">ADDED</p>
             </span>
@@ -51,7 +51,7 @@ const MenuCard = (props) => {
                 await getCustForItem(item);
                 router.push({ pathname: `/app/cust` });
               }}
-              className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+              className=" flex justify-center items-center bg-whiteColor rounded-full px-2 py-2"
             >
               <AiOutlinePlus className="text-smokyBlack text-xl" />
               <p>cust</p>
@@ -70,7 +70,7 @@ const MenuCard = (props) => {
               console.log("Inside without cust item");
               setStagedItem(item, "SET_WITHOUT_CUST");
             }}
-            className=" absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+            className=" flex justify-center items-center bg-whiteColor rounded-full px-2 py-2"
           >
             <AiOutlinePlus className="text-smokyBlack text-xl" />
           </span>
@@ -80,7 +80,7 @@ const MenuCard = (props) => {
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
           // If the current Item is present in Cart
           return (
-            <span className=" absolute right-5 top-5 flex flex-row justify-center items-center  rounded-full px-2 py-2 bg-primary text-white">
+            <span className="flex justify-center items-center  rounded-full px-2 py-2 bg-primary text-white">
               {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
               Added
             </span>
@@ -93,7 +93,7 @@ const MenuCard = (props) => {
               onClick={() => {
                 setStagedItem(item, "SET_WITHOUT_CUST");
               }}
-              className="absolute right-5 top-5 flex flex-row justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+              className="flex justify-center items-center bg-whiteColor rounded-full px-2 py-2"
             >
               <AiOutlinePlus className="text-smokyBlack text-xl" />
             </span>

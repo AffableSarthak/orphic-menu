@@ -32,6 +32,7 @@ interface IstagedItem {
   ordered: boolean;
   qty: number;
   username: string;
+  cust? : any
 }
 
 interface IsessionInfoType {

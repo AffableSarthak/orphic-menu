@@ -250,6 +250,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
           ordered: false,
           qty: 1,
           username: localStorage.getItem("username"),
+          //cust
         };
 
         const sessionId = localStorage.getItem("sessionId");

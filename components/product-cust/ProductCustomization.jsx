@@ -11,7 +11,7 @@ import * as yup from "yup";
 
 const ProductCustomization = () => {
   const router = useRouter();
-  const { miniGC } = useContext(sessionContext);
+  const { miniGC, setStagedItem } = useContext(sessionContext);
   const [itemName, setItemName] = useState("");
   const [initialValues, setInitialValues] = useState({});
 
@@ -72,8 +72,8 @@ const ProductCustomization = () => {
         <Formik
           initialValues={initialValues}
           // validationSchema={yup.object(getValidationSchema())}
-          onSubmit={async (values, formikHelpers) => {
-            console.log(values, formikHelpers);
+          onSubmit={async (values) => {
+            console.log({ values });
           }}
         >
           {({ values, errors, isSubmitting, isValidating }) => (
@@ -175,10 +175,10 @@ const ProductCustomization = () => {
                 >
                   Add to Cart
                 </button>
-                {/* <div>
+                <div>
                   <p className="text-smokyBlack text-sm">Item Total</p>
                   <p className="text-dark font-bold text-xl">$13.50</p>
-                </div> */}
+                </div>
               </div>
               {/* <button
                 type="submit"
@@ -188,7 +188,7 @@ const ProductCustomization = () => {
                 <span>Continue</span>
                 <span className="flex justify-center items-center {${isSubmitting? disabled: animate-spin}}"></span>
               </button> */}
-              {/* <pre>{JSON.stringify(values, null, 4)}</pre> */}
+              <pre>{JSON.stringify(values, null, 4)}</pre>
             </Form>
           )}
         </Formik>

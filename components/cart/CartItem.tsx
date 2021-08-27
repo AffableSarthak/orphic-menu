@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
 import sessionContext from "../../context/session/context";
@@ -7,19 +7,25 @@ const CartItem = ({
   item,
   qty,
   idx,
+  username,
 }: {
   item: Iitem;
   qty: number;
   idx: number;
+  username: string;
 }) => {
   // console.log(item,'from stagedItem card')
   // {
   //   key && console.log(key, 'key from cartItem');
   // }
-
+  const [sessionId, setSessionId] = useState("");
   // console.log(idx, "from cartItem ind");
+  useEffect(() => {
+    const sessionId = localStorage.getItem("sessionId");
+    setSessionId(sessionId);
+  }, []);
 
-  const { IncQtyForItem, DecQtyForItem, username } = useContext(sessionContext);
+  const { IncQtyForItem, DecQtyForItem } = useContext(sessionContext);
 
   return (
     <>
@@ -42,7 +48,7 @@ const CartItem = ({
             </p>
             {/*cart product name*/}
             <p className="text-sm text-smokyBlack font-medium">
-              ${parseInt(item.price) * qty}
+              ₹{parseInt(item.price) * qty}
             </p>
             {/*cart product price*/}
           </div>
@@ -57,9 +63,7 @@ const CartItem = ({
             <div className="text-sm flex bg-whiteColor rounded-sm shadow-sm ">
               <button
                 type="button"
-                onClick={() =>
-                  DecQtyForItem(item.itemId, "-MglGB1mqNf5eF4QWPfZ", idx)
-                }
+                onClick={() => DecQtyForItem(item.itemId, sessionId, idx)}
                 className="px-2 flex justify-center items-center"
               >
                 <AiOutlineMinus className="text-secondary text-lg" />
@@ -67,9 +71,9 @@ const CartItem = ({
               <p className="px-2 text-smokyBlack">{qty}</p> {/*no of items*/}
               <button
                 type="button"
-                onClick={() =>
-                  IncQtyForItem(item.itemId, "-MglGB1mqNf5eF4QWPfZ", idx)
-                }
+                onClick={() => {
+                  IncQtyForItem(item.itemId, sessionId, idx);
+                }}
                 className="px-2 flex justify-center items-center"
               >
                 <AiOutlinePlus className="text-secondary text-lg" />
