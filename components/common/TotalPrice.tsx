@@ -15,7 +15,7 @@ const TotalPrice = () => {
       tp += singleDishAmount;
     });
     setTotalPrice(tp);
-  });
+  }, [stagedItems]);
   return <span>{totalPrice}</span>;
 };
 

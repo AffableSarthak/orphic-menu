@@ -12,7 +12,7 @@ const CartButton = () => {
   useEffect(() => {
     stagedItems.forEach((stagedItem: IstagedItem) => (num += stagedItem.qty));
     setCartNo(num);
-  });
+  }, [stagedItems]);
   return (
     <>
       <div
