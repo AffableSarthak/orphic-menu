@@ -80,7 +80,7 @@ const MenuCard = (props) => {
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
           // If the current Item is present in Cart
           return (
-            <span className="flex justify-center items-center  rounded-full px-2 py-2 bg-primary text-white">
+            <span className="flex justify-center items-center  rounded-full px-2 py-2 bg-primary text-dark text-sm">
               {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
               Added
             </span>
@@ -160,7 +160,7 @@ const MenuCard = (props) => {
                   item.itemId.split("-")[1].toString() * 1
                 }_processed.glb`}
                 rel="noopener noreferrer"
-                className="flex justify-center items-center bg-whiteColor rounded-full p-2 "
+                className="flex justify-center items-center bg-whiteColor rounded-full p-2 active:bg-primary hover:bg-primary "
               >
                 <FiBox className="text-3xl" />
               </a>

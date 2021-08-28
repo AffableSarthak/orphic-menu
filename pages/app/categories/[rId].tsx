@@ -31,7 +31,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
           src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
         },
         {
-          name: "Burger & Combos",
+          name: "Burgers & Combos",
           src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
         },
         {

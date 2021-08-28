@@ -148,13 +148,16 @@ const sessionInfo = ({ children, db }: Iprops) => {
     item.cust.map((ic) => {
       let itemCObj = gcState.find((gc) => {
         console.log(gc.id, typeof gc.id, ic, typeof ic);
-        return gc.id === ic;
+        return gc.id == ic;
       });
       tempArray.push(itemCObj);
+      console.log(tempArray, "from abcdtexp");
     });
-    setminiGC([...tempArray]);
+    await setminiGC([...tempArray]);
     setLoading(false);
   };
+
+  console.log(miniGC, "from sttatskbcksc");
 
   const setStagedItem = async (item: Iitem, type: string) => {
     // setIsLoading(true)

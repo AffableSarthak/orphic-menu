@@ -24,14 +24,11 @@ const CommunityNotification = () => {
       className="absolute top-[140px] left-[15px] w-11/12 mx-auto bg-whiteColor p-4 rounded-lg shadow-xl text-center"
     >
       {stagedItem === undefined ? (
-        <div>Loading.. | no item yet added</div>
+        <div>No item yet span added</div>
       ) : (
         <p>
           <span className="text-secondary">{stagedItem.username}</span> added{" "}
-          <span className="font-bold text-smokyBlack">
-            {" "}
-            {stagedItem.item.itemName}
-          </span>{" "}
+          <span className="font-bold text-smokyBlack"> {stagedItem.item.itemName}</span>{" "}
           <span className="inline-block ml-2">{/* <BsArrowRight /> */}</span>
         </p>
       )}

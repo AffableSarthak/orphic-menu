@@ -23,14 +23,17 @@ const Menu = ({ categoryName, gc }) => {
     // console.log(items, "from menu");
     setCategoryItems(categoryName);
 
+    // if (items.length === null) router.push(`/app/categories/${rId}`);
+    // console.log(items.length === undefined);
+  }, [categoryName]);
+
+  useEffect(() => {
     {
       (async () => {
         await populateGc(gc);
       })();
     }
-    // if (items.length === null) router.push(`/app/categories/${rId}`);
-    // console.log(items.length === undefined);
-  }, [categoryName]);
+  }, []);
 
   // console.log({ rId });
   console.log(items, stagedItems);
@@ -77,7 +80,7 @@ const Menu = ({ categoryName, gc }) => {
         ) : (
           <>
             <h1 className="mt-16 text-center bg-whiteColor py-2 mx-2 border shadow-lg rounded-xl">
-              Sorry bhai POS wale ne Galti se daal diya
+              No Items for this category...
             </h1>
           </>
         )}
