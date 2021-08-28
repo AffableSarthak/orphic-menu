@@ -138,7 +138,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
     }
   };
 
-  // get the data for item cust
+  // get the data for item cust abc
   const getCustForItem = async (item: Iitem) => {
     setLoading(true);
     console.log(gcState, "from getCustForItem");
