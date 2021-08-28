@@ -25,11 +25,6 @@ const Categories = (props) => {
     localStorage.setItem("sessionId", sessionId);
     localStorage.setItem("tableId", tableId);
     localStorage.setItem("eateryId", eateryId);
-    {
-      (async () => {
-        await populateGc(gc);
-      })();
-    }
     getStagedItems(localStorage.getItem("sessionId"));
   }, []);
 

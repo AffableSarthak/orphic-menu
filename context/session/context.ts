@@ -26,7 +26,7 @@ export type sessionDataType = {
 export const sessionDefaultValue: sessionDataType = {
   isLoading: false,
   setUsername: () => null,
-  populateGc:()=> null,
+  populateGc: () => null,
   categories: [],
   username: "",
   items: [],

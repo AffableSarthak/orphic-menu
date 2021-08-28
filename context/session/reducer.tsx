@@ -6,6 +6,7 @@ import {
   SET_LOADING,
   GET_STAGED_ITEMS,
   UPDATE_QTY,
+  SET_CURRENT_ITEM,
 } from "./actionType";
 
 const sessionReducer = (state, action) => {
@@ -53,6 +54,12 @@ const sessionReducer = (state, action) => {
       return {
         ...state,
         stagedItems: payload,
+      };
+
+    case SET_CURRENT_ITEM:
+      return {
+        ...state,
+        currentItem: payload,
       };
   }
 };

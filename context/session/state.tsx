@@ -1,17 +1,11 @@
-import {
-  SET_CATEGORIES,
-  SET_LOADING,
-  GET_STAGED_ITEMS,
-  SET_STAGED,
-  SET_USERNAME,
-  UPDATE_QTY,
-} from "./actionType";
+import { SET_CATEGORIES, SET_LOADING, GET_STAGED_ITEMS, SET_STAGED, SET_USERNAME, UPDATE_QTY } from "./actionType";
 
 import SessionContext from "./context";
 // import Data from '../../db/claytopia.json'
 import { useReducer, useState } from "react";
 import sessionReducer from "./reducer";
 import { useRouter } from "next/router";
+import claytopiaData from "../../db/db.json";
 
 const sessionInfo = ({ children, db }: Iprops) => {
   const initialState: IinitialState = {
@@ -21,9 +15,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
     stagedItems: [],
     username: "",
     items: [],
-    currentItem: {},
-    cartCount: 0,
-    totalPrice: 0,
+    currentItem: null,
   };
 
   // console.log({ sessionProps })
@@ -33,17 +25,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
   const [miniGC, setminiGC] = useState<Igc[]>([]);
   const router = useRouter();
 
-  const {
-    isLoading,
-    categories,
-    orderedItems,
-    stagedItems,
-    username,
-    items,
-    currentItem,
-    cartCount,
-    totalPrice,
-  } = state;
+  const { isLoading, categories, orderedItems, stagedItems, username, items, currentItem } = state;
 
   /**
    *  Functions to Add
@@ -90,68 +72,18 @@ const sessionInfo = ({ children, db }: Iprops) => {
     setLoading(false);
   };
 
+  const getFilteredData = (category) => {
+    const data = Object.values(claytopiaData.eateries.bistro_claytopia_all);
+    return data.filter((x) => x.category === category);
+  };
+
   const setCategoryItems = async (categoryName: string) => {
     //call API
     setLoading(true);
-    const data: Iitem[] = [
-      {
-        bannerUrl:
-          "https://drive.google.com/uc?export=download&id=1jw7MKjy4PaP7zR5U3J3m3ePlyrGuSh5z",
-        category: "Burgers & Combos",
-        desc: "",
-        itemId: "BC-002",
-        itemName: "Spicy BBQ Chicken Combo",
-        objectUrl:
-          "https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL",
-        price: "350",
-      },
-
-      {
-        bannerUrl:
-          "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
-        category: "Pasta",
-        cust: ["002", "040", "001"],
-        desc: "",
-        itemId: "BC-005",
-        itemName: "Wild Mushroom Pasta ",
-        objectUrl:
-          "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
-        price: "295",
-      },
-      {
-        bannerUrl:
-          "https://drive.google.com/uc?export=download&id=1uopz02oTWLrITiDHVs9Gn8fOViVuXhQr",
-        category: "Breakfast",
-        desc: "",
-        itemId: "BC-010",
-        itemName: "Bistro Heavenly Rolls",
-        objectUrl:
-          "https://drive.google.com/uc?export=download&id=1DYZej3r0NxZ7A6IYLm_B8g_L2bBY4Mqy",
-        price: "300",
-      },
-      {
-        bannerUrl:
-          "https://drive.google.com/uc?export=download&id=1fMxyyYdRYpXsm3u0OWnfBgCkzElHGO0E",
-        category: "Soups & Salads",
-        desc: "",
-        itemId: "BC-011",
-        itemName: "Classic Ceaser Salad",
-        objectUrl:
-          "https://drive.google.com/uc?export=download&id=15JVQk8Ysh263m89ud4_YNGl0o9ICKJFX",
-        price: "220/250",
-      },
-      {
-        bannerUrl:
-          "https://drive.google.com/uc?export=download&id=1B4wmQm1QXc5c73EhOrRXPXaIlSJGJrtz",
-        category: "Main Course",
-        desc: "",
-        itemId: "BC-012",
-        itemName: "Herb Roasted Chicken",
-        objectUrl:
-          "https://drive.google.com/uc?export=download&id=1B4tGVggAHrQG_VaOsCeEz_zZj7hL1wPK",
-        price: "330",
-      },
-    ];
+    console.log(categoryName, "data from setCategoryItems");
+    //@ts-ignore
+    const data: Iitem[] = await getFilteredData(categoryName);
+    console.log(data, "data from setCategoryItems");
 
     await dispatch({
       type: "SET_CATEGORY_ITEM",
@@ -169,7 +101,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
       let data;
       sessionRef.child(sessionId).on("value", (snapshot) => {
         data = snapshot.val().stagedItems;
-        console.log(data, "from firebase");
+        // console.log(data, "from firebase");
         if (data === undefined) {
           dispatch({
             type: GET_STAGED_ITEMS,
@@ -209,7 +141,8 @@ const sessionInfo = ({ children, db }: Iprops) => {
   // get the data for item cust
   const getCustForItem = async (item: Iitem) => {
     setLoading(true);
-    console.log({ item, gcState });
+    console.log(gcState, "from getCustForItem");
+    // console.log(item,'from cartItemInfo')
     localStorage.setItem("currentItemName", item.itemName);
     let tempArray = [];
     item.cust.map((ic) => {
@@ -228,17 +161,26 @@ const sessionInfo = ({ children, db }: Iprops) => {
     setLoading(true);
     switch (type) {
       case "SET_WITH_CUST": {
-        const itemCust = getCustForItem(item);
-        const newItem = {
-          ...item,
-          cust: itemCust,
-        };
-        console.log(newItem, "from setStaged newItems");
-
-        await dispatch({ type: "SET_STAGED", payload: newItem });
-
+        // await dispatch({ type: "SET_STAGED", payload: newItem });
         // Firebase API to set Staged with call back
+        let stagedItem = {
+          delivered: false,
+          item,
+          itemId: item.itemId,
+          // note: "",
+          ordered: false,
+          qty: 1,
+          username: localStorage.getItem("username"),
+          //cust
+        };
+
+        console.log(stagedItem, "from unwanted switch");
+
+        const sessionId = localStorage.getItem("sessionId");
+
+        await updateStagedItems(sessionId, stagedItem);
       }
+
       case "SET_WITHOUT_CUST": {
         console.log("set staged item function ", item);
 
@@ -258,19 +200,6 @@ const sessionInfo = ({ children, db }: Iprops) => {
         await updateStagedItems(sessionId, stagedItem);
         // await dispatch({ type: SET_STAGED, payload: stagedItem });
         // api for firebase
-        db.ref("sessions")
-          .child(sessionId)
-          .get()
-          .then((snapshot) => {
-            if (snapshot.exists()) {
-              console.log(snapshot.val());
-            } else {
-              console.log("No data available");
-            }
-          })
-          .catch((error) => {
-            console.error(error);
-          });
       }
     }
     setLoading(false);
@@ -282,16 +211,10 @@ const sessionInfo = ({ children, db }: Iprops) => {
   // console.log(miniGC)
   // console.log(stagedItems, 'from state')
 
-  const IncQtyForItem = async (
-    itemId: string,
-    sessionId: string,
-    idx: number
-  ) => {
+  const IncQtyForItem = async (itemId: string, sessionId: string, idx: number) => {
     // console.log(itemId, "from INC FUN");
     try {
-      let itemQty = state.stagedItems.find(
-        (stagedItem: IstagedItem) => stagedItem.itemId === itemId
-      );
+      let itemQty = state.stagedItems.find((stagedItem: IstagedItem) => stagedItem.itemId === itemId);
       // console.log(itemQty, "from updateQty itemQty");
       let oldQty = itemQty.qty;
       // console.log(oldQty, "from updateQty oldQty");
@@ -318,17 +241,11 @@ const sessionInfo = ({ children, db }: Iprops) => {
     }
   };
 
-  const DecQtyForItem = async (
-    itemId: string,
-    sessionId: string,
-    idx: number
-  ) => {
+  const DecQtyForItem = async (itemId: string, sessionId: string, idx: number) => {
     // console.log(itemId, "from DEC FUN");
     try {
       // console.log(state.stagedItems, "from DEC FUN");
-      let itemQty = state.stagedItems.find(
-        (stagedItem: IstagedItem) => stagedItem.itemId === itemId
-      );
+      let itemQty = state.stagedItems.find((stagedItem: IstagedItem) => stagedItem.itemId === itemId);
       // console.log(itemQty, "from updateQty itemQty");
       let oldQty = itemQty.qty;
       // console.log(oldQty, "from updateQty oldQty");
@@ -337,9 +254,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
 
       if (oldQty === 1) {
         await sessionRef.child(sessionId).update({
-          stagedItems: state.stagedItems.filter(
-            (stagedItem: IstagedItem) => stagedItem.itemId !== itemId
-          ),
+          stagedItems: state.stagedItems.filter((stagedItem: IstagedItem) => stagedItem.itemId !== itemId),
         });
       } else {
         await sessionRef

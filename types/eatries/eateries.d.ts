@@ -1,8 +1,6 @@
-
 /**
  *  Naming convention => Start With I and No "Type" in the Name
  */
-
 
 // Item Type
 interface Iitem {
@@ -14,6 +12,5 @@ interface Iitem {
   itemName: string;
   objectUrl: string;
   price: string;
+  customization?: any;
 }
-
-

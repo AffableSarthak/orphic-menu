@@ -16,11 +16,15 @@ const CategoriesCard = ({ categoryName, imgUrl }) => {
         onClick={async () => {
           await localStorage.setItem("categoryName", categoryName);
           console.log(localStorage.getItem("categoryName"));
-          // const sessionId = await localStorage.getItem("sessionId");
+          const eateryId = await localStorage.getItem("eateryId");
           // console.log(sessionId);
-          await setCategoryItems(categoryName);
+          // await setCategoryItems(categoryName);
           // await getStagedItems(sessionId);
-          router.push({ pathname: `/app/menu/${categoryName}` });
+          console.log(categoryName);
+          router.push({
+            pathname: `/app/menu/${categoryName}`,
+            query: { eateryId },
+          });
         }}
       >
         <h2 id="cardHeading" className="text-base font-bold">

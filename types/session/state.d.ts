@@ -32,7 +32,7 @@ interface IstagedItem {
   ordered: boolean;
   qty: number;
   username: string;
-  cust? : any
+  
 }
 
 interface IsessionInfoType {
@@ -45,13 +45,11 @@ interface IsessionInfoType {
 }
 
 interface IinitialState {
-    isLoading: boolean;
-    categories : Icategory[];
-    orderedItems: IorderItem[];
-    stagedItems: IstagedItem[];
-    username: string;
-    items : Iitem[];
-    currentItem: object;
-    cartCount: number;
-    totalPrice: number;
+  isLoading: boolean;
+  categories: Icategory[];
+  orderedItems: IorderItem[];
+  stagedItems: IstagedItem[];
+  username: string;
+  items: Iitem[];
+  currentItem: object;
 }

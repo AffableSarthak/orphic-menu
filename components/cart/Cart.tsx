@@ -29,7 +29,7 @@ const Cart = () => {
 
   return (
     <>
-      <section id="cartSection" className="min-w-full px-4">
+      <section id="cartSection" className="min-w-full px-4 pb-4">
         {/* {cart header} */}
         <div id="cartHeader" className="mt-8 flex flex-row items-center">
           <div className="flex-four">

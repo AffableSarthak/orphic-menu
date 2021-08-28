@@ -23,65 +23,55 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     props: {
       tableId: "T-070",
       eateryId: "E-001",
-      sessionId: "-Mhn1ub6UEGjrGxxtEF1",
-      gc: [
-        {
-          id: "001",
-          name: "Choose Size",
-          type: "one",
-          values: [
-            {
-              name: "Small",
-              price: 20,
-            },
-            {
-              name: "Large",
-              price: 40,
-            },
-          ],
-        },
-        {
-          id: "002",
-          name: "Choose Pasta Type",
-          type: "one",
-          values: [
-            {
-              name: "Penne",
-              price: 0,
-            },
-            {
-              name: "Spaghetti",
-              price: 0,
-            },
-          ],
-        },
-        {
-          id: "040",
-          name: "Add On",
-          type: "many",
-          values: [
-            {
-              name: "Pepsi",
-              price: 50,
-            },
-            {
-              name: "Brownie",
-              price: 60,
-            },
-          ],
-        },
-      ],
+      sessionId: "-MglGB1mqNf5eF4QWPfZ",
+
       categories: [
         {
           name: "Pizza",
           src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
         },
         {
-          name: "Burger",
+          name: "Burger & Combos",
           src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
         },
         {
           name: "Pasta",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
+        },
+        {
+          name: "Main Course",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
+        },
+        {
+          name: "Snacks",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
+        },
+        {
+          name: "Soups & Salads",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
+        },
+        {
+          name: "Breakfast",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
+        },
+        {
+          name: "Starters",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
+        },
+        {
+          name: "Eggs & Pancake",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
+        },
+        {
+          name: "Desserts",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
+        },
+        {
+          name: "Sandwiches",
+          src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
+        },
+        {
+          name: "Beverages",
           src: "https://freesvg.org/img/Gerald-G-Fast-Food-Lunch-Dinner-FF-Menu-6.png",
         },
       ],
