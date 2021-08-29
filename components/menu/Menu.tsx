@@ -1,66 +1,100 @@
 import { IoIosArrowBack } from "react-icons/io";
 import { CgShoppingBag } from "react-icons/cg";
-import { BsArrowRight } from "react-icons/bs";
 import MenuCard from "./MenuCard";
 import PopularCard from "./PopularCard";
+import sessionContext from "../../context/session/context";
+import { useContext, useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import BackButton from "../common/BackButton";
+import CartButton from "../common/CartButton";
+import OrphicLoader from "../common/OrphicLoader";
+import CommunityNotification from "../common/CommunityNotification";
+import { route } from "next/dist/next-server/server/router";
 
-const Welcome = () => {
+const Menu = ({ categoryName, gc }) => {
+  const {
+    items,
+    username,
+    categories,
+    gcState,
+    stagedItems,
+    isLoading,
+    setCategoryItems,
+    populateGc,
+  } = useContext(sessionContext);
+  const router = useRouter();
+
+  // const isLoading = true;
+
+  useEffect(() => {
+    const rId = typeof window !== "undefined" && localStorage.getItem("rId");
+    // console.log(items, "from menu");
+    setCategoryItems(categoryName);
+
+    // if (items.length === null) router.push(`/app/categories/${rId}`);
+    // console.log(items.length === undefined);
+  }, []);
+
+  useEffect(() => {
+    {
+      (async () => {
+        await populateGc(gc);
+      })();
+    }
+  }, []);
+
+  // console.log({ rId });
+  console.log(items, stagedItems);
+
   return (
     <>
-      <section className="relative min-w-full min-h-screen">
+      {/* {isLoading ? <OrphicLoader /> : ''} */}
+      {/* <OrphicLoader isLoading={isLoading} /> */}
+
+      <section className="relative min-w-full min-h-screen pb-4">
         <div
           id="menuHeaderConatiner"
           className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-menu bg-cover bg-no-repeat object-center text-white"
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
-            <a className="inline-block bg-whiteColor p-2  rounded-xl">
-              <IoIosArrowBack className="text-smokyBlack text-2xl" />
-            </a>
-            <h3 className="ml-2 font-bold">Hunger Strike</h3>
+            {typeof window !== "undefined" && <BackButton />}
+
+            <h3 className="ml-2 font-bold">{categoryName}</h3>
           </div>
 
-          <div
-            id="addCartBtn"
-            className="flex flex-row item-center text-xl py-3 px-4 rounded-xl bg-whiteColor text-smokyBlack"
-          >
-            <span className="flex justify-center items-center">
-              <CgShoppingBag className="mr-4 text-center" />
-            </span>
-
-            <span>0</span>
-          </div>
+          <CartButton />
         </div>
 
-        <div
-          id="addNotify"
-          className="absolute top-[140px] left-[15px] w-11/12 mx-auto bg-whiteColor p-4 rounded-lg shadow-xl text-center"
-        >
-          <p>
-            <span className="text-secondary">Bhargav</span> added{" "}
-            <span className="font-bold text-smokyBlack"> Cheese Burger </span> {/*cust.name/desc.*/}
-            <span className="inline-block ml-4">
-              <BsArrowRight />
-            </span>
-          </p>
-        </div>
+        <CommunityNotification />
 
-        <div className="mt-16">
-          <h2 className="text-lg font-semibold px-4">Recommend</h2>
-          <div className="flex flex-row items-center gap-4 overflow-x-auto     px-4">
-            <MenuCard />
-            <MenuCard />
-            <MenuCard />
-          </div>
-        </div>
+        {items.length !== 0 ? (
+          <>
+            <div className="mt-14 p-4">
+              <h2 className="text-lg font-semibold px-4">Recommend</h2>
+            </div>
 
-        <div className="mt-5">
+            <div className="flex flex-row items-center gap-4 overflow-x-auto px-4">
+              {items.map((item, index) => (
+                <MenuCard key={index} item={item} stagedItems={stagedItems} />
+              ))}
+            </div>
+
+            {/* <div className="mt-5">
           <h2 className="text-lg font-semibold px-4">Popular Now</h2>
 
           <PopularCard />
-        </div>
+        </div> */}
+          </>
+        ) : (
+          <>
+            <h1 className="mt-16 text-center bg-whiteColor py-2 mx-2 border shadow-lg rounded-xl">
+              No Items for this category...
+            </h1>
+          </>
+        )}
       </section>
     </>
   );
 };
 
-export default Welcome;
+export default Menu;

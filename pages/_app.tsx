@@ -1,11 +1,16 @@
-import '../styles/globals.css'
+import SessionState from "../context/session/state";
+import "../styles/globals.css";
+import firebase from "../firebase/init";
 
 function MyApp({ Component, pageProps }) {
+  const db = firebase.database();
   return (
     <>
-      <Component {...pageProps} />
+      <SessionState db={db}>
+        <Component {...pageProps} />
+      </SessionState>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
