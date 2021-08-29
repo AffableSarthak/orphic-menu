@@ -1,9 +1,9 @@
 import Image from "next/image";
-import pizzaMatte from "../../public/usernameImages/pizzaMatte.png";
-import burgerSmall from "../../public/usernameImages/burgerSmall.png";
-import friesIsometric from "../../public/usernameImages/friesIsometric.png";
-import hotDog from "../../public/usernameImages/hotDog.png";
-import ketchupMayo from "../../public/usernameImages/ketchupMayo.png";
+import pizzaMatte from "../../public/usernameImages/Burger.svg";
+import burgerSmall from "../../public/usernameImages/Coffee.svg";
+import friesIsometric from "../../public/usernameImages/Fries.svg";
+import hotDog from "../../public/usernameImages/Donuts.svg";
+import ketchupMayo from "../../public/usernameImages/Milkshake.svg";
 import orphicLogo from "../../public/orphic_logo.svg";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
@@ -12,7 +12,6 @@ import * as yup from "yup";
 import sessionContext from "../../context/session/context";
 import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
-import OrphicLoader from "../common/OrphicLoader";
 // import { useContext } from "react";
 // import eatriesContext from "../../context/eateries/eatriesContext";
 const UserDetail = (props) => {
@@ -39,27 +38,47 @@ const UserDetail = (props) => {
       {/* {allData && JSON.stringify(allData)} */}
       {/* <OrphicLoader isLoading={isLoading} /> */}
       <div id="imagesConatiner">
-        <div id="pizzaContainer" className="text-center mt-8 ">
+        <div id="pizzaContainer" className="text-center mt-8 ml-8">
           <Image src={pizzaMatte} width={60} height={60} />
         </div>
 
         <div id="foodLayer2" className="flex flex-row justify-around">
-          <Image src={hotDog} width={80} height={80} />
-          <Image src={friesIsometric} width={60} height={60} />
+          <Image
+            src={hotDog}
+            // className="animate-bounce"
+            width={80}
+            height={80}
+          />
+          <Image
+            src={friesIsometric}
+            // className="animate-bounce"
+            width={60}
+            height={60}
+          />
         </div>
 
         <div
           id="foodLayer3"
           className="flex flex-row justify-between text-center"
         >
-          <Image src={burgerSmall} width={60} height={60} />
+          <Image
+            src={burgerSmall}
+            // className="animate-bounce"
+            width={60}
+            height={60}
+          />
           <Image
             src={orphicLogo}
             className="animate-spin-slow"
             width={100}
             height={100}
           />
-          <Image src={ketchupMayo} width={60} height={60} />
+          <Image
+            src={ketchupMayo}
+            // className="animate-bounce"
+            width={60}
+            height={60}
+          />
         </div>
       </div>
 
