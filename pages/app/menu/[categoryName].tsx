@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Menu from "../../../components/menu/Menu";
 import { GetServerSideProps } from "next";
-export default function menuPage(props) {
+export default function MenuPage(props) {
   const router = useRouter();
   console.log(router.query);
   return (
