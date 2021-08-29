@@ -1,4 +1,11 @@
-import { SET_CATEGORIES, SET_LOADING, GET_STAGED_ITEMS, SET_STAGED, SET_USERNAME, UPDATE_QTY } from "./actionType";
+import {
+  SET_CATEGORIES,
+  SET_LOADING,
+  GET_STAGED_ITEMS,
+  SET_STAGED,
+  SET_USERNAME,
+  UPDATE_QTY,
+} from "./actionType";
 
 import SessionContext from "./context";
 // import Data from '../../db/claytopia.json'
@@ -25,7 +32,15 @@ const sessionInfo = ({ children, db }: Iprops) => {
   const [miniGC, setminiGC] = useState<Igc[]>([]);
   const router = useRouter();
 
-  const { isLoading, categories, orderedItems, stagedItems, username, items, currentItem } = state;
+  const {
+    isLoading,
+    categories,
+    orderedItems,
+    stagedItems,
+    username,
+    items,
+    currentItem,
+  } = state;
 
   /**
    *  Functions to Add
@@ -80,17 +95,17 @@ const sessionInfo = ({ children, db }: Iprops) => {
   const setCategoryItems = async (categoryName: string) => {
     //call API
     setLoading(true);
-    console.log(categoryName, "data from setCategoryItems");
+    // console.log(categoryName, "data from setCategoryItems");
     //@ts-ignore
     const data: Iitem[] = await getFilteredData(categoryName);
-    console.log(data, "data from setCategoryItems");
+    // console.log(data, "data from setCategoryItems");
 
     await dispatch({
       type: "SET_CATEGORY_ITEM",
       payload: data,
     });
     const sessionId = await localStorage.getItem("sessionId");
-    console.log(sessionId);
+    // console.log(sessionId);
     await getStagedItems(sessionId);
     setLoading(false);
   };
@@ -122,7 +137,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
   const updateStagedItems = async (sessionId, stageItem) => {
     try {
       const sessionRef = db.ref("sessions");
-      console.log(state.stagedItems, "from stagedItms func");
+      // console.log(state.stagedItems, "from stagedItms func");
 
       await sessionRef.child(sessionId).update(
         {
@@ -141,23 +156,23 @@ const sessionInfo = ({ children, db }: Iprops) => {
   // get the data for item cust abcdrfgh
   const getCustForItem = async (item: Iitem) => {
     setLoading(true);
-    console.log(gcState, "from getCustForItem");
+    // console.log(gcState, "from getCustForItem");
     // console.log(item,'from cartItemInfo')
     localStorage.setItem("currentItemName", item.itemName);
     let tempArray = [];
     item.cust.map((ic) => {
       let itemCObj = gcState.find((gc) => {
-        console.log(gc.id, typeof gc.id, ic, typeof ic);
+        // console.log(gc.id, typeof gc.id, ic, typeof ic);
         return gc.id == ic;
       });
       tempArray.push(itemCObj);
-      console.log(tempArray, "from abcdtexp");
+      // console.log(tempArray, "from abcdtexp");
     });
     await setminiGC([...tempArray]);
     setLoading(false);
   };
 
-  console.log(miniGC, "from sttatskbcksc");
+  // console.log(miniGC, "from sttatskbcksc");
 
   const setStagedItem = async (item: Iitem, type: string) => {
     // setIsLoading(true)
@@ -177,7 +192,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
           //cust
         };
 
-        console.log(stagedItem, "from unwanted switch");
+        // console.log(stagedItem, "from unwanted switch");
 
         const sessionId = localStorage.getItem("sessionId");
 
@@ -185,7 +200,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
       }
 
       case "SET_WITHOUT_CUST": {
-        console.log("set staged item function ", item);
+        // console.log("set staged item function ", item);
 
         let stagedItem = {
           delivered: false,
@@ -214,10 +229,16 @@ const sessionInfo = ({ children, db }: Iprops) => {
   // console.log(miniGC)
   // console.log(stagedItems, 'from state')
 
-  const IncQtyForItem = async (itemId: string, sessionId: string, idx: number) => {
+  const IncQtyForItem = async (
+    itemId: string,
+    sessionId: string,
+    idx: number
+  ) => {
     // console.log(itemId, "from INC FUN");
     try {
-      let itemQty = state.stagedItems.find((stagedItem: IstagedItem) => stagedItem.itemId === itemId);
+      let itemQty = state.stagedItems.find(
+        (stagedItem: IstagedItem) => stagedItem.itemId === itemId
+      );
       // console.log(itemQty, "from updateQty itemQty");
       let oldQty = itemQty.qty;
       // console.log(oldQty, "from updateQty oldQty");
@@ -244,11 +265,17 @@ const sessionInfo = ({ children, db }: Iprops) => {
     }
   };
 
-  const DecQtyForItem = async (itemId: string, sessionId: string, idx: number) => {
+  const DecQtyForItem = async (
+    itemId: string,
+    sessionId: string,
+    idx: number
+  ) => {
     // console.log(itemId, "from DEC FUN");
     try {
       // console.log(state.stagedItems, "from DEC FUN");
-      let itemQty = state.stagedItems.find((stagedItem: IstagedItem) => stagedItem.itemId === itemId);
+      let itemQty = state.stagedItems.find(
+        (stagedItem: IstagedItem) => stagedItem.itemId === itemId
+      );
       // console.log(itemQty, "from updateQty itemQty");
       let oldQty = itemQty.qty;
       // console.log(oldQty, "from updateQty oldQty");
@@ -257,7 +284,9 @@ const sessionInfo = ({ children, db }: Iprops) => {
 
       if (oldQty === 1) {
         await sessionRef.child(sessionId).update({
-          stagedItems: state.stagedItems.filter((stagedItem: IstagedItem) => stagedItem.itemId !== itemId),
+          stagedItems: state.stagedItems.filter(
+            (stagedItem: IstagedItem) => stagedItem.itemId !== itemId
+          ),
         });
       } else {
         await sessionRef
@@ -282,7 +311,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
     }
   };
 
-  console.log(isLoading);
+  // console.log(isLoading);
 
   return (
     <>

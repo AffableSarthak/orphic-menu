@@ -96,7 +96,12 @@ const Categories = (props) => {
             className={`grid grid-cols-2 gap-4 ${isLoading && "animate-pulse"}`}
           >
             {categories.map((c, i) => (
-              <CategoriesCard key={i} categoryName={c.name} imgUrl={c.src} />
+              <CategoriesCard
+                key={i}
+                categoryName={c.name}
+                imgUrl={c.src}
+                bgColor={c.bgColor}
+              />
             ))}
           </div>
         </div>

@@ -51,7 +51,7 @@ const Cart = () => {
           id="deliveryAdress"
           className="flex flex-col justify-center pl-4 bg-whiteColor mt-8 h-[96px] rounded-2xl shadow-lg"
         >
-          <p className="text-gray-500 text-sm mb-2">Diliver to</p>
+          <p className="text-gray-500 text-sm mb-2">Table Name</p>
           <h2 className="text-smokyBlack font-medium">{tableId}</h2>
         </div>
 

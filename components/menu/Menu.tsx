@@ -12,8 +12,16 @@ import CommunityNotification from "../common/CommunityNotification";
 import { route } from "next/dist/next-server/server/router";
 
 const Menu = ({ categoryName, gc }) => {
-  const { items, username, categories, gcState, stagedItems, isLoading, setCategoryItems, populateGc } =
-    useContext(sessionContext);
+  const {
+    items,
+    username,
+    categories,
+    gcState,
+    stagedItems,
+    isLoading,
+    setCategoryItems,
+    populateGc,
+  } = useContext(sessionContext);
   const router = useRouter();
 
   // const isLoading = true;
@@ -25,7 +33,7 @@ const Menu = ({ categoryName, gc }) => {
 
     // if (items.length === null) router.push(`/app/categories/${rId}`);
     // console.log(items.length === undefined);
-  }, [categoryName]);
+  }, []);
 
   useEffect(() => {
     {

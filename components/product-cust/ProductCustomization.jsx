@@ -53,19 +53,24 @@ const ProductCustomization = () => {
   //   return schemaObj;
   // };
   const newItemObj = (values) => {
-    console.log(Object.values(values), "from new item");
+    // console.log(Object.values(values), "from new item");
   };
   return (
     <>
       <section id="prodCustSection" className="min-w-full px-4 pb-4">
-        <div id="prodCustHeader" className="flex flex-row justify-between items-center mt-8">
+        <div
+          id="prodCustHeader"
+          className="flex flex-row justify-between items-center mt-8"
+        >
           <BackButton />
 
           <CartButton />
         </div>
 
         {/* {console.log(miniGC, "from ProductCustomization")} */}
-        <h1 className="text-sm font-semibold text-smokyBlack mt-8">{itemName}</h1>
+        <h1 className="text-sm font-semibold text-smokyBlack mt-8">
+          {itemName}
+        </h1>
         <Formik
           initialValues={initialValues}
           // validationSchema={yup.object(getValidationSchema())}
@@ -77,7 +82,7 @@ const ProductCustomization = () => {
             };
             await setStagedItem(item, "SET_WITH_CUST");
             router.push({ pathname: "/app/cart" });
-            console.log({ values });
+            // console.log({ values });
           }}
         >
           {({ values, errors, isSubmitting, isValidating }) => (
@@ -87,13 +92,22 @@ const ProductCustomization = () => {
                   return (
                     <>
                       <div key={index} className="my-2 py-2">
-                        <div id="my-radio-group" className="flex justify-between items-center">
-                          <h2 className="text-sm text-smokyBlack font-semibold">{mgc.name}</h2>
+                        <div
+                          id="my-radio-group"
+                          className="flex justify-between items-center"
+                        >
+                          <h2 className="text-sm text-smokyBlack font-semibold">
+                            {mgc.name}
+                          </h2>
                           <p className="text-xs text-smokyBlack font-semibold bg-primary uppercase p-1 rounded-md">
                             required
                           </p>
                         </div>
-                        <div role="group" aria-labelledby="my-radio-group" className="mt-3 divide-y-2">
+                        <div
+                          role="group"
+                          aria-labelledby="my-radio-group"
+                          className="mt-3 divide-y-2"
+                        >
                           {mgc.values.map((value, index) => (
                             <>
                               {/* {(console.log(value), "from values")} */}
@@ -105,7 +119,11 @@ const ProductCustomization = () => {
                                     value={`${value.name},${value.price}`}
                                     className="h-3 w-3 m-2 p-0 text-primary ring-2 ring-offset-1  ring-white checked:ring-2 checked:ring-offset-1 checked:ring-primary"
                                   />
-                                  <label htmlFor={`radio${index}`} key={index} className="text-sm text-gray-600">
+                                  <label
+                                    htmlFor={`radio${index}`}
+                                    key={index}
+                                    className="text-sm text-gray-600"
+                                  >
                                     {value.name}
                                   </label>
                                 </div>
@@ -127,13 +145,22 @@ const ProductCustomization = () => {
                   return (
                     <>
                       <div key={index} className="my-2 py-2">
-                        <div id="checkbox-group" className="flex justify-between items-center">
-                          <h2 className="text-sm text-smokyBlack font-semibold">{mgc.name}</h2>
+                        <div
+                          id="checkbox-group"
+                          className="flex justify-between items-center"
+                        >
+                          <h2 className="text-sm text-smokyBlack font-semibold">
+                            {mgc.name}
+                          </h2>
                           <p className="text-xs text-smokyBlack font-semibold bg-whiteColor uppercase p-1 rounded-md">
                             Optional
                           </p>
                         </div>
-                        <div role="group" aria-labelledby="checkbox-group" className="mt-3 divide-y-2">
+                        <div
+                          role="group"
+                          aria-labelledby="checkbox-group"
+                          className="mt-3 divide-y-2"
+                        >
                           {mgc.values.map((value, index) => (
                             <>
                               <div className="flex flex-row justify-between py-2">
@@ -145,7 +172,11 @@ const ProductCustomization = () => {
                                     value={`${value.name},${value.price}`}
                                     className="h-3 w-3 m-2 p-0 text-primary ring-2 ring-offset-1  ring-white checked:ring-2 checked:ring-offset-1 checked:ring-primary"
                                   />
-                                  <label htmlFor={`checkbox${index}`} key={index} className="text-sm text-gray-600">
+                                  <label
+                                    htmlFor={`checkbox${index}`}
+                                    key={index}
+                                    className="text-sm text-gray-600"
+                                  >
                                     {value.name}
                                   </label>
                                 </div>
@@ -170,7 +201,10 @@ const ProductCustomization = () => {
                 </div>
               </div> */}
               {/* <-------CBM -----> */}
-              <div id="totalBill" className="flex flex-row justify-between gap-10 mt-8">
+              <div
+                id="totalBill"
+                className="flex flex-row justify-between gap-10 mt-8"
+              >
                 <button
                   type="submit"
                   className="flex-five py-4 text-center text-base font-medium rounded-3xl bg-primary  active:bg-secondary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl"

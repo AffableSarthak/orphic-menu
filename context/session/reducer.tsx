@@ -50,7 +50,7 @@ const sessionReducer = (state, action) => {
     //     sessionInfo: payload,
     //   };
     case UPDATE_QTY:
-      console.log(payload.length);
+      // console.log(payload.length);
       return {
         ...state,
         stagedItems: payload,

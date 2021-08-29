@@ -11,7 +11,7 @@ const TotalPrice = () => {
       if (stagedItem.item.customization) {
         let custPrice = 0;
         let temp = Object.entries(stagedItem.item.customization);
-        console.log(temp, "temp from total price");
+        // console.log(temp, "temp from total price");
         // temp.map((s: any) => {
         //   console.log(typeof s == "object");
 
@@ -27,7 +27,8 @@ const TotalPrice = () => {
             custPrice += parseInt(t[1].split(",")[1]);
           }
         });
-        singleDishAmount = (custPrice + parseInt(stagedItem.item.price)) * stagedItem.qty;
+        singleDishAmount =
+          (custPrice + parseInt(stagedItem.item.price)) * stagedItem.qty;
         tp = tp + singleDishAmount;
       } else {
         singleDishAmount = parseInt(stagedItem.item.price) * stagedItem.qty;

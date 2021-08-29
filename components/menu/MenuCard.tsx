@@ -7,7 +7,8 @@ import { useContext } from "react";
 import { useRouter } from "next/router";
 
 const MenuCard = (props) => {
-  const { setStagedItem, getCustForItem, isLoading, setCurrentItem } = useContext(sessionContext);
+  const { setStagedItem, getCustForItem, isLoading, setCurrentItem } =
+    useContext(sessionContext);
   // const isLoading = true;
   const { item, stagedItems } = props;
   const router = useRouter();
@@ -22,14 +23,14 @@ const MenuCard = (props) => {
           <span
             onClick={async () => {
               await setCurrentItem(item);
-              console.log(item, "from cartItemInfo");
+              // console.log(item, "from cartItemInfo");
               await getCustForItem(item);
               router.push({ pathname: `/app/cust` });
             }}
-            className=" flex  justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+            className=" flex  justify-center items-center bg-whiteColor active:bg-primary rounded-full px-2 py-2"
           >
             <AiOutlinePlus className="text-smokyBlack text-xl" />
-            <p>cust</p>
+            {/* <p>cust</p> */}
           </span>
         );
       } else if (stagedItems.length > 0) {
@@ -51,10 +52,10 @@ const MenuCard = (props) => {
                 await getCustForItem(item);
                 router.push({ pathname: `/app/cust` });
               }}
-              className=" flex justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+              className=" flex justify-center items-center bg-whiteColor  active:bg-primary rounded-full px-2 py-2"
             >
               <AiOutlinePlus className="text-smokyBlack text-xl" />
-              <p>cust</p>
+              {/* <p>cust</p> */}
             </span>
           );
         }
@@ -67,10 +68,10 @@ const MenuCard = (props) => {
           // push to cart with and add the item with other details to staged items => item, count, username
           <span
             onClick={() => {
-              console.log("Inside without cust item");
+              // console.log("Inside without cust item");
               setStagedItem(item, "SET_WITHOUT_CUST");
             }}
-            className=" flex justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+            className=" flex justify-center items-center bg-whiteColor active:bg-primary rounded-full px-2 py-2"
           >
             <AiOutlinePlus className="text-smokyBlack text-xl" />
           </span>
@@ -93,7 +94,7 @@ const MenuCard = (props) => {
               onClick={() => {
                 setStagedItem(item, "SET_WITHOUT_CUST");
               }}
-              className="flex justify-center items-center bg-whiteColor rounded-full px-2 py-2"
+              className="flex justify-center items-center bg-whiteColor  active:bg-primary rounded-full px-2 py-2"
             >
               <AiOutlinePlus className="text-smokyBlack text-xl" />
             </span>
@@ -107,8 +108,14 @@ const MenuCard = (props) => {
     <>
       {/* {console.log(item, "img container")} */}
 
-      <div id="cardContainer" className="flex-four min-w-[224px] min-h-[324px] bg-dark rounded-[30px] my-1">
-        <div id="cardHeader" className="flex justify-between items-center px-4 min-h-[60px] rounded-t-[30px]">
+      <div
+        id="cardContainer"
+        className="flex-four min-w-[224px] min-h-[324px] bg-dark rounded-[30px] my-1"
+      >
+        <div
+          id="cardHeader"
+          className="flex justify-between items-center px-4 min-h-[60px] rounded-t-[30px]"
+        >
           {isLoading ? (
             <>
               <p className="bg-gray-500 h-5  w-10 px-6 animate-pulse rounded-md"></p>
@@ -129,9 +136,14 @@ const MenuCard = (props) => {
           ) : (
             <>
               {!item.bannerUrl ? (
-                <h1 className=" text-white h-[150px] flex justify-center items-center">Comming Soon....</h1>
+                <h1 className=" text-white h-[150px] flex justify-center items-center">
+                  Comming Soon....
+                </h1>
               ) : (
-                <img src={item.bannerUrl} className="block w-full min-h-[150px] object-cover" />
+                <img
+                  src={item.bannerUrl}
+                  className="block w-full min-h-[150px] object-cover"
+                />
               )}
             </>
           )}
@@ -141,7 +153,9 @@ const MenuCard = (props) => {
           {isLoading ? (
             <div className="bg-gray-500 h-5 w-11/12 mx-auto px-6 animate-pulse rounded-md"></div>
           ) : (
-            <h1 className="text-whiteColor px-4 text-base font-medium">{item.itemName}</h1>
+            <h1 className="text-whiteColor px-4 text-base font-medium">
+              {item.itemName}
+            </h1>
           )}
         </div>
 
@@ -153,7 +167,9 @@ const MenuCard = (props) => {
             </>
           ) : (
             <>
-              <p className="text-whiteColor text-lg font-normal">₹{item.price}</p>
+              <p className="text-whiteColor text-lg font-normal">
+                ₹{item.price}
+              </p>
               <a
                 target="_blank"
                 href={`https://asia-south1-onpar-ar.cloudfunctions.net/app?url=${

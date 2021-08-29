@@ -4,7 +4,7 @@ import burgerSmall from "../../public/usernameImages/burgerSmall.png";
 import friesIsometric from "../../public/usernameImages/friesIsometric.png";
 import hotDog from "../../public/usernameImages/hotDog.png";
 import ketchupMayo from "../../public/usernameImages/ketchupMayo.png";
-import orphicLogo from "../../public/usernameImages/orphicLogo.png";
+import orphicLogo from "../../public/orphic_logo.svg";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -53,7 +53,12 @@ const UserDetail = (props) => {
           className="flex flex-row justify-between text-center"
         >
           <Image src={burgerSmall} width={60} height={60} />
-          <Image src={orphicLogo} width={100} height={100} />
+          <Image
+            src={orphicLogo}
+            className="animate-spin-slow"
+            width={100}
+            height={100}
+          />
           <Image src={ketchupMayo} width={60} height={60} />
         </div>
       </div>

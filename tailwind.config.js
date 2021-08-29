@@ -12,7 +12,9 @@ module.exports = {
         whiteColor: "#F8F8FA",
         categoriesCardsColor: "#F5D4C1",
       },
-
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
       flex: {
         two: "1 0 20%",
         three: "1 0 30%",
