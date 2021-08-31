@@ -4,7 +4,7 @@ import popularDish from "../../public/beverages.jpg";
 const PopularCard = ({ item }: { item: Iitem }) => {
   return (
     <>
-      <div className="px-4">
+      <div className="px-2">
         <div
           id="popularCardContainer"
           className="flex flex-row justify-center h-[70px] mt-4 bg-dark rounded-xl"

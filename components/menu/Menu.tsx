@@ -77,8 +77,10 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl }) => {
 
             <div
               className={`flex ${
-                categoryName === "Beverages" ? "flex-col" : "flex-row"
-              } items-center gap-4 overflow-x-auto px-4`}
+                categoryName === "Beverages"
+                  ? "flex-col gap-2 overflow-y-auto px-2"
+                  : "flex-row gap-4 overflow-x-auto px-4"
+              } items-center `}
             >
               {items.map((item, index) => {
                 // console.log(item.subCategory);
