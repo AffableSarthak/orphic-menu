@@ -78,7 +78,7 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl }) => {
             <div
               className={`flex ${
                 categoryName === "Beverages"
-                  ? "flex-col gap-2 overflow-y-auto px-2"
+                  ? "flex-col gap-2 overflow-y-auto mx-1"
                   : "flex-row gap-4 overflow-x-auto px-4"
               } items-center `}
             >

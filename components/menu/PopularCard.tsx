@@ -4,10 +4,10 @@ import popularDish from "../../public/beverages.jpg";
 const PopularCard = ({ item }: { item: Iitem }) => {
   return (
     <>
-      <div className="px-2">
+      <div className="px-2 overflow-auto">
         <div
           id="popularCardContainer"
-          className="flex flex-row justify-center h-[70px] mt-4 bg-dark rounded-xl"
+          className="flex flex-row justify-center h-[90px] mt-4 bg-dark rounded-xl"
         >
           {/* <div
             id="popCardImageContainer"
