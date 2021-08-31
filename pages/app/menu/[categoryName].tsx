@@ -6,7 +6,12 @@ export default function MenuPage(props) {
   console.log(router.query);
   return (
     <>
-      <Menu categoryName={router.query.categoryName} gc={props.gc} />
+      <Menu
+        categoryName={router.query.categoryName}
+        bgColor={router.query.bgColor}
+        imgUrl={router.query.imgUrl}
+        gc={props.gc}
+      />
     </>
   );
 }

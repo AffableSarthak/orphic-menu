@@ -127,9 +127,9 @@ const UserDetail = (props) => {
                 disabled={isSubmitting || isValidating}
                 className="ml-auto  flex flex-row justify-center items-center px-8 py-4 rounded-2xl bg-primary active:bg-secondary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl"
               >
-                <span>Continue</span>
-                <span className="flex justify-center items-center {${isSubmitting? disabled: animate-spin}}">
-                  <BsArrowRight />
+                <span className="font-medium text-base  ">Continue</span>
+                <span className="flex justify-center  items-center {${isSubmitting? disabled: animate-spin}}">
+                  <BsArrowRight size={20} />
                 </span>
               </button>
               {/* </div> */}

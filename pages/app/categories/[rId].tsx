@@ -19,6 +19,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   //     notFound: true,
   //   }
   // }
+
+  /**
+   * API call to get tableID eateryID sessionID /:rId (random ID)
+   * API call to get Catergories for a Eatery /:eateryId
+   *
+   */
   return {
     props: {
       tableId: "T-070",

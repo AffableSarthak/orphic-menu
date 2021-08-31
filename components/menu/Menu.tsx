@@ -11,7 +11,7 @@ import OrphicLoader from "../common/OrphicLoader";
 import CommunityNotification from "../common/CommunityNotification";
 import { route } from "next/dist/next-server/server/router";
 
-const Menu = ({ categoryName, gc }) => {
+const Menu = ({ categoryName, bgColor, gc, imgUrl }) => {
   const {
     items,
     username,
@@ -44,39 +44,48 @@ const Menu = ({ categoryName, gc }) => {
   }, []);
 
   // console.log({ rId });
-  console.log(items, stagedItems);
+  // console.log(items, stagedItems);
 
   return (
     <>
-      {/* {isLoading ? <OrphicLoader /> : ''} */}
       {/* <OrphicLoader isLoading={isLoading} /> */}
 
       <section className="relative min-w-full min-h-screen pb-4">
         <div
           id="menuHeaderConatiner"
-          className="flex flex-row justify-between items-center min-w-full h-40 px-4 bg-menu bg-cover bg-no-repeat object-center text-white"
+          className={`flex flex-row justify-between items-center min-w-full h-40 px-4 ${bgColor} bg-cover bg-no-repeat object-center text-white`}
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
             {typeof window !== "undefined" && <BackButton />}
 
-            <h3 className="ml-2 font-bold">{categoryName}</h3>
+            {/* <h3 className="ml-2 text-lg font-bold text-black mr-3">
+              {categoryName}
+            </h3> */}
+            <img src={imgUrl} className="w-[50px] h-[50px] ml-4" />
           </div>
 
-          <CartButton />
+          {/* <CartButton /> */}
         </div>
 
-        <CommunityNotification />
+        {/* <CommunityNotification /> */}
 
         {items.length !== 0 ? (
           <>
-            <div className="mt-14 p-4">
-              <h2 className="text-lg font-semibold px-4">Recommend</h2>
+            <div className="mt-6 p-4">
+              <h2 className="text-xl font-semibold px-4">{categoryName}</h2>
             </div>
 
-            <div className="flex flex-row items-center gap-4 overflow-x-auto px-4">
-              {items.map((item, index) => (
-                <MenuCard key={index} item={item} stagedItems={stagedItems} />
-              ))}
+            <div
+              className={`flex ${
+                categoryName === "Beverages" ? "flex-col" : "flex-row"
+              } items-center gap-4 overflow-x-auto px-4`}
+            >
+              {items.map((item, index) => {
+                // console.log(item.subCategory);
+                return (
+                  <MenuCard key={index} item={item} stagedItems={stagedItems} />
+                );
+              })}
             </div>
 
             {/* <div className="mt-5">

@@ -23,7 +23,7 @@ const CategoriesCard = ({ categoryName, imgUrl, bgColor }) => {
           // console.log(categoryName);
           router.push({
             pathname: `/app/menu/${categoryName}`,
-            query: { eateryId },
+            query: { eateryId, bgColor, imgUrl },
           });
         }}
       >

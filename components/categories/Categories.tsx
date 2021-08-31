@@ -64,10 +64,10 @@ const Categories = (props) => {
             </select>
           </div>
           {/* cart button */}
-          <CartButton />
+          {/* <CartButton /> */}
         </div>
 
-        <div id="resturantHeading" className="mt-6">
+        <div id="resturantHeading" className="m-10">
           <h1 className="font-black text-2xl w-[200px] mx-auto">
             Your favorite dishes in <span className="text-primary">3D</span>
             <Image src={taco} width={30} height={30} className="ml-9" />
@@ -75,22 +75,22 @@ const Categories = (props) => {
         </div>
 
         {/* {search input} */}
-        <div className="relative p-4">
+        {/* <div className="relative p-4">
           <input
             type="text"
             className="bg-whiteColor border-2 border-gray-300 rounded-2xl focus:border-transparent focus:outline-none focus:ring-2 focus:ring-secondary p-4 pl-10 w-full"
             placeholder="Search for a category"
           />
           <RiSearchLine className="absolute top-[35px] left-[29px] text-2xl text-gray-400" />
-        </div>
+        </div> */}
 
         <div id="categoriesCards" className="mt-5 px-4">
-          <h2
+          {/* <h2
             id="categoriesCardsHeading"
             className="text-lg font-semibold mb-4"
           >
             Popular
-          </h2>
+          </h2> */}
           <div
             id="categoriesCardsContainer"
             className={`grid grid-cols-2 gap-4 ${isLoading && "animate-pulse"}`}
