@@ -10,6 +10,7 @@ import CartButton from "../common/CartButton";
 import OrphicLoader from "../common/OrphicLoader";
 import CommunityNotification from "../common/CommunityNotification";
 import { route } from "next/dist/next-server/server/router";
+import SubMenu from "./SubMenu";
 
 const Menu = ({ categoryName, bgColor, gc, imgUrl }) => {
   const {
@@ -75,26 +76,31 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl }) => {
               <h2 className="text-xl font-semibold px-4">{categoryName}</h2>
             </div>
 
-            <div
-              className={`flex ${
-                categoryName === "Beverages"
-                  ? "flex-col gap-2 overflow-y-auto mx-1"
-                  : "flex-row gap-4 overflow-x-auto px-4"
-              } items-center `}
-            >
-              {items.map((item, index) => {
-                // console.log(item.subCategory);
-                return (
-                  <MenuCard
-                    key={index}
-                    item={item}
-                    stagedItems={stagedItems}
-                    bgColor={bgColor}
-                    imgUrl={imgUrl}
-                  />
-                );
-              })}
-            </div>
+            {categoryName === "Beverages" ? (
+              <SubMenu
+                items={[...items]}
+                stagedItems={stagedItems}
+                bgColor={bgColor}
+                imgUrl={imgUrl}
+              />
+            ) : (
+              <div
+                className={`flex flex-row gap-4 overflow-x-auto px-4 items-center`}
+              >
+                {items.map((item, index) => {
+                  // console.log(item.subCategory);
+                  return (
+                    <MenuCard
+                      key={index}
+                      item={item}
+                      stagedItems={stagedItems}
+                      bgColor={bgColor}
+                      imgUrl={imgUrl}
+                    />
+                  );
+                })}
+              </div>
+            )}
 
             {/* <div className="mt-5">
           <h2 className="text-lg font-semibold px-4">Popular Now</h2>

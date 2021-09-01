@@ -113,91 +113,91 @@ const MenuCard = (props) => {
       {/* {console.log(item, "img container")} */}
       {/* {console.log(item.subCategory)} */}
 
-      {item.subCategory ? (
+      {/* {item.subCategory ? (
         <PopularCard item={item} />
-      ) : (
+      ) : ( */}
+      <div
+        id="cardContainer"
+        className={`flex-four min-w-[250px] min-h-[350px] bg-dark rounded-[30px] my-2`}
+      >
         <div
-          id="cardContainer"
-          className={`flex-four min-w-[250px] min-h-[350px] bg-dark rounded-[30px] my-2`}
+          id="cardHeader"
+          className="flex justify-between items-center px-4 min-h-[60px] rounded-t-[30px]"
         >
-          <div
-            id="cardHeader"
-            className="flex justify-between items-center px-4 min-h-[60px] rounded-t-[30px]"
-          >
-            {isLoading ? (
-              <>
-                <p className="bg-gray-500 h-5  w-10 px-6 animate-pulse rounded-md"></p>
-                <span className="bg-gray-500 h-5 mx-1 w-1 px-6 animate-pulse rounded-md"></span>
-              </>
-            ) : (
-              <>
-                <p className="text-white">{item.itemId}</p>
-                {cartItemInfo(stagedItems, item)}
-              </>
-            )}
-          </div>
-          <div id="imgContainer" className="flex-3 mt-2 ">
-            {isLoading ? (
-              <>
-                <div className="h-[130px] mb-5 w-11/12 mx-auto animate-pulse rounded-md bg-gray-500"></div>
-              </>
-            ) : (
-              <>
-                {!item.bannerUrl ? (
-                  <h1
-                    className={`text-dark text-md rounded-2xl ${bgColor} m-4 h-[150px] flex justify-center items-center shadow-2xl `}
-                  >
-                    <img src={imgUrl} className="w-[45px] h-[45px] p-1" />
-                    GIF Coming Soon
-                  </h1>
-                ) : (
-                  <img
-                    src={item.bannerUrl}
-                    className="block w-full min-h-[150px] object-cover"
-                  />
-                )}
-              </>
-            )}
-          </div>
-
-          <div className="min-h-[49px]">
-            {isLoading ? (
-              <div className="bg-gray-500 h-5 w-11/12 mx-auto px-6 animate-pulse rounded-md"></div>
-            ) : (
-              <h1 className="text-whiteColor px-4 text-base font-medium">
-                {item.itemName}
-              </h1>
-            )}
-          </div>
-
-          <div className="flex justify-between items-end px-4 pb-4">
-            {isLoading ? (
-              <>
-                <p className="flex-7 w-8/12 bg-gray-500 h-5  mx-auto px-6 animate-pulse rounded-md"></p>
-                <span className="flex-2 bg-gray-500 h-5 mx-auto px-6 animate-pulse rounded-md"></span>
-              </>
-            ) : (
-              <>
-                <p className="text-whiteColor text-lg font-normal">
-                  ₹{item.price}
-                </p>
-                {item.bannerUrl && (
-                  <a
-                    target="_blank"
-                    href={`https://asia-south1-onpar-ar.cloudfunctions.net/app?url=${
-                      item.itemId.split("-")[1].toString() * 1
-                    }_processed.glb`}
-                    rel="noopener noreferrer"
-                    className="flex justify-center items-center bg-whiteColor rounded-full p-2 active:bg-primary hover:bg-primary "
-                  >
-                    <FiBox className="text-3xl" />
-                  </a>
-                )}
-              </>
-            )}
-          </div>
+          {isLoading ? (
+            <>
+              <p className="bg-gray-500 h-5  w-10 px-6 animate-pulse rounded-md"></p>
+              <span className="bg-gray-500 h-5 mx-1 w-1 px-6 animate-pulse rounded-md"></span>
+            </>
+          ) : (
+            <>
+              <p className="text-white">{item.itemId}</p>
+              {cartItemInfo(stagedItems, item)}
+            </>
+          )}
         </div>
-      )}
+        <div id="imgContainer" className="flex-3 mt-2 ">
+          {isLoading ? (
+            <>
+              <div className="h-[130px] mb-5 w-11/12 mx-auto animate-pulse rounded-md bg-gray-500"></div>
+            </>
+          ) : (
+            <>
+              {!item.bannerUrl ? (
+                <h1
+                  className={`text-dark text-md rounded-2xl ${bgColor} m-4 h-[150px] flex justify-center items-center shadow-2xl `}
+                >
+                  <img src={imgUrl} className="w-[45px] h-[45px] p-1" />
+                  GIF Coming Soon
+                </h1>
+              ) : (
+                <img
+                  src={item.bannerUrl}
+                  className="block w-full min-h-[150px] object-cover"
+                />
+              )}
+            </>
+          )}
+        </div>
+
+        <div className="min-h-[49px]">
+          {isLoading ? (
+            <div className="bg-gray-500 h-5 w-11/12 mx-auto px-6 animate-pulse rounded-md"></div>
+          ) : (
+            <h1 className="text-whiteColor px-4 text-base font-medium">
+              {item.itemName}
+            </h1>
+          )}
+        </div>
+
+        <div className="flex justify-between items-end px-4 pb-4">
+          {isLoading ? (
+            <>
+              <p className="flex-7 w-8/12 bg-gray-500 h-5  mx-auto px-6 animate-pulse rounded-md"></p>
+              <span className="flex-2 bg-gray-500 h-5 mx-auto px-6 animate-pulse rounded-md"></span>
+            </>
+          ) : (
+            <>
+              <p className="text-whiteColor text-lg font-normal">
+                ₹{item.price}
+              </p>
+              {item.bannerUrl && (
+                <a
+                  target="_blank"
+                  href={`https://asia-south1-onpar-ar.cloudfunctions.net/app?url=${
+                    item.itemId.split("-")[1].toString() * 1
+                  }_processed.glb`}
+                  rel="noopener noreferrer"
+                  className="flex justify-center items-center bg-whiteColor rounded-full p-2 active:bg-primary hover:bg-primary "
+                >
+                  <FiBox className="text-3xl" />
+                </a>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+      {/* )} */}
     </>
   );
 };
