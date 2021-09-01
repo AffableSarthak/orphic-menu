@@ -35,16 +35,16 @@ const SubMenu = (props) => {
         //   bgColor={props.bgColor}
         //   imgUrl={props.imgUrl}
         // />
-        <PopularCard item={item} />
+        <PopularCard key={index} item={item} />
       ));
     }
   };
 
   return (
     <>
-      {subState.map((ele) => (
+      {subState.map((ele, index) => (
         <>
-          <div className="p-4">
+          <div className="p-4" key={index}>
             <h2 className="text-md font-semibold px-4">{ele[0]}</h2>
           </div>
           <div
