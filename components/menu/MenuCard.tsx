@@ -148,7 +148,7 @@ const MenuCard = (props) => {
                     className={`text-dark text-md rounded-2xl ${bgColor} m-4 h-[150px] flex justify-center items-center shadow-2xl `}
                   >
                     <img src={imgUrl} className="w-[45px] h-[45px] p-1" />
-                    Coming Soon
+                    GIF Coming Soon
                   </h1>
                 ) : (
                   <img
