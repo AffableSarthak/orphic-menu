@@ -118,7 +118,7 @@ const MenuCard = (props) => {
       ) : (
         <div
           id="cardContainer"
-          className={`flex-four min-w-[224px] min-h-[350px] bg-dark rounded-[30px] my-1`}
+          className={`flex-four min-w-[250px] min-h-[350px] bg-dark rounded-[30px] my-2`}
         >
           <div
             id="cardHeader"
