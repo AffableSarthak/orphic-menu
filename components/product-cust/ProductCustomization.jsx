@@ -64,7 +64,7 @@ const ProductCustomization = () => {
         >
           <BackButton />
 
-          <CartButton />
+          {/* <CartButton /> */}
         </div>
 
         {/* {console.log(miniGC, "from ProductCustomization")} */}
@@ -205,13 +205,13 @@ const ProductCustomization = () => {
                 id="totalBill"
                 className="flex flex-row justify-between gap-10 mt-8"
               >
-                <button
+                {/* <button
                   type="submit"
                   className="flex-five py-4 text-center text-base font-medium rounded-3xl bg-primary  active:bg-secondary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl"
                   disabled={isSubmitting || isValidating}
                 >
                   Add to Cart
-                </button>
+                </button> */}
                 {/* <div>
                   <p className="text-smokyBlack text-sm">Item Total</p>
                   <p className="text-dark font-bold text-xl">$13.50</p>

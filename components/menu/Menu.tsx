@@ -85,7 +85,13 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl }) => {
               {items.map((item, index) => {
                 // console.log(item.subCategory);
                 return (
-                  <MenuCard key={index} item={item} stagedItems={stagedItems} />
+                  <MenuCard
+                    key={index}
+                    item={item}
+                    stagedItems={stagedItems}
+                    bgColor={bgColor}
+                    imgUrl={imgUrl}
+                  />
                 );
               })}
             </div>

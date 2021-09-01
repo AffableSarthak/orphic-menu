@@ -11,7 +11,7 @@ const MenuCard = (props) => {
   const { setStagedItem, getCustForItem, isLoading, setCurrentItem } =
     useContext(sessionContext);
   // const isLoading = true;
-  const { item, stagedItems } = props;
+  const { item, stagedItems, bgColor, imgUrl } = props;
   const router = useRouter();
 
   const [sub, setSub] = useState([]);
@@ -41,10 +41,10 @@ const MenuCard = (props) => {
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
           // If the current Item is present in Cart
           return (
-            <span className=" flex justify-center items-center rounded-full px-2 py-2 bg-primary">
-              {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
-              <p className="text-black text-sm">Added</p>
-            </span>
+            <></>
+            // <span className=" flex justify-center items-center rounded-full px-2 py-2 bg-primary">
+            //   <p className="text-black text-sm">Added</p>
+            // </span>
           );
         } else {
           // current Item is not present in the cart
@@ -69,38 +69,39 @@ const MenuCard = (props) => {
         // No Item in Cart
         return (
           // push to cart with and add the item with other details to staged items => item, count, username
-          <span
-            onClick={() => {
-              // console.log("Inside without cust item");
-              setStagedItem(item, "SET_WITHOUT_CUST");
-            }}
-            className=" flex justify-center items-center bg-whiteColor active:bg-primary rounded-full px-2 py-2"
-          >
-            <AiOutlinePlus className="text-smokyBlack text-xl" />
-          </span>
+          <></>
+          // <span
+          //   onClick={() => {
+          //     setStagedItem(item, "SET_WITHOUT_CUST");
+          //   }}
+          //   className=" flex justify-center items-center bg-whiteColor active:bg-primary rounded-full px-2 py-2"
+          // >
+          //   <AiOutlinePlus className="text-smokyBlack text-xl" />
+          // </span>
         );
       } else if (stagedItems.length > 0) {
         // Items present in cart
         if (stagedItems.find((ele) => ele.item.itemId === item.itemId)) {
           // If the current Item is present in Cart
           return (
-            <span className="flex justify-center items-center  rounded-full px-2 py-2 bg-primary text-dark text-sm">
-              {/* <AiOutlinePlus className="text-smokyBlack text-xl" /> */}
-              Added
-            </span>
+            <></>
+            // <span className="flex justify-center items-center  rounded-full px-2 py-2 bg-primary text-dark text-sm">
+            //   Added
+            // </span>
           );
         } else {
           // current Item is not present in the cart
           return (
             // push to cart with and add the item with other details to staged items => item, count, username
-            <span
-              onClick={() => {
-                setStagedItem(item, "SET_WITHOUT_CUST");
-              }}
-              className="flex justify-center items-center bg-whiteColor  active:bg-primary rounded-full px-2 py-2"
-            >
-              <AiOutlinePlus className="text-smokyBlack text-xl" />
-            </span>
+            <></>
+            // <span
+            //   onClick={() => {
+            //     setStagedItem(item, "SET_WITHOUT_CUST");
+            //   }}
+            //   className="flex justify-center items-center bg-whiteColor  active:bg-primary rounded-full px-2 py-2"
+            // >
+            //   <AiOutlinePlus className="text-smokyBlack text-xl" />
+            // </span>
           );
         }
       }
@@ -110,14 +111,14 @@ const MenuCard = (props) => {
   return (
     <>
       {/* {console.log(item, "img container")} */}
-      {console.log(item.subCategory)}
+      {/* {console.log(item.subCategory)} */}
 
       {item.subCategory ? (
         <PopularCard item={item} />
       ) : (
         <div
           id="cardContainer"
-          className="flex-four min-w-[224px] min-h-[324px] bg-dark rounded-[30px] my-1"
+          className={`flex-four min-w-[224px] min-h-[350px] bg-dark rounded-[30px] my-1`}
         >
           <div
             id="cardHeader"
@@ -131,7 +132,7 @@ const MenuCard = (props) => {
             ) : (
               <>
                 <p className="text-white">{item.itemId}</p>
-                {/* {cartItemInfo(stagedItems, item)} */}
+                {cartItemInfo(stagedItems, item)}
               </>
             )}
           </div>
@@ -143,8 +144,11 @@ const MenuCard = (props) => {
             ) : (
               <>
                 {!item.bannerUrl ? (
-                  <h1 className=" text-white h-[150px] flex justify-center items-center">
-                    Comming Soon....
+                  <h1
+                    className={`text-dark text-md rounded-2xl ${bgColor} m-4 h-[150px] flex justify-center items-center shadow-2xl `}
+                  >
+                    <img src={imgUrl} className="w-[45px] h-[45px] p-1" />
+                    Coming Soon
                   </h1>
                 ) : (
                   <img
@@ -177,16 +181,18 @@ const MenuCard = (props) => {
                 <p className="text-whiteColor text-lg font-normal">
                   ₹{item.price}
                 </p>
-                <a
-                  target="_blank"
-                  href={`https://asia-south1-onpar-ar.cloudfunctions.net/app?url=${
-                    item.itemId.split("-")[1].toString() * 1
-                  }_processed.glb`}
-                  rel="noopener noreferrer"
-                  className="flex justify-center items-center bg-whiteColor rounded-full p-2 active:bg-primary hover:bg-primary "
-                >
-                  <FiBox className="text-3xl" />
-                </a>
+                {item.bannerUrl && (
+                  <a
+                    target="_blank"
+                    href={`https://asia-south1-onpar-ar.cloudfunctions.net/app?url=${
+                      item.itemId.split("-")[1].toString() * 1
+                    }_processed.glb`}
+                    rel="noopener noreferrer"
+                    className="flex justify-center items-center bg-whiteColor rounded-full p-2 active:bg-primary hover:bg-primary "
+                  >
+                    <FiBox className="text-3xl" />
+                  </a>
+                )}
               </>
             )}
           </div>
