@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import MenuCard from "./MenuCard";
+import PopularCard from "./PopularCard";
 
 const SubMenu = (props) => {
   const [subState, setSubState] = useState([]);
@@ -27,13 +28,14 @@ const SubMenu = (props) => {
   const getSubCategoryData = (array) => {
     {
       return array.map((item, index) => (
-        <MenuCard
-          key={index}
-          item={item}
-          stagedItems={props.stagedItems}
-          bgColor={props.bgColor}
-          imgUrl={props.imgUrl}
-        />
+        // <MenuCard
+        //   key={index}
+        //   item={item}
+        //   stagedItems={props.stagedItems}
+        //   bgColor={props.bgColor}
+        //   imgUrl={props.imgUrl}
+        // />
+        <PopularCard item={item} />
       ));
     }
   };
@@ -46,7 +48,7 @@ const SubMenu = (props) => {
             <h2 className="text-md font-semibold px-4">{ele[0]}</h2>
           </div>
           <div
-            className={`flex flex-row gap-4 overflow-x-auto px-4 items-center`}
+            className={`flex flex-col gap-2 overflow-x-auto px-4 items-center`}
           >
             {getSubCategoryData(ele[1])}
           </div>

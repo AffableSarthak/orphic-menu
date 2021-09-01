@@ -7,7 +7,7 @@ const PopularCard = ({ item }: { item: Iitem }) => {
       <div className="px-2 overflow-auto">
         <div
           id="popularCardContainer"
-          className="flex flex-row justify-center h-[90px] mt-4 bg-dark rounded-xl"
+          className="flex flex-row justify-center h-[90px] mt-1 bg-dark rounded-xl"
         >
           {/* <div
             id="popCardImageContainer"
