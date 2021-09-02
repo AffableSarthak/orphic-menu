@@ -20,6 +20,6 @@
     "**/*.tsx",
     "tailwind.config.js",
     "components/svgs/welcomePageSvg/FoodOne.js"
-  ],
+, "components/glbLoad/Model.js"  ],
   "exclude": ["node_modules"]
 }

@@ -6,6 +6,14 @@ import sessionContext from "../../context/session/context";
 import { useContext, useState } from "react";
 import { useRouter } from "next/router";
 import PopularCard from "./PopularCard";
+import Button from "../common/Button";
+// import Model from "../glbLoad/Model";
+
+import dynamic from "next/dynamic";
+
+const Model = dynamic(() => import("../glbLoad/Model"), {
+  ssr: false,
+});
 
 const MenuCard = (props) => {
   const { setStagedItem, getCustForItem, isLoading, setCurrentItem } =
@@ -118,7 +126,7 @@ const MenuCard = (props) => {
       ) : ( */}
       <div
         id="cardContainer"
-        className={`flex-four min-w-[250px] min-h-[350px] bg-dark rounded-[30px] my-2`}
+        className={`flex-four min-w-[300px] min-h-[400px] bg-dark rounded-[30px] my-2`}
       >
         <div
           id="cardHeader"
@@ -132,11 +140,11 @@ const MenuCard = (props) => {
           ) : (
             <>
               <p className="text-white">{item.itemId}</p>
-              {cartItemInfo(stagedItems, item)}
+              {/* {cartItemInfo(stagedItems, item)} */}
             </>
           )}
         </div>
-        <div id="imgContainer" className="flex-3 mt-2 ">
+        <div id="imgContainer" className=" mt-2 ">
           {isLoading ? (
             <>
               <div className="h-[130px] mb-5 w-11/12 mx-auto animate-pulse rounded-md bg-gray-500"></div>
@@ -145,15 +153,21 @@ const MenuCard = (props) => {
             <>
               {!item.bannerUrl ? (
                 <h1
-                  className={`text-dark text-md rounded-2xl ${bgColor} m-4 h-[150px] flex justify-center items-center shadow-2xl `}
+                  className={`text-dark text-md text-center rounded-2xl ${bgColor} my-10 mx-4 h-[150px] flex justify-center items-center shadow-2xl `}
                 >
-                  <img src={imgUrl} className="w-[45px] h-[45px] p-1" />
-                  GIF Coming Soon
+                  <img src={imgUrl} className="w-[45px] h-[45px] m-2" />
+                  Image Unavailable
                 </h1>
               ) : (
-                <img
-                  src={item.bannerUrl}
-                  className="block w-full min-h-[150px] object-cover"
+                // <img
+                //   src={item.bannerUrl}
+                //   className="block w-full min-h-[150px] object-cover"
+                // />
+                //@ts-ignore
+                <Model
+                  glbName={`${
+                    item.itemId.split("-")[1].toString() * 1
+                  }_processed`}
                 />
               )}
             </>
@@ -164,7 +178,7 @@ const MenuCard = (props) => {
           {isLoading ? (
             <div className="bg-gray-500 h-5 w-11/12 mx-auto px-6 animate-pulse rounded-md"></div>
           ) : (
-            <h1 className="text-whiteColor px-4 text-base font-medium">
+            <h1 className="text-whiteColor px-4 m-2 text-base font-medium">
               {item.itemName}
             </h1>
           )}
@@ -192,6 +206,14 @@ const MenuCard = (props) => {
                 >
                   <FiBox className="text-3xl" />
                 </a>
+                // <button
+                //   onClick={() => {
+                //     router.push("/app/model/44_processed");
+                //   }}
+                //   className="flex justify-center items-center bg-whiteColor rounded-full p-2 active:bg-primary hover:bg-primary"
+                // >
+                //   <FiBox className="text-3xl" />
+                // </button>
               )}
             </>
           )}
