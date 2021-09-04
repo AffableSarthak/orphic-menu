@@ -11,6 +11,7 @@ import OrphicLoader from "../common/OrphicLoader";
 import CommunityNotification from "../common/CommunityNotification";
 import { route } from "next/dist/next-server/server/router";
 import SubMenu from "./SubMenu";
+import DisclosureCard from "./DisclosureCard";
 
 const Menu = ({ categoryName, bgColor, gc, imgUrl }) => {
   const {
@@ -85,17 +86,24 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl }) => {
               />
             ) : (
               <div
-                className={`flex flex-row gap-4 overflow-x-auto px-4 items-center`}
+                className={`flex flex-col overflow-x-auto px-2 items-center`}
               >
                 {items.map((item, index) => {
                   // console.log(item.subCategory);
                   return (
-                    <MenuCard
-                      key={index}
+                    // <MenuCard
+                    //   key={index}
+                    //   item={item}
+                    //   stagedItems={stagedItems}
+                    //   bgColor={bgColor}
+                    //   imgUrl={imgUrl}
+                    // />
+                    <DisclosureCard
                       item={item}
                       stagedItems={stagedItems}
                       bgColor={bgColor}
                       imgUrl={imgUrl}
+                      key={index}
                     />
                   );
                 })}

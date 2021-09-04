@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import DisclosureCard from "./DisclosureCard";
 import MenuCard from "./MenuCard";
 import PopularCard from "./PopularCard";
 
@@ -35,7 +36,15 @@ const SubMenu = (props) => {
         //   bgColor={props.bgColor}
         //   imgUrl={props.imgUrl}
         // />
-        <PopularCard key={index} item={item} />
+
+        <DisclosureCard
+          item={item}
+          stagedItems={props.stagedItems}
+          bgColor={props.bgColor}
+          imgUrl={props.imgUrl}
+          key={index}
+        />
+        // <PopularCard key={index} item={item} />
       ));
     }
   };

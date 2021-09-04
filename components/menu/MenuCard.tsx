@@ -126,7 +126,7 @@ const MenuCard = (props) => {
       ) : ( */}
       <div
         id="cardContainer"
-        className={`flex-four min-w-[300px] min-h-[400px] bg-dark rounded-[30px] my-2`}
+        className={`flex-four min-w-[200px] min-h-[150px] bg-dark rounded-[30px] my-2`}
       >
         <div
           id="cardHeader"
@@ -144,7 +144,7 @@ const MenuCard = (props) => {
             </>
           )}
         </div>
-        <div id="imgContainer" className=" mt-2 ">
+        {/* <div id="imgContainer" className=" mt-2 ">
           {isLoading ? (
             <>
               <div className="h-[130px] mb-5 w-11/12 mx-auto animate-pulse rounded-md bg-gray-500"></div>
@@ -159,20 +159,22 @@ const MenuCard = (props) => {
                   Image Unavailable
                 </h1>
               ) : (
-                // <img
-                //   src={item.bannerUrl}
-                //   className="block w-full min-h-[150px] object-cover"
-                // />
+                <>
+                <img
+                  src={item.bannerUrl}
+                  className="block w-full min-h-[150px] object-cover"
+                />
                 //@ts-ignore
                 <Model
                   glbName={`${
                     item.itemId.split("-")[1].toString() * 1
                   }_processed`}
                 />
+                </>
               )}
             </>
           )}
-        </div>
+        </div> */}
 
         <div className="min-h-[49px]">
           {isLoading ? (
