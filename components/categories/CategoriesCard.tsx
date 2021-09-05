@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import sessionContext from "../../context/session/context";
 
-const CategoriesCard = ({ categoryName, imgUrl, bgColor }) => {
+const CategoriesCard = ({ categoryName, imgUrl, bgColor, custType }) => {
   const router = useRouter();
   const { setCategoryItems, getStagedItems } = useContext(sessionContext);
 
@@ -23,7 +23,7 @@ const CategoriesCard = ({ categoryName, imgUrl, bgColor }) => {
           // console.log(categoryName);
           router.push({
             pathname: `/app/menu/${categoryName}`,
-            query: { eateryId, bgColor, imgUrl },
+            query: { eateryId, bgColor, imgUrl, custType },
           });
         }}
       >

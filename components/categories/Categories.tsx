@@ -101,6 +101,7 @@ const Categories = (props) => {
                 categoryName={c.name}
                 imgUrl={c.src}
                 bgColor={c.bgColor}
+                custType={c.custType ? c.custType : " "}
               />
             ))}
           </div>

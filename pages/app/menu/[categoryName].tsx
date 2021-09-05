@@ -10,6 +10,7 @@ export default function MenuPage(props) {
         categoryName={router.query.categoryName}
         bgColor={router.query.bgColor}
         imgUrl={router.query.imgUrl}
+        custType={router.query.custType}
         gc={props.gc}
       />
     </>

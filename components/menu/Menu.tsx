@@ -13,7 +13,7 @@ import { route } from "next/dist/next-server/server/router";
 import SubMenu from "./SubMenu";
 import DisclosureCard from "./DisclosureCard";
 
-const Menu = ({ categoryName, bgColor, gc, imgUrl }) => {
+const Menu = ({ categoryName, bgColor, gc, imgUrl, custType }) => {
   const {
     items,
     username,
@@ -74,7 +74,9 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl }) => {
         {items.length !== 0 ? (
           <>
             <div className="mt-6 p-4">
-              <h2 className="text-xl font-semibold px-4">{categoryName}</h2>
+              <h2 className="text-xl font-semibold px-4">
+                {categoryName} {custType}
+              </h2>
             </div>
 
             {categoryName === "Beverages" ? (
