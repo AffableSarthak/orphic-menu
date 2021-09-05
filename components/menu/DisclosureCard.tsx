@@ -30,11 +30,15 @@ export default function DisclosureCard(props: {
                 } `}
               >
                 <div className="flex flex-col gap-2 flex-eight">
-                  <div className="flex m-2 text-white text-lg font-thin">
+                  <div className="flex ml-2 text-white text-lg font-thin">
                     <h3>{item.itemName}</h3>
                   </div>
-
-                  <div className="flex m-2 text-md  text-primary">
+                  {item.desc && item.desc.length > 0 && (
+                    <div className="flex ml-2 text-white text-sm font-thin">
+                      <h3>{item.desc}</h3>
+                    </div>
+                  )}
+                  <div className="flex ml-2 text-md  text-primary">
                     <h3>
                       ₹{item.price}{" "}
                       <span className="text-xs">({item.itemId})</span>

@@ -53,12 +53,10 @@ const SubMenu = (props) => {
     <>
       {subState.map((ele, index) => (
         <>
-          <div className="p-4" key={index}>
+          <div className="px-4" key={index}>
             <h2 className="text-md font-semibold px-4">{ele[0]}</h2>
           </div>
-          <div
-            className={`flex flex-col gap-2 overflow-x-auto px-4 items-center`}
-          >
+          <div className={`flex flex-col overflow-x-auto px-2 items-center`}>
             {getSubCategoryData(ele[1])}
           </div>
         </>
