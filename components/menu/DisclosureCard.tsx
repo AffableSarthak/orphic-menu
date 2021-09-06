@@ -25,23 +25,31 @@ export default function DisclosureCard(props: {
           {({ open }) => (
             <>
               <div
-                className={`flex flex-row justify-between w-full py-2 px-2 text-md font-medium text-left bg-dark ${
+                className={`flex flex-row justify-between w-full py-2 px-2 min-h-[120px] text-md font-medium text-left bg-gradient-to-r from-gradientColor ${
                   item.subCategory ? "rounded-2xl" : "rounded-t-2xl"
                 } `}
               >
                 <div className="flex flex-col gap-2 flex-eight">
-                  <div className="flex ml-2 text-white text-lg font-thin">
+                  <div className="flex ml-2 text-dark text-lg font-bold">
                     <h3>{item.itemName}</h3>
                   </div>
+                  {/* <div className="flex ml-2 text-dark text-sm font-thin">
+                    <h3>
+                      a totally sinful lamb burger served with two lamb patties,
+                      fried egg, jalapenos, lettuce, tomatoes, onion and cheese
+                    </h3>
+                  </div> */}
                   {item.desc && item.desc.length > 0 && (
-                    <div className="flex ml-2 text-white text-sm font-thin">
+                    <div className="flex ml-2 text-dark text-sm font-thin">
                       <h3>{item.desc}</h3>
                     </div>
                   )}
-                  <div className="flex ml-2 text-md  text-primary">
+                  <div className="flex ml-2 text-sm font-semibold text-dark">
                     <h3>
                       ₹{item.price}{" "}
-                      <span className="text-xs">({item.itemId})</span>
+                      {/* <span className="text-xs font-semibold">
+                        ({item.itemId})
+                      </span> */}
                     </h3>
                   </div>
                 </div>
@@ -54,14 +62,28 @@ export default function DisclosureCard(props: {
                     />
                   </div> */}
                   {item.bannerUrl && (
-                    <Disclosure.Button className="flex rounded-full bg-white p-2 cursor-pointer">
-                      <FiBox className="text-dark text-2xl" />
+                    <Disclosure.Button className="flex text-white font-medium tracking-widest rounded-tl-lg rounded-br-lg bg-button px-3 py-2 cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                        />
+                      </svg>
+                      view
                     </Disclosure.Button>
                   )}
                 </div>
               </div>
               <Disclosure.Panel
-                className={`px-4 pt-4 pb-2 text-sm text-gray-500 bg-dark  rounded-b-2xl`}
+                className={`px-4 pt-4 pb-2 text-sm text-gray-500 bg-gradient-to-r from-gradientColor  rounded-b-2xl`}
               >
                 <Model
                   glbName={`${

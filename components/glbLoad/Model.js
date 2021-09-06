@@ -3,13 +3,14 @@ import { FiBox } from "react-icons/fi";
 
 const Model = ({ glbName, item }) => (
   <div
+    className="text-right text-black mt-2"
     style={{
       // margin: "3em auto",
       display: "flex",
       flexDirection: "column",
       maxWidth: "600px",
       borderRadius: "6px",
-      boxShadow: "0 3px 10px rgba(0, 0, 0, 0.25)",
+      // boxShadow: "0 3px 10px rgba(0, 0, 0, 0.25)",
       overflow: "hidden",
     }}
   >
@@ -17,7 +18,7 @@ const Model = ({ glbName, item }) => (
       style={{
         width: "100%",
         height: "200px",
-        // backgroundColor: "#302F3C",
+        // backgroundColor: "#FFFFFF",
         "-posterColor": "#ffffff00",
         marginBottom: "1rem",
       }}
@@ -40,15 +41,25 @@ const Model = ({ glbName, item }) => (
       View in your space
     </button> */}
       {/* <div id="ar-prompt" className="m-2 p-2"> */}
+      <button>
+        <a
+          target="_blank"
+          href={`https://asia-south1-onpar-ar.cloudfunctions.net/app?url=${
+            item.itemId.split("-")[1].toString() * 1
+          }_processed.glb`}
+          rel="noopener noreferrer"
+        >
+          {/* VIEW IN AR */}
+          <FiBox className="text-4xl" />
+        </a>
+      </button>
       <a
         target="_blank"
         href={`https://asia-south1-onpar-ar.cloudfunctions.net/app?url=${
           item.itemId.split("-")[1].toString() * 1
         }_processed.glb`}
         rel="noopener noreferrer"
-      >
-        {/* <FiBox className="text-3xl rounded-3xl bg-white" /> */}
-      </a>
+      ></a>
       {/* </div> */}
     </model-viewer>
     {/* <div className="text-center">
@@ -73,16 +84,7 @@ const Model = ({ glbName, item }) => (
     </div> */}
 
     {/* <button className="bg-white rounded-full p-1 text-black text-lg font-mono font-black active:bg-primary"> */}
-    <a
-      className="text-dark bg-white rounded-full text-lg font-mono font-black text-center active:text-primary"
-      target="_blank"
-      href={`https://asia-south1-onpar-ar.cloudfunctions.net/app?url=${
-        item.itemId.split("-")[1].toString() * 1
-      }_processed.glb`}
-      rel="noopener noreferrer"
-    >
-      VIEW IN AR
-    </a>
+
     {/* </button> */}
   </div>
 );

@@ -11,6 +11,8 @@ module.exports = {
         smokyBlack: "#3D3D3D",
         whiteColor: "#F8F8FA",
         categoriesCardsColor: "#F5D4C1",
+        gradientColor: "#FFF4E8",
+        button: "#FF8100",
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",

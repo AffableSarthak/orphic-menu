@@ -74,7 +74,7 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl, custType }) => {
         {items.length !== 0 ? (
           <>
             <div className="mt-6 p-4">
-              <h2 className="text-xl font-semibold px-4">
+              <h2 className="text-xl font-black px-4">
                 {categoryName} {custType}
               </h2>
             </div>
