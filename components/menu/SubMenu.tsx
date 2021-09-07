@@ -62,6 +62,7 @@ const SubMenu = (props) => {
       <div className="flex flex-row overflow-x-auto px-4">
         {subState.map((ele, index) => (
           <button
+            key={index}
             onClick={() => {
               handleActiveItems(ele[1]);
             }}
