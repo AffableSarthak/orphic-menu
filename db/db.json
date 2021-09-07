@@ -1,203 +1,5 @@
 {
   "eateries" : {
-    "bistro_claytopia" : {
-      "BC-001" : {
-        "bannerUrl" : "",
-        "category" : "Pasta",
-        "cust" : [ "002" ],
-        "desc" : "",
-        "itemId" : "BC-001",
-        "itemName" : "Bistro Mix Mushroom",
-        "objectUrl" : "",
-        "price" : "349"
-      },
-      "BC-002" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1jw7MKjy4PaP7zR5U3J3m3ePlyrGuSh5z",
-        "category" : "Burgers & Combos",
-        "desc" : "",
-        "itemId" : "BC-002",
-        "itemName" : "Spicy BBQ Chicken Combo",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL",
-        "price" : "350"
-      },
-      "BC-005" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
-        "category" : "Pasta",
-        "cust" : [ "002" ],
-        "desc" : "",
-        "itemId" : "BC-005",
-        "itemName" : "Wild Mushroom Pasta ",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
-        "price" : "319"
-      },
-      "BC-007" : {
-        "bannerUrl" : "",
-        "category" : "Snacks",
-        "desc" : "",
-        "itemId" : "BC-007",
-        "itemName" : "French Fries",
-        "objectUrl" : "",
-        "price" : "120/190"
-      },
-      "BC-008" : {
-        "bannerUrl" : "",
-        "category" : "Soups & Salads",
-        "desc" : "",
-        "itemId" : "BC-008",
-        "itemName" : "Exotic Veggies Soup",
-        "objectUrl" : "",
-        "price" : "230"
-      },
-      "BC-010" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1uopz02oTWLrITiDHVs9Gn8fOViVuXhQr",
-        "category" : "Breakfast",
-        "desc" : "",
-        "itemId" : "BC-010",
-        "itemName" : "Bistro Heavenly Rolls",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1DYZej3r0NxZ7A6IYLm_B8g_L2bBY4Mqy",
-        "price" : "300"
-      },
-      "BC-011" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1fMxyyYdRYpXsm3u0OWnfBgCkzElHGO0E",
-        "category" : "Soups & Salads",
-        "desc" : "",
-        "itemId" : "BC-011",
-        "itemName" : "Classic Ceaser Salad",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=15JVQk8Ysh263m89ud4_YNGl0o9ICKJFX",
-        "price" : "240"
-      },
-      "BC-012" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1B4wmQm1QXc5c73EhOrRXPXaIlSJGJrtz",
-        "category" : "Main Course",
-        "desc" : "",
-        "itemId" : "BC-012",
-        "itemName" : "Herb Roasted Chicken",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1B4tGVggAHrQG_VaOsCeEz_zZj7hL1wPK",
-        "price" : "350"
-      },
-      "BC-013" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1AjQugwnvlqnLGEiSWxTuo43AnPn_rTwM",
-        "category" : "Starters",
-        "desc" : "",
-        "itemId" : "BC-013",
-        "itemName" : "Basil Pesto Cottage Cheese",
-        "objectUrl" : "https://drive.google.com/file/d/1ae26bDlvx_N_JA4dUobXx4WPAcHi3p9Y/view?usp=sharing",
-        "price" : "260"
-      },
-      "BC-014" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1hScTOMZGoJfCtFDq7uJ2wBWCh1xsegAY",
-        "category" : "Main Course",
-        "desc" : "",
-        "itemId" : "BC-014",
-        "itemName" : "Mushroom & Spinach Stuffed Chicken",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1eqzi3k_SO9M7nHSjYq6ndiMg5QV3JrZM",
-        "price" : "320"
-      },
-      "BC-016" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1sWLqXmvKc0Z3CsX_u0ASqS37fUpr-j99",
-        "category" : "Pizza",
-        "cust" : [ "070" ],
-        "desc" : "",
-        "itemId" : "BC-016",
-        "itemName" : "Peri Peri Chicken Pizza",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1L_126gjVBDI4yfPqRpmhTMEuQrxc-WIm",
-        "price" : "310/370"
-      },
-      "BC-019" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1Hy_LYlyilVkYQBJmODuydvYuYCesi7GF",
-        "category" : "Pasta",
-        "cust" : [ "002" ],
-        "desc" : "",
-        "itemId" : "BC-019",
-        "itemName" : "Bistro Chicken Pasta",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1_Du2hP2zKLfQpha--BHvWmINCd0e0Xq6",
-        "price" : "349"
-      },
-      "BC-020" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=19ZkLKGMPElRu2L0HFXNqxqs6zOW3I1-7",
-        "category" : "Pizza",
-        "cust" : [ "070" ],
-        "desc" : "",
-        "itemId" : "BC-020",
-        "itemName" : "Pesto Chicken Pizza",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1dq6f_pMJ6HlqsqjKBeXjSYoZV0I2FGeJ",
-        "price" : "310/370"
-      },
-      "BC-021" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1Ztm1Un232m7gl9yq4_AdHw1u87cmf1ZJ",
-        "category" : "Snacks",
-        "desc" : "",
-        "itemId" : "BC-021",
-        "itemName" : "French Fries With Cheese",
-        "objectUrl" : "https://drive.google.com/file/d/1vrp4uZLoJ2uORlgfY46J75cCvJEAYoRO/view?usp=sharing",
-        "price" : "120/190"
-      },
-      "BC-025" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1YLkrnWUCrLtN7QQGEh6rNctxl_Cl35fF",
-        "category" : "Snacks",
-        "desc" : "",
-        "itemId" : "BC-025",
-        "itemName" : "Bruschetta ",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
-        "price" : "180"
-      },
-      "BC-030" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1OpFTxM_93Wz0lIgBFWnqa3TEYuBbCJVA",
-        "category" : "Desserts",
-        "desc" : "",
-        "itemId" : "BC-030",
-        "itemName" : "Blueberry Cheese Cake",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1W-gDgkBG1p1cZvdlNVnbck3N3L6gXQJR",
-        "price" : "160"
-      },
-      "BC-032" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=13DoSpqWvk5nh1kYZLVWqt8yjgRFJOx2V",
-        "category" : "Pizza",
-        "cust" : [ "060" ],
-        "desc" : "",
-        "itemId" : "BC-032",
-        "itemName" : "Veggie Exotic Pizza",
-        "objectUrl" : "https://drive.google.com/file/d/1x2E0ruXBCoRjXhTiiglsfSXJ-LcBUDFn/view?usp=sharing",
-        "price" : "240/300"
-      },
-      "BC-033" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1scy6v874AG-5S33ai22YI7hw4V1-3wrD",
-        "category" : "Sandwiches",
-        "desc" : "",
-        "itemId" : "BC-033",
-        "itemName" : "Smoky BBQ Chicken Sandwich",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1szdmn0h8ODslpjsN9BEPm9tz_kdE1AZ5",
-        "price" : "240"
-      },
-      "BC-062" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1sZDkEImbdubLi7q5cQicjvLKARgW4E3q",
-        "category" : "Main Course",
-        "cust" : [ "001" ],
-        "desc" : "",
-        "itemId" : "BC-062",
-        "itemName" : "Yeoboseyo Korean Chicken Noodles",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1kbZ2nSrhjmsuFHz4QL3kzFUCH8EEnoWX",
-        "price" : "280"
-      },
-      "BC-066" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=1Tr0JmEQ2FY2pOrM-u_wvA3iVXtPfZfPO",
-        "category" : "Main Course",
-        "desc" : "",
-        "itemId" : "BC-066",
-        "itemName" : "Hot Pot(Veg/Chicken)",
-        "objectUrl" : "https://drive.google.com/uc?export=download&id=1l0_1TRd8AQdhzg26lVRRYSK1T4VVxDZ4",
-        "price" : "260/280"
-      },
-      "BC-070" : {
-        "bannerUrl" : "https://drive.google.com/uc?export=download&id=117uE-qZ616EIYbhiRdGkp_Lbdnx3yKHb",
-        "category" : "Snacks",
-        "desc" : "",
-        "itemId" : "BC-070",
-        "itemName" : "Chicken Nugget Fries",
-        "objectUrl" : "https://drive.google.com/file/d/18Pdx99YiNQYVYkhZBCWkOMbj215BLkJj/view?usp=sharing",
-        "price" : "250"
-      }
-    },
     "bistro_claytopia_all" : {
       "BC-001" : {
         "bannerUrl" : "",
@@ -206,6 +8,7 @@
         "desc" : "",
         "itemId" : "BC-001",
         "itemName" : "Bistro Mix Mushroom",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "349"
       },
@@ -215,6 +18,7 @@
         "desc" : "",
         "itemId" : "BC-002",
         "itemName" : "Spicy BBQ Chicken Combo",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL",
         "price" : "350"
       },
@@ -225,6 +29,7 @@
         "desc" : "",
         "itemId" : "BC-003",
         "itemName" : "Hosin Glazed Grilled Chicken",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "280"
       },
@@ -235,6 +40,7 @@
         "desc" : "",
         "itemId" : "BC-005",
         "itemName" : "Wild Mushroom Pasta ",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
         "price" : "319"
       },
@@ -244,6 +50,7 @@
         "desc" : "",
         "itemId" : "BC-007",
         "itemName" : "French Fries",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "120"
       },
@@ -253,6 +60,7 @@
         "desc" : "",
         "itemId" : "BC-008",
         "itemName" : "Exotic Veggies Soup",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "230"
       },
@@ -262,6 +70,7 @@
         "desc" : "",
         "itemId" : "BC-010",
         "itemName" : "Bistro Heavenly Rolls",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1DYZej3r0NxZ7A6IYLm_B8g_L2bBY4Mqy",
         "price" : "320"
       },
@@ -271,6 +80,7 @@
         "desc" : "",
         "itemId" : "BC-011",
         "itemName" : "Classic Ceaser Salad",
+        "label" : "VNV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=15JVQk8Ysh263m89ud4_YNGl0o9ICKJFX",
         "price" : "240/260"
       },
@@ -280,6 +90,7 @@
         "desc" : "",
         "itemId" : "BC-012",
         "itemName" : "Herb Roasted Chicken",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1B4tGVggAHrQG_VaOsCeEz_zZj7hL1wPK",
         "price" : "330"
       },
@@ -289,6 +100,7 @@
         "desc" : "",
         "itemId" : "BC-013",
         "itemName" : "Basil Pesto Cottage Cheese",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1ae26bDlvx_N_JA4dUobXx4WPAcHi3p9Y/view?usp=sharing",
         "price" : "260"
       },
@@ -298,6 +110,7 @@
         "desc" : "",
         "itemId" : "BC-014",
         "itemName" : "Mushroom & Spinach Stuffed Chicken",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1eqzi3k_SO9M7nHSjYq6ndiMg5QV3JrZM",
         "price" : "320"
       },
@@ -308,6 +121,7 @@
         "desc" : "",
         "itemId" : "BC-016",
         "itemName" : "Peri Peri Chicken Pizza",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1L_126gjVBDI4yfPqRpmhTMEuQrxc-WIm",
         "price" : "310/370"
       },
@@ -318,6 +132,7 @@
         "desc" : "",
         "itemId" : "BC-019",
         "itemName" : "Bistro Chicken Pasta",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1_Du2hP2zKLfQpha--BHvWmINCd0e0Xq6",
         "price" : "349"
       },
@@ -328,6 +143,7 @@
         "desc" : "",
         "itemId" : "BC-020",
         "itemName" : "Pesto Chicken Pizza",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1dq6f_pMJ6HlqsqjKBeXjSYoZV0I2FGeJ",
         "price" : "310/370"
       },
@@ -337,6 +153,7 @@
         "desc" : "",
         "itemId" : "BC-021",
         "itemName" : "French Fries With Cheese",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1vrp4uZLoJ2uORlgfY46J75cCvJEAYoRO/view?usp=sharing",
         "price" : "190"
       },
@@ -346,6 +163,7 @@
         "desc" : "",
         "itemId" : "BC-022",
         "itemName" : "French Toast",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1vrp4uZLoJ2uORlgfY46J75cCvJEAYoRO/view?usp=sharing",
         "price" : "220"
       },
@@ -355,6 +173,7 @@
         "desc" : "",
         "itemId" : "BC-023",
         "itemName" : "Spicy Minced Chicken Soup",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "260"
       },
@@ -364,6 +183,7 @@
         "desc" : "",
         "itemId" : "BC-024",
         "itemName" : "Sesame Crispy Chicken ",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1pbtSdnWoGanNACvruort_g3Rkgnat921/view?usp=sharing",
         "price" : "270"
       },
@@ -373,6 +193,7 @@
         "desc" : "",
         "itemId" : "BC-025",
         "itemName" : "Bruschetta ",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
         "price" : "180"
       },
@@ -382,6 +203,7 @@
         "desc" : "",
         "itemId" : "BC-026",
         "itemName" : "Double Veggie Delight Burger",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1zdIuL_uRMGtixcxOiNAgr-1ZoHVvdlZ-",
         "price" : "249"
       },
@@ -391,6 +213,7 @@
         "desc" : "",
         "itemId" : "BC-027",
         "itemName" : "The Bistro Chicken Burger",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1kWT2Yto-BGzffSYXX5hvwlqE5YJEMsOn",
         "price" : "295"
       },
@@ -401,6 +224,7 @@
         "desc" : "",
         "itemId" : "BC-028",
         "itemName" : "Asian Inspired Chicken Suasage",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "300"
       },
@@ -410,6 +234,7 @@
         "desc" : "",
         "itemId" : "BC-029",
         "itemName" : "Crispy Vegetables",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1fLUtphxCryLq-tmKq0MSjIRZTnQzH1yW/view?usp=sharing",
         "price" : "240"
       },
@@ -419,6 +244,7 @@
         "desc" : "",
         "itemId" : "BC-030",
         "itemName" : "Blueberry Cheese Cake",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1W-gDgkBG1p1cZvdlNVnbck3N3L6gXQJR",
         "price" : "160"
       },
@@ -428,6 +254,7 @@
         "desc" : "",
         "itemId" : "BC-031",
         "itemName" : "Buffalo Wings",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1qevFJzgrrjrt1qjYvF47BmJEre2hPgg0",
         "price" : "310"
       },
@@ -438,6 +265,7 @@
         "desc" : "",
         "itemId" : "BC-032",
         "itemName" : "Veggie Exotic Pizza",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1x2E0ruXBCoRjXhTiiglsfSXJ-LcBUDFn/view?usp=sharing",
         "price" : "240/300"
       },
@@ -447,6 +275,7 @@
         "desc" : "",
         "itemId" : "BC-033",
         "itemName" : "Smoky BBQ Chicken Sandwich",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1szdmn0h8ODslpjsN9BEPm9tz_kdE1AZ5",
         "price" : "240"
       },
@@ -456,6 +285,7 @@
         "desc" : "",
         "itemId" : "BC-035",
         "itemName" : "Pancakes",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1qJ7__o6_5n5sGPgVNWPxnKdHU7-Jjokc/view?usp=sharing",
         "price" : "230"
       },
@@ -465,6 +295,7 @@
         "desc" : "",
         "itemId" : "BC-037",
         "itemName" : "Cheesy Smiles",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1Mn-VeZ5At-CCjxU2hssnOvJNaTs_gQOc",
         "price" : "210"
       },
@@ -474,6 +305,7 @@
         "desc" : "",
         "itemId" : "BC-039",
         "itemName" : "Mumbai Masala Nachos",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1CEkDJD5Zm-CNs9lBORrYVsXZsJIOkJ_1",
         "price" : "240"
       },
@@ -483,6 +315,7 @@
         "desc" : "",
         "itemId" : "BC-040",
         "itemName" : "Assorted Wild Mushroom Soup",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "250"
       },
@@ -492,6 +325,7 @@
         "desc" : "",
         "itemId" : "BC-041",
         "itemName" : "Grilled Chicken Habana Style",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1Q4LgpLevftmc0EVyKRltFa6LksjFIfC-",
         "price" : "300"
       },
@@ -501,6 +335,7 @@
         "desc" : "",
         "itemId" : "BC-042",
         "itemName" : "Tandoori Tossed Chicken Salad",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1t-W1fHTYlccR7kubpGJwpIR21hcSGu1j",
         "price" : "270"
       },
@@ -511,6 +346,7 @@
         "desc" : "",
         "itemId" : "BC-043",
         "itemName" : "Veggie Burger",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1KpZs9e-iwJ6Sl80P2PxwI-v6ksn5vyiN",
         "price" : "169/199"
       },
@@ -520,6 +356,7 @@
         "desc" : "",
         "itemId" : "BC-044",
         "itemName" : "Arabiatta",
+        "label" : "VNV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=16evwvKl_rqODHyNzTWZ48sBn-AsY_sY1",
         "price" : "249/269"
       },
@@ -529,6 +366,7 @@
         "desc" : "",
         "itemId" : "BC-045",
         "itemName" : "Excotic Masala Omlette",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1vufv1WEHEZIQ4iQKTDWJm3Dm-ovwguk6/view?usp=sharing",
         "price" : "205"
       },
@@ -538,6 +376,7 @@
         "desc" : "",
         "itemId" : "BC-048",
         "itemName" : "Creamy Spicy Chicken Tikka ",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/19gbWm1zWishPPKAktSrMK35j4ZyCj8XO/view?usp=sharing",
         "price" : "240"
       },
@@ -548,6 +387,7 @@
         "desc" : "",
         "itemId" : "BC-050",
         "itemName" : "Schezwan Buddha",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "280"
       },
@@ -557,6 +397,7 @@
         "desc" : "",
         "itemId" : "BC-051",
         "itemName" : "Spicy Supreme Garlic Bread",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1f7793YP7IViuESizd4l8-rEdCfG1Dg38/view?usp=sharing",
         "price" : "205"
       },
@@ -566,6 +407,7 @@
         "desc" : " ",
         "itemId" : "BC-052",
         "itemName" : "Spicy Sesame Babycorn",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1lgRHRFpJWFa2bTSzGB4k_T3So9IxR8Kt/view?usp=sharing",
         "price" : "250"
       },
@@ -575,6 +417,7 @@
         "desc" : "",
         "itemId" : "BC-053",
         "itemName" : "Spicy Chicken Strip",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1_A60Y_EoioXx8BCG6Ei8pJLrj6z3FvmZ/view?usp=sharing",
         "price" : "270"
       },
@@ -585,6 +428,7 @@
         "desc" : " ",
         "itemId" : "BC-054",
         "itemName" : "BBQ Chicken Burger",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=10Mj9GTEN0SojSRUbfWjvNU8bhcC49R2L",
         "price" : "199/249"
       },
@@ -595,6 +439,7 @@
         "desc" : "",
         "itemId" : "BC-055",
         "itemName" : "Pasta Mediterranean",
+        "label" : "VNV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1eBgw0t-KEK29bG9QTXDR_G-jBQKAXx-W",
         "price" : "259/299"
       },
@@ -605,6 +450,7 @@
         "desc" : " ",
         "itemId" : "BC-056",
         "itemName" : "Roadside Rowdy Burger",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1GLOP88rnwFq8fu-EodOn-urgUfB6qIgT/view?usp=sharing",
         "price" : "169/199"
       },
@@ -615,6 +461,7 @@
         "desc" : " ",
         "itemId" : "BC-057",
         "itemName" : "Heard A Lot Peri-Peri Chicken Burger",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1wETfvJAM-LRJFNWvp66alyZLccpKU_4x/view?usp=sharing",
         "price" : "199/249"
       },
@@ -625,6 +472,7 @@
         "desc" : " ",
         "itemId" : "BC-058",
         "itemName" : "Pesto Pasta(Dry Pasta)",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1937t4_salm2owJXPkf6tPwP6YL94MM2k",
         "price" : "290"
       },
@@ -634,6 +482,7 @@
         "desc" : "",
         "itemId" : "BC-059",
         "itemName" : "Claytopia Mudpie/with Ice cream",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1eC40KrcnovgEtyrd9UUtApe2Qu9MWoMQ/view?usp=sharing",
         "price" : "190"
       },
@@ -643,6 +492,7 @@
         "desc" : "",
         "itemId" : "BC-060",
         "itemName" : "Mushroom & Chicken Stroganoff",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1l0_1TRd8AQdhzg26lVRRYSK1T4VVxDZ4",
         "price" : "300"
       },
@@ -653,6 +503,7 @@
         "desc" : "",
         "itemId" : "BC-062",
         "itemName" : "Yeoboseyo Korean Chicken Noodles",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1kbZ2nSrhjmsuFHz4QL3kzFUCH8EEnoWX",
         "price" : "300"
       },
@@ -662,6 +513,7 @@
         "desc" : "",
         "itemId" : "BC-066",
         "itemName" : "Hot Pot(Veg/Chicken)",
+        "label" : "VNV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=17h5JyhLLFuFtJr2lL2HvWVAn4NL7fG5l",
         "price" : "280/300"
       },
@@ -671,6 +523,7 @@
         "desc" : "",
         "itemId" : "BC-070",
         "itemName" : "Chicken Nugget Fries",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/18Pdx99YiNQYVYkhZBCWkOMbj215BLkJj/view?usp=sharing",
         "price" : "270"
       },
@@ -680,6 +533,7 @@
         "desc" : "",
         "itemId" : "BC-072",
         "itemName" : "Grilled Cottage Cheese",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1VaAg9kJ9WzomtM2fXaM1iREFeo8UdkB3",
         "price" : "280"
       },
@@ -689,6 +543,7 @@
         "desc" : "",
         "itemId" : "BC-075",
         "itemName" : "Veggie Supreme Sandwich",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1Ih2IuSMcUK--emOVfKGAwgMF26KLOHe6/view?usp=sharing",
         "price" : "229"
       },
@@ -698,6 +553,7 @@
         "desc" : " ",
         "itemId" : "BC-076",
         "itemName" : "Tukpa (Non Veg)",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1BquqGVTfTZGvQTSRfDroNDcdhCG_uI2x/view?usp=sharing",
         "price" : "210"
       },
@@ -707,6 +563,7 @@
         "desc" : " ",
         "itemId" : "BC-078",
         "itemName" : "Tukpa (Veg)",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1JR0KVh2hON5XzbIM18ETMhyzvbuB7vh1",
         "price" : "190"
       },
@@ -716,6 +573,7 @@
         "desc" : "",
         "itemId" : "BC-079",
         "itemName" : "Ultimate Chicken Sandwich",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1Zmb_p7bxZwyrkSGZfciwZHAl_vjMy2_C/view?usp=sharing",
         "price" : "259"
       },
@@ -726,6 +584,7 @@
         "desc" : " ",
         "itemId" : "BC-080",
         "itemName" : "Scilliana Pasta",
+        "label" : "VNV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1mqsTN3MFCgEURae8xqZfrDcSE2qBmVtc",
         "price" : "259/299"
       },
@@ -735,6 +594,7 @@
         "desc" : " ",
         "itemId" : "BC-081",
         "itemName" : "Spicy Monstrous Lamb Combo",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/13gFwrozSamKYbFMeKBbrsYijB-QmF5gE/view?usp=sharing",
         "price" : "350"
       },
@@ -745,6 +605,7 @@
         "desc" : "",
         "itemId" : "BC-083",
         "itemName" : "Aglio-E-Olio(Dry Pasta)",
+        "label" : "VNV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=13x6yTjQUhY_XvnCFn1uGX959xJi6UIEh",
         "price" : "259/299"
       },
@@ -754,6 +615,7 @@
         "desc" : "",
         "itemId" : "BC-084",
         "itemName" : "Chicken Sausage Cheesy Fries",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1vL576-9Mez5PuV0xh5o2dajPrZAfzrtj/view?usp=sharing",
         "price" : "250"
       },
@@ -764,6 +626,7 @@
         "desc" : "",
         "itemId" : "BC-085",
         "itemName" : "Margarita Pizza",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1wxfILvwvnKK5vP78IJ3RYd3wZNmNnxTz/view?usp=sharing",
         "price" : "230/280"
       },
@@ -774,6 +637,7 @@
         "desc" : "",
         "itemId" : "BC-086",
         "itemName" : "Alfredo ",
+        "label" : "VNV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1tWABf0jcjSO6N8efQkCo9S9vO_sSyJw7",
         "price" : "269/299"
       },
@@ -783,6 +647,7 @@
         "desc" : "",
         "itemId" : "BC-087",
         "itemName" : "Warm Brownie",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1o4hpVnmIBnlwDQXZ4BwSc3wnc-1S8nKN",
         "price" : "180"
       },
@@ -792,6 +657,7 @@
         "desc" : "",
         "itemId" : "BC-088",
         "itemName" : "Hot Chocolate Sundae",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "220"
       },
@@ -801,6 +667,7 @@
         "desc" : "",
         "itemId" : "BC-089",
         "itemName" : "Mint Melted Poppers",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1WQBW1sC_Wpixtm4e73GjQmcYuwa8JcAZ",
         "price" : "200"
       },
@@ -810,6 +677,7 @@
         "desc" : "",
         "itemId" : "BC-091",
         "itemName" : "Honey Chilli Chicken",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/13ZlwSOTO0U_7tValE0wro0KkjRffUgZb/view?usp=sharing",
         "price" : "270"
       },
@@ -819,6 +687,7 @@
         "desc" : "",
         "itemId" : "BC-092",
         "itemName" : "Butterfly Prawns",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1x-hR7gXdbcvQBTIoa-_mNhPimaWXbb4r",
         "price" : "340"
       },
@@ -828,6 +697,7 @@
         "desc" : " ",
         "itemId" : "BC-095",
         "itemName" : "Potato Wedges ",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1tK1YemZbyG6Q2vivs5o62QjtSTe6HkNp",
         "price" : "160"
       },
@@ -837,6 +707,7 @@
         "desc" : "",
         "itemId" : "BC-096",
         "itemName" : "Crispy Corn Fries",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=18gtQP-Z2aBuhd2tf5Bd2y406CJoN1kFl",
         "price" : "240"
       },
@@ -847,6 +718,7 @@
         "desc" : "",
         "itemId" : "BC-097",
         "itemName" : "Mushroom Corn Delight Pizza",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1PK-hMcBQDqMxv8rPhNMrpka3b9LwBiXi",
         "price" : "270/340"
       },
@@ -856,6 +728,7 @@
         "desc" : "",
         "itemId" : "BC-098",
         "itemName" : "Crumble Apple/with Ice Cream",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1II3eqAGWlvzJBJQybTqUb-1brrBr3n4Z",
         "price" : "190"
       },
@@ -865,6 +738,7 @@
         "desc" : "",
         "itemId" : "BC-099",
         "itemName" : "Crispy Mushroom Salted Pepper",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1ySUiejurgq-l-XW7m2Ekz7JSrSY7IJJT",
         "price" : "250"
       },
@@ -874,6 +748,7 @@
         "desc" : "twin steak cooked to perfection placed with mashed potato, conchiglie mushroom sauce and sauteed vegetables",
         "itemId" : "BC-101",
         "itemName" : "Twin Chicken Steak ",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1kGGxhNyYylAwX2Q-xoSXaxVveD4Jlvpt",
         "price" : "350"
       },
@@ -883,6 +758,7 @@
         "desc" : "",
         "itemId" : "BC-103",
         "itemName" : "Spicy Peri-Peri Wings",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1yjhXl8jrxfgqIwHKs6fv95z8rKvfuBJc",
         "price" : "310"
       },
@@ -891,6 +767,7 @@
         "desc" : "double grilled sausage, cheesy scrambled eggs, rosemary grilled tomatoes, mushroom and hash brown.....you will be smiling all the way home with this one!",
         "itemId" : "BC-104",
         "itemName" : "Country Roads Take Me Home ",
+        "label" : "NV",
         "price" : "320"
       },
       "BC-105" : {
@@ -898,6 +775,7 @@
         "desc" : "there is more meat than you can eat! grilled chicken, chicken sausage, two pieces chicken wings, cheesy scrambled eggs, mushroom and hash brown",
         "itemId" : "BC-105",
         "itemName" : "Meat Bangers Breakie",
+        "label" : "NV",
         "price" : "320"
       },
       "BC-106" : {
@@ -905,6 +783,7 @@
         "desc" : "homemade waffles sprinkled with powdered sugar and served with maple syrup and whipped cream alongside a fried egg and breakfast sausage!",
         "itemId" : "BC-106",
         "itemName" : "Wowy Waffles",
+        "label" : "NV",
         "price" : "320"
       },
       "BC-107" : {
@@ -912,6 +791,7 @@
         "desc" : "a fabulous combination of chocolate chips pancakes served with chocolate sauce and drizzled with maple syrup, served alongside roasted potatoes, fried egg, and breakfast sausage.",
         "itemId" : "BC-107",
         "itemName" : "The Choco-coco Delight",
+        "label" : "NV",
         "price" : "320"
       },
       "BC-108" : {
@@ -920,6 +800,7 @@
         "desc" : "homemade French toast sprinkled with powdered sugar and maple syrup, served with breakfast sausage and scrambled eggs",
         "itemId" : "BC-108",
         "itemName" : "The Ooh La-La French Toast",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1ZKXJu5yguIpFMj-Yohi3guO-4xqoFpAB",
         "price" : "320"
       },
@@ -928,42 +809,49 @@
         "desc " : "Extra vegetables/ chicken/ salami (INR 50)",
         "itemId" : "BC-109",
         "itemName" : "Scrambled Egg",
+        "label" : "NV",
         "price" : "205"
       },
       "BC-110" : {
         "category" : "Eggs & Pancake",
         "itemId" : "BC-110",
         "itemName" : "Sunny Side Up",
+        "label" : "NV",
         "price" : "195"
       },
       "BC-111" : {
         "category" : "Eggs & Pancake",
         "itemId" : "BC-111",
         "itemName" : "Mushroom & Cheese",
+        "label" : "NV",
         "price" : "210"
       },
       "BC-112" : {
         "category" : "Eggs & Pancake",
         "itemId" : "BC-112",
         "itemName" : "Chicken Salami and Cheese",
+        "label" : "NV",
         "price" : "240"
       },
       "BC-113" : {
         "category" : "Eggs & Pancake",
         "itemId" : "BC-113",
         "itemName" : "Bistro Chicken Omlette",
+        "label" : "NV",
         "price" : "250"
       },
       "BC-114" : {
         "category" : "Snacks",
         "itemId" : "BC-114",
         "itemName" : "Potato Basket",
+        "label" : "V",
         "price" : "290"
       },
       "BC-115" : {
         "category" : "Snacks",
         "itemId" : "BC-115",
         "itemName" : "Plain garlic Bread",
+        "label" : "V",
         "price" : "120"
       },
       "BC-116" : {
@@ -972,6 +860,7 @@
         "desc" : "",
         "itemId" : "BC-116",
         "itemName" : "Garlic Bread with Cheese",
+        "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1f7793YP7IViuESizd4l8-rEdCfG1Dg38/view?usp=sharing",
         "price" : "190"
       },
@@ -979,12 +868,14 @@
         "category" : "Snacks",
         "itemId" : "BC-117",
         "itemName" : "Exotic Cheesy Sausage Nachos",
+        "label" : "NV",
         "price" : "250"
       },
       "BC-118" : {
         "category" : "Snacks",
         "itemId" : "BC-118",
         "itemName" : "Lakili Assorted Cheesy Nachos",
+        "label" : "V",
         "price" : "260"
       },
       "BC-119" : {
@@ -993,6 +884,7 @@
         "desc" : "noodles, exotic vegetables, mushroom, beansprout, gherkinssesame seeds, shredded chicken, coconut flavored with spring onion",
         "itemId" : "BC-119",
         "itemName" : "Herb Chicken & Mushroom Soup",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "260"
       },
@@ -1002,6 +894,7 @@
         "desc" : "Ice berg lettuce, olives, cottage cheese, basil, bell peppers, sprouts, cherry tomatoes, gherkins and dressing with Italian herb",
         "itemId" : "BC-120",
         "itemName" : "Graden Salad",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "240"
       },
@@ -1011,6 +904,7 @@
         "desc" : "lettuce toast with cherry tomatoes, onions, bell peppers, olives, croutons and grilled chicken with mayo dressing",
         "itemId" : "BC-121",
         "itemName" : "The Bistro Chicken Salad",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "260"
       },
@@ -1019,6 +913,7 @@
         "desc" : "(with macroni pasta)",
         "itemId" : "BC-122",
         "itemName" : "Exotic Sauteed Veggies Salad",
+        "label" : "VNV",
         "price" : "220/260"
       },
       "BC-123" : {
@@ -1027,6 +922,7 @@
         "desc" : "",
         "itemId" : "BC-123",
         "itemName" : "Hunan Chicken",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "270"
       },
@@ -1036,6 +932,7 @@
         "desc" : "",
         "itemId" : "BC-124",
         "itemName" : "Teriyaki Wings",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "310"
       },
@@ -1045,6 +942,7 @@
         "desc" : "a yummy crispy patty sensational burger that is just right",
         "itemId" : "BC-125",
         "itemName" : "Classic Chicken Burger",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "199"
       },
@@ -1055,6 +953,7 @@
         "desc" : "a scrumptious burger that is not just a feast for the eyes but also for your taste buds",
         "itemId" : "BC-126",
         "itemName" : "Grilled Lamb Burger",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "209/259"
       },
@@ -1065,6 +964,7 @@
         "desc" : "",
         "itemId" : "BC-127",
         "itemName" : "Tandoori Chicken Burger",
+        "label" : "NV",
         "objectUrl" : "smoky spicy creamy tandoori chicken with lettuce, onion and tomatoes and cheese",
         "price" : "199/249"
       },
@@ -1075,6 +975,7 @@
         "desc" : "",
         "itemId" : "BC-128",
         "itemName" : "Chilly Chicken",
+        "label" : "NV",
         "objectUrl" : "super spicy chilly chicken with lettuce, onions and cheese",
         "price" : "199/249"
       },
@@ -1084,6 +985,7 @@
         "desc" : "crispy cottage cheese, crunchy veggie patty with lettuce, onion, tomatoes, gherkins and cheese",
         "itemId" : "BC-129",
         "itemName" : "Crispy Cottage Cheesy Burger",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "259"
       },
@@ -1093,6 +995,7 @@
         "desc" : "a totally sinful lamb burger served with two lamb patties, fried egg, jalapenos, lettuce, tomatoes, onion and cheese",
         "itemId" : "BC-130",
         "itemName" : "The Bistro Lamb Burger",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1WNwtW37ItFPBYA2b_ZpMoP8QqLmrIxfO",
         "price" : "295"
       },
@@ -1102,6 +1005,7 @@
         "desc" : "",
         "itemId" : "BC-131",
         "itemName" : "The Ultimate Chicken Sausage Combo",
+        "label" : "NV",
         "objectUrl" : "chicken mortadella with a delightful chicken patty accompanied with cheese, fried egg, mushrooms, gherkins, onion, tomatoes and red paprika",
         "price" : "350"
       },
@@ -1111,6 +1015,7 @@
         "desc" : "grilled chicken accompanied with salami, spicy peppers, lettuce, cucumber, fried eggs and cheese",
         "itemId" : "BC-132",
         "itemName" : "The Godfather Sandwich",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1tWq3awii6r484Bwyd_UKcGfNJZm_naEn",
         "price" : "269"
       },
@@ -1120,6 +1025,7 @@
         "desc" : "",
         "itemId" : "BC-133",
         "itemName" : "Asian Style Grilled Veggies",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "220"
       },
@@ -1129,6 +1035,7 @@
         "desc" : "",
         "itemId" : "BC-134",
         "itemName" : "Crumbled Cottage Cheese",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "220"
       },
@@ -1139,6 +1046,7 @@
         "desc" : "",
         "itemId" : "BC-135",
         "itemName" : "Spinach Pasta",
+        "label" : "VNV",
         "objectUrl" : "",
         "price" : "259/299"
       },
@@ -1149,6 +1057,7 @@
         "desc" : "",
         "itemId" : "BC-136",
         "itemName" : "Spicy Sausage Pasta",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "299"
       },
@@ -1158,6 +1067,7 @@
         "desc" : "",
         "itemId" : "BC-137",
         "itemName" : "Conchiglie Chicken Minced Pasta",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "319"
       },
@@ -1167,6 +1077,7 @@
         "desc" : "",
         "itemId" : "BC-138",
         "itemName" : "Conchiglie Pesto Prawn Pasta",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "330"
       },
@@ -1177,6 +1088,7 @@
         "desc" : "",
         "itemId" : "BC-139",
         "itemName" : "Kiddie Smiley Corn Pizza",
+        "label" : "V",
         "objectUrl" : "",
         "price" : "240/280"
       },
@@ -1187,6 +1099,7 @@
         "desc" : "chicken sausages, onions, jalapenos, chilies and basil",
         "itemId" : "BC-140",
         "itemName" : "Spicy Chicken Sausage Pizza",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "310/370"
       },
@@ -1197,6 +1110,7 @@
         "desc" : "chicken tikka, onion and jalapenos",
         "itemId" : "BC-141",
         "itemName" : "Chicken Tikka Pizza",
+        "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1anOLhP7APobdeNcKp_EVGfFSD6QiO09B",
         "price" : "310/370"
       },
@@ -1207,6 +1121,7 @@
         "desc" : "fired sm oky prawns, onions, and jalapenos",
         "itemId" : "BC-142",
         "itemName" : "Smoky Pesto Prawn Pizza",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "320/400"
       },
@@ -1217,6 +1132,7 @@
         "desc" : "",
         "itemId" : "BC-143",
         "itemName" : "Moren Shrimp & Coconut",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "350"
       },
@@ -1227,6 +1143,7 @@
         "desc" : "chicken boneless tossed in Japanese teriyaki.",
         "itemId" : "BC-144",
         "itemName" : "Sesame Teriyaki Chicken",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "300"
       },
@@ -1237,6 +1154,7 @@
         "desc" : "",
         "itemId" : "BC-145",
         "itemName" : "The Savor Bhutanese",
+        "label" : "NV",
         "objectUrl" : "butter flavoured steamed rice served with the Bhutanese finest minced chicken sauce and topped cheese",
         "price" : "300"
       },
@@ -1246,6 +1164,7 @@
         "desc" : "herb prawns in our secret sauce!!",
         "itemId" : "BC-146",
         "itemName" : "Prawn Skewers in House Sauce",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "350"
       },
@@ -1255,6 +1174,7 @@
         "desc" : "",
         "itemId" : "BC-147",
         "itemName" : "Chocolate Truffle",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "170"
       },
@@ -1264,6 +1184,7 @@
         "desc" : "",
         "itemId" : "BC-148",
         "itemName" : "Red Velvet Cake",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "170"
       },
@@ -1273,6 +1194,7 @@
         "desc" : "",
         "itemId" : "BC-149",
         "itemName" : "Incredible Chocolate Mousse Cake",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "180"
       },
@@ -1282,6 +1204,7 @@
         "desc" : "",
         "itemId" : "BC-150",
         "itemName" : "Giant Brownie Ice Cream",
+        "label" : "NV",
         "objectUrl" : "",
         "price" : "240"
       },
@@ -1799,1605 +1722,6 @@
         "Large" : 65,
         "Small" : 0
       }
-    }
-  },
-  "sessions" : {
-    "000" : {
-      "occupied" : false,
-      "paid" : false,
-      "sessionId" : "000",
-      "tableId" : "000"
-    },
-    "123" : {
-      "stagedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1uopz02oTWLrITiDHVs9Gn8fOViVuXhQr",
-          "category" : "Breakfast",
-          "desc" : "",
-          "itemId" : "BC-010",
-          "itemName" : "Bistro Heavenly Rolls",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1DYZej3r0NxZ7A6IYLm_B8g_L2bBY4Mqy",
-          "price" : "300"
-        },
-        "itemId" : "BC-010",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1jw7MKjy4PaP7zR5U3J3m3ePlyrGuSh5z",
-          "category" : "Burgers & Combos",
-          "desc" : "",
-          "itemId" : "BC-002",
-          "itemName" : "Spicy BBQ Chicken Combo",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL",
-          "price" : "350"
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ]
-    },
-    "-MfVqooPpha-QuxNa-0o" : {
-      "array" : [ "FUCK YOU" ],
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1TrXM8ena2NUpeMLiPl9EPYpbxo251Ths",
-          "itemId" : "BC-002",
-          "itemName" : " Chicken Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1QsS6h5M2jxGUzqIdD3X4gtuXzgk_MeJR",
-          "price" : "250"
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1SxlexXBaBy2I19EUpwiBhi6Ob2GHL3AS",
-          "itemId" : "BC-024",
-          "itemName" : "Sesame Babycorn",
-          "objectUrl" : "https://drive.google.com/file/d/1pbtSdnWoGanNACvruort_g3Rkgnat921/view?usp=sharing",
-          "price" : "199"
-        },
-        "itemId" : "BC-024",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1TrXM8ena2NUpeMLiPl9EPYpbxo251Ths",
-          "itemId" : "BC-002",
-          "itemName" : " Chicken Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1QsS6h5M2jxGUzqIdD3X4gtuXzgk_MeJR",
-          "price" : "250"
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1SxlexXBaBy2I19EUpwiBhi6Ob2GHL3AS",
-          "itemId" : "BC-024",
-          "itemName" : "Sesame Babycorn",
-          "objectUrl" : "https://drive.google.com/file/d/1pbtSdnWoGanNACvruort_g3Rkgnat921/view?usp=sharing",
-          "price" : "199"
-        },
-        "itemId" : "BC-024",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://www.archanaskitchen.com/images/archanaskitchen/World_Appetizers/Asian_Style_Baby_Corn_with_Sesame_Seeds_and_Peanut_Sauce-1.jpg",
-          "itemId" : "TI-001",
-          "itemName" : "Seseme Babycorn",
-          "objectUrl" : "banner.jpg",
-          "price" : "100"
-        },
-        "itemId" : "TI-001",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "paid" : true,
-      "sessionId" : "-MfVqooPpha-QuxNa-0o",
-      "tableId" : "007"
-    },
-    "-MfXgfA7bDaghkD-nQfB" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://www.archanaskitchen.com/images/archanaskitchen/World_Appetizers/Asian_Style_Baby_Corn_with_Sesame_Seeds_and_Peanut_Sauce-1.jpg",
-          "itemId" : "TI-001",
-          "itemName" : "Seseme Babycorn",
-          "objectUrl" : "banner.jpg",
-          "price" : "100"
-        },
-        "itemId" : "TI-001",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://www.archanaskitchen.com/images/archanaskitchen/World_Appetizers/Asian_Style_Baby_Corn_with_Sesame_Seeds_and_Peanut_Sauce-1.jpg",
-          "itemId" : "TI-001",
-          "itemName" : "Seseme Babycorn",
-          "objectUrl" : "banner.jpg",
-          "price" : "100"
-        },
-        "itemId" : "TI-001",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1SxlexXBaBy2I19EUpwiBhi6Ob2GHL3AS",
-          "itemId" : "BC-024",
-          "itemName" : "Sesame Babycorn",
-          "objectUrl" : "https://drive.google.com/file/d/1pbtSdnWoGanNACvruort_g3Rkgnat921/view?usp=sharing",
-          "price" : "199"
-        },
-        "itemId" : "BC-024",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "paid" : true,
-      "sessionId" : "-MfXgfA7bDaghkD-nQfB",
-      "tableId" : "007"
-    },
-    "-MfXuNGEp-mY64PbOk6k" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1YLkrnWUCrLtN7QQGEh6rNctxl_Cl35fF",
-          "itemId" : "BC-025",
-          "itemName" : "Bruschetta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
-          "price" : "180"
-        },
-        "itemId" : "BC-025",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1AjQugwnvlqnLGEiSWxTuo43AnPn_rTwM",
-          "itemId" : "BC-013",
-          "itemName" : "Basil Pesto Cottage Cheese",
-          "objectUrl" : "https://drive.google.com/file/d/1ae26bDlvx_N_JA4dUobXx4WPAcHi3p9Y/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-013",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1TrXM8ena2NUpeMLiPl9EPYpbxo251Ths",
-          "itemId" : "BC-002",
-          "itemName" : " Chicken Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1QsS6h5M2jxGUzqIdD3X4gtuXzgk_MeJR",
-          "price" : "250"
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1SxlexXBaBy2I19EUpwiBhi6Ob2GHL3AS",
-          "itemId" : "BC-024",
-          "itemName" : "Sesame Babycorn",
-          "objectUrl" : "https://drive.google.com/file/d/1pbtSdnWoGanNACvruort_g3Rkgnat921/view?usp=sharing",
-          "price" : "199"
-        },
-        "itemId" : "BC-024",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "paid" : true,
-      "sessionId" : "-MfXuNGEp-mY64PbOk6k",
-      "tableId" : "008"
-    },
-    "-MfXwG_o6gXl_fHuY0V8" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=117uE-qZ616EIYbhiRdGkp_Lbdnx3yKHb",
-          "category" : "Finger Foods",
-          "itemId" : "BC-070",
-          "itemName" : "Chicken Nugget Fries",
-          "objectUrl" : "https://drive.google.com/file/d/18Pdx99YiNQYVYkhZBCWkOMbj215BLkJj/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-070",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 2
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://www.archanaskitchen.com/images/archanaskitchen/World_Appetizers/Asian_Style_Baby_Corn_with_Sesame_Seeds_and_Peanut_Sauce-1.jpg",
-          "category" : "Test",
-          "itemId" : "TI-001",
-          "itemName" : "Seseme Babycorn",
-          "objectUrl" : "banner.jpg",
-          "price" : "100"
-        },
-        "itemId" : "TI-001",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1RPwAbKgWPJMClanrKFtNVP1i46BqN3vU",
-          "category" : "Sandwiches",
-          "itemId" : "BC-075",
-          "itemName" : "Veggie Supreme Sandwich",
-          "objectUrl" : "https://drive.google.com/file/d/1Ih2IuSMcUK--emOVfKGAwgMF26KLOHe6/view?usp=sharing",
-          "price" : "200"
-        },
-        "itemId" : "BC-075",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1BiPqX0OZwyt7BaiT6Baz9xoRvYy7a2RR",
-          "category" : "Veg Starters",
-          "itemId" : "BC-029",
-          "itemName" : "Crispy Vegetables",
-          "objectUrl" : "https://drive.google.com/file/d/1fLUtphxCryLq-tmKq0MSjIRZTnQzH1yW/view?usp=sharing",
-          "price" : "230"
-        },
-        "itemId" : "BC-029",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 4
-      } ],
-      "paid" : false,
-      "sessionId" : "-MfXwG_o6gXl_fHuY0V8",
-      "stagedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1AjQugwnvlqnLGEiSWxTuo43AnPn_rTwM",
-          "category" : "Veg Starters",
-          "itemId" : "BC-013",
-          "itemName" : "Basil Pesto Cottage Cheese",
-          "objectUrl" : "https://drive.google.com/file/d/1ae26bDlvx_N_JA4dUobXx4WPAcHi3p9Y/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-013",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1BiPqX0OZwyt7BaiT6Baz9xoRvYy7a2RR",
-          "category" : "Veg Starters",
-          "itemId" : "BC-029",
-          "itemName" : "Crispy Vegetables",
-          "objectUrl" : "https://drive.google.com/file/d/1fLUtphxCryLq-tmKq0MSjIRZTnQzH1yW/view?usp=sharing",
-          "price" : "230"
-        },
-        "itemId" : "BC-029",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1YLkrnWUCrLtN7QQGEh6rNctxl_Cl35fF",
-          "category" : "Garlic Bread",
-          "itemId" : "BC-025",
-          "itemName" : "Bruschetta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
-          "price" : "180"
-        },
-        "itemId" : "BC-025",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/file/d/1f8IVBRnCLioZ-J5becyvZQcpIwq0Iytq/view?usp=sharing",
-          "category" : "Finger Food",
-          "itemId" : "BC-037",
-          "itemName" : "Cheesy Smiles",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1Mn-VeZ5At-CCjxU2hssnOvJNaTs_gQOc",
-          "price" : "190"
-        },
-        "itemId" : "BC-037",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/file/d/1VfjRo7zk9XjjRO-SUtZoIaNh7n6A84q2/view?usp=sharing",
-          "category" : " Veg Starters",
-          "itemId" : "BC-052",
-          "itemName" : "Spicy Sesame Babycorn",
-          "objectUrl" : "https://drive.google.com/file/d/1lgRHRFpJWFa2bTSzGB4k_T3So9IxR8Kt/view?usp=sharing",
-          "price" : "230"
-        },
-        "itemId" : "BC-052",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1Rt0H30zjv2PQxlcMUpkRNhlbZUIi8yET",
-          "category" : "Italian Pasta",
-          "itemId" : "BC-080",
-          "itemName" : "Scilliana Pasta",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1mqsTN3MFCgEURae8xqZfrDcSE2qBmVtc",
-          "price" : "240/270"
-        },
-        "itemId" : "BC-080",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "tableId" : "008"
-    },
-    "-MfY0z85pfSSGXVbFOL5" : {
-      "occupied" : true,
-      "paid" : true,
-      "sessionId" : "-MfY0z85pfSSGXVbFOL5",
-      "stagedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1YLkrnWUCrLtN7QQGEh6rNctxl_Cl35fF",
-          "category" : "Garlic Bread",
-          "itemId" : "BC-025",
-          "itemName" : "Bruschetta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
-          "price" : "180"
-        },
-        "itemId" : "BC-025",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=117uE-qZ616EIYbhiRdGkp_Lbdnx3yKHb",
-          "category" : "Finger Foods",
-          "itemId" : "BC-070",
-          "itemName" : "Chicken Nugget Fries",
-          "objectUrl" : "https://drive.google.com/file/d/18Pdx99YiNQYVYkhZBCWkOMbj215BLkJj/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-070",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "tableId" : "007"
-    },
-    "-MfYSajtkcofvxhWfLDq" : {
-      "occupied" : true,
-      "paid" : true,
-      "sessionId" : "-MfYSajtkcofvxhWfLDq",
-      "tableId" : "009"
-    },
-    "-MfYUNdd2EGQuhaR6Gf5" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1AjQugwnvlqnLGEiSWxTuo43AnPn_rTwM",
-          "category" : "Veg Starters",
-          "itemId" : "BC-013",
-          "itemName" : "Basil Pesto Cottage Cheese",
-          "objectUrl" : "https://drive.google.com/file/d/1ae26bDlvx_N_JA4dUobXx4WPAcHi3p9Y/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-013",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1BiPqX0OZwyt7BaiT6Baz9xoRvYy7a2RR",
-          "category" : "Veg Starters",
-          "itemId" : "BC-029",
-          "itemName" : "Crispy Vegetables",
-          "objectUrl" : "https://drive.google.com/file/d/1fLUtphxCryLq-tmKq0MSjIRZTnQzH1yW/view?usp=sharing",
-          "price" : "230"
-        },
-        "itemId" : "BC-029",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1SxlexXBaBy2I19EUpwiBhi6Ob2GHL3AS",
-          "category" : "Starters",
-          "itemId" : "BC-024",
-          "itemName" : "Sesame Babycorn",
-          "objectUrl" : "https://drive.google.com/file/d/1pbtSdnWoGanNACvruort_g3Rkgnat921/view?usp=sharing",
-          "price" : "199"
-        },
-        "itemId" : "BC-024",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1TrXM8ena2NUpeMLiPl9EPYpbxo251Ths",
-          "category" : "Starters",
-          "itemId" : "BC-002",
-          "itemName" : " Chicken Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1QsS6h5M2jxGUzqIdD3X4gtuXzgk_MeJR",
-          "price" : "250"
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1YLkrnWUCrLtN7QQGEh6rNctxl_Cl35fF",
-          "category" : "Garlic Bread",
-          "itemId" : "BC-025",
-          "itemName" : "Bruschetta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
-          "price" : "180"
-        },
-        "itemId" : "BC-025",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1kg2rnkvZmmI7pN2poGuO0Dz6LJAAB6oJ",
-          "category" : "all time Bistro favourite",
-          "itemId" : "BC-027",
-          "itemName" : "The Bistro Chicken Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1kWT2Yto-BGzffSYXX5hvwlqE5YJEMsOn",
-          "price" : "260"
-        },
-        "itemId" : "BC-027",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 2
-      } ],
-      "paid" : true,
-      "sessionId" : "-MfYUNdd2EGQuhaR6Gf5",
-      "stagedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1SxlexXBaBy2I19EUpwiBhi6Ob2GHL3AS",
-          "category" : "Starters",
-          "itemId" : "BC-024",
-          "itemName" : "Sesame Babycorn",
-          "objectUrl" : "https://drive.google.com/file/d/1pbtSdnWoGanNACvruort_g3Rkgnat921/view?usp=sharing",
-          "price" : "199"
-        },
-        "itemId" : "BC-024",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1TrXM8ena2NUpeMLiPl9EPYpbxo251Ths",
-          "category" : "Starters",
-          "itemId" : "BC-002",
-          "itemName" : " Chicken Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1QsS6h5M2jxGUzqIdD3X4gtuXzgk_MeJR",
-          "price" : "250"
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "tableId" : "010"
-    },
-    "-MfYVlA3a7x2pzaic06P" : {
-      "occupied" : true,
-      "paid" : false,
-      "sessionId" : "-MfYVlA3a7x2pzaic06P",
-      "tableId" : "011"
-    },
-    "-MfaWy4o7C_tFyx5if_S" : {
-      "occupied" : true,
-      "paid" : false,
-      "sessionId" : "-MfaWy4o7C_tFyx5if_S",
-      "stagedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1TrXM8ena2NUpeMLiPl9EPYpbxo251Ths",
-          "category" : "Starters",
-          "itemId" : "BC-002",
-          "itemName" : " Chicken Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1QsS6h5M2jxGUzqIdD3X4gtuXzgk_MeJR",
-          "price" : "250"
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "tableId" : "007"
-    },
-    "-Mfb67lduYBcN_KFmD4s" : {
-      "occupied" : true,
-      "paid" : false,
-      "sessionId" : "-Mfb67lduYBcN_KFmD4s",
-      "tableId" : "1"
-    },
-    "-MfcHZL6Q4oiasrBbbvC" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1SxlexXBaBy2I19EUpwiBhi6Ob2GHL3AS",
-          "category" : "Starters",
-          "itemId" : "BC-024",
-          "itemName" : "Sesame Babycorn",
-          "objectUrl" : "https://drive.google.com/file/d/1pbtSdnWoGanNACvruort_g3Rkgnat921/view?usp=sharing",
-          "price" : "199"
-        },
-        "itemId" : "BC-024",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1TrXM8ena2NUpeMLiPl9EPYpbxo251Ths",
-          "category" : "Starters",
-          "itemId" : "BC-002",
-          "itemName" : " Chicken Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1QsS6h5M2jxGUzqIdD3X4gtuXzgk_MeJR",
-          "price" : "250"
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1AjQugwnvlqnLGEiSWxTuo43AnPn_rTwM",
-          "category" : "Veg Starters",
-          "itemId" : "BC-013",
-          "itemName" : "Basil Pesto Cottage Cheese",
-          "objectUrl" : "https://drive.google.com/file/d/1ae26bDlvx_N_JA4dUobXx4WPAcHi3p9Y/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-013",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1YLkrnWUCrLtN7QQGEh6rNctxl_Cl35fF",
-          "category" : "Garlic Bread",
-          "itemId" : "BC-025",
-          "itemName" : "Bruschetta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
-          "price" : "180"
-        },
-        "itemId" : "BC-025",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1kg2rnkvZmmI7pN2poGuO0Dz6LJAAB6oJ",
-          "category" : "all time Bistro favourite",
-          "itemId" : "BC-027",
-          "itemName" : "The Bistro Chicken Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1kWT2Yto-BGzffSYXX5hvwlqE5YJEMsOn",
-          "price" : "260"
-        },
-        "itemId" : "BC-027",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=13DoSpqWvk5nh1kYZLVWqt8yjgRFJOx2V",
-          "category" : "Pizza Mania",
-          "itemId" : "BC-032",
-          "itemName" : "Veggie Exotic Pizza",
-          "objectUrl" : "https://drive.google.com/file/d/1x2E0ruXBCoRjXhTiiglsfSXJ-LcBUDFn/view?usp=sharing",
-          "price" : "220/280"
-        },
-        "itemId" : "BC-032",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=17z67lCqt-QVKmVGAmvEN4unJ4qbHCtEV",
-          "category" : "Pizza Mania",
-          "itemId" : "BC-065",
-          "itemName" : "Peri Peri Chicken Pizza",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=15KsjGnZv3gHbb3Lamjq9EjHw2yepvvhz",
-          "price" : "270/340"
-        },
-        "itemId" : "BC-065",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1CfXZxjVB59_xSxphx9gM_eJQPNlTodu9",
-          "category" : "Eggilicious! Waffles & Pancakes",
-          "itemId" : "BC-035",
-          "itemName" : "Pancakes",
-          "objectUrl" : "https://drive.google.com/file/d/1qJ7__o6_5n5sGPgVNWPxnKdHU7-Jjokc/view?usp=sharing",
-          "price" : "230"
-        },
-        "itemId" : "BC-035",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1ZsUvgXLhXKFJ-gXObX7y9koBq4qbPfV-",
-          "category" : "Non Veg Starters",
-          "itemId" : "BC-053",
-          "itemName" : "Spicy Chicken Strip",
-          "objectUrl" : "https://drive.google.com/file/d/1_A60Y_EoioXx8BCG6Ei8pJLrj6z3FvmZ/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-053",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1en01aeNMsVB0LkpXI2GuiriAUHVOfnTW",
-          "category" : "Desserts",
-          "itemId" : "BC-059",
-          "itemName" : "Claytopia Mudpie/with Ice cream",
-          "objectUrl" : "https://drive.google.com/file/d/1eC40KrcnovgEtyrd9UUtApe2Qu9MWoMQ/view?usp=sharing",
-          "price" : "190/240"
-        },
-        "itemId" : "BC-059",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=117uE-qZ616EIYbhiRdGkp_Lbdnx3yKHb",
-          "category" : "Finger Foods",
-          "itemId" : "BC-070",
-          "itemName" : "Chicken Nugget Fries",
-          "objectUrl" : "https://drive.google.com/file/d/18Pdx99YiNQYVYkhZBCWkOMbj215BLkJj/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-070",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1KSTpP13BFDgqFtVilMFBiqOYhoiSnbw9",
-          "category" : "Sandwiches",
-          "itemId" : "BC-079",
-          "itemName" : "Ultimate Chicken Sandwich",
-          "objectUrl" : "https://drive.google.com/file/d/1Zmb_p7bxZwyrkSGZfciwZHAl_vjMy2_C/view?usp=sharing",
-          "price" : "240"
-        },
-        "itemId" : "BC-079",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1RPwAbKgWPJMClanrKFtNVP1i46BqN3vU",
-          "category" : "Sandwiches",
-          "itemId" : "BC-075",
-          "itemName" : "Veggie Supreme Sandwich",
-          "objectUrl" : "https://drive.google.com/file/d/1Ih2IuSMcUK--emOVfKGAwgMF26KLOHe6/view?usp=sharing",
-          "price" : "200"
-        },
-        "itemId" : "BC-075",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "paid" : false,
-      "sessionId" : "-MfcHZL6Q4oiasrBbbvC",
-      "tableId" : "012"
-    },
-    "-MfdFhz4nWZbZE_azkFp" : {
-      "occupied" : true,
-      "paid" : true,
-      "sessionId" : "-MfdFhz4nWZbZE_azkFp",
-      "stagedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1AjQugwnvlqnLGEiSWxTuo43AnPn_rTwM",
-          "category" : "Veg Starters",
-          "itemId" : "BC-013",
-          "itemName" : "Basil Pesto Cottage Cheese",
-          "objectUrl" : "https://drive.google.com/file/d/1ae26bDlvx_N_JA4dUobXx4WPAcHi3p9Y/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-013",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "tableId" : "009"
-    },
-    "-MffxvyXgHaVlCfFx5MR" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1CfXZxjVB59_xSxphx9gM_eJQPNlTodu9",
-          "category" : "Eggilicious! Waffles & Pancakes",
-          "itemId" : "BC-035",
-          "itemName" : "Pancakes",
-          "objectUrl" : "https://drive.google.com/file/d/1qJ7__o6_5n5sGPgVNWPxnKdHU7-Jjokc/view?usp=sharing",
-          "price" : "230"
-        },
-        "itemId" : "BC-035",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=117uE-qZ616EIYbhiRdGkp_Lbdnx3yKHb",
-          "category" : "Finger Foods",
-          "itemId" : "BC-070",
-          "itemName" : "Chicken Nugget Fries",
-          "objectUrl" : "https://drive.google.com/file/d/18Pdx99YiNQYVYkhZBCWkOMbj215BLkJj/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-070",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=17z67lCqt-QVKmVGAmvEN4unJ4qbHCtEV",
-          "category" : "Pizza Mania",
-          "itemId" : "BC-065",
-          "itemName" : "Peri Peri Chicken Pizza",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=15KsjGnZv3gHbb3Lamjq9EjHw2yepvvhz",
-          "price" : "270/340"
-        },
-        "itemId" : "BC-065",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=13DoSpqWvk5nh1kYZLVWqt8yjgRFJOx2V",
-          "category" : "Pizza Mania",
-          "itemId" : "BC-032",
-          "itemName" : "Veggie Exotic Pizza",
-          "objectUrl" : "https://drive.google.com/file/d/1x2E0ruXBCoRjXhTiiglsfSXJ-LcBUDFn/view?usp=sharing",
-          "price" : "220/280"
-        },
-        "itemId" : "BC-032",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1ZsUvgXLhXKFJ-gXObX7y9koBq4qbPfV-",
-          "category" : "Non Veg Starters",
-          "itemId" : "BC-053",
-          "itemName" : "Spicy Chicken Strip",
-          "objectUrl" : "https://drive.google.com/file/d/1_A60Y_EoioXx8BCG6Ei8pJLrj6z3FvmZ/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-053",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "paid" : true,
-      "sessionId" : "-MffxvyXgHaVlCfFx5MR",
-      "tableId" : "019"
-    },
-    "-MfkyaREVu57lM25r_lm" : {
-      "occupied" : true,
-      "paid" : true,
-      "sessionId" : "-MfkyaREVu57lM25r_lm",
-      "tableId" : "108"
-    },
-    "-Mfl4s4v_4NSoJB4MOpg" : {
-      "occupied" : true,
-      "paid" : true,
-      "sessionId" : "-Mfl4s4v_4NSoJB4MOpg",
-      "tableId" : "001"
-    },
-    "-MflfyuesWMITyYAqUX-" : {
-      "occupied" : true,
-      "paid" : true,
-      "sessionId" : "-MflfyuesWMITyYAqUX-",
-      "tableId" : "069"
-    },
-    "-MfnGq5iflZy-xtolrAQ" : {
-      "occupied" : true,
-      "paid" : false,
-      "sessionId" : "-MfnGq5iflZy-xtolrAQ",
-      "tableId" : "069"
-    },
-    "-Mfxwjv76vZ5I_3TaPv9" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1LordX8aHm-wagmwUmNmcmvE5q0J_RJxv",
-          "category" : "Finger Food",
-          "itemId" : "BC-009",
-          "itemName" : "Potato Wedges",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1tK1YemZbyG6Q2vivs5o62QjtSTe6HkNp",
-          "price" : "135"
-        },
-        "itemId" : "BC-009",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1TrXM8ena2NUpeMLiPl9EPYpbxo251Ths",
-          "category" : "Starters",
-          "itemId" : "BC-002",
-          "itemName" : " Chicken Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1QsS6h5M2jxGUzqIdD3X4gtuXzgk_MeJR",
-          "price" : "250"
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/file/d/1Ztm1Un232m7gl9yq4_AdHw1u87cmf1ZJ/view?usp=sharing",
-          "category" : "Finger Food",
-          "itemId" : "BC-021",
-          "itemName" : "French Fries With Cheese",
-          "objectUrl" : "https://drive.google.com/file/d/1vrp4uZLoJ2uORlgfY46J75cCvJEAYoRO/view?usp=sharing",
-          "price" : "160"
-        },
-        "itemId" : "BC-021",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "paid" : false,
-      "sessionId" : "-Mfxwjv76vZ5I_3TaPv9",
-      "tableId" : "022"
-    },
-    "-MglGB1mqNf5eF4QWPfZ" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1jw7MKjy4PaP7zR5U3J3m3ePlyrGuSh5z",
-          "category" : "Burgers & Combos",
-          "itemId" : "BC-002",
-          "itemName" : "Spicy BBQ Chicken Burger Combo",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1QsS6h5M2jxGUzqIdD3X4gtuXzgk_MeJR",
-          "price" : 350
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1u3VhveYKo1QQkDMY5LdGv6Sc0LHKzFAV",
-          "category" : "Burgers & Combos",
-          "itemId" : "BC-026",
-          "itemName" : "Double Veggie Delight",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1zdIuL_uRMGtixcxOiNAgr-1ZoHVvdlZ-",
-          "price" : "230"
-        },
-        "itemId" : "BC-026",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 2
-      } ],
-      "paid" : false,
-      "sessionId" : "-MglGB1mqNf5eF4QWPfZ",
-      "stagedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1sWLqXmvKc0Z3CsX_u0ASqS37fUpr-j99",
-          "category" : "Pizza",
-          "cust" : [ "070" ],
-          "customization" : {
-            "Choose_Size" : "Large(10 Inches),70"
-          },
-          "desc" : "",
-          "itemId" : "BC-016",
-          "itemName" : "Peri Peri Chicken Pizza",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1L_126gjVBDI4yfPqRpmhTMEuQrxc-WIm",
-          "price" : "270"
-        },
-        "itemId" : "BC-016",
-        "ordered" : false,
-        "qty" : 1,
-        "username" : "affable1"
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1jw7MKjy4PaP7zR5U3J3m3ePlyrGuSh5z",
-          "category" : "Burgers & Combos",
-          "desc" : "",
-          "itemId" : "BC-002",
-          "itemName" : "Spicy BBQ Chicken Combo",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL",
-          "price" : "350"
-        },
-        "itemId" : "BC-002",
-        "ordered" : false,
-        "qty" : 1,
-        "username" : "affable1"
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1uG3srvvbhRwRNzwhBmtfz7vbIgV4yHf0",
-          "category" : "Burgers & Combos",
-          "cust" : [ 130 ],
-          "customization" : {
-            "Choose_Size" : "Large,30"
-          },
-          "desc" : "",
-          "itemId" : "BC-043",
-          "itemName" : "Veggie Burger",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1KpZs9e-iwJ6Sl80P2PxwI-v6ksn5vyiN",
-          "price" : "150"
-        },
-        "itemId" : "BC-043",
-        "ordered" : false,
-        "qty" : 1,
-        "username" : "affable1"
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1BiPqX0OZwyt7BaiT6Baz9xoRvYy7a2RR",
-          "category" : "Starters",
-          "desc" : "",
-          "itemId" : "BC-029",
-          "itemName" : "Crispy Vegetables",
-          "objectUrl" : "https://drive.google.com/file/d/1fLUtphxCryLq-tmKq0MSjIRZTnQzH1yW/view?usp=sharing",
-          "price" : "230"
-        },
-        "itemId" : "BC-029",
-        "ordered" : false,
-        "qty" : 1,
-        "username" : "uhhh"
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1SxlexXBaBy2I19EUpwiBhi6Ob2GHL3AS",
-          "category" : "Starters",
-          "desc" : "",
-          "itemId" : "BC-024",
-          "itemName" : "Sesame Crispy Chicken ",
-          "objectUrl" : "https://drive.google.com/file/d/1pbtSdnWoGanNACvruort_g3Rkgnat921/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-024",
-        "ordered" : false,
-        "qty" : 6,
-        "username" : "uhhh"
-      } ],
-      "tableId" : "009"
-    },
-    "-Mh3ibNCcCP8CPaIbNzL" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "",
-          "category" : "Pasta",
-          "itemId" : "BC-001",
-          "itemName" : "Bistro Mix Mushroom",
-          "objectUrl" : "",
-          "price" : "320"
-        },
-        "itemId" : "BC-001",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
-          "category" : "Pasta",
-          "itemId" : "BC-005",
-          "itemName" : "Wild Mushroom Pasta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
-          "price" : "295"
-        },
-        "itemId" : "BC-005",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1Hy_LYlyilVkYQBJmODuydvYuYCesi7GF",
-          "category" : "Pasta",
-          "itemId" : "BC-019",
-          "itemName" : "Bistro Chicken Pasta",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1_Du2hP2zKLfQpha--BHvWmINCd0e0Xq6",
-          "price" : "330"
-        },
-        "itemId" : "BC-019",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1UxHKXEUV04zOxHtu_cx8LQZJV6O0sQiO",
-          "category" : "Burgers & Combos",
-          "itemId" : "BC-081",
-          "itemName" : "Spicy Monstrous Lamb Combo",
-          "objectUrl" : "https://drive.google.com/file/d/13gFwrozSamKYbFMeKBbrsYijB-QmF5gE/view?usp=sharing",
-          "price" : "350"
-        },
-        "itemId" : "BC-081",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "",
-          "category" : "Burgers & Combos",
-          "itemId" : "BC-125",
-          "itemName" : "Classic Chicken Burger",
-          "objectUrl" : "",
-          "price" : "175"
-        },
-        "itemId" : "BC-125",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
-          "category" : "Pasta",
-          "itemId" : "BC-005",
-          "itemName" : "Wild Mushroom Pasta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
-          "price" : "295"
-        },
-        "itemId" : "BC-005",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/file/d/1Z6Ex6hJHv1F0rKzvYz5ZwI8ijGTUbaKb/view?usp=sharing",
-          "category" : "Pasta",
-          "itemId" : "BC-044",
-          "itemName" : "Arabiatta",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=16evwvKl_rqODHyNzTWZ48sBn-AsY_sY1",
-          "price" : "230"
-        },
-        "itemId" : "BC-044",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1XdA627OaUqTG2EiM7OYtk4TXW-R1PasP",
-          "category" : "Pasta",
-          "itemId" : "BC-055",
-          "itemName" : "Pasta Mediterranean",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1eBgw0t-KEK29bG9QTXDR_G-jBQKAXx-W",
-          "price" : "240"
-        },
-        "itemId" : "BC-055",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1-XfXljGZdRAb81bpX4S5T9DjDeCFs6BL",
-          "category" : "Snacks",
-          "itemId" : "BC-116",
-          "itemName" : "Garlic Bread with Cheese",
-          "objectUrl" : "https://drive.google.com/file/d/1f7793YP7IViuESizd4l8-rEdCfG1Dg38/view?usp=sharing",
-          "price" : "190"
-        },
-        "itemId" : "BC-116",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "category" : "Snacks",
-          "itemId" : "BC-115",
-          "itemName" : "Plain garlic Bread",
-          "price" : "120"
-        },
-        "itemId" : "BC-115",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "paid" : false,
-      "sessionId" : "-Mh3ibNCcCP8CPaIbNzL",
-      "tableId" : ""
-    },
-    "-Mh410Dwg4xDhXYbELHg" : {
-      "occupied" : true,
-      "paid" : false,
-      "sessionId" : "-Mh410Dwg4xDhXYbELHg",
-      "tableId" : ""
-    },
-    "-Mh44yUeTiIxNLpZz9j5" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=13DoSpqWvk5nh1kYZLVWqt8yjgRFJOx2V",
-          "category" : "Pizza",
-          "itemId" : "BC-032",
-          "itemName" : "Veggie Exotic Pizza",
-          "objectUrl" : "https://drive.google.com/file/d/1x2E0ruXBCoRjXhTiiglsfSXJ-LcBUDFn/view?usp=sharing",
-          "price" : "220"
-        },
-        "itemId" : "BC-032",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1,
-        "selectedCustomizations" : {
-          "Choose Size" : {
-            "name" : "Large(10 Inches)",
-            "price" : 60
-          }
-        }
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1Hy_LYlyilVkYQBJmODuydvYuYCesi7GF",
-          "category" : "Pasta",
-          "itemId" : "BC-019",
-          "itemName" : "Bistro Chicken Pasta",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1_Du2hP2zKLfQpha--BHvWmINCd0e0Xq6",
-          "price" : "330"
-        },
-        "itemId" : "BC-019",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1,
-        "selectedCustomizations" : {
-          "Choose Pasta Type" : {
-            "name" : "Penne",
-            "price" : 0
-          }
-        }
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1sWLqXmvKc0Z3CsX_u0ASqS37fUpr-j99",
-          "category" : "Pizza",
-          "itemId" : "BC-016",
-          "itemName" : "Peri Peri Chicken Pizza",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1L_126gjVBDI4yfPqRpmhTMEuQrxc-WIm",
-          "price" : "270"
-        },
-        "itemId" : "BC-016",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1,
-        "selectedCustomizations" : {
-          "Choose Size" : {
-            "name" : "Large(10 Inches)",
-            "price" : 70
-          }
-        }
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1uopz02oTWLrITiDHVs9Gn8fOViVuXhQr",
-          "category" : "Breakfast",
-          "itemId" : "BC-010",
-          "itemName" : "Bistro Heavenly Rolls",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1DYZej3r0NxZ7A6IYLm_B8g_L2bBY4Mqy",
-          "price" : "300"
-        },
-        "itemId" : "BC-010",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "paid" : true,
-      "sessionId" : "-Mh44yUeTiIxNLpZz9j5",
-      "tableId" : "070"
-    },
-    "-Mh7mYkvWwW1aA3BaEpd" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
-          "category" : "Pasta",
-          "itemId" : "BC-005",
-          "itemName" : "Wild Mushroom Pasta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
-          "price" : "295"
-        },
-        "itemId" : "BC-005",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1,
-        "selectedCustomizations" : {
-          "Choose Pasta Type" : {
-            "name" : "Penne",
-            "price" : 0
-          }
-        }
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "",
-          "category" : "Pasta",
-          "itemId" : "BC-001",
-          "itemName" : "Bistro Mix Mushroom",
-          "objectUrl" : "",
-          "price" : "320"
-        },
-        "itemId" : "BC-001",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1,
-        "selectedCustomizations" : {
-          "Choose Pasta Type" : {
-            "name" : "Penne",
-            "price" : 0
-          }
-        }
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
-          "category" : "Pasta",
-          "itemId" : "BC-005",
-          "itemName" : "Wild Mushroom Pasta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
-          "price" : "295"
-        },
-        "itemId" : "BC-005",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1,
-        "selectedCustomizations" : {
-          "Choose Pasta Type" : {
-            "name" : "Spaghetti",
-            "price" : 0
-          }
-        }
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1YLkrnWUCrLtN7QQGEh6rNctxl_Cl35fF",
-          "category" : "Snacks",
-          "itemId" : "BC-025",
-          "itemName" : "Bruschetta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
-          "price" : "180"
-        },
-        "itemId" : "BC-025",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
-          "category" : "Pasta",
-          "itemId" : "BC-005",
-          "itemName" : "Wild Mushroom Pasta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
-          "price" : "295"
-        },
-        "itemId" : "BC-005",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1,
-        "selectedCustomizations" : {
-          "Choose Pasta Type" : {
-            "name" : "Penne",
-            "price" : 0
-          }
-        }
-      } ],
-      "paid" : true,
-      "sessionId" : "-Mh7mYkvWwW1aA3BaEpd",
-      "tableId" : "070"
-    },
-    "-MhCpOUl0jVcSxOLuUeX" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
-          "category" : "Pasta",
-          "itemId" : "BC-005",
-          "itemName" : "Wild Mushroom Pasta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
-          "price" : "295"
-        },
-        "itemId" : "BC-005",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 8,
-        "selectedCustomizations" : {
-          "Choose Pasta Type" : {
-            "name" : "Penne",
-            "price" : 0
-          }
-        }
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=117uE-qZ616EIYbhiRdGkp_Lbdnx3yKHb",
-          "category" : "Snacks",
-          "itemId" : "BC-070",
-          "itemName" : "Chicken Nugget Fries",
-          "objectUrl" : "https://drive.google.com/file/d/18Pdx99YiNQYVYkhZBCWkOMbj215BLkJj/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-070",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 29
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1YLkrnWUCrLtN7QQGEh6rNctxl_Cl35fF",
-          "category" : "Snacks",
-          "itemId" : "BC-025",
-          "itemName" : "Bruschetta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
-          "price" : "180"
-        },
-        "itemId" : "BC-025",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 9
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1AjQugwnvlqnLGEiSWxTuo43AnPn_rTwM",
-          "category" : "Starters",
-          "itemId" : "BC-013",
-          "itemName" : "Basil Pesto Cottage Cheese",
-          "objectUrl" : "https://drive.google.com/file/d/1ae26bDlvx_N_JA4dUobXx4WPAcHi3p9Y/view?usp=sharing",
-          "price" : "250"
-        },
-        "itemId" : "BC-013",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1YLkrnWUCrLtN7QQGEh6rNctxl_Cl35fF",
-          "category" : "Snacks",
-          "itemId" : "BC-025",
-          "itemName" : "Bruschetta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
-          "price" : "180"
-        },
-        "itemId" : "BC-025",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
-          "category" : "Pasta",
-          "itemId" : "BC-005",
-          "itemName" : "Wild Mushroom Pasta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
-          "price" : "295"
-        },
-        "itemId" : "BC-005",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1,
-        "selectedCustomizations" : {
-          "Choose Pasta Type" : {
-            "name" : "Spaghetti",
-            "price" : 0
-          }
-        }
-      } ],
-      "paid" : true,
-      "sessionId" : "-MhCpOUl0jVcSxOLuUeX",
-      "stagedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1jw7MKjy4PaP7zR5U3J3m3ePlyrGuSh5z",
-          "category" : "Burgers & Combos",
-          "itemId" : "BC-002",
-          "itemName" : "Spicy BBQ Chicken Combo",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL",
-          "price" : "350"
-        },
-        "itemId" : "BC-002",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1
-      } ],
-      "tableId" : "070"
-    },
-    "-Mhn1iz3WwLLKJ59hXpg" : {
-      "occupied" : true,
-      "orderedItems" : [ {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1Hy_LYlyilVkYQBJmODuydvYuYCesi7GF",
-          "category" : "Pasta",
-          "itemId" : "BC-019",
-          "itemName" : "Bistro Chicken Pasta",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1_Du2hP2zKLfQpha--BHvWmINCd0e0Xq6",
-          "price" : "330"
-        },
-        "itemId" : "BC-019",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1,
-        "selectedCustomizations" : {
-          "Choose Pasta Type" : {
-            "name" : "Penne",
-            "price" : 0
-          }
-        }
-      }, {
-        "delivered" : true,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
-          "category" : "Pasta",
-          "itemId" : "BC-005",
-          "itemName" : "Wild Mushroom Pasta ",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=182Rs-oOni7C0yHd5qcfgC1iIHOYtz0kk",
-          "price" : "295"
-        },
-        "itemId" : "BC-005",
-        "note" : "",
-        "ordered" : false,
-        "qty" : 1,
-        "selectedCustomizations" : {
-          "Choose Pasta Type" : {
-            "name" : "Penne",
-            "price" : 0
-          }
-        }
-      } ],
-      "paid" : true,
-      "sessionId" : "-Mhn1iz3WwLLKJ59hXpg",
-      "tableId" : "070"
-    },
-    "-Mhn1ub6UEGjrGxxtEF1" : {
-      "occupied" : true,
-      "paid" : false,
-      "sessionId" : "-Mhn1ub6UEGjrGxxtEF1",
-      "stagedItems" : [ {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1B4wmQm1QXc5c73EhOrRXPXaIlSJGJrtz",
-          "category" : "Main Course",
-          "desc" : "",
-          "itemId" : "BC-012",
-          "itemName" : "Herb Roasted Chicken",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1B4tGVggAHrQG_VaOsCeEz_zZj7hL1wPK",
-          "price" : "330"
-        },
-        "itemId" : "BC-012",
-        "ordered" : false,
-        "qty" : 1,
-        "username" : "himanshu"
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1fMxyyYdRYpXsm3u0OWnfBgCkzElHGO0E",
-          "category" : "Soups & Salads",
-          "desc" : "",
-          "itemId" : "BC-011",
-          "itemName" : "Classic Ceaser Salad",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=15JVQk8Ysh263m89ud4_YNGl0o9ICKJFX",
-          "price" : "220/250"
-        },
-        "itemId" : "BC-011",
-        "ordered" : false,
-        "qty" : 2,
-        "username" : "himanshu"
-      }, {
-        "delivered" : false,
-        "item" : {
-          "bannerUrl" : "https://drive.google.com/uc?export=download&id=1sWLqXmvKc0Z3CsX_u0ASqS37fUpr-j99",
-          "category" : "Pizza",
-          "cust" : [ "070" ],
-          "desc" : "",
-          "itemId" : "BC-016",
-          "itemName" : "Peri Peri Chicken Pizza",
-          "objectUrl" : "https://drive.google.com/uc?export=download&id=1L_126gjVBDI4yfPqRpmhTMEuQrxc-WIm",
-          "price" : "270"
-        },
-        "itemId" : "BC-016",
-        "ordered" : false,
-        "qty" : 1,
-        "username" : "Dan hammer "
-      } ],
-      "tableId" : "070"
-    },
-    "MglGB1mqNf5eF4QWPfZ" : {
-      "stagedItems" : [ {
-        "qty" : 5
-      } ]
-    },
-    "Test" : {
-      "paid" : true
     }
   }
 }

@@ -13,5 +13,6 @@ interface Iitem {
   objectUrl: string;
   price: string;
   customization?: any;
-  subCategory?: string;''
+  subCategory?: string;
+  label?:string;
 }

@@ -1,11 +1,13 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon, PlusIcon } from "@heroicons/react/solid";
-
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { FiBox } from "react-icons/fi";
 import MenuCard from "./MenuCard";
 import PopularCard from "./PopularCard";
 import SubMenu from "./SubMenu";
+import Veg from "../../public/label/Veg.svg";
+import NonVeg from "../../public/label/Non-Veg.svg";
 
 const Model = dynamic(() => import("../glbLoad/Model"), {
   ssr: false,
@@ -18,6 +20,41 @@ export default function DisclosureCard(props: {
   imgUrl: string;
 }) {
   const { item, stagedItems, bgColor, imgUrl } = props;
+
+  const labelValue = (label) => {
+    // if (!label) {
+    //   return <Image src={Veg} />;
+    // } else {
+    //   switch (label) {
+    //     case "V":
+    //       return <Image src={Veg} />;
+    //     case "NV":
+    //       return <Image src={NonVeg} />;
+    //   }
+    // }
+    switch (label) {
+      case "V":
+        return <Image src={Veg} />;
+      case "NV":
+        return <Image src={NonVeg} />;
+      case "VNV":
+        return (
+          <>
+            <div>
+              <span className="mr-2">
+                <Image src={Veg} />
+              </span>
+              <span>
+                <Image src={NonVeg} />
+              </span>
+            </div>
+          </>
+        );
+      default:
+        return <Image src={Veg} />;
+    }
+  };
+
   return (
     <div className="w-full px-2">
       <div className="w-full max-w-md p-2 mx-auto bg-white rounded-2xl">
@@ -29,41 +66,34 @@ export default function DisclosureCard(props: {
                   item.subCategory ? "rounded-2xl" : "rounded-t-2xl"
                 } `}
               >
-                <div className="flex flex-col gap-2 flex-eight">
+                <div className="flex flex-col gap-1 flex-eight">
                   <div className="flex ml-2 text-dark text-lg font-bold">
-                    <h3>{item.itemName}</h3>
+                    <h4>{item.itemName}</h4>
                   </div>
-                  {/* <div className="flex ml-2 text-dark text-sm font-thin">
-                    <h3>
-                      a totally sinful lamb burger served with two lamb patties,
-                      fried egg, jalapenos, lettuce, tomatoes, onion and cheese
-                    </h3>
-                  </div> */}
+                  <div>
+                    <span className="flex ml-2">{labelValue(item.label)}</span>
+                  </div>
+
                   {item.desc && item.desc.length > 0 && (
-                    <div className="flex ml-2 text-dark text-sm font-thin">
+                    <div className="flex ml-2 mb-4 text-dark text-base tracking-tight font-normal font-description">
                       <h3>{item.desc}</h3>
                     </div>
                   )}
                   <div className="flex ml-2 text-sm font-semibold text-dark">
-                    <h3>
-                      ₹{item.price}{" "}
-                      {/* <span className="text-xs font-semibold">
-                        ({item.itemId})
-                      </span> */}
-                    </h3>
+                    <h3>₹{item.price} </h3>
                   </div>
                 </div>
-                <div className="flex justify-end flex-col gap-2 mr-1">
-                  {/* <div className="flex">
+                <div className="flex justify-end items-end flex-col">
+                  {/* <div className="flex justify-end">
                     <PlusIcon
                       className={`${
                         open ? `transform rotate-180 ${bgColor} text-dark` : ""
-                      } w-7 h-7 text-dark bg-white m-2 rounded-2xl text-center`}
+                      } w-7 h-7 text-dark bg-gray-100 p-1 mr-2 mt-1 rounded-2xl text-center`}
                     />
                   </div> */}
-                  {item.bannerUrl && (
-                    <Disclosure.Button className="flex text-white font-medium tracking-widest rounded-tl-lg rounded-br-lg bg-button px-3 py-2 cursor-pointer">
-                      <svg
+                  {item.bannerUrl ? (
+                    <Disclosure.Button className="flex text-white font-medium tracking-widest rounded-tl-2xl rounded-br-2xl bg-button px-5 py-2 cursor-pointer">
+                      {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"
                         fill="none"
@@ -76,9 +106,14 @@ export default function DisclosureCard(props: {
                           strokeWidth={2}
                           d="M12 6v6m0 0v6m0-6h6m-6 0H6"
                         />
-                      </svg>
-                      view
+                      </svg> */}
+                      VIEW
                     </Disclosure.Button>
+                  ) : (
+                    // <div className="flex text-dark font-xs tracking-widest rounded-tl-2xl rounded-br-2xl bg-white px-5 py-2">
+                    //   soon
+                    // </div>
+                    <></>
                   )}
                 </div>
               </div>

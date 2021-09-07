@@ -17,6 +17,9 @@ module.exports = {
       animation: {
         "spin-slow": "spin 3s linear infinite",
       },
+      fontFamily: {
+        description: ["Mulish"],
+      },
       flex: {
         two: "1 0 20%",
         three: "1 0 30%",
@@ -27,7 +30,6 @@ module.exports = {
         eight: "1 0 80%",
         nine: "1 0 90%",
       },
-
       backgroundImage: (theme) => ({
         menu: "url('/menuImages/pizzaBg.jpg ')",
       }),

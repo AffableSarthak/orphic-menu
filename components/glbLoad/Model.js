@@ -19,7 +19,7 @@ const Model = ({ glbName, item }) => (
         width: "100%",
         height: "200px",
         // backgroundColor: "#FFFFFF",
-        "-posterColor": "#ffffff00",
+        // "-posterColor": "#ffffff00",
         marginBottom: "1rem",
       }}
       src={`https://d3fkon.github.io/onpar-ar/objects/bc/${glbName}.glb`}

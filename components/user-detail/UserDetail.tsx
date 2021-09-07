@@ -89,7 +89,40 @@ const UserDetail = (props) => {
         </p>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-10 text-center">
+        <button
+          onClick={() => {
+            if (localStorage.getItem("rId") !== undefined) {
+              router.push({
+                pathname: `/app/categories/${rId}`,
+              });
+            }
+          }}
+          className="px-6 py-4 bg-primary text-dark font-semibold rounded-2xl"
+        >
+          <div className="flex">
+            <div className="mr-2">Get Started</div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      {/* <div className="mt-5">
         <Formik
           initialValues={{ username: "" }}
           validationSchema={yup.object({
@@ -115,13 +148,8 @@ const UserDetail = (props) => {
                 placeholder="Enter your Name"
                 className="bg-whiteColor w-full px-8 py-4 rounded-2xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl "
               />
-              {/* <ErrorMessage
-                name="username"
-                component={'div'}
-                className="text-red-500 px-4"
-              /> */}
+
               <p className="text-red-500 text-center h-8">{errors.username}</p>
-              {/* <div className="flex justify-end mt-5"> */}
               <button
                 type="submit"
                 disabled={isSubmitting || isValidating}
@@ -132,13 +160,20 @@ const UserDetail = (props) => {
                   <BsArrowRight size={20} />
                 </span>
               </button>
-              {/* </div> */}
             </Form>
           )}
         </Formik>
-      </div>
+      </div> */}
     </>
   );
 };
 
 export default UserDetail;
+
+{
+  /* <ErrorMessage
+                name="username"
+                component={'div'}
+                className="text-red-500 px-4"
+              /> */
+}
