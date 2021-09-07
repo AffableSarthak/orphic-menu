@@ -80,7 +80,9 @@ export default function DisclosureCard(props: {
                     </div>
                   )}
                   <div className="flex ml-2 text-sm font-semibold text-dark">
-                    <h3>₹{item.price} </h3>
+                    <h3>
+                      ₹{item.price} ({item.itemId}){" "}
+                    </h3>
                   </div>
                 </div>
                 <div className="flex justify-end items-end flex-col">
