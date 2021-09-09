@@ -20,7 +20,8 @@
         "itemName" : "Spicy BBQ Chicken Combo",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1nm3rqDM1NFoL7MFNix87Ob8nTn6CgodL",
-        "price" : "350"
+        "price" : "350",
+        "subCategory" : "Combos"
       },
       "BC-003" : {
         "bannerUrl" : "",
@@ -31,7 +32,8 @@
         "itemName" : "Hosin Glazed Grilled Chicken",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "280"
+        "price" : "280",
+        "subCategory" : "Pan Asian"
       },
       "BC-005" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=17AFInAwDwXUOLYEQAakLzow3Ner2X7qw",
@@ -52,7 +54,8 @@
         "itemName" : "French Fries",
         "label" : "V",
         "objectUrl" : "",
-        "price" : "120"
+        "price" : "120",
+        "subCategory" : "Finger Food"
       },
       "BC-008" : {
         "bannerUrl" : "",
@@ -62,7 +65,8 @@
         "itemName" : "Exotic Veggies Soup",
         "label" : "V",
         "objectUrl" : "",
-        "price" : "230"
+        "price" : "230",
+        "subCategory" : "Soups"
       },
       "BC-010" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1uopz02oTWLrITiDHVs9Gn8fOViVuXhQr",
@@ -82,7 +86,8 @@
         "itemName" : "Classic Ceaser Salad",
         "label" : "VNV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=15JVQk8Ysh263m89ud4_YNGl0o9ICKJFX",
-        "price" : "240/260"
+        "price" : "240/260",
+        "subCategory" : "Salads"
       },
       "BC-012" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1B4wmQm1QXc5c73EhOrRXPXaIlSJGJrtz",
@@ -92,7 +97,8 @@
         "itemName" : "Herb Roasted Chicken",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1B4tGVggAHrQG_VaOsCeEz_zZj7hL1wPK",
-        "price" : "330"
+        "price" : "330",
+        "subCategory" : "European"
       },
       "BC-013" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1AjQugwnvlqnLGEiSWxTuo43AnPn_rTwM",
@@ -102,7 +108,8 @@
         "itemName" : "Basil Pesto Cottage Cheese",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1ae26bDlvx_N_JA4dUobXx4WPAcHi3p9Y/view?usp=sharing",
-        "price" : "260"
+        "price" : "260",
+        "subCategory" : "Veg"
       },
       "BC-014" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1hScTOMZGoJfCtFDq7uJ2wBWCh1xsegAY",
@@ -112,7 +119,8 @@
         "itemName" : "Mushroom & Spinach Stuffed Chicken",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1eqzi3k_SO9M7nHSjYq6ndiMg5QV3JrZM",
-        "price" : "320"
+        "price" : "320",
+        "subCategory" : "European"
       },
       "BC-016" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1sWLqXmvKc0Z3CsX_u0ASqS37fUpr-j99",
@@ -155,7 +163,8 @@
         "itemName" : "French Fries With Cheese",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1vrp4uZLoJ2uORlgfY46J75cCvJEAYoRO/view?usp=sharing",
-        "price" : "190"
+        "price" : "190",
+        "subCategory" : "Finger Food"
       },
       "BC-022" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1DVTK5TLvA2Ak-xI1zz7RGSyda9avJVlB",
@@ -175,7 +184,8 @@
         "itemName" : "Spicy Minced Chicken Soup",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "260"
+        "price" : "260",
+        "subCategory" : "Soups"
       },
       "BC-024" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1SxlexXBaBy2I19EUpwiBhi6Ob2GHL3AS",
@@ -185,7 +195,8 @@
         "itemName" : "Sesame Crispy Chicken ",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1pbtSdnWoGanNACvruort_g3Rkgnat921/view?usp=sharing",
-        "price" : "270"
+        "price" : "270",
+        "subCategory" : "Non Veg"
       },
       "BC-025" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1YLkrnWUCrLtN7QQGEh6rNctxl_Cl35fF",
@@ -195,7 +206,8 @@
         "itemName" : "Bruschetta ",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1pbtSdnWoGanNACvruort_g3Rkgnat921",
-        "price" : "180"
+        "price" : "180",
+        "subCategory" : "Garlic Bread"
       },
       "BC-026" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1u3VhveYKo1QQkDMY5LdGv6Sc0LHKzFAV",
@@ -205,7 +217,8 @@
         "itemName" : "Double Veggie Delight Burger",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1zdIuL_uRMGtixcxOiNAgr-1ZoHVvdlZ-",
-        "price" : "249"
+        "price" : "249",
+        "subCategory" : "All Time Fav"
       },
       "BC-027" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1kg2rnkvZmmI7pN2poGuO0Dz6LJAAB6oJ",
@@ -215,7 +228,8 @@
         "itemName" : "The Bistro Chicken Burger",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1kWT2Yto-BGzffSYXX5hvwlqE5YJEMsOn",
-        "price" : "295"
+        "price" : "295",
+        "subCategory" : "All Time Fav"
       },
       "BC-028" : {
         "bannerUrl" : "",
@@ -226,7 +240,8 @@
         "itemName" : "Asian Inspired Chicken Suasage",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "300"
+        "price" : "300",
+        "subCategory" : "Pan Asian"
       },
       "BC-029" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1BiPqX0OZwyt7BaiT6Baz9xoRvYy7a2RR",
@@ -236,7 +251,8 @@
         "itemName" : "Crispy Vegetables",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1fLUtphxCryLq-tmKq0MSjIRZTnQzH1yW/view?usp=sharing",
-        "price" : "240"
+        "price" : "240",
+        "subCategory" : "Veg"
       },
       "BC-030" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1OpFTxM_93Wz0lIgBFWnqa3TEYuBbCJVA",
@@ -256,7 +272,8 @@
         "itemName" : "Buffalo Wings",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1qevFJzgrrjrt1qjYvF47BmJEre2hPgg0",
-        "price" : "310"
+        "price" : "310",
+        "subCategory" : "Non Veg"
       },
       "BC-032" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=13DoSpqWvk5nh1kYZLVWqt8yjgRFJOx2V",
@@ -277,7 +294,8 @@
         "itemName" : "Smoky BBQ Chicken Sandwich",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1szdmn0h8ODslpjsN9BEPm9tz_kdE1AZ5",
-        "price" : "240"
+        "price" : "240",
+        "subCategory" : "Herb Focaccia"
       },
       "BC-035" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1CfXZxjVB59_xSxphx9gM_eJQPNlTodu9",
@@ -297,7 +315,8 @@
         "itemName" : "Cheesy Smiles",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1Mn-VeZ5At-CCjxU2hssnOvJNaTs_gQOc",
-        "price" : "210"
+        "price" : "210",
+        "subCategory":"Finger Food"
       },
       "BC-039" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=16hr5XFchV30XuU-SYlm25kOqGvL0Jzrx",
@@ -307,7 +326,8 @@
         "itemName" : "Mumbai Masala Nachos",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1CEkDJD5Zm-CNs9lBORrYVsXZsJIOkJ_1",
-        "price" : "240"
+        "price" : "240",
+        "subCategory" : "Nachos"
       },
       "BC-040" : {
         "bannerUrl" : "",
@@ -317,7 +337,8 @@
         "itemName" : "Assorted Wild Mushroom Soup",
         "label" : "V",
         "objectUrl" : "",
-        "price" : "250"
+        "price" : "250",
+        "subCategory" : "Soups"
       },
       "BC-041" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1HrAbPZjCmQ2uIKMgfHIMX8VyZ_3R522w",
@@ -327,7 +348,8 @@
         "itemName" : "Grilled Chicken Habana Style",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1Q4LgpLevftmc0EVyKRltFa6LksjFIfC-",
-        "price" : "300"
+        "price" : "300",
+        "subCategory" : "European"
       },
       "BC-042" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1tE9odmLiN00Rn7lfLFYUvaonfItpxQme",
@@ -337,7 +359,8 @@
         "itemName" : "Tandoori Tossed Chicken Salad",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1t-W1fHTYlccR7kubpGJwpIR21hcSGu1j",
-        "price" : "270"
+        "price" : "270",
+        "subCategory" : "Salads"
       },
       "BC-043" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1uG3srvvbhRwRNzwhBmtfz7vbIgV4yHf0",
@@ -348,7 +371,8 @@
         "itemName" : "Veggie Burger",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1KpZs9e-iwJ6Sl80P2PxwI-v6ksn5vyiN",
-        "price" : "169/199"
+        "price" : "169/199",
+        "subCategory" : "Burgers"
       },
       "BC-044" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1uG3srvvbhRwRNzwhBmtfz7vbIgV4yHf0",
@@ -378,7 +402,8 @@
         "itemName" : "Creamy Spicy Chicken Tikka ",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/19gbWm1zWishPPKAktSrMK35j4ZyCj8XO/view?usp=sharing",
-        "price" : "240"
+        "price" : "240",
+        "subCategory" : "Herb Focaccia"
       },
       "BC-050" : {
         "bannerUrl" : "",
@@ -389,7 +414,8 @@
         "itemName" : "Schezwan Buddha",
         "label" : "V",
         "objectUrl" : "",
-        "price" : "280"
+        "price" : "280",
+        "subCategory" : "Pan Asian"
       },
       "BC-051" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1-XfXljGZdRAb81bpX4S5T9DjDeCFs6BL",
@@ -399,7 +425,8 @@
         "itemName" : "Spicy Supreme Garlic Bread",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1f7793YP7IViuESizd4l8-rEdCfG1Dg38/view?usp=sharing",
-        "price" : "205"
+        "price" : "205",
+        "subCategory" : "Garlic Bread"
       },
       "BC-052" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1VfjRo7zk9XjjRO-SUtZoIaNh7n6A84q2",
@@ -409,7 +436,8 @@
         "itemName" : "Spicy Sesame Babycorn",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1lgRHRFpJWFa2bTSzGB4k_T3So9IxR8Kt/view?usp=sharing",
-        "price" : "250"
+        "price" : "250",
+        "subCategory" : "Veg"
       },
       "BC-053" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1ZsUvgXLhXKFJ-gXObX7y9koBq4qbPfV-",
@@ -419,7 +447,8 @@
         "itemName" : "Spicy Chicken Strip",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1_A60Y_EoioXx8BCG6Ei8pJLrj6z3FvmZ/view?usp=sharing",
-        "price" : "270"
+        "price" : "270",
+        "subCategory" : "Non Veg"
       },
       "BC-054" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1zUAsURM1LmhXjcTruJA_DtMPK8-gDO6K",
@@ -430,7 +459,8 @@
         "itemName" : "BBQ Chicken Burger",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=10Mj9GTEN0SojSRUbfWjvNU8bhcC49R2L",
-        "price" : "199/249"
+        "price" : "199/249",
+        "subCategory" : "Burgers"
       },
       "BC-055" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1XdA627OaUqTG2EiM7OYtk4TXW-R1PasP",
@@ -452,7 +482,8 @@
         "itemName" : "Roadside Rowdy Burger",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1GLOP88rnwFq8fu-EodOn-urgUfB6qIgT/view?usp=sharing",
-        "price" : "169/199"
+        "price" : "169/199",
+        "subCategory" : "Burgers"
       },
       "BC-057" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=13c4eW4vwGMJY4Eb5F23Jrb00kA04oy49",
@@ -463,7 +494,8 @@
         "itemName" : "Heard A Lot Peri-Peri Chicken Burger",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1wETfvJAM-LRJFNWvp66alyZLccpKU_4x/view?usp=sharing",
-        "price" : "199/249"
+        "price" : "199/249",
+        "subCategory" : "Burgers"
       },
       "BC-058" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1w85aiB0FtbA3QvPhdyrRmMFSCIGiiybV",
@@ -494,7 +526,8 @@
         "itemName" : "Mushroom & Chicken Stroganoff",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1l0_1TRd8AQdhzg26lVRRYSK1T4VVxDZ4",
-        "price" : "300"
+        "price" : "300",
+        "subCategory" : "European"
       },
       "BC-062" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1sZDkEImbdubLi7q5cQicjvLKARgW4E3q",
@@ -505,7 +538,8 @@
         "itemName" : "Yeoboseyo Korean Chicken Noodles",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1kbZ2nSrhjmsuFHz4QL3kzFUCH8EEnoWX",
-        "price" : "300"
+        "price" : "300",
+        "subCategory" : "Pan Asian"
       },
       "BC-066" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1Tr0JmEQ2FY2pOrM-u_wvA3iVXtPfZfPO",
@@ -515,7 +549,8 @@
         "itemName" : "Hot Pot(Veg/Chicken)",
         "label" : "VNV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=17h5JyhLLFuFtJr2lL2HvWVAn4NL7fG5l",
-        "price" : "280/300"
+        "price" : "280/300",
+        "subCategory" : "European"
       },
       "BC-070" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=117uE-qZ616EIYbhiRdGkp_Lbdnx3yKHb",
@@ -525,7 +560,8 @@
         "itemName" : "Chicken Nugget Fries",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/18Pdx99YiNQYVYkhZBCWkOMbj215BLkJj/view?usp=sharing",
-        "price" : "270"
+        "price" : "270",
+        "subCategory" : "Finger Food"
       },
       "BC-072" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1L5yGNn1iOdzL3q6ay5owxzK58u4j5jn_",
@@ -535,7 +571,8 @@
         "itemName" : "Grilled Cottage Cheese",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1VaAg9kJ9WzomtM2fXaM1iREFeo8UdkB3",
-        "price" : "280"
+        "price" : "280",
+        "subCategory" : "European"
       },
       "BC-075" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1RPwAbKgWPJMClanrKFtNVP1i46BqN3vU",
@@ -545,7 +582,8 @@
         "itemName" : "Veggie Supreme Sandwich",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1Ih2IuSMcUK--emOVfKGAwgMF26KLOHe6/view?usp=sharing",
-        "price" : "229"
+        "price" : "229",
+        "subCategory" : "Classic"
       },
       "BC-076" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1l4ELbfGQr0wKkH8MATWMmrL1TlYHl2r5",
@@ -555,7 +593,8 @@
         "itemName" : "Tukpa (Non Veg)",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1BquqGVTfTZGvQTSRfDroNDcdhCG_uI2x/view?usp=sharing",
-        "price" : "210"
+        "price" : "210",
+        "subCategory" : "Soups"
       },
       "BC-078" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1jfV9cwbE501haqPtMFZ4LktRQxrbzkUE",
@@ -565,7 +604,8 @@
         "itemName" : "Tukpa (Veg)",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1JR0KVh2hON5XzbIM18ETMhyzvbuB7vh1",
-        "price" : "190"
+        "price" : "190",
+        "subCategory" : "Soups"
       },
       "BC-079" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1KSTpP13BFDgqFtVilMFBiqOYhoiSnbw9",
@@ -575,7 +615,8 @@
         "itemName" : "Ultimate Chicken Sandwich",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1Zmb_p7bxZwyrkSGZfciwZHAl_vjMy2_C/view?usp=sharing",
-        "price" : "259"
+        "price" : "259",
+        "subCategory" : "Classic"
       },
       "BC-080" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1Rt0H30zjv2PQxlcMUpkRNhlbZUIi8yET",
@@ -596,7 +637,8 @@
         "itemName" : "Spicy Monstrous Lamb Combo",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/13gFwrozSamKYbFMeKBbrsYijB-QmF5gE/view?usp=sharing",
-        "price" : "350"
+        "price" : "350",
+        "subCategory" : "Combos"
       },
       "BC-083" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1BQE_WlpQMuMf6YZNtprGHrc26BWLMD2C",
@@ -617,7 +659,8 @@
         "itemName" : "Chicken Sausage Cheesy Fries",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/1vL576-9Mez5PuV0xh5o2dajPrZAfzrtj/view?usp=sharing",
-        "price" : "250"
+        "price" : "250",
+        "subCategory" : "Finger Food"
       },
       "BC-085" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=11jtBcXh-lcAPOfT0xft0axDxzlnwwJJt",
@@ -669,7 +712,8 @@
         "itemName" : "Mint Melted Poppers",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1WQBW1sC_Wpixtm4e73GjQmcYuwa8JcAZ",
-        "price" : "200"
+        "price" : "200",
+        "subCategory":"Finger Food"
       },
       "BC-091" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1sgnuOnqDZsxhRxyNKl12aPb4alH7eBOa",
@@ -679,7 +723,8 @@
         "itemName" : "Honey Chilli Chicken",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/file/d/13ZlwSOTO0U_7tValE0wro0KkjRffUgZb/view?usp=sharing",
-        "price" : "270"
+        "price" : "270",
+        "subCategory" : "Non Veg"
       },
       "BC-092" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1pTuMnJG4s88yOQOBR6E7k_-k_7uBiQkc",
@@ -689,7 +734,8 @@
         "itemName" : "Butterfly Prawns",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1x-hR7gXdbcvQBTIoa-_mNhPimaWXbb4r",
-        "price" : "340"
+        "price" : "340",
+        "subCategory" : "Non Veg"
       },
       "BC-095" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1xjL3_rdrZdPvhPD8tWRj5dYgVxWIZ0Mf",
@@ -699,7 +745,8 @@
         "itemName" : "Potato Wedges ",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1tK1YemZbyG6Q2vivs5o62QjtSTe6HkNp",
-        "price" : "160"
+        "price" : "160",
+        "subCategory" : "Finger Food"
       },
       "BC-096" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1OBFA6SlpwZQIhnfPad0gtqMHGu4CYg2H",
@@ -709,7 +756,8 @@
         "itemName" : "Crispy Corn Fries",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=18gtQP-Z2aBuhd2tf5Bd2y406CJoN1kFl",
-        "price" : "240"
+        "price" : "240",
+        "subCategory" : "Veg"
       },
       "BC-097" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=12V2Q9_jhRJJ9UEuZEdAolYD7Il_wu3Bs",
@@ -740,7 +788,8 @@
         "itemName" : "Crispy Mushroom Salted Pepper",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1ySUiejurgq-l-XW7m2Ekz7JSrSY7IJJT",
-        "price" : "250"
+        "price" : "250",
+        "subCategory" : "Veg"
       },
       "BC-101" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1qyRNf-5pVB-Xmj9sov_3AnNlzfYIgS_F",
@@ -750,7 +799,8 @@
         "itemName" : "Twin Chicken Steak ",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1kGGxhNyYylAwX2Q-xoSXaxVveD4Jlvpt",
-        "price" : "350"
+        "price" : "350",
+        "subCategory" : "European"
       },
       "BC-103" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1PkDBJg9cQQ5WrYQAm3dejYEtDqoClnFy",
@@ -760,7 +810,8 @@
         "itemName" : "Spicy Peri-Peri Wings",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1yjhXl8jrxfgqIwHKs6fv95z8rKvfuBJc",
-        "price" : "310"
+        "price" : "310",
+        "subCategory" : "Non Veg"
       },
       "BC-104" : {
         "category" : "Breakfast",
@@ -845,14 +896,16 @@
         "itemId" : "BC-114",
         "itemName" : "Potato Basket",
         "label" : "V",
-        "price" : "290"
+        "price" : "290",
+        "subCategory" : "Finger Food"
       },
       "BC-115" : {
         "category" : "Snacks",
         "itemId" : "BC-115",
         "itemName" : "Plain garlic Bread",
         "label" : "V",
-        "price" : "120"
+        "price" : "120",
+        "subCategory" : "Garlic Bread"
       },
       "BC-116" : {
         "bannerUrl" : "https://drive.google.com/uc?export=download&id=1-XfXljGZdRAb81bpX4S5T9DjDeCFs6BL",
@@ -862,21 +915,24 @@
         "itemName" : "Garlic Bread with Cheese",
         "label" : "V",
         "objectUrl" : "https://drive.google.com/file/d/1f7793YP7IViuESizd4l8-rEdCfG1Dg38/view?usp=sharing",
-        "price" : "190"
+        "price" : "190",
+        "subCategory":"Garlic Bread"
       },
       "BC-117" : {
         "category" : "Snacks",
         "itemId" : "BC-117",
         "itemName" : "Exotic Cheesy Sausage Nachos",
         "label" : "NV",
-        "price" : "250"
+        "price" : "250",
+        "subCategory" : "Nachos"
       },
       "BC-118" : {
         "category" : "Snacks",
         "itemId" : "BC-118",
         "itemName" : "Lakili Assorted Cheesy Nachos",
         "label" : "V",
-        "price" : "260"
+        "price" : "260",
+        "subCategory" : "Nachos"
       },
       "BC-119" : {
         "bannerUrl" : "",
@@ -886,17 +942,19 @@
         "itemName" : "Herb Chicken & Mushroom Soup",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "260"
+        "price" : "260",
+        "subCategory" : "Soups"
       },
       "BC-120" : {
         "bannerUrl" : "",
         "category" : "Soups & Salads",
         "desc" : "Ice berg lettuce, olives, cottage cheese, basil, bell peppers, sprouts, cherry tomatoes, gherkins and dressing with Italian herb",
         "itemId" : "BC-120",
-        "itemName" : "Graden Salad",
+        "itemName" : "Garden Salad",
         "label" : "V",
         "objectUrl" : "",
-        "price" : "240"
+        "price" : "240",
+        "subCategory" : "Salads"
       },
       "BC-121" : {
         "bannerUrl" : "",
@@ -906,7 +964,8 @@
         "itemName" : "The Bistro Chicken Salad",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "260"
+        "price" : "260",
+        "subCategory" : "Salads"
       },
       "BC-122" : {
         "category" : "Soups & Salads",
@@ -914,7 +973,8 @@
         "itemId" : "BC-122",
         "itemName" : "Exotic Sauteed Veggies Salad",
         "label" : "VNV",
-        "price" : "220/260"
+        "price" : "220/260",
+        "subCategory" : "Salads"
       },
       "BC-123" : {
         "bannerUrl" : "",
@@ -924,7 +984,8 @@
         "itemName" : "Hunan Chicken",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "270"
+        "price" : "270",
+        "subCategory" : "Non Veg"
       },
       "BC-124" : {
         "bannerUrl" : "",
@@ -934,7 +995,8 @@
         "itemName" : "Teriyaki Wings",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "310"
+        "price" : "310",
+        "subCategory" : "Non Veg"
       },
       "BC-125" : {
         "bannerUrl" : "",
@@ -944,7 +1006,8 @@
         "itemName" : "Classic Chicken Burger",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "199"
+        "price" : "199",
+        "subCategory" : "Burgers"
       },
       "BC-126" : {
         "bannerUrl" : "",
@@ -955,7 +1018,8 @@
         "itemName" : "Grilled Lamb Burger",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "209/259"
+        "price" : "209/259",
+        "subCategory" : "Burgers"
       },
       "BC-127" : {
         "bannerUrl" : "",
@@ -966,7 +1030,8 @@
         "itemName" : "Tandoori Chicken Burger",
         "label" : "NV",
         "objectUrl" : "smoky spicy creamy tandoori chicken with lettuce, onion and tomatoes and cheese",
-        "price" : "199/249"
+        "price" : "199/249",
+        "subCategory" : "Burgers"
       },
       "BC-128" : {
         "bannerUrl" : "",
@@ -977,7 +1042,8 @@
         "itemName" : "Chilly Chicken",
         "label" : "NV",
         "objectUrl" : "super spicy chilly chicken with lettuce, onions and cheese",
-        "price" : "199/249"
+        "price" : "199/249",
+        "subCategory" : "Burgers"
       },
       "BC-129" : {
         "bannerUrl" : "",
@@ -987,7 +1053,8 @@
         "itemName" : "Crispy Cottage Cheesy Burger",
         "label" : "V",
         "objectUrl" : "",
-        "price" : "259"
+        "price" : "259",
+        "subCategory" : "All Time Fav"
       },
       "BC-130" : {
         "bannerUrl" : "xx",
@@ -997,7 +1064,8 @@
         "itemName" : "The Bistro Lamb Burger",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1WNwtW37ItFPBYA2b_ZpMoP8QqLmrIxfO",
-        "price" : "295"
+        "price" : "295",
+        "subCategory" : "All Time Fav"
       },
       "BC-131" : {
         "bannerUrl" : "",
@@ -1007,7 +1075,8 @@
         "itemName" : "The Ultimate Chicken Sausage Combo",
         "label" : "NV",
         "objectUrl" : "chicken mortadella with a delightful chicken patty accompanied with cheese, fried egg, mushrooms, gherkins, onion, tomatoes and red paprika",
-        "price" : "350"
+        "price" : "350",
+        "subCategory" : "Combos"
       },
       "BC-132" : {
         "bannerUrl" : "xx",
@@ -1017,7 +1086,8 @@
         "itemName" : "The Godfather Sandwich",
         "label" : "NV",
         "objectUrl" : "https://drive.google.com/uc?export=download&id=1tWq3awii6r484Bwyd_UKcGfNJZm_naEn",
-        "price" : "269"
+        "price" : "269",
+        "subCategory" : "Classic"
       },
       "BC-133" : {
         "bannerUrl" : "",
@@ -1027,7 +1097,8 @@
         "itemName" : "Asian Style Grilled Veggies",
         "label" : "V",
         "objectUrl" : "",
-        "price" : "220"
+        "price" : "220",
+        "subCategory" : "Herb Focaccia"
       },
       "BC-134" : {
         "bannerUrl" : "",
@@ -1037,7 +1108,8 @@
         "itemName" : "Crumbled Cottage Cheese",
         "label" : "V",
         "objectUrl" : "",
-        "price" : "220"
+        "price" : "220",
+        "subCategory" : "Herb Focaccia"
       },
       "BC-135" : {
         "bannerUrl" : "",
@@ -1134,7 +1206,8 @@
         "itemName" : "Moren Shrimp & Coconut",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "350"
+        "price" : "350",
+        "subCategory": "Pan Asian"
       },
       "BC-144" : {
         "bannerUrl" : "",
@@ -1145,7 +1218,8 @@
         "itemName" : "Sesame Teriyaki Chicken",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "300"
+        "price" : "300",
+        "subCategory" : "Pan Asian"
       },
       "BC-145" : {
         "bannerUrl" : "",
@@ -1156,7 +1230,8 @@
         "itemName" : "The Savor Bhutanese",
         "label" : "NV",
         "objectUrl" : "butter flavoured steamed rice served with the Bhutanese finest minced chicken sauce and topped cheese",
-        "price" : "300"
+        "price" : "300",
+        "subCategory" : "Pan Asian"
       },
       "BC-146" : {
         "bannerUrl" : "",
@@ -1166,7 +1241,8 @@
         "itemName" : "Prawn Skewers in House Sauce",
         "label" : "NV",
         "objectUrl" : "",
-        "price" : "350"
+        "price" : "350",
+        "subCategory" : "European"
       },
       "BC-147" : {
         "bannerUrl" : "",

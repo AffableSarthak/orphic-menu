@@ -59,20 +59,21 @@ const SubMenu = (props) => {
 
   return (
     <>
-      <div className="flex flex-row overflow-x-auto px-4">
+      <div className="flex flex-row overflow-x-auto px-4 mt-5">
         {subState.map((ele, index) => (
           <button
             key={index}
             onClick={() => {
+              console.log(typeof ele[0], ele[0]);
               handleActiveItems(ele[1]);
             }}
             className="flex-four mr-4 rounded-xl px-4 py-4 bg-gray-100 border border-gray-400 text-dark active:bg-primary active:text-dark focus:bg-primary focus:text-dark active:border-none "
           >
-            {ele[0]}
+            {ele[0] === "undefined" ? "ALL" : ele[0]}
           </button>
         ))}
       </div>
-      <div className={`flex flex-col overflow-x-auto px-2 mt-6 items-center`}>
+      <div className={`flex flex-col overflow-x-auto px-2 mt-4 items-center`}>
         {getSubCategoryData(activeItems)}
       </div>
     </>

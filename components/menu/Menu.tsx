@@ -73,13 +73,13 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl, custType }) => {
 
         {items.length !== 0 ? (
           <>
-            <div className="mt-6 p-4">
-              <h2 className="text-xl font-black px-4">
-                {categoryName} {custType}
-              </h2>
-            </div>
-
-            {categoryName === "Beverages" ? (
+            {categoryName === "Beverages" ||
+            categoryName === "Burgers & Combos" ||
+            categoryName === "Main Course" ||
+            categoryName === "Soups & Salads" ||
+            categoryName === "Snacks" ||
+            categoryName === "Starters" ||
+            categoryName === "Sandwiches" ? (
               <SubMenu
                 items={[...items]}
                 stagedItems={stagedItems}
@@ -87,31 +87,37 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl, custType }) => {
                 imgUrl={imgUrl}
               />
             ) : (
-              <div
-                className={`flex flex-col overflow-x-auto px-2 items-center`}
-              >
-                {items.map((item, index) => {
-                  // console.log(item.subCategory);
-                  return (
-                    // <MenuCard
-                    //   key={index}
-                    //   item={item}
-                    //   stagedItems={stagedItems}
-                    //   bgColor={bgColor}
-                    //   imgUrl={imgUrl}
-                    // />
-                    <DisclosureCard
-                      item={item}
-                      stagedItems={stagedItems}
-                      bgColor={bgColor}
-                      imgUrl={imgUrl}
-                      key={index}
-                    />
-                  );
-                })}
-              </div>
+              <>
+                <div className="mt-6 p-4">
+                  <h2 className="text-xl font-black px-4">
+                    {categoryName} {custType}
+                  </h2>
+                </div>
+                <div
+                  className={`flex flex-col overflow-x-auto px-2 items-center`}
+                >
+                  {items.map((item, index) => {
+                    // console.log(item.subCategory);
+                    return (
+                      // <MenuCard
+                      //   key={index}
+                      //   item={item}
+                      //   stagedItems={stagedItems}
+                      //   bgColor={bgColor}
+                      //   imgUrl={imgUrl}
+                      // />
+                      <DisclosureCard
+                        item={item}
+                        stagedItems={stagedItems}
+                        bgColor={bgColor}
+                        imgUrl={imgUrl}
+                        key={index}
+                      />
+                    );
+                  })}
+                </div>
+              </>
             )}
-
             {/* <div className="mt-5">
           <h2 className="text-lg font-semibold px-4">Popular Now</h2>
 

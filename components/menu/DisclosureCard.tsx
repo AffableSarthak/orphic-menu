@@ -62,60 +62,67 @@ export default function DisclosureCard(props: {
           {({ open }) => (
             <>
               <div
-                className={`flex flex-row justify-between w-full py-2 px-2 min-h-[120px] text-md font-medium text-left bg-gradient-to-r from-gradientColor ${
+                className={`flex flex-row justify-between w-full py-2 px-2 min-h-[130px] text-md font-medium text-left bg-gradient-to-r from-gradientColor ${
                   item.subCategory ? "rounded-2xl" : "rounded-t-2xl"
                 } `}
               >
-                <div className="flex flex-col gap-1 flex-eight">
+                <div className="flex flex-col flex-eight">
                   <div className="flex ml-2 text-dark text-lg font-bold">
-                    <h4>{item.itemName}</h4>
+                    <h4>
+                      {/* <span className="pr-2">{labelValue(item.label)}</span> */}
+                      {item.itemName}
+                    </h4>
                   </div>
-                  <div>
+                  {/* <div>
                     <span className="flex ml-2">{labelValue(item.label)}</span>
-                  </div>
+                  </div> */}
 
                   {item.desc && item.desc.length > 0 && (
-                    <div className="flex ml-2 mb-4 text-dark text-base tracking-tight font-normal font-description">
+                    <div className="flex ml-2  text-dark text-base tracking-tight font-normal font-description">
                       <h3>{item.desc}</h3>
                     </div>
                   )}
-                  <div className="flex ml-2 text-sm font-semibold text-dark">
+                  <div className="flex ml-2 my-5 text-base font-semibold text-dark">
                     <h3>
-                      ₹{item.price} ({item.itemId}){" "}
+                      ₹{item.price}
+                      {/* ({item.itemId}){" "} */}
                     </h3>
                   </div>
-                </div>
-                <div className="flex justify-end items-end flex-col">
-                  {/* <div className="flex justify-end">
-                    <PlusIcon
-                      className={`${
-                        open ? `transform rotate-180 ${bgColor} text-dark` : ""
-                      } w-7 h-7 text-dark bg-gray-100 p-1 mr-2 mt-1 rounded-2xl text-center`}
-                    />
-                  </div> */}
-                  {item.bannerUrl ? (
-                    <Disclosure.Button className="flex text-white font-medium tracking-widest rounded-tl-2xl rounded-br-2xl bg-button px-5 py-2 cursor-pointer">
-                      {/* <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+                  {/* {item.bannerUrl && (
+                    <div>
+                      <Disclosure.Button
+                        className=" text-primary text-sm font-normal tracking-wide rounded-tr-2xl 
+                      bg-dark px-5 py-2 cursor-pointer"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                        />
-                      </svg> */}
-                      VIEW
-                    </Disclosure.Button>
-                  ) : (
-                    // <div className="flex text-dark font-xs tracking-widest rounded-tl-2xl rounded-br-2xl bg-white px-5 py-2">
-                    //   soon
-                    // </div>
-                    <></>
+                        VIEW
+                      </Disclosure.Button>
+                    </div>
+                  )} */}
+                </div>
+                <div className="flex justify-between items-end flex-col">
+                  <div>{labelValue(item.label)}</div>
+
+                  {/* <div>
+                    <button className="bg-button py-2 px-4 text-sm tracking-wide rounded-tl-2xl ">
+                      <div className="flex">
+                        <div>
+                          <PlusIcon className="w-4 h-4 text-white" />
+                        </div>
+                        <div className="text-white font-medium tracking-wides">
+                          ADD
+                        </div>
+                      </div>
+                    </button>
+                  </div> */}
+                  {item.bannerUrl && (
+                    <div>
+                      <Disclosure.Button
+                        className=" text-white text-sm font-normal tracking-wide rounded-tl-2xl rounded-br-2xl
+                      bg-button px-5 py-2 cursor-pointer"
+                      >
+                        VIEW
+                      </Disclosure.Button>
+                    </div>
                   )}
                 </div>
               </div>
@@ -138,6 +145,21 @@ export default function DisclosureCard(props: {
   );
 }
 
+// className={`${
+//   open
+//     ? `transform rotate-180 ${bgColor} text-dark`
+//     : ""
+// } w-7 h-7 text-dark bg-gray-100 p-1 mr-2 mt-1 rounded-2xl text-center`}
+
+{
+  /* <div>
+                    <PlusIcon
+                      className={`${
+                        open ? `transform rotate-180 ${bgColor} text-dark` : ""
+                      } w-7 h-7 text-dark bg-gray-100 p-1 mr-2 mt-1 rounded-2xl text-center`}
+                    />
+                  </div> */
+}
 {
   /* <span> */
 }
