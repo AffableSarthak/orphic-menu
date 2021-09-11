@@ -22,7 +22,8 @@ const Model = ({ glbName, item }) => (
         // "-posterColor": "#ffffff00",
         marginBottom: "1rem",
       }}
-      src={`https://d3fkon.github.io/onpar-ar/objects/bc/${glbName}.glb`}
+      // src={`https://d3fkon.github.io/onpar-ar/objects/bc/${glbName}.glb`}
+      src={`https://s3.eu-west-1.amazonaws.com/next.onpar.co.in/Objects/bc/${glbName}.glb`}
       poster="poster.webp"
       camera-orbit="0deg 75deg auto"
       auto-rotate
@@ -53,13 +54,13 @@ const Model = ({ glbName, item }) => (
           <FiBox className="text-4xl" />
         </a>
       </button>
-      <a
+      {/* <a
         target="_blank"
         href={`https://asia-south1-onpar-ar.cloudfunctions.net/app?url=${
           item.itemId.split("-")[1].toString() * 1
         }_processed.glb`}
         rel="noopener noreferrer"
-      ></a>
+      ></a> */}
       {/* </div> */}
     </model-viewer>
     {/* <div className="text-center">
