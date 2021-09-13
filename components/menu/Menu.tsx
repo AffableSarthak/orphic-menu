@@ -111,7 +111,7 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl, custType }) => {
                         stagedItems={stagedItems}
                         bgColor={bgColor}
                         imgUrl={imgUrl}
-                        key={index}
+                        key={item.itemId}
                       />
                     );
                   })}

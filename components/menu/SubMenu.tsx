@@ -45,7 +45,7 @@ const SubMenu = (props) => {
           stagedItems={props.stagedItems}
           bgColor={props.bgColor}
           imgUrl={props.imgUrl}
-          key={index}
+          key={item.itemId}
         />
         // <PopularCard key={index} item={item} />
       ));
