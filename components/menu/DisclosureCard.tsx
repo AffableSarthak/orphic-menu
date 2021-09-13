@@ -22,16 +22,6 @@ export default function DisclosureCard(props: {
   const { item, stagedItems, bgColor, imgUrl } = props;
 
   const labelValue = (label) => {
-    // if (!label) {
-    //   return <Image src={Veg} />;
-    // } else {
-    //   switch (label) {
-    //     case "V":
-    //       return <Image src={Veg} />;
-    //     case "NV":
-    //       return <Image src={NonVeg} />;
-    //   }
-    // }
     switch (label) {
       case "V":
         return <Image src={Veg} />;
@@ -62,12 +52,12 @@ export default function DisclosureCard(props: {
           {({ open }) => (
             <>
               <div
-                className={`flex flex-row justify-between w-full py-2 px-2 min-h-[130px] text-md font-medium text-left bg-gradient-to-r from-gradientColor ${
+                className={`flex flex-row justify-between w-full py-2 px-2 min-h-[120px] text-md font-medium text-left bg-gradient-to-r from-gradientColor ${
                   item.subCategory ? "rounded-2xl" : "rounded-t-2xl"
                 } `}
               >
                 <div className="flex flex-col flex-eight">
-                  <div className="flex ml-2 text-dark text-lg font-bold">
+                  <div className="flex ml-2 mt-1 text-dark text-base font-bold">
                     <h4>
                       {/* <span className="pr-2">{labelValue(item.label)}</span> */}
                       {item.itemName}
@@ -78,13 +68,14 @@ export default function DisclosureCard(props: {
                   </div> */}
 
                   {item.desc && item.desc.length > 0 && (
-                    <div className="flex ml-2  text-dark text-base tracking-tight font-normal font-description">
+                    <div className="flex ml-2 mt-1  text-dark text-sm tracking-tighter font-normal font-description max-h-[60px] overflow-y-auto">
                       <h3>{item.desc}</h3>
                     </div>
                   )}
-                  <div className="flex ml-2 my-5 text-base font-semibold text-dark">
+                  <div className="flex ml-2 mt-4 text-base font-black text-dark">
                     <h3>
-                      ₹{item.price}({item.itemId}){" "}
+                      ₹{item.price}
+                      {/* ({item.itemId}){" "} */}
                     </h3>
                   </div>
                   {/* {item.bannerUrl && (
