@@ -53,7 +53,7 @@ export default function DisclosureCard(props: {
             <>
               <div
                 className={`flex flex-row justify-between w-full py-2 px-2 min-h-[120px] text-md font-medium text-left bg-gradient-to-r from-gradientColor ${
-                  item.subCategory ? "rounded-2xl" : "rounded-t-2xl"
+                  item.subCategory ? "rounded-t-2xl" : "rounded-t-2xl"
                 } `}
               >
                 <div className="flex flex-col flex-eight">
@@ -107,8 +107,9 @@ export default function DisclosureCard(props: {
                   {item.bannerUrl && (
                     <div>
                       <Disclosure.Button
-                        className=" text-white text-sm font-normal tracking-wide rounded-tl-2xl rounded-br-2xl
-                      bg-button px-5 py-2 cursor-pointer"
+                        //   className=" text-white text-sm font-normal tracking-wide rounded-tl-2xl rounded-br-2xl
+                        // bg-button px-5 py-2 cursor-pointer"
+                        className="bg-button  text-white text-sm font-medium tracking-widest py-1 px-4 border-b-4 border-yellow-700 rounded"
                       >
                         VIEW
                       </Disclosure.Button>
