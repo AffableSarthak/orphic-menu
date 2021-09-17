@@ -14,7 +14,7 @@ import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 // import { useContext } from "react";
 // import eatriesContext from "../../context/eateries/eatriesContext";
-const UserDetail = (props) => {
+const UserDetail = (props: { rId: string }) => {
   const { isLoading, setUsername, populateGc } = useContext(sessionContext);
   // console.log(props)
 

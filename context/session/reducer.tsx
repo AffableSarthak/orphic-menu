@@ -9,7 +9,7 @@ import {
   SET_CURRENT_ITEM,
 } from "./actionType";
 
-const sessionReducer = (state, action) => {
+const sessionReducer = (state: any, action: any) => {
   const { type, payload } = action;
   switch (type) {
     case SET_LOADING:

@@ -4,28 +4,18 @@ import BackButton from "../common/BackButton";
 import Button from "../common/Button";
 import { useContext, useEffect, useState } from "react";
 import sessionContext from "../../context/session/context";
-import totalPrice from "../utils/total-price";
 import TotalPrice from "../common/TotalPrice";
-import { toArray } from "lodash";
 
 const Cart = () => {
   const { getStagedItems, stagedItems } = useContext(sessionContext);
   const [tableId, setTableId] = useState("");
 
-  // console.log(stagedItems, "from cart");
-
-  // const sessionId = "-MglGB1mqNf5eF4QWPfZ";
-
   useEffect(() => {
     const sessionId = localStorage.getItem("sessionId");
     const tableId = localStorage.getItem("tableId");
-    setTableId(tableId);
+    setTableId(tableId as string);
     getStagedItems(sessionId);
   }, []);
-
-  // console.log(sessionInfo.stagedItems, "from cart");
-  // console.log(stagedItems, "from cart");
-  // console.log(window.localStorage, "from cart");
 
   return (
     <>

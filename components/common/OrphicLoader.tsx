@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import orphicLogo from "../../public/orphic_logo.svg";
 
-const OrphicLoader = ({ isLoading }) => {
+const OrphicLoader = ({ isLoading }: { isLoading: boolean }) => {
   if (isLoading)
     return (
       <div className="flex justify-center items-center h-screen">

@@ -4,9 +4,17 @@ import { useEffect } from "react";
 import { useContext } from "react";
 import sessionContext from "../../context/session/context";
 
-const CategoriesCard = ({ categoryName, imgUrl, bgColor, custType }) => {
+const CategoriesCard = ({
+  categoryName,
+  imgUrl,
+  bgColor,
+}: {
+  categoryName: string;
+  imgUrl: string;
+  bgColor: string;
+}) => {
   const router = useRouter();
-  const { setCategoryItems, getStagedItems } = useContext(sessionContext);
+  // const { setCategoryItems, getStagedItems } = useContext(sessionContext);
 
   return (
     <>
@@ -14,16 +22,16 @@ const CategoriesCard = ({ categoryName, imgUrl, bgColor, custType }) => {
         id="cardContaner"
         className={`flex flex-col justify-between p-4 rounded-2xl ${bgColor}`}
         onClick={async () => {
-          await localStorage.setItem("categoryName", categoryName);
+          localStorage.setItem("categoryName", categoryName);
           // console.log(localStorage.getItem("categoryName"));
-          const eateryId = await localStorage.getItem("eateryId");
+          const eateryId = localStorage.getItem("eateryId");
           // console.log(sessionId);
           // await setCategoryItems(categoryName);
           // await getStagedItems(sessionId);
           // console.log(categoryName);
           router.push({
             pathname: `/app/menu/${categoryName}`,
-            query: { eateryId, bgColor, imgUrl, custType },
+            query: { eateryId, bgColor, imgUrl },
           });
         }}
       >

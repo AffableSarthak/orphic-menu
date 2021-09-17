@@ -1,23 +1,25 @@
 import { HiOutlineLocationMarker } from "react-icons/hi";
-
 import taco from "../../public/categoriesImages/taco.png";
-import wavyPizza from "../../public/categoriesImages/wavyPizza.png";
 import Image from "next/image";
 import CategoriesCard from "./CategoriesCard";
 import sessionContext from "../../context/session/context";
 import { useContext, useEffect } from "react";
-import { RiSearchLine } from "react-icons/ri";
-import OrphicLoader from "../common/OrphicLoader";
-import CartButton from "../common/CartButton";
 
-const Categories = (props) => {
-  const { tableId, sessionId, eateryId, categories, gc } = props.sessionProps;
+const Categories = (props: {
+  sessionProps: {
+    tableId: string;
+    sessionId: string;
+    eateryId: string;
+    categories: Icategory[];
+  };
+}) => {
+  const { tableId, sessionId, eateryId, categories } = props.sessionProps;
   const {
     isLoading,
-    setUsername,
-    populateGc,
+    // setUsername,
+    // populateGc,
     // categories,
-    username,
+    // username,
     getStagedItems,
   } = useContext(sessionContext);
 
@@ -101,7 +103,7 @@ const Categories = (props) => {
                 categoryName={c.name}
                 imgUrl={c.src}
                 bgColor={c.bgColor}
-                custType={c.custType ? c.custType : " "}
+                // custType={c.custType ? c.custType : " "}
               />
             ))}
           </div>

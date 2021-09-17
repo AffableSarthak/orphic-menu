@@ -51,5 +51,5 @@ interface IinitialState {
   stagedItems: IstagedItem[];
   username: string;
   items: Iitem[];
-  currentItem: object;
+  currentItem: object | null;
 }

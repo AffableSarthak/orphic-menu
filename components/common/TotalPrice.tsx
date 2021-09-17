@@ -20,7 +20,7 @@ const TotalPrice = () => {
 
         temp.forEach((t: any) => {
           if (t[0] === "Add_On") {
-            t[1].forEach((fa) => {
+            t[1].forEach((fa: string) => {
               custPrice += parseInt(fa.split(",")[1]);
             });
           } else {

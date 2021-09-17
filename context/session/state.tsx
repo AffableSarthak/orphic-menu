@@ -1,14 +1,14 @@
 import {
-  SET_CATEGORIES,
+  // SET_CATEGORIES,
   SET_LOADING,
   GET_STAGED_ITEMS,
-  SET_STAGED,
+  // SET_STAGED,
   SET_USERNAME,
-  UPDATE_QTY,
+  // UPDATE_QTY,
 } from "./actionType";
 
 import SessionContext from "./context";
-// import Data from '../../db/claytopia.json'
+import Data from "../../db/claytopia.json";
 import { useReducer, useState } from "react";
 import sessionReducer from "./reducer";
 import { useRouter } from "next/router";
@@ -63,7 +63,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
 
   const setCurrentItem = async (item: Iitem) => {
     setLoading(true);
-    await dispatch({
+    dispatch({
       type: "SET_CURRENT_ITEM",
       payload: item,
     });
@@ -72,22 +72,22 @@ const sessionInfo = ({ children, db }: Iprops) => {
 
   const setUsername = async (username: string) => {
     setLoading(true);
-    await dispatch({
+    dispatch({
       type: SET_USERNAME,
       payload: username,
     });
-    await localStorage.setItem("username", username);
+    localStorage.setItem("username", username);
     setLoading(false);
   };
 
   const populateGc = async (gc: Igc[]) => {
     setLoading(true);
     // console.log("inisde populate");
-    await setGcState([...gc]);
+    setGcState([...gc]);
     setLoading(false);
   };
 
-  const getFilteredData = (category) => {
+  const getFilteredData = (category: string) => {
     const data = Object.values(claytopiaData.eateries.bistro_claytopia_all);
     return data.filter((x) => x.category === category);
   };
@@ -97,27 +97,27 @@ const sessionInfo = ({ children, db }: Iprops) => {
     setLoading(true);
     // console.log(categoryName, "data from setCategoryItems");
     //@ts-ignore
-    const data: Iitem[] = await getFilteredData(categoryName);
+    const data: Iitem[] = getFilteredData(categoryName);
     // console.log(data, "data from setCategoryItems");
 
-    await dispatch({
+    dispatch({
       type: "SET_CATEGORY_ITEM",
       payload: data,
     });
-    const sessionId = await localStorage.getItem("sessionId");
+    const sessionId = localStorage.getItem("sessionId");
     // console.log(sessionId);
-    await getStagedItems(sessionId);
+    await getStagedItems(sessionId as string);
     setLoading(false);
   };
 
-  const getStagedItems = async (sessionId) => {
+  const getStagedItems = async (sessionId: string) => {
     try {
       const sessionRef = await db.ref("sessions");
       let data;
-      sessionRef.child(sessionId).on("value", (snapshot) => {
+      sessionRef.child(sessionId).on("value", (snapshot: any) => {
         data = snapshot.val().stagedItems;
         // console.log(data, "from firebase");
-        if (data === undefined) {
+        if (!data) {
           dispatch({
             type: GET_STAGED_ITEMS,
             payload: [],
@@ -134,7 +134,10 @@ const sessionInfo = ({ children, db }: Iprops) => {
     }
   };
 
-  const updateStagedItems = async (sessionId, stageItem) => {
+  const updateStagedItems = async (
+    sessionId: string,
+    stageItem: IstagedItem
+  ) => {
     try {
       const sessionRef = db.ref("sessions");
       // console.log(state.stagedItems, "from stagedItms func");
@@ -143,7 +146,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
         {
           stagedItems: [...state.stagedItems, stageItem],
         },
-        (error) => {
+        (error: any) => {
           if (error) console.log(error);
           else console.log("update success full");
         }
@@ -159,8 +162,8 @@ const sessionInfo = ({ children, db }: Iprops) => {
     // console.log(gcState, "from getCustForItem");
     // console.log(item,'from cartItemInfo')
     localStorage.setItem("currentItemName", item.itemName);
-    let tempArray = [];
-    item.cust.map((ic) => {
+    let tempArray: any = [];
+    item?.cust?.map((ic) => {
       let itemCObj = gcState.find((gc) => {
         // console.log(gc.id, typeof gc.id, ic, typeof ic);
         return gc.id == ic;
@@ -168,7 +171,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
       tempArray.push(itemCObj);
       // console.log(tempArray, "from abcdtexp");
     });
-    await setminiGC([...tempArray]);
+    setminiGC([...tempArray]);
     setLoading(false);
   };
 
@@ -195,8 +198,8 @@ const sessionInfo = ({ children, db }: Iprops) => {
         // console.log(stagedItem, "from unwanted switch");
 
         const sessionId = localStorage.getItem("sessionId");
-
-        await updateStagedItems(sessionId, stagedItem);
+        // @ts-ignore
+        await updateStagedItems(sessionId as string, stagedItem);
       }
 
       case "SET_WITHOUT_CUST": {
@@ -215,7 +218,8 @@ const sessionInfo = ({ children, db }: Iprops) => {
 
         const sessionId = localStorage.getItem("sessionId");
 
-        await updateStagedItems(sessionId, stagedItem);
+        // @ts-ignore
+        await updateStagedItems(sessionId as string, stagedItem);
         // await dispatch({ type: SET_STAGED, payload: stagedItem });
         // api for firebase
       }
@@ -252,7 +256,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
           {
             qty: oldQty + 1,
           },
-          (error) => {
+          (error: any) => {
             if (error) {
               console.log(error);
             } else {
@@ -297,7 +301,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
             {
               qty: oldQty - 1,
             },
-            (error) => {
+            (error: any) => {
               if (error) {
                 console.log(error);
               } else {

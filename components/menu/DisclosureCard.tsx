@@ -1,11 +1,6 @@
 import { Disclosure } from "@headlessui/react";
-import { ChevronUpIcon, PlusIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { FiBox } from "react-icons/fi";
-import MenuCard from "./MenuCard";
-import PopularCard from "./PopularCard";
-import SubMenu from "./SubMenu";
 import Veg from "../../public/label/Veg.svg";
 import NonVeg from "../../public/label/Non-Veg.svg";
 
@@ -21,7 +16,7 @@ export default function DisclosureCard(props: {
 }) {
   const { item, stagedItems, bgColor, imgUrl } = props;
 
-  const labelValue = (label) => {
+  const labelValue = (label: string) => {
     switch (label) {
       case "V":
         return <Image src={Veg} />;
@@ -90,7 +85,7 @@ export default function DisclosureCard(props: {
                   )} */}
                 </div>
                 <div className="flex justify-between items-end flex-col">
-                  <div>{labelValue(item.label)}</div>
+                  <div>{labelValue(item.label as string)}</div>
 
                   {/* <div>
                     <button className="bg-button py-2 px-4 text-sm tracking-wide rounded-tl-2xl ">
@@ -134,82 +129,4 @@ export default function DisclosureCard(props: {
       </div>
     </div>
   );
-}
-
-// className={`${
-//   open
-//     ? `transform rotate-180 ${bgColor} text-dark`
-//     : ""
-// } w-7 h-7 text-dark bg-gray-100 p-1 mr-2 mt-1 rounded-2xl text-center`}
-
-{
-  /* <div>
-                    <PlusIcon
-                      className={`${
-                        open ? `transform rotate-180 ${bgColor} text-dark` : ""
-                      } w-7 h-7 text-dark bg-gray-100 p-1 mr-2 mt-1 rounded-2xl text-center`}
-                    />
-                  </div> */
-}
-{
-  /* <span> */
-}
-{
-  /* <MenuCard
-                    item={item}
-                    stagedItems={stagedItems}
-                    bgColor={bgColor}
-                    imgUrl={imgUrl}
-                  /> */
-}
-{
-  /* <PopularCard
-                    item={item}
-                    stagedItems={stagedItems}
-                    bgColor={bgColor}
-                    imgUrl={imgUrl}
-                  />
-                </span> */
-}
-{
-  /* <ChevronUpIcon
-                  className={`${
-                    open ? "transform rotate-180" : ""
-                  } w-5 h-5 text-purple-500`}
-                /> */
-}
-
-{
-  /* <div className="flex flex-col gap-4">
-                  <div>
-                    <FiBox
-                      className={`${
-                        open
-                          ? `text-3xl text-black ${bgColor} m-2 rounded-md`
-                          : "text-3xl text-white m-2 rounded-md"
-                      }`}
-                    />
-                  </div>
-                  <div> */
-}
-{
-  /* <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
-                        clipRule="evenodd"
-                      />
-                    </svg> */
-}
-
-{
-  /* </div> */
-}
-{
-  /* </div> */
 }

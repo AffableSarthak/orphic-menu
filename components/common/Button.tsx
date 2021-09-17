@@ -1,4 +1,4 @@
-const Button = ({ name }) => {
+const Button = ({ name }: { name: string }) => {
   return (
     <>
       <button

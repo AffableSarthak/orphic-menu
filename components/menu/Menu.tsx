@@ -1,35 +1,39 @@
-import { IoIosArrowBack } from "react-icons/io";
-import { CgShoppingBag } from "react-icons/cg";
-import MenuCard from "./MenuCard";
-import PopularCard from "./PopularCard";
 import sessionContext from "../../context/session/context";
 import { useContext, useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import BackButton from "../common/BackButton";
-import CartButton from "../common/CartButton";
-import OrphicLoader from "../common/OrphicLoader";
-import CommunityNotification from "../common/CommunityNotification";
-import { route } from "next/dist/next-server/server/router";
+// import CartButton from "../common/CartButton";
+// import OrphicLoader from "../common/OrphicLoader";
+// import CommunityNotification from "../common/CommunityNotification";
 import SubMenu from "./SubMenu";
 import DisclosureCard from "./DisclosureCard";
 
-const Menu = ({ categoryName, bgColor, gc, imgUrl, custType }) => {
+const Menu = ({
+  categoryName,
+  bgColor,
+  gc,
+  imgUrl,
+}: {
+  categoryName: string;
+  bgColor: string;
+  gc: Igc[];
+  imgUrl: string;
+}) => {
   const {
     items,
-    username,
-    categories,
-    gcState,
+    // username,
+    // categories,
+    // gcState,
     stagedItems,
-    isLoading,
+    // isLoading,
     setCategoryItems,
     populateGc,
   } = useContext(sessionContext);
-  const router = useRouter();
+  // const router = useRouter();
 
   // const isLoading = true;
 
   useEffect(() => {
-    const rId = typeof window !== "undefined" && localStorage.getItem("rId");
+    // const rId = typeof window !== "undefined" && localStorage.getItem("rId");
     // console.log(items, "from menu");
     setCategoryItems(categoryName);
 
@@ -55,7 +59,7 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl, custType }) => {
       <section className="relative min-w-full min-h-screen pb-4">
         <div
           id="menuHeaderConatiner"
-          className={`flex flex-row justify-between items-center min-w-full h-40 px-4 ${bgColor} bg-cover bg-no-repeat object-center text-white`}
+          className={`flex flex-row justify-between items-center min-w-full h-28 px-4 ${bgColor} bg-cover bg-no-repeat object-center text-white`}
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
             {typeof window !== "undefined" && <BackButton />}
@@ -89,23 +93,13 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl, custType }) => {
             ) : (
               <>
                 <div className="mt-6 p-4">
-                  <h2 className="text-xl font-black px-4">
-                    {categoryName} {custType}
-                  </h2>
+                  <h2 className="text-xl font-black px-4">{categoryName}</h2>
                 </div>
                 <div
                   className={`flex flex-col overflow-x-auto px-2 items-center`}
                 >
-                  {items.map((item, index) => {
-                    // console.log(item.subCategory);
+                  {items.map((item) => {
                     return (
-                      // <MenuCard
-                      //   key={index}
-                      //   item={item}
-                      //   stagedItems={stagedItems}
-                      //   bgColor={bgColor}
-                      //   imgUrl={imgUrl}
-                      // />
                       <DisclosureCard
                         item={item}
                         stagedItems={stagedItems}
@@ -118,11 +112,6 @@ const Menu = ({ categoryName, bgColor, gc, imgUrl, custType }) => {
                 </div>
               </>
             )}
-            {/* <div className="mt-5">
-          <h2 className="text-lg font-semibold px-4">Popular Now</h2>
-
-          <PopularCard />
-        </div> */}
           </>
         ) : (
           <>

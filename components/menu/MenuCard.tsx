@@ -5,8 +5,8 @@ import { AiOutlinePlus } from "react-icons/ai";
 import sessionContext from "../../context/session/context";
 import { useContext, useState } from "react";
 import { useRouter } from "next/router";
-import PopularCard from "./PopularCard";
-import Button from "../common/Button";
+// import PopularCard from "./PopularCard";
+// import Button from "../common/Button";
 // import Model from "../glbLoad/Model";
 
 import dynamic from "next/dynamic";
@@ -15,7 +15,7 @@ const Model = dynamic(() => import("../glbLoad/Model"), {
   ssr: false,
 });
 
-const MenuCard = (props) => {
+const MenuCard = (props: any) => {
   const { setStagedItem, getCustForItem, isLoading, setCurrentItem } =
     useContext(sessionContext);
   // const isLoading = true;
@@ -24,7 +24,7 @@ const MenuCard = (props) => {
 
   const [sub, setSub] = useState([]);
 
-  const cartItemInfo = (stagedItems, item) => {
+  const cartItemInfo = (stagedItems: IstagedItem[], item: Iitem) => {
     if (item.cust) {
       // Item has customization
       if (stagedItems.length === 0 || stagedItems === undefined) {
@@ -35,7 +35,8 @@ const MenuCard = (props) => {
             onClick={async () => {
               await setCurrentItem(item);
               // console.log(item, "from cartItemInfo");
-              await getCustForItem(item);
+              getCustForItem(item);
+              // await getCustForItem(item);
               router.push({ pathname: `/app/cust` });
             }}
             className=" flex  justify-center items-center bg-whiteColor active:bg-primary rounded-full px-2 py-2"

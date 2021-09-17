@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import firebase from "../firebase/init";
 import Head from "next/head";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
   const db = firebase.database();
   return (
     <>

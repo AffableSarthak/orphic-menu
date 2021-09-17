@@ -1,7 +1,12 @@
 import Categories from "../../../components/categories/Categories";
 import { GetServerSideProps } from "next";
 
-export default function categories(props) {
+export default function categories(props: {
+  tableId: string;
+  eateryId: string;
+  sessionId: string;
+  categories: Icategory[];
+}) {
   return (
     <>
       <Categories sessionProps={props} />
@@ -10,7 +15,7 @@ export default function categories(props) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { params } = context;
+  // const { params } = context;
   // const res = await fetch(`https://...`)
   // const data = await res.json()
 
@@ -35,19 +40,16 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
           name: "Pizza",
           src: "https://drive.google.com/uc?export=download&id=1SBzVzPJCIJJgxYxHm8HEL0jWgr_yIW10",
           bgColor: "bg-indigo-100",
-          // custType: "(Regular/Large)",
         },
         {
           name: "Burgers & Combos",
           src: "https://drive.google.com/uc?export=download&id=1rHN4g_ukLioYWN_ZXsV-qhaoIz2D9xG6",
           bgColor: "bg-yellow-100",
-          // custType: "(Small/Large)",
         },
         {
           name: "Pasta",
           src: "https://drive.google.com/uc?export=download&id=1YvNz_1KAeJIgkU_0wfEMUthDu9vIjiNH",
           bgColor: "bg-red-100",
-          // custType: "(Veg/Non-Veg)",
         },
         {
           name: "Main Course",

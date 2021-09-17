@@ -1,16 +1,16 @@
 import { useRouter } from "next/router";
 import Menu from "../../../components/menu/Menu";
 import { GetServerSideProps } from "next";
-export default function MenuPage(props) {
+export default function MenuPage(props: { gc: Igc[] }) {
   const router = useRouter();
   console.log(router.query);
   return (
     <>
       <Menu
-        categoryName={router.query.categoryName}
-        bgColor={router.query.bgColor}
-        imgUrl={router.query.imgUrl}
-        custType={router.query.custType}
+        categoryName={router.query.categoryName as string}
+        bgColor={router.query.bgColor as string}
+        imgUrl={router.query.imgUrl as string}
+        // custType={router.query.custType}
         gc={props.gc}
       />
     </>
@@ -18,7 +18,7 @@ export default function MenuPage(props) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { params } = context;
+  // const { params } = context;
   // const res = await fetch(`https://...`)
   // const data = await res.json()
 

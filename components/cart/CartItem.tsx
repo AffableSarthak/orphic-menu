@@ -22,7 +22,7 @@ const CartItem = ({
   // console.log(idx, "from cartItem ind");
   useEffect(() => {
     const sessionId = localStorage.getItem("sessionId");
-    setSessionId(sessionId);
+    setSessionId(sessionId as string);
   }, []);
 
   const { IncQtyForItem, DecQtyForItem } = useContext(sessionContext);
@@ -32,15 +32,10 @@ const CartItem = ({
       let custPrice = 0;
       let temp = Object.entries(item.customization);
       console.log(temp, "temp from total price");
-      // temp.map((s: any) => {
-      //   console.log(typeof s == "object");
-
-      //   // console.log(s.split(",")[1] * 1);
-      // });
 
       temp.forEach((t: any) => {
         if (t[0] === "Add_On") {
-          t[1].forEach((fa) => {
+          t[1].forEach((fa: string) => {
             custPrice += parseInt(fa.split(",")[1]);
           });
         } else {

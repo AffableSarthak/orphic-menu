@@ -16,3 +16,21 @@ interface Iitem {
   subCategory?: string;
   label?:string;
 }
+
+interface Igcvalue {
+  name: string;
+  price: number;
+}
+interface Igc {
+      id: string;
+      name: string;
+      type: string;
+      values: Igcvalue[]
+}
+
+
+interface Icategory {
+  name: string;
+  src: string;
+  bgColor : string;
+}

@@ -1,16 +1,14 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import DisclosureCard from "./DisclosureCard";
-import MenuCard from "./MenuCard";
-import PopularCard from "./PopularCard";
 
-const SubMenu = (props) => {
+const SubMenu = (props: any) => {
   const [subState, setSubState] = useState([]);
   const [activeItems, setActiveItems] = useState<Iitem[]>([]);
   useEffect(() => {
     // console.log(props);
     // Accepts the array and key
-    const groupBy = (array, key) => {
+    const groupBy = (array: any[], key: string) => {
       // Return the end result
       return array.reduce((result, currentValue) => {
         // If an array already present for key, push it to the array. Else create an array and push the object
@@ -25,21 +23,13 @@ const SubMenu = (props) => {
     const itemsGroupedBySubCategory = groupBy(props.items, "subCategory");
     const tempSubCategory = Object.entries(itemsGroupedBySubCategory);
     setSubState(tempSubCategory as any);
-    console.log(tempSubCategory[0][1]);
+    // console.log(tempSubCategory[0][1]);
     setActiveItems(tempSubCategory[0][1] as Iitem[]);
   }, [props.items]);
 
   const getSubCategoryData = (array: Iitem[]) => {
     {
       return array.map((item: Iitem, index) => (
-        // <MenuCard
-        //   key={index}
-        //   item={item}
-        //   stagedItems={props.stagedItems}
-        //   bgColor={props.bgColor}
-        //   imgUrl={props.imgUrl}
-        // />
-
         <DisclosureCard
           item={item}
           stagedItems={props.stagedItems}
