@@ -54,8 +54,9 @@ const Painting = () => {
           <h2 className="text-lg font-black px-4">Choose your Masterpiece</h2>
         </div>
         <div className={`flex flex-col overflow-x-auto px-2 items-center`}>
-          {data.map((item) => (
+          {data.map((item, i) => (
             <div
+              key={i}
               className={`flex flex-row justify-between w-full my-2 mx-2 p-2  text-md font-medium text-left bg-purple-50 rounded-2xl`}
             >
               <div className="flex flex-col flex-six">
@@ -69,8 +70,8 @@ const Painting = () => {
                   <p>Available colors</p>
                 </div>
                 <div className="flex ml-2 text-base font-black text-dark">
-                  {item.availableColors.map((color) => (
-                    <div className={`h-4 w-4 m-1 ${color}`}></div>
+                  {item.availableColors.map((color, i) => (
+                    <div key={i} className={`h-4 w-4 m-1 ${color}`}></div>
                   ))}
                 </div>
                 <div className="flex ml-2 mt-1 text-base font-black text-dark">
