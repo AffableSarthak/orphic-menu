@@ -121,6 +121,38 @@ const UserDetail = (props: { rId: string }) => {
           </div>
         </button>
       </div>
+      {/* <div className="mt-4 text-center">
+        <button
+          onClick={() => {
+            if (localStorage.getItem("rId") !== undefined) {
+              router.push({
+                pathname: `/app/painting`,
+              });
+            }
+          }}
+          className="px-6 py-4 bg-purple-200 min-w-[171px] text-dark font-semibold rounded-2xl"
+        >
+          <div className="flex">
+            <div className="mr-2">Paint Lyf</div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div> */}
 
       {/* <div className="mt-5">
         <Formik
