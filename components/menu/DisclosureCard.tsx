@@ -69,8 +69,7 @@ export default function DisclosureCard(props: {
                   )}
                   <div className="flex ml-2 mt-4 text-base font-black text-dark">
                     <h3>
-                      ₹{item.price}
-                      {/* ({item.itemId}){" "} */}
+                      ₹{item.price}({item.itemId}){" "}
                     </h3>
                   </div>
                   {/* {item.bannerUrl && (
