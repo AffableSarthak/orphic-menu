@@ -1,11 +1,16 @@
 import { useRouter } from "next/router";
 import Menu from "../../../components/menu/Menu";
 import { GetServerSideProps } from "next";
+import Script from "next/script";
 export default function MenuPage(props: { gc: Igc[] }) {
   const router = useRouter();
   console.log(router.query);
   return (
     <>
+      <Script
+        type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+      />
       <Menu
         categoryName={router.query.categoryName as string}
         bgColor={router.query.bgColor as string}

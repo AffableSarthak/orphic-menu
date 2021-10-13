@@ -14,6 +14,9 @@ module.exports = {
         gradientColor: "#FFF4E8",
         button: "#FF8100",
       },
+      backdropBlur: {
+        op: "0.8px",
+      },
       animation: {
         "spin-slow": "spin 3s linear infinite",
       },

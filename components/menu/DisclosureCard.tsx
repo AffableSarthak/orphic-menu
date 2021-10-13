@@ -3,6 +3,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Veg from "../../public/label/Veg.svg";
 import NonVeg from "../../public/label/Non-Veg.svg";
+import ModalViewer from "../modal/ModalViewer";
 
 const Model = dynamic(() => import("../glbLoad/Model"), {
   ssr: false,
@@ -100,15 +101,22 @@ export default function DisclosureCard(props: {
                     </button>
                   </div> */}
                   {item.bannerUrl && (
-                    <div>
-                      <Disclosure.Button
-                        //   className=" text-white text-sm font-normal tracking-wide rounded-tl-2xl rounded-br-2xl
-                        // bg-button px-5 py-2 cursor-pointer"
-                        className="bg-button  text-white text-sm font-medium tracking-widest py-1 px-4 border-b-4 border-yellow-700 rounded"
-                      >
-                        VIEW
-                      </Disclosure.Button>
-                    </div>
+                    // <div>
+                    //   <Disclosure.Button
+                    //     //   className=" text-white text-sm font-normal tracking-wide rounded-tl-2xl rounded-br-2xl
+                    //     // bg-button px-5 py-2 cursor-pointer"
+                    //     className="bg-button  text-white text-sm font-medium tracking-widest py-1 px-4 border-b-4 border-yellow-700 rounded"
+                    //   >
+                    //     VIEW
+                    //   </Disclosure.Button>
+                    // </div>
+                    <ModalViewer
+                      glbName={`${
+                        //@ts-ignore
+                        item.itemId.split("-")[1].toString() * 1
+                      }_processed`}
+                      item={item}
+                    />
                   )}
                 </div>
               </div>
