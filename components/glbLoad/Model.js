@@ -33,6 +33,7 @@ const Model = ({ glbName, item }) => (
         alt="Model of a Food Item"
         camera-controls
         rotation-per-second="0.69rad"
+        ar
         ar-modes="webxr scene-viewer quick-look"
         min-camera-orbit="-141deg 22deg auto"
         max-camera-orbit="-32deg 76deg auto"
