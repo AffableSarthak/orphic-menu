@@ -34,7 +34,7 @@ const Model = ({ glbName, item }) => (
         camera-controls
         rotation-per-second="0.69rad"
         ar
-        ar-modes="webxr scene-viewer quick-look"
+        ar-modes="webxr quick-look"
         min-camera-orbit="-141deg 22deg auto"
         max-camera-orbit="-32deg 76deg auto"
         poster="https://i.pinimg.com/originals/c4/cb/9a/c4cb9abc7c69713e7e816e6a624ce7f8.gif"

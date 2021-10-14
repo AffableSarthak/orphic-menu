@@ -16,7 +16,7 @@ const TestModelPage = () => {
         poster="https://i.pinimg.com/originals/ee/1d/08/ee1d081c5bdf966b058c1a6588e73e8a.gif"
         shadow-intensity="1"
         ar
-        ar-modes="webxr scene-viewer quick-look"
+        ar-modes="webxr quick-look"
         environment-image="neutral"
         auto-rotate
         camera-controls
