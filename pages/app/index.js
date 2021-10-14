@@ -20,8 +20,6 @@ const TestModelPage = () => {
         environment-image="neutral"
         auto-rotate
         camera-controls
-        shadow-intensity="5"
-        shadow-softness="5"
         skybox-image="https://images.unsplash.com/photo-1596263576925-d90d63691097?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1922&q=80"
       ></model-viewer>
     </div>
