@@ -2,7 +2,7 @@ import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import dynamic from "next/dynamic";
-import { FiBox } from "react-icons/fi";
+import { HiEyeOff, HiEye } from "react-icons/hi";
 
 const Model = dynamic(() => import("../glbLoad/Model"), {
   ssr: false,
@@ -37,9 +37,14 @@ const ModalViewer = ({ glbName, item }: { glbName: string; item: Iitem }) => {
       <button
         type="button"
         onClick={openModal}
-        className="bg-button  text-white text-sm font-medium tracking-widest py-1 px-4 border-b-4 border-yellow-700 rounded"
+        className="bg-button  text-white text-sm font-medium tracking-widest py-1 px-2 border-b-4 border-yellow-700 rounded"
       >
-        VIEW
+        <div className="flex">
+          <div>
+            <HiEye className="text-lg mr-1" />
+          </div>
+          <div>VIEW</div>
+        </div>
       </button>
       {/* </div> */}
 
@@ -109,14 +114,14 @@ const ModalViewer = ({ glbName, item }: { glbName: string; item: Iitem }) => {
                 </div> */}
                 <div className="text-right">
                   <button
-                    onClick={closeModal}
+                    onClick={closeModalWithOutAr}
                     className="bg-dark opacity-90  text-white text-sm font-medium tracking-widest pt-2 pb-1 px-4 border-b-8 border-black rounded"
                   >
                     <div className="flex">
                       <div>
-                        <FiBox className="text-lg mr-1" />
+                        <HiEyeOff className="text-lg mr-1" />
                       </div>
-                      <div>VIEW IN AR</div>
+                      <div>CLOSE</div>
                     </div>
                   </button>
                 </div>
