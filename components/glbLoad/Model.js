@@ -32,6 +32,7 @@ const Model = ({ glbName, item }) => (
         auto-rotate
         alt="Model of a Food Item"
         camera-controls
+        environment-image="neutral"
         rotation-per-second="0.69rad"
         ar
         ar-modes="webxr quick-look"
