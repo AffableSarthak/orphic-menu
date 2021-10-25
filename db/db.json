@@ -1872,15 +1872,32 @@
         "price" : "25",
         "subCategory" : "Others"
       },
+      "BC-192" : {
+        "bannerUrl" : "xxx",
+        "category" : "Brik Oven",
+        "desc" : "",
+        "itemId" : "BC-192",
+        "itemName" : "Brownie",
+        "objectUrl" : "xxx",
+        "price" : "150"
+      },
+      "BC-191" : {
+        "bannerUrl" : "xxx",
+        "category" : "Brik Oven",
+        "desc" : "",
+        "itemId" : "BC-191",
+        "itemName" : "Cake",
+        "objectUrl" : "xxx",
+        "price" : "180"
+      },
       "BC-190" : {
-        "bannerUrl" : "",
-        "category" : "Beverages",
+        "bannerUrl" : "xxx",
+        "category" : "Brik Oven",
         "desc" : "",
         "itemId" : "BC-190",
-        "itemName" : "Water",
-        "objectUrl" : "",
-        "price" : "150",
-        "subCategory" : "Others"
+        "itemName" : "Pizza",
+        "objectUrl" : "xxx",
+        "price" : "250"
       }
     }
   },

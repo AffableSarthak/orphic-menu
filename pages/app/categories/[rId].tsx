@@ -37,6 +37,11 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       sessionId: "-MglGB1mqNf5eF4QWPfZ",
       categories: [
         {
+          name: "Brik Oven",
+          src: "https://drive.google.com/uc?export=download&id=1SBzVzPJCIJJgxYxHm8HEL0jWgr_yIW10",
+          bgColor: "bg-blue-50",
+        },
+        {
           name: "Pizza",
           src: "https://drive.google.com/uc?export=download&id=1SBzVzPJCIJJgxYxHm8HEL0jWgr_yIW10",
           bgColor: "bg-indigo-100",

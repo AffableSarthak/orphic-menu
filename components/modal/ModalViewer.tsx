@@ -112,7 +112,7 @@ const ModalViewer = ({ glbName, item }: { glbName: string; item: Iitem }) => {
                     VIEW IN AR
                   </button>
                 </div> */}
-                <div className="text-right">
+                {/* <div className="text-right">
                   <button
                     onClick={closeModalWithOutAr}
                     className="bg-dark opacity-90  text-white text-sm font-medium tracking-widest pt-2 pb-1 px-4 border-b-8 border-black rounded"
@@ -124,7 +124,7 @@ const ModalViewer = ({ glbName, item }: { glbName: string; item: Iitem }) => {
                       <div>CLOSE</div>
                     </div>
                   </button>
-                </div>
+                </div> */}
               </div>
             </Transition.Child>
           </div>
