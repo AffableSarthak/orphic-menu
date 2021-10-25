@@ -8,7 +8,7 @@ import {
 } from "./actionType";
 
 import SessionContext from "./context";
-import Data from "../../db/claytopia.json";
+// import Data from "../../db/claytopia.json";
 import { useReducer, useState } from "react";
 import sessionReducer from "./reducer";
 import { useRouter } from "next/router";
