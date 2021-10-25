@@ -48,9 +48,7 @@ export default function DisclosureCard(props: {
           {({ open }) => (
             <>
               <div
-                className={`flex flex-row justify-between w-full py-2 px-2 min-h-[120px] text-md font-medium text-left bg-gradient-to-r from-gradientColor ${
-                  item.subCategory ? "rounded-t-2xl" : "rounded-t-2xl"
-                } `}
+                className={`flex flex-row justify-between w-full py-2 px-2 min-h-[120px] text-md font-medium text-left bg-gradient-to-r from-gradientColor rounded-2xl`}
               >
                 <div className="flex flex-col flex-eight">
                   <div className="flex ml-2 mt-1 text-dark text-base font-bold">
