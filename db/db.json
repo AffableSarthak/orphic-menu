@@ -1877,7 +1877,7 @@
         "category" : "Brik Oven",
         "desc" : "",
         "itemId" : "BC-192",
-        "itemName" : "Brownie",
+        "itemName" : "Chocolate Brownie",
         "objectUrl" : "xxx",
         "price" : "150"
       },
@@ -1886,7 +1886,7 @@
         "category" : "Brik Oven",
         "desc" : "",
         "itemId" : "BC-191",
-        "itemName" : "Cake",
+        "itemName" : "Lemon Ricotta Cake",
         "objectUrl" : "xxx",
         "price" : "180"
       },
@@ -1895,9 +1895,36 @@
         "category" : "Brik Oven",
         "desc" : "",
         "itemId" : "BC-190",
-        "itemName" : "Pizza",
+        "itemName" : "Gourmet Pizza",
         "objectUrl" : "xxx",
         "price" : "250"
+      },
+      "BC-193" : {
+        "bannerUrl" : "xxx",
+        "category" : "Brik Oven",
+        "desc" : "",
+        "itemId" : "BC-193",
+        "itemName" : "Chocolate Truffle Cake",
+        "objectUrl" : "xxx",
+        "price" : "350"
+      },
+      "BC-194" : {
+        "bannerUrl" : "xxx",
+        "category" : "Brik Oven",
+        "desc" : "",
+        "itemId" : "BC-194",
+        "itemName" : "Mediterranean Pasta",
+        "objectUrl" : "xxx",
+        "price" : "220"
+      },
+      "BC-195" : {
+        "bannerUrl" : "xxx",
+        "category" : "Brik Oven",
+        "desc" : "",
+        "itemId" : "BC-195",
+        "itemName" : "Peri-Peri Chicken Burger",
+        "objectUrl" : "xxx",
+        "price" : "210"
       }
     }
   },
