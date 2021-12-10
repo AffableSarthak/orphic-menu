@@ -89,7 +89,7 @@ const UserDetail = (props: { rId: string }) => {
         </p>
       </div>
 
-      <div className="mt-10 text-center">
+      {/* <div className="mt-10 text-center">
         <button
           onClick={() => {
             if (localStorage.getItem("rId") !== undefined) {
@@ -120,7 +120,7 @@ const UserDetail = (props: { rId: string }) => {
             </div>
           </div>
         </button>
-      </div>
+      </div> */}
       {/* <div className="mt-4 text-center">
         <button
           onClick={() => {
@@ -154,9 +154,9 @@ const UserDetail = (props: { rId: string }) => {
         </button>
       </div> */}
 
-      {/* <div className="mt-5">
+      <div className="mt-5">
         <Formik
-          initialValues={{ username: "" }}
+          initialValues={{ username: "", phoneNumber: "" }}
           validationSchema={yup.object({
             username: yup
               .string()
@@ -165,12 +165,13 @@ const UserDetail = (props: { rId: string }) => {
               .max(15),
           })}
           onSubmit={async (values) => {
-            await setUsername(values.username);
-            if (localStorage.getItem("rId") !== undefined) {
-              router.push({
-                pathname: `/app/categories/${rId}`,
-              });
-            }
+            console.log(values);
+            // setUsername(values.username);
+            // if (localStorage.getItem("rId") !== undefined) {
+            router.push({
+              pathname: `/app/categories/${rId}`,
+            });
+            // }
           }}
         >
           {({ values, errors, isSubmitting, isValidating }) => (
@@ -182,6 +183,15 @@ const UserDetail = (props: { rId: string }) => {
               />
 
               <p className="text-red-500 text-center h-8">{errors.username}</p>
+              <Field
+                name="phoneNumber"
+                placeholder="Enter your phone number"
+                className="bg-whiteColor w-full px-8 py-4 rounded-2xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl "
+              />
+
+              <p className="text-red-500 text-center h-8">
+                {errors.phoneNumber}
+              </p>
               <button
                 type="submit"
                 disabled={isSubmitting || isValidating}
@@ -195,7 +205,7 @@ const UserDetail = (props: { rId: string }) => {
             </Form>
           )}
         </Formik>
-      </div> */}
+      </div>
     </>
   );
 };
