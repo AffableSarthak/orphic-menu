@@ -17,6 +17,23 @@ interface Iitem {
   label?:string;
 }
 
+// Item Type
+interface Iitem1 {
+  _id: string;
+  modelUrl: string;
+  imageUrl: string;
+  isNonVeg: boolean;
+  rate: string;
+  subCategory: string;
+  mainCategory: string;
+  description: string;
+  name: string;
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}
+
 interface Igcvalue {
   name: string;
   price: number;
@@ -33,4 +50,8 @@ interface Icategory {
   name: string;
   src: string;
   bgColor : string;
+}
+
+interface Icategory1 {
+  name: string
 }

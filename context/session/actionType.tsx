@@ -6,5 +6,6 @@ export const SET_LOADING = "SET_LOADING";
 export const GET_STAGED_ITEMS = "GET_STAGED_ITEMS";
 export const UPDATE_QTY = "UPDATE_QTY";
 export const SET_CURRENT_ITEM = "SET_CURRENT_ITEM";
+export const SET_ALL_ITEMS = "SET_ALL_ITEMS";
 
 // export const SET_SESSION_STATE = "SET_SESSION_STATE";

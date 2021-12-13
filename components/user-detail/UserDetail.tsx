@@ -12,6 +12,7 @@ import * as yup from "yup";
 import sessionContext from "../../context/session/context";
 import { useContext, useEffect } from "react";
 import { useRouter } from "next/router";
+import axios from "axios";
 // import { useContext } from "react";
 // import eatriesContext from "../../context/eateries/eatriesContext";
 const UserDetail = (props: { rId: string }) => {
@@ -32,6 +33,12 @@ const UserDetail = (props: { rId: string }) => {
 
     // console.log(localStorage.getItem("rId"));
   });
+
+  const saveUser = async (data: Object) =>{
+    const res = await axios.post('https://api.app.orphic.co.in/users', data);
+    const result = await res.data;
+    console.log(result);
+  }
 
   return (
     <>
@@ -156,9 +163,9 @@ const UserDetail = (props: { rId: string }) => {
 
       <div className="mt-5">
         <Formik
-          initialValues={{ username: "", phoneNumber: "" }}
+          initialValues={{ userName: "", phoneNumber: "" }}
           validationSchema={yup.object({
-            username: yup
+            userName: yup
               .string()
               .required("Username is Required!")
               .min(3, "Atleast enter two characters")
@@ -172,17 +179,19 @@ const UserDetail = (props: { rId: string }) => {
               pathname: `/app/categories/${rId}`,
             });
             // }
+
+            await saveUser(values);
           }}
         >
           {({ values, errors, isSubmitting, isValidating }) => (
             <Form className="block px-4">
               <Field
-                name="username"
+                name="userName"
                 placeholder="Enter your Name"
                 className="bg-whiteColor w-full px-8 py-4 rounded-2xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary focus:rounded-2xl "
               />
 
-              <p className="text-red-500 text-center h-8">{errors.username}</p>
+              <p className="text-red-500 text-center h-8">{errors.userName}</p>
               <Field
                 name="phoneNumber"
                 placeholder="Enter your phone number"

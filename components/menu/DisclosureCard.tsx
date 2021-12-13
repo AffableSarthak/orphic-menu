@@ -10,32 +10,57 @@ const Model = dynamic(() => import("../glbLoad/Model"), {
 });
 
 export default function DisclosureCard(props: {
-  item: Iitem;
+  // item: Iitem;
+  item: Iitem1;
   stagedItems: IstagedItem[];
   bgColor: string;
   imgUrl: string;
 }) {
   const { item, stagedItems, bgColor, imgUrl } = props;
 
-  const labelValue = (label: string) => {
+  // const labelValue = (label: string) => {
+  //   switch (label) {
+  //     case "V":
+  //       return <Image src={Veg} />;
+  //     case "NV":
+  //       return <Image src={NonVeg} />;
+  //     case "VNV":
+  //       return (
+  //         <>
+  //           <div>
+  //             <span className="mr-2">
+  //               <Image src={Veg} />
+  //             </span>
+  //             <span>
+  //               <Image src={NonVeg} />
+  //             </span>
+  //           </div>
+  //         </>
+  //       );
+  //     default:
+  //       return <Image src={Veg} />;
+  //   }
+  // };
+
+  const labelValue = (label: Boolean) => {
     switch (label) {
-      case "V":
+      case false:
         return <Image src={Veg} />;
-      case "NV":
+      case true:
         return <Image src={NonVeg} />;
-      case "VNV":
-        return (
-          <>
-            <div>
-              <span className="mr-2">
-                <Image src={Veg} />
-              </span>
-              <span>
-                <Image src={NonVeg} />
-              </span>
-            </div>
-          </>
-        );
+      // case "VNV":
+      //   return (
+      //     <>
+      //       <div>
+      //         <span className="mr-2">
+      //           <Image src={Veg} />
+      //         </span>
+      //         <span>
+      //           <Image src={NonVeg} />
+      //         </span>
+      //       </div>
+      //     </>
+      //   );
       default:
         return <Image src={Veg} />;
     }
@@ -54,21 +79,27 @@ export default function DisclosureCard(props: {
                   <div className="flex ml-2 mt-1 text-dark text-base font-bold">
                     <h4>
                       {/* <span className="pr-2">{labelValue(item.label)}</span> */}
-                      {item.itemName}
+                      {/* {item.itemName} */}
+                      {item.name}
                     </h4>
                   </div>
                   {/* <div>
                     <span className="flex ml-2">{labelValue(item.label)}</span>
                   </div> */}
 
-                  {item.desc && item.desc.length > 0 && (
+                  {/* {item.desc && item.desc.length > 0 && ( */}
+                    {item.description && item.description.length > 0 && (
                     <div className="flex ml-2 mt-1  text-dark text-sm tracking-tighter font-normal font-description max-h-[60px] overflow-y-auto">
-                      <h3>{item.desc}</h3>
+                      <h3>
+                        {/* {item.desc} */}
+                        {item.description}
+                        </h3>
                     </div>
                   )}
                   <div className="flex ml-2 mt-4 text-base font-black text-dark">
                     <h3>
-                      ₹{item.price}
+                      {/* ₹{item.price} */}
+                      ₹{item.rate}
                       {/* ({item.itemId}){" "} */}
                     </h3>
                   </div>
@@ -84,7 +115,9 @@ export default function DisclosureCard(props: {
                   )} */}
                 </div>
                 <div className="flex justify-between items-end flex-col">
-                  <div>{labelValue(item.label as string)}</div>
+                  {/* <div>{labelValue(item.label as string)}</div> */}
+                  <div>{labelValue(item.isNonVeg as Boolean)}</div>
+
 
                   {/* <div>
                     <button className="bg-button py-2 px-4 text-sm tracking-wide rounded-tl-2xl ">
@@ -98,7 +131,8 @@ export default function DisclosureCard(props: {
                       </div>
                     </button>
                   </div> */}
-                  {item.bannerUrl && (
+                  {/* {item.bannerUrl && ( */}
+                    {item.modelUrl && (
                     // <div>
                     //   <Disclosure.Button
                     //     //   className=" text-white text-sm font-normal tracking-wide rounded-tl-2xl rounded-br-2xl
@@ -111,7 +145,7 @@ export default function DisclosureCard(props: {
                     <ModalViewer
                       glbName={`${
                         //@ts-ignore
-                        item.itemId.split("-")[1].toString() * 1
+                        item.id.split("-")[1].toString() * 1
                       }_processed`}
                       item={item}
                     />
@@ -124,7 +158,7 @@ export default function DisclosureCard(props: {
                 <Model
                   glbName={`${
                     //@ts-ignore
-                    item.itemId.split("-")[1].toString() * 1
+                    item.id.split("-")[1].toString() * 1
                   }_processed`}
                   item={item}
                 />

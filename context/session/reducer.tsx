@@ -7,6 +7,7 @@ import {
   GET_STAGED_ITEMS,
   UPDATE_QTY,
   SET_CURRENT_ITEM,
+  SET_ALL_ITEMS,
 } from "./actionType";
 
 const sessionReducer = (state: any, action: any) => {
@@ -18,6 +19,7 @@ const sessionReducer = (state: any, action: any) => {
         isLoading: payload,
       };
     case SET_CATEGORIES:
+      console.log(payload)
       return {
         ...state,
         categories: payload,
@@ -61,6 +63,12 @@ const sessionReducer = (state: any, action: any) => {
         ...state,
         currentItem: payload,
       };
+
+    case SET_ALL_ITEMS: 
+    return {
+      ...state,
+      allItems: payload
+    }
   }
 };
 

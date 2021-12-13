@@ -51,6 +51,7 @@ const Menu = ({
 
   // console.log({ rId });
   // console.log(items, stagedItems);
+  console.log({items})
 
   return (
     <>
@@ -105,7 +106,8 @@ const Menu = ({
                         stagedItems={stagedItems}
                         bgColor={bgColor}
                         imgUrl={imgUrl}
-                        key={item.itemId}
+                        // key={item.itemId}
+                        key={item.id}
                       />
                     );
                   })}

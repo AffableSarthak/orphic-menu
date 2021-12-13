@@ -8,7 +8,8 @@ const Model = dynamic(() => import("../glbLoad/Model"), {
   ssr: false,
 });
 
-const ModalViewer = ({ glbName, item }: { glbName: string; item: Iitem }) => {
+// const ModalViewer = ({ glbName, item }: { glbName: string; item: Iitem }) => {
+  const ModalViewer = ({ glbName, item }: { glbName: string; item: Iitem1 }) => {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {

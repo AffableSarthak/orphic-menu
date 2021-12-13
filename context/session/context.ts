@@ -5,9 +5,10 @@ export type sessionDataType = {
   setUsername: (username: string) => void;
   // getCategories: (eataryId: string) => void;
   populateGc: (gc: Igc[]) => void;
-  categories: Icategory[];
+  // categories: Icategory[];
+  categories: string[];
   username: any;
-  items: Iitem[];
+  items: Iitem1[];
   setCategoryItems: (categoryName: string) => void;
   gcState: Igc[];
   stagedItems: IstagedItem[];
@@ -21,6 +22,9 @@ export type sessionDataType = {
   // sessionInfo: IsessionInfoType;
   IncQtyForItem: (itemId: string, sessionId: string, idx: number) => void;
   DecQtyForItem: (itemId: string, sessionId: string, idx: number) => void;
+  allItems: Iitem1[];
+  setAllItems: (data: Iitem1[]) => void;
+  setCategories: (data: string[]) => void;
 };
 
 export const sessionDefaultValue: sessionDataType = {
@@ -43,6 +47,9 @@ export const sessionDefaultValue: sessionDataType = {
   // sessionInfo: null,
   IncQtyForItem: () => null,
   DecQtyForItem: () => null,
+  allItems: [],
+  setAllItems: () => null,
+  setCategories: () => null
 };
 
 const sessionContext = createContext<sessionDataType>(sessionDefaultValue);

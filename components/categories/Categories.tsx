@@ -4,24 +4,53 @@ import Image from "next/image";
 import CategoriesCard from "./CategoriesCard";
 import sessionContext from "../../context/session/context";
 import { useContext, useEffect } from "react";
+import axios from "axios";
 
 const Categories = (props: {
   sessionProps: {
     tableId: string;
     sessionId: string;
     eateryId: string;
-    categories: Icategory[];
+    // categories: Icategory[];
   };
 }) => {
-  const { tableId, sessionId, eateryId, categories } = props.sessionProps;
+  // const { tableId, sessionId, eateryId, categories } = props.sessionProps;
+  const { tableId, sessionId, eateryId } = props.sessionProps;
+
   const {
     isLoading,
     // setUsername,
     // populateGc,
     // categories,
     // username,
+    allItems,
+    categories,
     getStagedItems,
+    setAllItems,
+    setCategories
   } = useContext(sessionContext);
+
+  useEffect(()=>{
+    getAllItems();
+  },[])
+
+  const getAllItems = async () =>{
+    const res = await axios.get('https://api.app.orphic.co.in/items');
+    const result = res.data.data;
+    await setAllItems(result);
+    // console.log(result.data, 'from categorys');
+    
+  }
+  useEffect(()=>{
+    const categoriesItems = allItems.map((item)=> item.mainCategory);
+    setCategories(Array.from(new Set(categoriesItems))) ;
+  },[allItems])
+
+//   useEffect(()=>{
+// console.log(categories)
+//   },[categories])
+
+
 
   useEffect(() => {
     localStorage.setItem("sessionId", sessionId);
@@ -97,7 +126,10 @@ const Categories = (props: {
             id="categoriesCardsContainer"
             className={`grid grid-cols-2 gap-4 ${isLoading && "animate-pulse"}`}
           >
-            {categories.map((c, i) => (
+            {categories.map((categoryName,index)=>{
+              return <CategoriesCard key={index} categoryName={categoryName}/>
+            })}
+            {/* {categories.map((c, i) => (
               <CategoriesCard
                 key={i}
                 categoryName={c.name}
@@ -105,7 +137,7 @@ const Categories = (props: {
                 bgColor={c.bgColor}
                 // custType={c.custType ? c.custType : " "}
               />
-            ))}
+            ))} */}
           </div>
         </div>
       </section>

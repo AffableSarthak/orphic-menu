@@ -50,6 +50,7 @@ interface IinitialState {
   orderedItems: IorderItem[];
   stagedItems: IstagedItem[];
   username: string;
-  items: Iitem[];
+  items: Iitem1[];
   currentItem: object | null;
+  allItems: Iitem1[]
 }
