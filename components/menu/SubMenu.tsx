@@ -4,7 +4,7 @@ import DisclosureCard from "./DisclosureCard";
 
 const SubMenu = (props: any) => {
   const [subState, setSubState] = useState([]);
-  const [activeItems, setActiveItems] = useState<Iitem[]>([]);
+  const [activeItems, setActiveItems] = useState<Iitem1[]>([]);
   useEffect(() => {
     // console.log(props);
     // Accepts the array and key
@@ -24,25 +24,25 @@ const SubMenu = (props: any) => {
     const tempSubCategory = Object.entries(itemsGroupedBySubCategory);
     setSubState(tempSubCategory as any);
     // console.log(tempSubCategory[0][1]);
-    setActiveItems(tempSubCategory[0][1] as Iitem[]);
+    setActiveItems(tempSubCategory[0][1] as Iitem1[]);
   }, [props.items]);
 
-  const getSubCategoryData = (array: Iitem[]) => {
+  const getSubCategoryData = (array: Iitem1[]) => {
     {
-      return array.map((item: Iitem, index) => (
+      return array.map((item: Iitem1, index) => (
         <DisclosureCard
           item={item}
           stagedItems={props.stagedItems}
           bgColor={props.bgColor}
           imgUrl={props.imgUrl}
-          key={item.itemId}
+          key={item.id}
         />
         // <PopularCard key={index} item={item} />
       ));
     }
   };
 
-  const handleActiveItems = (array: Iitem[]) => {
+  const handleActiveItems = (array: Iitem1[]) => {
     console.log({ array });
     setActiveItems(array);
   };
