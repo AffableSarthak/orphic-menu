@@ -92,7 +92,8 @@ const Model = dynamic(() => import("../glbLoad/Model"), {
                   <Model
                     glbName={`${
                       //@ts-ignore
-                      item.itemId.split("-")[1].toString() * 1
+                      // item.itemId.split("-")[1].toString() * 1
+                      item.id.split("-")[1].toString() * 1
                     }_processed`}
                     item={item}
                   />

@@ -132,7 +132,9 @@ export default function DisclosureCard(props: {
                     </button>
                   </div> */}
                   {/* {item.bannerUrl && ( */}
-                    {item.modelUrl && (
+                    {/* {item.modelUrl && ( */}
+                    {true && (
+
                     // <div>
                     //   <Disclosure.Button
                     //     //   className=" text-white text-sm font-normal tracking-wide rounded-tl-2xl rounded-br-2xl

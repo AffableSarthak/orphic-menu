@@ -65,10 +65,10 @@ const Menu = ({
           <div id="menuHeaderBack" className="flex flex-row items-center">
             {typeof window !== "undefined" && <BackButton />}
 
-            {/* <h3 className="ml-2 text-lg font-bold text-black mr-3">
+            <h3 className="ml-2 text-lg font-bold text-black mr-3">
               {categoryName}
-            </h3> */}
-            <img src={imgUrl} className="w-[50px] h-[50px] ml-4" />
+            </h3>
+            {/* <img src={imgUrl} className="w-[50px] h-[50px] ml-4" /> */}
           </div>
 
           {/* <CartButton /> */}
