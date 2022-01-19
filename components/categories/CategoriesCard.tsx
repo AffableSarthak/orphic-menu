@@ -8,19 +8,20 @@ import sessionContext from "../../context/session/context";
 // const CategoriesCard = ({categoryName,imgUrl,bgColor,}: {categoryName: string;imgUrl: string;bgColor: string;
 // })
 
-const CategoriesCard = ({categoryName}: {categoryName: string;})=> {
-  const {setAllItems } =
-    useContext(sessionContext);
+const CategoriesCard = (props: any) => {
+  const { setAllItems } = useContext(sessionContext);
   const router = useRouter();
   // const { setCategoryItems, getStagedItems } = useContext(sessionContext);
 
-  console.log(categoryName)
+  console.log(props.categoryName);
+  const { categoryName, imageUrl, bgColor, categoryId } = props;
 
   return (
     <>
       <div
         id="cardContaner"
         // className={`flex flex-col justify-between p-4 rounded-2xl ${bgColor}`}
+        style={{ color: `${bgColor}` }}
         className={`flex flex-col justify-between p-4 rounded-2xl bg-yellow-100`}
         onClick={async () => {
           // localStorage.setItem("categoryName", categoryName);
@@ -32,11 +33,11 @@ const CategoriesCard = ({categoryName}: {categoryName: string;})=> {
           // await setCategoryItems(categoryName);
           // await getStagedItems(sessionId);
           // console.log(categoryName);
-         
+
           router.push({
             // pathname: `/app/menu/${categoryName}`,
             pathname: `/app/menu/${categoryName}`,
-            // query: { eateryId, bgColor, imgUrl },
+            query: { bgColor, imageUrl, categoryId },
 
             // query: { eateryId, bgColor, imgUrl },
           });
@@ -46,8 +47,8 @@ const CategoriesCard = ({categoryName}: {categoryName: string;})=> {
           {categoryName}
         </h2>
         <div className="flex justify-center items-center p-2">
-          {/* <Image src={imgUrl} /> */}
-          {/* <img src={imgUrl} className="w-[50px]  h-[50px]" /> */}
+          {/* <Image src={imageUrl} /> */}
+          <img src={imageUrl} className="w-[50px]  h-[50px]" />
         </div>
       </div>
     </>

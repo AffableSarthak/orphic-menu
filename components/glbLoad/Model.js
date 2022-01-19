@@ -25,7 +25,7 @@ const Model = ({ glbName, item }) => (
           "-posterColor": "transparent",
           marginBottom: "1rem",
         }}
-        src={`https://s3.eu-west-1.amazonaws.com/next.onpar.co.in/Objects/bc/${glbName}.glb`}
+        src={`${item.modelUrl}`}
         // poster={logo}
         loading="eager"
         camera-orbit="0deg 75deg auto"

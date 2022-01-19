@@ -12,11 +12,13 @@ const Menu = ({
   bgColor,
   gc,
   imgUrl,
+  categoryId,
 }: {
   categoryName: string;
   bgColor: string;
   gc: Igc[];
   imgUrl: string;
+  categoryId: string;
 }) => {
   const {
     items,
@@ -35,7 +37,7 @@ const Menu = ({
   useEffect(() => {
     // const rId = typeof window !== "undefined" && localStorage.getItem("rId");
     // console.log(items, "from menu");
-    setCategoryItems(categoryName);
+    setCategoryItems(categoryId);
 
     // if (items.length === null) router.push(`/app/categories/${rId}`);
     // console.log(items.length === undefined);
@@ -51,7 +53,7 @@ const Menu = ({
 
   // console.log({ rId });
   // console.log(items, stagedItems);
-  console.log({items})
+  console.log({ items });
 
   return (
     <>
@@ -60,15 +62,15 @@ const Menu = ({
       <section className="relative min-w-full min-h-screen pb-4">
         <div
           id="menuHeaderConatiner"
-          className={`flex flex-row justify-between items-center min-w-full h-28 px-4 ${bgColor} bg-cover bg-no-repeat object-center text-white`}
+          className={`flex flex-row justify-between items-center min-w-full h-28 px-4 bg-cover bg-no-repeat object-center text-white`}
         >
           <div id="menuHeaderBack" className="flex flex-row items-center">
             {typeof window !== "undefined" && <BackButton />}
 
-            <h3 className="ml-2 text-lg font-bold text-black mr-3">
+            {/* <h3 className="ml-2 text-lg font-bold text-black mr-3">
               {categoryName}
-            </h3>
-            {/* <img src={imgUrl} className="w-[50px] h-[50px] ml-4" /> */}
+            </h3> */}
+            <img src={imgUrl} className="w-[50px] h-[40px] ml-4" />
           </div>
 
           {/* <CartButton /> */}
@@ -93,9 +95,9 @@ const Menu = ({
               />
             ) : (
               <>
-                <div className="mt-6 p-4">
+                {/* <div className="p-4">
                   <h2 className="text-xl font-black px-4">{categoryName}</h2>
-                </div>
+                </div> */}
                 <div
                   className={`flex flex-col overflow-x-auto px-2 items-center`}
                 >

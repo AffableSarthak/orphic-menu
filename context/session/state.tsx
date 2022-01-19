@@ -110,9 +110,10 @@ const sessionInfo = ({ children, db }: Iprops) => {
   const getFilteredData = (category: string) => {
     // const data = Object.values(claytopiaData.eateries.bistro_claytopia_all);
     // return data.filter((x) => x.category === category);
+    console.log(category, allItems);
     const data =
       allItems &&
-      allItems.filter((item: Iitem1) => item.subCategory === category);
+      allItems.filter((item: Iitem1) => item.mainCategory === category);
     return data;
   };
 

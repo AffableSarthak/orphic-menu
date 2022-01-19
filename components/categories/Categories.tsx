@@ -3,7 +3,7 @@ import taco from "../../public/categoriesImages/taco.png";
 import Image from "next/image";
 import CategoriesCard from "./CategoriesCard";
 import sessionContext from "../../context/session/context";
-import { useContext, useEffect } from "react";
+import { Key, useContext, useEffect } from "react";
 import axios from "axios";
 
 const Categories = (props: {
@@ -11,11 +11,11 @@ const Categories = (props: {
     tableId: string;
     sessionId: string;
     eateryId: string;
-    // categories: Icategory[];
+    categories: any;
   };
 }) => {
   // const { tableId, sessionId, eateryId, categories } = props.sessionProps;
-  const { tableId, sessionId, eateryId } = props.sessionProps;
+  const { tableId, sessionId, eateryId, categories } = props.sessionProps;
 
   const {
     isLoading,
@@ -24,7 +24,7 @@ const Categories = (props: {
     // categories,
     // username,
     allItems,
-    categories,
+    // categories,
     getStagedItems,
     setAllItems,
     setCategories,
@@ -124,18 +124,27 @@ const Categories = (props: {
             id="categoriesCardsContainer"
             className={`grid grid-cols-2 gap-4 ${isLoading && "animate-pulse"}`}
           >
-            {categories.map((categoryName, index) => {
-              return <CategoriesCard key={index} categoryName={categoryName} />;
-            })}
-            {/* {categories.map((c, i) => (
-              <CategoriesCard
-                key={i}
-                categoryName={c.name}
-                imgUrl={c.src}
-                bgColor={c.bgColor}
-                // custType={c.custType ? c.custType : " "}
-              />
-            ))} */}
+            {/* {categories.map((_category, index) => {
+              return <CategoriesCard key={index} categoryName={_category.name} />;
+            })} */}
+            {categories.map(
+              (
+                c: { name: string; imageUrl: any; textColor: any; _id: string },
+                i: Key | null | undefined
+              ) => {
+                console.log({ c });
+                return (
+                  <CategoriesCard
+                    key={i}
+                    categoryName={c.name}
+                    imageUrl={c.imageUrl}
+                    bgColor={c.textColor}
+                    categoryId={c._id}
+                    // custType={c.custType ? c.custType : " "}
+                  />
+                );
+              }
+            )}
           </div>
         </div>
       </section>

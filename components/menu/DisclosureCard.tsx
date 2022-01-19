@@ -88,18 +88,17 @@ export default function DisclosureCard(props: {
                   </div> */}
 
                   {/* {item.desc && item.desc.length > 0 && ( */}
-                    {item.description && item.description.length > 0 && (
+                  {item.description && item.description.length > 0 && (
                     <div className="flex ml-2 mt-1  text-dark text-sm tracking-tighter font-normal font-description max-h-[60px] overflow-y-auto">
                       <h3>
                         {/* {item.desc} */}
                         {item.description}
-                        </h3>
+                      </h3>
                     </div>
                   )}
                   <div className="flex ml-2 mt-4 text-base font-black text-dark">
                     <h3>
-                      {/* ₹{item.price} */}
-                      ₹{item.rate}
+                      {/* ₹{item.price} */}₹{item.rate}
                       {/* ({item.itemId}){" "} */}
                     </h3>
                   </div>
@@ -118,10 +117,6 @@ export default function DisclosureCard(props: {
                   {/* <div>{labelValue(item.label as string)}</div> */}
                   <div>{labelValue(item.isNonVeg as Boolean)}</div>
 
-
-
-
-
                   {/* <div>
                     <button className="bg-button py-2 px-4 text-sm tracking-wide rounded-tl-2xl ">
                       <div className="flex">
@@ -135,9 +130,8 @@ export default function DisclosureCard(props: {
                     </button>
                   </div> */}
                   {/* {item.bannerUrl && ( */}
-                    {/* {item.modelUrl && ( */}
-                    {true && (
-
+                  {item.modelUrl && (
+                    // {true && (
                     // <div>
                     //   <Disclosure.Button
                     //     //   className=" text-white text-sm font-normal tracking-wide rounded-tl-2xl rounded-br-2xl

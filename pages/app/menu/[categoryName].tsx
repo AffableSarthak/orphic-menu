@@ -14,8 +14,8 @@ export default function MenuPage(props: { gc: Igc[] }) {
       <Menu
         categoryName={router.query.categoryName as string}
         bgColor={router.query.bgColor as string}
-        imgUrl={router.query.imgUrl as string}
-        // custType={router.query.custType}
+        imgUrl={router.query.imageUrl as string}
+        categoryId={router.query.categoryId as string}
         gc={props.gc}
       />
     </>
