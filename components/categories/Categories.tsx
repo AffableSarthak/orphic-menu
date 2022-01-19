@@ -133,6 +133,7 @@ const Categories = (props: {
                   name: string;
                   imageUrl: any;
                   backgroundColor: any;
+                  borderColor: any;
                   _id: string;
                 },
                 i: Key | null | undefined
@@ -145,6 +146,7 @@ const Categories = (props: {
                     imageUrl={c.imageUrl}
                     bgColor={c.backgroundColor}
                     categoryId={c._id}
+                    borderColor={c.borderColor}
                     // custType={c.custType ? c.custType : " "}
                   />
                 );

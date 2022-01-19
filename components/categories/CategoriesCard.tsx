@@ -14,14 +14,17 @@ const CategoriesCard = (props: any) => {
   // const { setCategoryItems, getStagedItems } = useContext(sessionContext);
 
   console.log(props.categoryName);
-  const { categoryName, imageUrl, bgColor, categoryId } = props;
+  const { categoryName, imageUrl, bgColor, categoryId, borderColor } = props;
 
   return (
     <>
       <div
         id="cardContaner"
         // className={`flex flex-col justify-between p-4 rounded-2xl ${bgColor}`}
-        style={{ backgroundColor: `${bgColor}` }}
+        style={{
+          backgroundColor: `${bgColor}`,
+          border: `${borderColor} solid 1px`,
+        }}
         className={`flex flex-col justify-between p-4 rounded-2xl `}
         onClick={async () => {
           // localStorage.setItem("categoryName", categoryName);
