@@ -129,7 +129,12 @@ const Categories = (props: {
             })} */}
             {categories.map(
               (
-                c: { name: string; imageUrl: any; textColor: any; _id: string },
+                c: {
+                  name: string;
+                  imageUrl: any;
+                  backgroundColor: any;
+                  _id: string;
+                },
                 i: Key | null | undefined
               ) => {
                 console.log({ c });
@@ -138,7 +143,7 @@ const Categories = (props: {
                     key={i}
                     categoryName={c.name}
                     imageUrl={c.imageUrl}
-                    bgColor={c.textColor}
+                    bgColor={c.backgroundColor}
                     categoryId={c._id}
                     // custType={c.custType ? c.custType : " "}
                   />

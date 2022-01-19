@@ -21,8 +21,8 @@ const CategoriesCard = (props: any) => {
       <div
         id="cardContaner"
         // className={`flex flex-col justify-between p-4 rounded-2xl ${bgColor}`}
-        style={{ color: `${bgColor}` }}
-        className={`flex flex-col justify-between p-4 rounded-2xl bg-yellow-100`}
+        style={{ backgroundColor: `${bgColor}` }}
+        className={`flex flex-col justify-between p-4 rounded-2xl `}
         onClick={async () => {
           // localStorage.setItem("categoryName", categoryName);
           localStorage.setItem("categoryName", categoryName);
