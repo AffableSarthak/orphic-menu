@@ -27,30 +27,28 @@ const Categories = (props: {
     categories,
     getStagedItems,
     setAllItems,
-    setCategories
+    setCategories,
   } = useContext(sessionContext);
 
-  useEffect(()=>{
+  useEffect(() => {
     getAllItems();
-  },[])
+  }, []);
 
-  const getAllItems = async () =>{
-    const res = await axios.get('https://api.app.orphic.co.in/items');
+  const getAllItems = async () => {
+    const res = await axios.get("https://api.app.orphic.co.in/items");
     const result = res.data.data;
     await setAllItems(result);
     // console.log(result.data, 'from categorys');
-    
-  }
-  useEffect(()=>{
-    const categoriesItems = allItems.map((item)=> item.mainCategory);
-    setCategories(Array.from(new Set(categoriesItems))) ;
-  },[allItems])
+  };
+  useEffect(() => {
+    console.log(allItems);
+    const categoriesItems = allItems.map((item) => item.subCategory);
+    setCategories(Array.from(new Set(categoriesItems)));
+  }, [allItems]);
 
-//   useEffect(()=>{
-// console.log(categories)
-//   },[categories])
-
-
+  //   useEffect(()=>{
+  // console.log(categories)
+  //   },[categories])
 
   useEffect(() => {
     localStorage.setItem("sessionId", sessionId);
@@ -126,8 +124,8 @@ const Categories = (props: {
             id="categoriesCardsContainer"
             className={`grid grid-cols-2 gap-4 ${isLoading && "animate-pulse"}`}
           >
-            {categories.map((categoryName,index)=>{
-              return <CategoriesCard key={index} categoryName={categoryName}/>
+            {categories.map((categoryName, index) => {
+              return <CategoriesCard key={index} categoryName={categoryName} />;
             })}
             {/* {categories.map((c, i) => (
               <CategoriesCard

@@ -26,23 +26,22 @@ const sessionInfo = ({ children, db }: Iprops) => {
     currentItem: null,
     allItems: [
       {
-      _id: "61aed50af2bdd550ad01ad0f",
-      modelUrl: "",
-      imageUrl: "",
-      isNonVeg: true,
-      rate: "320",
-      subCategory: "American Breakfast",
-      mainCategory: "All Day Breakfast",
-      description: " A mouth-watering eggs stuffed with cottage cheese and salami with cheese spread served alongside with baked potatoes, hash brown and sauteed vegetables rolls don't get better than this!",
-      name: "Bistro Heavenly Rolls",
-      id: "BC-001",
-      createdAt: "2021-12-07T03:29:14.995Z",
-      updatedAt: "2021-12-10T08:47:59.517Z",
-      __v: 0
-    },
-    
-  
-  ],
+        _id: "61aed50af2bdd550ad01ad0f",
+        modelUrl: "",
+        imageUrl: "",
+        isNonVeg: true,
+        rate: "320",
+        subCategory: "American Breakfast",
+        mainCategory: "All Day Breakfast",
+        description:
+          " A mouth-watering eggs stuffed with cottage cheese and salami with cheese spread served alongside with baked potatoes, hash brown and sauteed vegetables rolls don't get better than this!",
+        name: "Bistro Heavenly Rolls",
+        id: "BC-001",
+        createdAt: "2021-12-07T03:29:14.995Z",
+        updatedAt: "2021-12-10T08:47:59.517Z",
+        __v: 0,
+      },
+    ],
   };
 
   // console.log({ sessionProps })
@@ -60,7 +59,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
     username,
     items,
     currentItem,
-    allItems
+    allItems,
   } = state;
 
   /**
@@ -111,7 +110,9 @@ const sessionInfo = ({ children, db }: Iprops) => {
   const getFilteredData = (category: string) => {
     // const data = Object.values(claytopiaData.eateries.bistro_claytopia_all);
     // return data.filter((x) => x.category === category);
-    const data = allItems && allItems.filter((item : Iitem1)=> item.mainCategory === category);
+    const data =
+      allItems &&
+      allItems.filter((item: Iitem1) => item.subCategory === category);
     return data;
   };
 
@@ -339,21 +340,20 @@ const sessionInfo = ({ children, db }: Iprops) => {
   };
 
   // console.log(isLoading);
-  const setAllItems = (data: Iitem1[]) =>{
+  const setAllItems = (data: Iitem1[]) => {
     dispatch({
-       type: SET_ALL_ITEMS,
-       payload: data}
-      )
+      type: SET_ALL_ITEMS,
+      payload: data,
+    });
+  };
 
-  }
-  
-  const setCategories = (data: string[]) =>{
+  const setCategories = (data: string[]) => {
     // console.log(data)
     dispatch({
       type: SET_CATEGORIES,
-      payload: data
-    })
-  }
+      payload: data,
+    });
+  };
 
   return (
     <>
@@ -379,7 +379,7 @@ const sessionInfo = ({ children, db }: Iprops) => {
           DecQtyForItem,
           allItems,
           setAllItems,
-          setCategories
+          setCategories,
         }}
       >
         {children}
